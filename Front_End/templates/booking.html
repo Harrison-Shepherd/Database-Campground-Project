@@ -1,0 +1,20 @@
+<!-- Front_End/templates/booking.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Details</title>
+</head>
+<body>
+    <h1>Booking Details</h1>
+    <p><strong>Booking ID:</strong> {{ booking.booking_id }}</p>
+    <p><strong>Customer Name:</strong> {{ booking.customer_name }}</p>
+    <p><strong>Arrival Date:</strong> {{ booking.arrival_date }}</p>
+    <p><strong>Campsite Size:</strong> {{ booking.campsite_size }}</p>
+    <p><strong>Number of Campsites:</strong> {{ booking.num_campsites }}</p>
+    <a href="{{ url_for('index') }}">Back to Bookings Overview</a>
+</body>
+</html>

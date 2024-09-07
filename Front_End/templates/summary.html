@@ -1,0 +1,20 @@
+<!-- Front_End/templates/summary.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Summary</title>
+</head>
+<body>
+    <h1>Daily Summary</h1>
+
+    <p><strong>Date:</strong> {{ summary.date }}</p>
+    <p><strong>Total Sales:</strong> ${{ summary.total_sales }}</p>
+    <p><strong>Total Bookings:</strong> {{ summary.total_bookings }}</p>
+
+    <a href="{{ url_for('index') }}">Back to Bookings Overview</a>
+</body>
+</html>
