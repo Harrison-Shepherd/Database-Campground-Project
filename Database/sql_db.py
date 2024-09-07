@@ -1,14 +1,15 @@
-# sql_db.py
+# Database/sql_db.py
 
 import pyodbc
 
 def connect_to_sql():
+    # Define your connection string
     connection_string = (
         "Driver={ODBC Driver 18 for SQL Server};"
-        "Server=tcp:campground-server.database.windows.net,1433;"
+        "Server=campground-server.database.windows.net;"
         "Database=CampgroundBookingsDB;"
         "Uid=CampgroundAdmin;"
-        "Pwd=CampgroundDatabasePassword!1;"  # Replace with your actual password
+        "Pwd=CampgroundDatabasePassword!1;"
         "Encrypt=yes;"
         "TrustServerCertificate=no;"
         "Connection Timeout=30;"
@@ -16,17 +17,24 @@ def connect_to_sql():
     conn = pyodbc.connect(connection_string)
     return conn
 
-def test_connection():
-    try:
-        conn = connect_to_sql()
-        cursor = conn.cursor()
-        cursor.execute("SELECT TOP 1 * FROM daily_summary")  # Adjust this query as per your table structure
-        row = cursor.fetchone()
-        print("Connection successful. Sample data:", row)
-    except Exception as e:
-        print("Error connecting to SQL database:", e)
-    finally:
-        conn.close()
-
-if __name__ == "__main__":
-    test_connection()
+def insert_summary(conn, summary):
+    """
+    Inserts a daily summary into the summary table.
+    
+    :param conn: Database connection object.
+    :param summary: Dictionary with summary data containing
+                    campground_id, summary_date, total_sales, total_bookings.
+    """
+    cursor = conn.cursor()
+    query = """
+        INSERT INTO camping.summary (campground_id, summary_date, total_sales, total_bookings)
+        VALUES (?, ?, ?, ?)
+    """
+    cursor.execute(
+        query,
+        summary['campground_id'],
+        summary['summary_date'],
+        summary['total_sales'],
+        summary['total_bookings']
+    )
+    conn.commit()

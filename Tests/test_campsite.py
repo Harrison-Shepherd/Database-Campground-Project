@@ -1,23 +1,16 @@
-# Tests/test_campsite.py
-
 import unittest
-from datetime import datetime, timedelta
 from Models.campsite import Campsite
 
 class TestCampsite(unittest.TestCase):
+
     def setUp(self):
-        # Set up a campsite for testing
-        self.campsite = Campsite(1, "Large", 70)
+        """Set up a campsite with available dates."""
+        self.campsite = Campsite(site_number=1, size="Large", rate=60, available_dates=["2024-09-07", "2024-09-08"])
 
     def test_campsite_availability(self):
-        # Test if the campsite is available before booking
-        start_date = datetime(2024, 9, 7)
-        end_date = datetime(2024, 9, 14)
-        self.assertTrue(self.campsite.is_available(start_date, end_date))
-        
-        # Book the campsite and check availability again
-        self.campsite.book(start_date, end_date)
-        self.assertFalse(self.campsite.is_available(start_date, end_date))
+        """Test checking availability within a date range."""
+        self.assertTrue(self.campsite.is_available("2024-09-07", "2024-09-08"))  # Should be available
+        self.assertFalse(self.campsite.is_available("2024-09-07", "2024-09-09"))  # Should not be available
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
