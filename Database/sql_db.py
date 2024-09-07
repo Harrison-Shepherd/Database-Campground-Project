@@ -1,3 +1,5 @@
+# sql_db.py
+
 import pyodbc
 
 def connect_to_sql():
@@ -14,11 +16,17 @@ def connect_to_sql():
     conn = pyodbc.connect(connection_string)
     return conn
 
-def insert_summary(conn, summary_data):
-    cursor = conn.cursor()
-    query = """
-        INSERT INTO daily_summary (campground_id, summary_date, total_sales, total_bookings)
-        VALUES (?, ?, ?, ?)
-    """
-    cursor.execute(query, summary_data['campground_id'], summary_data['summary_date'], summary_data['total_sales'], summary_data['total_bookings'])
-    conn.commit()
+def test_connection():
+    try:
+        conn = connect_to_sql()
+        cursor = conn.cursor()
+        cursor.execute("SELECT TOP 1 * FROM daily_summary")  # Adjust this query as per your table structure
+        row = cursor.fetchone()
+        print("Connection successful. Sample data:", row)
+    except Exception as e:
+        print("Error connecting to SQL database:", e)
+    finally:
+        conn.close()
+
+if __name__ == "__main__":
+    test_connection()
