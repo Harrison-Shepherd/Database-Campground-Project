@@ -1,4 +1,4 @@
-# Database/cosmos_db.py
+#Database/cosmos_db.py
 import uuid
 from azure.cosmos import CosmosClient, exceptions
 
@@ -29,51 +29,67 @@ def fetch_cosmos_bookings(container):
         print(f"An error occurred while fetching bookings: {e}")
         return []
 
-def insert_booking_to_cosmos(client, booking_data):
+def insert_booking_to_cosmos(container, booking_data):
     """
-    Inserts a booking into the Cosmos DB container.
-    :param client: Cosmos DB container client.
+    Inserts a booking into the Cosmos DB container if it does not already exist.
+    :param container: Cosmos DB container client.
     :param booking_data: The booking data to insert.
     """
     try:
-        # Ensure the booking_data contains a unique 'id'
-        booking_data['id'] = str(uuid.uuid4())  # Generates a unique ID
-        client.create_item(booking_data)
-        print("Booking inserted into Cosmos DB successfully.")
+        # Ensure booking_id exists in booking_data
+        booking_id = booking_data.get('booking_id')
+        if not booking_id:
+            print("Booking data is missing the 'booking_id'.")
+            return
+
+        # Check if the booking already exists
+        existing_booking = list(container.query_items(
+            query="SELECT * FROM c WHERE c.booking_id = @booking_id",
+            parameters=[{"name": "@booking_id", "value": booking_id}],
+            enable_cross_partition_query=True
+        ))
+
+        if existing_booking:
+            print(f"Booking with ID {booking_id} already exists in Cosmos DB. Skipping insertion.")
+        else:
+            booking_data['id'] = str(uuid.uuid4())  # Generates a unique ID for the Cosmos DB item
+            container.create_item(booking_data)
+            print(f"Booking {booking_id} inserted into Cosmos DB successfully.")
     except exceptions.CosmosHttpResponseError as e:
         print(f"An error occurred while inserting the booking: {e}")
     except Exception as e:
         print(f"An error occurred while inserting the booking: {e}")
 
-def update_booking_in_cosmos(client, booking_id, update_data):
+
+def update_booking_in_cosmos(container, booking_id, update_data):
     """
     Updates a booking document in Cosmos DB with the given booking ID.
-    :param client: Cosmos DB container client.
+    :param container: Cosmos DB container client.
     :param booking_id: The ID of the booking to update.
     :param update_data: A dictionary containing the data to update.
     """
     try:
         # Fetch the existing booking document by ID
-        booking = client.read_item(item=booking_id, partition_key=booking_id)
+        booking = container.read_item(item=booking_id, partition_key=booking_id)
         # Update the booking document with the provided data
         for key, value in update_data.items():
             booking[key] = value
-        client.replace_item(item=booking_id, body=booking)
+        container.replace_item(item=booking_id, body=booking)
         print(f"Booking with ID {booking_id} updated successfully.")
     except exceptions.CosmosResourceNotFoundError:
         print(f"Booking with ID {booking_id} not found.")
     except Exception as e:
         print(f"An error occurred while updating the booking: {e}")
 
-def delete_booking_from_cosmos(client, booking_id):
+def delete_booking_from_cosmos(container, booking_id):
     """
     Deletes a booking document from Cosmos DB using the booking ID.
-    :param client: Cosmos DB container client.
+    :param container: Cosmos DB container client.
     :param booking_id: The ID of the booking to delete.
     """
     try:
         # Attempt to delete the booking document by ID
-        client.delete_item(item=booking_id, partition_key=booking_id)
+        container.delete_item(item=booking_id, partition_key=booking_id)
         print(f"Booking with ID {booking_id} deleted successfully.")
     except exceptions.CosmosResourceNotFoundError:
         print(f"Booking with ID {booking_id} not found.")
