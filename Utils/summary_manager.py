@@ -1,44 +1,42 @@
+# Utils/summary_manager.py
 from datetime import datetime
 from Database.sql_db import insert_summary
-from Models.campsite import Campsite
-from Models.booking import Booking
+from Database.head_office_db import write_summary_to_head_office
+from Models.summary import Summary
 
 def create_and_insert_summary(sql_conn, bookings, head_office_conn):
     """
-    Creates and inserts a daily summary of bookings into the SQL database and writes it back to Head Office.
+    Creates and inserts a daily summary of bookings into the local SQL database and the Head Office database.
+    
+    :param sql_conn: SQL database connection for local summary insertion.
+    :param bookings: List of processed Booking objects.
+    :param head_office_conn: Connection to the Head Office SQL database.
     """
+    # Calculate the total sales and total bookings from the processed bookings
     total_sales = sum(booking.total_cost for booking in bookings if booking.campsite_id is not None)
-    total_bookings = len(bookings)
-    summary_data = {
-        "campground_id": 1121132,  # Replace with your student ID
-        "summary_date": datetime.now().strftime("%Y-%m-%d"),
-        "total_sales": total_sales,
-        "total_bookings": total_bookings
-    }
+    total_bookings = len([booking for booking in bookings if booking.campsite_id is not None])
+
+    # Create a Summary object with the calculated data
+    summary = Summary(
+        campground_id=1121132,  # Replace with your student ID
+        summary_date=datetime.now().date(),
+        total_sales=total_sales,
+        total_bookings=total_bookings
+    )
 
     try:
-        # Insert summary into local SQL database
-        insert_summary(sql_conn, summary_data)
-        print("Summary inserted successfully into local SQL database.")
+        # Validate the summary data before insertion
+        summary.validate()
 
-        # Write summary back to Head Office database
-        write_summary_to_head_office(head_office_conn, summary_data)
-        print("Summary written back to Head Office database successfully.")
+        # Insert the summary into the local SQL database
+        insert_summary(sql_conn, summary.to_dict())
+        print("Summary inserted successfully into the local SQL database.")
+
+        # Insert the summary into the Head Office database
+        write_summary_to_head_office(head_office_conn, summary.to_dict())
+        print("Summary written back to the Head Office database successfully.")
     except Exception as e:
-        print(f"An error occurred while inserting summary: {e}")
-
-def write_summary_to_head_office(head_office_conn, summary_data):
-    """
-    Writes the summary data back to the Head Office database.
-    """
-    cursor = head_office_conn.cursor()
-    query = """
-    INSERT INTO head_office.summary (campground_id, summary_date, total_sales, total_bookings)
-    VALUES (?, ?, ?, ?)
-    """
-    cursor.execute(query, (summary_data["campground_id"], summary_data["summary_date"],
-                           summary_data["total_sales"], summary_data["total_bookings"]))
-    head_office_conn.commit()
+        print(f"An error occurred while inserting the summary: {e}")
 
 def generate_summary(bookings, campsites):
     """

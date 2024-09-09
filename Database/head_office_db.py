@@ -1,6 +1,5 @@
 # Database/head_office_db.py
 import pyodbc
-from Database.sql_db import connect_to_sql  # Import connect_to_sql from sql_db.py
 
 def connect_to_head_office():
     """
@@ -26,7 +25,6 @@ def fetch_bookings(conn):
     :return: A list of booking records.
     """
     cursor = conn.cursor()
-    
     query = """
     SELECT 
         b.booking_id, 
@@ -59,54 +57,3 @@ def update_booking_campground(conn, booking_id, new_campground_id):
     query = "UPDATE head_office.booking SET campground_id = ? WHERE booking_id = ?"
     cursor.execute(query, (new_campground_id, booking_id))
     conn.commit()
-
-if __name__ == "__main__":
-    sql_conn = None
-    head_office_conn = None
-    cosmos_conn = None
-
-    try:
-        # Step 1: Connect to SQL database
-        sql_conn = connect_to_sql()
-        print("Connected to SQL database successfully.")
-
-        # Step 2: Connect to Head Office database and fetch bookings
-        head_office_conn = connect_to_head_office()
-        print("Connected to Head Office database successfully.")
-        bookings = fetch_bookings(head_office_conn)
-        print(f"Fetched {len(bookings)} bookings from the head office database.")
-
-        # Step 3: Import other functions inside the function scope to avoid circular imports
-        from Utils.booking_processor import process_bookings
-        from Database.cosmos_db import connect_to_cosmos, insert_booking_to_cosmos
-        from Models.booking import Booking, create_booking_data
-        from Utils.campsite_manager import initialize_campsites
-        from Utils.summary_manager import generate_summary, display_summary, create_and_insert_summary
-
-        # Step 4: Connect to Cosmos DB
-        cosmos_conn = connect_to_cosmos()
-        print("Connected to Cosmos DB successfully.")
-
-        # Step 5: Initialize campsites
-        campsites = initialize_campsites()
-
-        # Step 6: Process the bookings to allocate campsites
-        process_bookings(bookings, campsites, head_office_conn, cosmos_conn, 1121132)
-
-        # Step 7: Generate summary and write back to Head Office
-        summary = generate_summary(bookings, campsites)
-        display_summary(summary)
-        create_and_insert_summary(sql_conn, bookings)
-
-    except Exception as e:
-        print(f"An error occurred: {e}")
-
-    finally:
-        # Close connections properly
-        if sql_conn:
-            sql_conn.close()
-            print("SQL connection closed.")
-        if head_office_conn:
-            head_office_conn.close()
-            print("Head Office connection closed.")
-        print("Cosmos DB connection management is handled by SDK.")
