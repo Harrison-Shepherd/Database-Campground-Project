@@ -1,16 +1,18 @@
 # Database/sql_db.py
+
 import pyodbc
 
 def connect_to_sql():
     """
-    Connects to the local SQL database and returns the connection object.
+    Connects to the local SQL database (camping).
+    :return: Connection object to the SQL database.
     """
     connection_string = (
         "Driver={ODBC Driver 18 for SQL Server};"
-        "Server=campground-server.database.windows.net;"  # Server address for local SQL
-        "Database=CampgroundBookingsDB;"                  # Database name
-        "Uid=CampgroundAdmin;"                            # Username
-        "Pwd=CampgroundDatabasePassword!1;"               # Password
+        "Server=campground-server.database.windows.net;"
+        "Database=CampgroundBookingsDB;"
+        "Uid=CampgroundAdmin;"
+        "Pwd=CampgroundDatabasePassword!1;"
         "Encrypt=yes;"
         "TrustServerCertificate=no;"
         "Connection Timeout=30;"

@@ -1,4 +1,5 @@
 # Database/head_office_db.py
+
 import pyodbc
 
 def connect_to_head_office():
@@ -25,6 +26,7 @@ def fetch_bookings(conn):
     :return: A list of booking records.
     """
     cursor = conn.cursor()
+    
     query = """
     SELECT 
         b.booking_id, 
