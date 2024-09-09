@@ -1,61 +1,66 @@
+# create_additional_campsites.py
 from azure.cosmos import CosmosClient, exceptions
-from datetime import datetime, timedelta
+import uuid
 
-# Connection details for Cosmos DB
-endpoint = "https://harrisonshepherd.documents.azure.com:443/"
-primary_key = "cbl5qkgWcGm0xIWYmUyEZXyXRbxXbGIwQvAwuCXkQ2W7C3768eJH6B5kIP3ji8BlhyctiJQQACTvACDb6LGWqg=="
-client = CosmosClient(endpoint, primary_key)
-database = client.get_database_client('CampgroundBookingsDB')
-campsite_container = database.get_container_client('Campsites')
+# Cosmos DB connection details
+ENDPOINT = "https://harrisonshepherd.documents.azure.com:443/"
+PRIMARY_KEY = "cbl5qkgWcGm0xIWYmUyEZXyXRbxXbGIwQvAwuCXkQ2W7C3768eJH6B5kIP3ji8BlhyctiJQQACTvACDb6LGWqg=="
 
-def generate_available_dates(start_date, count):
+def connect_to_cosmos():
     """
-    Generate a list of available dates starting from a given date.
-    :param start_date: The date to start from.
-    :param count: Number of weeks to generate dates for.
-    :return: List of available dates.
+    Connect to Cosmos DB and return the container client.
     """
-    dates = []
-    current_date = start_date
-    for _ in range(count):
-        dates.append(current_date.strftime('%Y-%m-%d'))
-        current_date += timedelta(weeks=1)
-    return dates
+    client = CosmosClient(ENDPOINT, PRIMARY_KEY)
+    database = client.get_database_client('CampgroundBookingsDB')
+    container = database.get_container_client('Campsites')
+    return container
 
-def create_campsite_data():
+def create_campsites(container):
     """
-    Creates campsite data for different sizes.
+    Create additional campsites in Cosmos DB.
     """
-    campsite_data = []
-    sizes = [('Small', 50), ('Medium', 60), ('Large', 70)]
-    start_date = datetime(2024, 10, 1)  # Example start date
+    campsites = []
 
-    # Create 15 campsites (5 of each size)
-    site_number = 1
-    for size, rate in sizes:
-        for _ in range(5):
-            campsite = {
-                "id": str(site_number),
-                "site_number": site_number,
-                "site_size": size,
-                "daily_rate": rate,
-                "available_dates": generate_available_dates(start_date, 10)  # Generate 10 weeks of availability
-            }
-            campsite_data.append(campsite)
-            site_number += 1
-    return campsite_data
+    # Add 10 Small campsites
+    for i in range(1, 11):
+        campsites.append({
+            'id': str(uuid.uuid4()),
+            'site_number': i,
+            'size': 'Small',
+            'rate_per_night': 50,
+            'available_dates': []  # Initialize with empty available dates
+        })
 
-def populate_campsites():
-    """
-    Populate the Campsites collection in Cosmos DB with sample data.
-    """
-    campsites = create_campsite_data()
+    # Add 10 Medium campsites
+    for i in range(11, 21):
+        campsites.append({
+            'id': str(uuid.uuid4()),
+            'site_number': i,
+            'size': 'Medium',
+            'rate_per_night': 60,
+            'available_dates': []
+        })
+
+    # Add 10 Large campsites
+    for i in range(21, 31):
+        campsites.append({
+            'id': str(uuid.uuid4()),
+            'site_number': i,
+            'size': 'Large',
+            'rate_per_night': 70,
+            'available_dates': []
+        })
+
+    # Insert each campsite into the Cosmos DB container
     for campsite in campsites:
         try:
-            campsite_container.upsert_item(campsite)
-            print(f"Inserted campsite {campsite['site_number']} into Cosmos DB.")
+            container.create_item(body=campsite)
+            print(f"Campsite {campsite['site_number']} added successfully.")
+        except exceptions.CosmosResourceExistsError:
+            print(f"Campsite {campsite['site_number']} already exists in the database.")
         except exceptions.CosmosHttpResponseError as e:
-            print(f"An error occurred while inserting campsite {campsite['site_number']}: {e}")
+            print(f"Failed to add campsite {campsite['site_number']}: {e}")
 
-# Run the function to populate the campsites
-populate_campsites()
+if __name__ == "__main__":
+    container = connect_to_cosmos()
+    create_campsites(container)
