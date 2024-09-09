@@ -1,5 +1,6 @@
 # Database/head_office_db.py
 import pyodbc
+from Database.sql_db import connect_to_sql  # Import connect_to_sql from sql_db.py
 
 def connect_to_head_office():
     """
@@ -22,7 +23,7 @@ def fetch_bookings(conn):
     """
     Fetches bookings from the head_office.booking table and includes customer names.
     :param conn: The connection object to the SQL database.
-    :return: A list of bookings fetched from the database.
+    :return: A list of booking records.
     """
     cursor = conn.cursor()
     
@@ -35,7 +36,7 @@ def fetch_bookings(conn):
         b.campground_id, 
         b.campsite_size, 
         b.num_campsites, 
-        CONCAT(c.first_name, ' ', c.last_name) AS customer_name  -- Combine first and last name for customer_name
+        CONCAT(c.first_name, ' ', c.last_name) AS customer_name
     FROM 
         head_office.booking b
     JOIN 
@@ -44,9 +45,8 @@ def fetch_bookings(conn):
         b.campground_id = 1121132;
     """
     cursor.execute(query)
-    bookings = cursor.fetchall()
-    return bookings
-
+    rows = cursor.fetchall()
+    return rows
 
 def update_booking_campground(conn, booking_id, new_campground_id):
     """
@@ -61,25 +61,52 @@ def update_booking_campground(conn, booking_id, new_campground_id):
     conn.commit()
 
 if __name__ == "__main__":
+    sql_conn = None
+    head_office_conn = None
+    cosmos_conn = None
+
     try:
-        # Attempt to connect to the Head Office database
-        conn = connect_to_head_office()
+        # Step 1: Connect to SQL database
+        sql_conn = connect_to_sql()
+        print("Connected to SQL database successfully.")
+
+        # Step 2: Connect to Head Office database and fetch bookings
+        head_office_conn = connect_to_head_office()
         print("Connected to Head Office database successfully.")
-        
-        # Fetch and print the number of bookings
-        bookings = fetch_bookings(conn)
-        print(f"Fetched {len(bookings)} bookings from the database.")
-        
-        # Example of updating a booking's campground ID (using the first booking fetched)
-        if bookings:
-            first_booking_id = bookings[0][0]  # Assuming the first column is booking_id
-            update_booking_campground(conn, first_booking_id, 1121132)  # Replace 1121132 with your student ID
-            print(f"Updated booking {first_booking_id} to new campground ID 1121132.")
+        bookings = fetch_bookings(head_office_conn)
+        print(f"Fetched {len(bookings)} bookings from the head office database.")
+
+        # Step 3: Import other functions inside the function scope to avoid circular imports
+        from Utils.booking_processor import process_bookings
+        from Database.cosmos_db import connect_to_cosmos, insert_booking_to_cosmos
+        from Models.booking import Booking, create_booking_data
+        from Utils.campsite_manager import initialize_campsites
+        from Utils.summary_manager import generate_summary, display_summary, create_and_insert_summary
+
+        # Step 4: Connect to Cosmos DB
+        cosmos_conn = connect_to_cosmos()
+        print("Connected to Cosmos DB successfully.")
+
+        # Step 5: Initialize campsites
+        campsites = initialize_campsites()
+
+        # Step 6: Process the bookings to allocate campsites
+        process_bookings(bookings, campsites, head_office_conn, cosmos_conn, 1121132)
+
+        # Step 7: Generate summary and write back to Head Office
+        summary = generate_summary(bookings, campsites)
+        display_summary(summary)
+        create_and_insert_summary(sql_conn, bookings)
 
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"An error occurred: {e}")
+
     finally:
-        # Ensure the connection is closed to avoid resource leaks
-        if conn:
-            conn.close()
-            print("Connection closed.")
+        # Close connections properly
+        if sql_conn:
+            sql_conn.close()
+            print("SQL connection closed.")
+        if head_office_conn:
+            head_office_conn.close()
+            print("Head Office connection closed.")
+        print("Cosmos DB connection management is handled by SDK.")

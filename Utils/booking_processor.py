@@ -15,7 +15,7 @@ def process_bookings(bookings, campsites, head_office_conn, cosmos_conn, campgro
     """
     Processes bookings by allocating campsites and inserting booking data into Cosmos DB.
     
-    :param bookings: List of booking tuples fetched from the Head Office database.
+    :param bookings: List of Booking objects.
     :param campsites: List of Campsite objects available for allocation.
     :param head_office_conn: Connection to the Head Office database.
     :param cosmos_conn: Connection to the Cosmos DB.
@@ -24,8 +24,11 @@ def process_bookings(bookings, campsites, head_office_conn, cosmos_conn, campgro
     allocated_bookings = set()
     inserted_bookings = set()
 
-    for booking_tuple in bookings:
-        booking = Booking.from_db_record(booking_tuple)
+    for booking in bookings:
+        if not isinstance(booking, Booking):
+            logging.error(f"Expected Booking object but got {type(booking)}. Skipping this record.")
+            continue
+        
         adjusted_start_date = Booking.adjust_to_saturday(booking.arrival_date)
         adjusted_end_date = adjusted_start_date + timedelta(days=7)
 

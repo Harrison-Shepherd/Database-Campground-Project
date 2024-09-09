@@ -1,6 +1,5 @@
 # Models/booking.py
 from datetime import datetime, timedelta, date
-from Database.head_office_db import fetch_bookings, update_booking_campground
 from Models.campsite import allocate_campsite
 import logging
 
@@ -15,7 +14,7 @@ class Booking:
         self.campground_id = campground_id
         self.campsite_id = None
         self.total_cost = 0
-        self.customer_name = customer_name  # Add customer name
+        self.customer_name = customer_name
 
     def __repr__(self):
         return f"<Booking {self.booking_id} - Customer {self.customer_id}>"
@@ -69,14 +68,8 @@ class Booking:
             campground_id=record[4],
             campsite_size=record[5],
             num_campsites=record[6],
-            customer_name=record[7]  # Make sure this field is present in your query
+            customer_name=record[7]
         )
-
-    @staticmethod
-    def fetch_bookings(head_office_conn):
-        raw_bookings = fetch_bookings(head_office_conn)
-        bookings = [Booking.from_db_record(record) for record in raw_bookings]
-        return bookings
 
     @staticmethod
     def adjust_to_saturday(start_date):
@@ -85,18 +78,24 @@ class Booking:
             return start_date
         return start_date + timedelta(days=days_to_saturday)
 
-    def allocate_campsite(self, campsites, head_office_conn):
+    def allocate_campsite(self, campsites, head_office_conn, update_booking_campground_func):
         adjusted_start_date = Booking.adjust_to_saturday(self.arrival_date)
         adjusted_end_date = adjusted_start_date + timedelta(days=7)
 
         allocated_campsite = allocate_campsite(campsites, adjusted_start_date, adjusted_end_date, self)
         if allocated_campsite:
             self.update_campsite_info(allocated_campsite.site_number, allocated_campsite.rate_per_night)
-            update_booking_campground(head_office_conn, self.booking_id, self.campground_id)
+            update_booking_campground_func(head_office_conn, self.booking_id, self.campground_id)
             print(f"Booking {self.booking_id} successfully allocated to Campsite {allocated_campsite.site_number}.")
         else:
             print(f"No available campsites for Booking {self.booking_id} from {adjusted_start_date} to {adjusted_end_date}.")
         return allocated_campsite
 
 def create_booking_data(booking):
-    return booking.to_dict()
+    """
+    Prepare booking data to be stored in Cosmos DB.
+    """
+    booking_data = booking.to_dict()
+    booking_data["confirmation"] = f"confirmation_{booking.booking_id}.pdf"  # Reference the confirmation PDF
+    # Add any additional data fields necessary
+    return booking_data

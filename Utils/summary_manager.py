@@ -3,35 +3,47 @@ from Database.sql_db import insert_summary
 from Models.campsite import Campsite
 from Models.booking import Booking
 
-def create_and_insert_summary(sql_conn, bookings):
+def create_and_insert_summary(sql_conn, bookings, head_office_conn):
     """
-    Creates and inserts a daily summary of bookings into the SQL database based on processed bookings.
-
-    :param sql_conn: SQL database connection.
-    :param bookings: List of Booking objects that have been processed.
+    Creates and inserts a daily summary of bookings into the SQL database and writes it back to Head Office.
     """
-    # Calculate total sales and total bookings from the list of processed bookings
     total_sales = sum(booking.total_cost for booking in bookings if booking.campsite_id is not None)
     total_bookings = len(bookings)
-
     summary_data = {
-        "campground_id": 1121132,  # Replace with your student ID or relevant identifier
+        "campground_id": 1121132,  # Replace with your student ID
         "summary_date": datetime.now().strftime("%Y-%m-%d"),
         "total_sales": total_sales,
         "total_bookings": total_bookings
     }
 
     try:
+        # Insert summary into local SQL database
         insert_summary(sql_conn, summary_data)
-        print("Summary inserted successfully.")
+        print("Summary inserted successfully into local SQL database.")
+
+        # Write summary back to Head Office database
+        write_summary_to_head_office(head_office_conn, summary_data)
+        print("Summary written back to Head Office database successfully.")
     except Exception as e:
         print(f"An error occurred while inserting summary: {e}")
 
+def write_summary_to_head_office(head_office_conn, summary_data):
+    """
+    Writes the summary data back to the Head Office database.
+    """
+    cursor = head_office_conn.cursor()
+    query = """
+    INSERT INTO head_office.summary (campground_id, summary_date, total_sales, total_bookings)
+    VALUES (?, ?, ?, ?)
+    """
+    cursor.execute(query, (summary_data["campground_id"], summary_data["summary_date"],
+                           summary_data["total_sales"], summary_data["total_bookings"]))
+    head_office_conn.commit()
 
 def generate_summary(bookings, campsites):
     """
     Generates a summary of booking allocations and campsite utilization.
-    
+
     :param bookings: List of Booking objects.
     :param campsites: List of Campsite objects.
     :return: A dictionary containing summary details.
@@ -62,18 +74,17 @@ def generate_summary(bookings, campsites):
 
     return summary
 
-
 def display_summary(summary):
     """
     Displays the summary of booking allocations and campsite utilization.
-    
+
     :param summary: A dictionary containing summary details.
     """
     print("\nSummary of Booking Allocations:")
     print(f"Total Bookings: {summary['total_bookings']}")
     print(f"Successful Allocations: {summary['successful_allocations']}")
     print(f"Failed Allocations: {summary['failed_allocations']}\n")
-    
+
     print("Campsite Utilization:")
     for site_number, details in summary['campsite_utilization'].items():
         print(f"Campsite {site_number}: Size - {details['size']}, Rate - ${details['rate_per_night']} per night, "

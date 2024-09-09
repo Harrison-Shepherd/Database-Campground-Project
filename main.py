@@ -1,11 +1,11 @@
+# main.py
 from Database.sql_db import connect_to_sql
 from Database.head_office_db import connect_to_head_office, fetch_bookings
 from Database.cosmos_db import connect_to_cosmos
-from Models.campsite import Campsite
+from Models.booking import Booking
 from Utils.booking_processor import process_bookings
 from Utils.campsite_manager import initialize_campsites
-from Utils.summary_manager import create_and_insert_summary, generate_summary, display_summary
-
+from Utils.summary_manager import generate_summary, display_summary  # Import the summary functions
 import logging
 
 # Configure logging to suppress less relevant logs, and only show INFO and above
@@ -29,10 +29,18 @@ def main():
         head_office_conn = connect_to_head_office()
         print("Connected to Head Office database successfully.")
 
-        bookings = fetch_bookings(head_office_conn)
-        print(f"Fetched {len(bookings)} bookings from the head office database.")
+        raw_bookings = fetch_bookings(head_office_conn)
+        print(f"Fetched {len(raw_bookings)} bookings from the head office database.")
 
-        # Step 3: Initialize campsites
+        # Convert raw rows to Booking objects
+        bookings = []
+        for record in raw_bookings:
+            try:
+                booking = Booking.from_db_record(record)
+                bookings.append(booking)
+            except Exception as e:
+                print(f"Expected Booking object but got {type(record)}. Skipping this record.")
+
         campsites = initialize_campsites()
 
         # Step 4: Connect to Cosmos DB
@@ -47,14 +55,11 @@ def main():
         summary = generate_summary(bookings, campsites)
         display_summary(summary)
 
-        # Step 7: Create and insert the summary into the SQL database
-        create_and_insert_summary(sql_conn, bookings)
-
     except Exception as e:
         print(f"An error occurred: {e}")
 
     finally:
-        # Step 8: Close all connections
+        # Step 7: Close all connections
         if sql_conn:
             sql_conn.close()
             print("SQL connection closed.")
