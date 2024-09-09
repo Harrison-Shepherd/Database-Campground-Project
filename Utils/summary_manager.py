@@ -4,41 +4,83 @@ from datetime import datetime
 from Database.sql_db import connect_to_sql
 from Database.head_office_db import connect_to_head_office
 from Models.summary import Summary
+from fpdf import FPDF  # Ensure you have installed fpdf using pip install fpdf
+import os
 
-def create_and_insert_summary(sql_conn, bookings):
+# Define the folder to save confirmation PDFs
+CONFIRMATION_FOLDER = "confirmation_pdfs"
+
+# Ensure the folder exists
+os.makedirs(CONFIRMATION_FOLDER, exist_ok=True)
+
+
+def create_and_insert_summary(bookings):
     """
     Creates and inserts a daily summary of bookings into the local SQL database and the Head Office database.
+    Also generates a PDF confirmation of the summary.
     
-    :param sql_conn: SQL database connection for local summary insertion.
     :param bookings: List of processed Booking objects.
     """
-    # Calculate the total sales and total bookings from the processed bookings
-    total_sales = sum(booking.total_cost for booking in bookings if booking.campsite_id is not None)
-    total_bookings = len([booking for booking in bookings if booking.campsite_id is not None])
-
-    # Create a Summary object with the calculated data
-    summary = Summary(
-        campground_id=1121132,  # Replace with your student ID
-        summary_date=datetime.now().date(),
-        total_sales=total_sales,
-        total_bookings=total_bookings
-    )
-
     try:
+        # Calculate the total sales and total bookings from the processed bookings
+        total_sales = sum(booking.total_cost for booking in bookings if booking.campsite_id is not None)
+        total_bookings = len([booking for booking in bookings if booking.campsite_id is not None])
+
+        # Log calculated totals
+        print(f"Calculated Total Sales: {total_sales}, Total Bookings: {total_bookings}")
+
+        # Create a Summary object with the calculated data
+        summary = Summary(
+            campground_id=1121132,  # Replace with your student ID
+            summary_date=datetime.now().date(),
+            total_sales=total_sales,
+            total_bookings=total_bookings
+        )
+
+        # Log the summary object creation
+        print(f"Summary object created: {summary}")
+
         # Validate the summary data before insertion
         summary.validate()
+        print("Summary data validated successfully.")
 
-        # Insert the summary into the local SQL database
+        # Insert into both databases and generate PDF
+        insert_summary_into_databases(summary)
+        generate_summary_pdf(summary)
+        print("Summary PDF generated and saved successfully.")
+
+    except Exception as e:
+        print(f"An error occurred while creating and inserting the summary: {e}")
+
+
+def insert_summary_into_databases(summary):
+    """
+    Inserts the summary into both the local SQL and Head Office databases.
+    
+    :param summary: Summary object containing summary data.
+    """
+    # Attempt to insert into the local SQL database
+    try:
+        print("Attempting to connect to the local SQL database...")
+        sql_conn = connect_to_sql()
+        print("Connected to local SQL database.")
         insert_summary(sql_conn, summary.to_dict())
         print("Summary inserted successfully into the local SQL database.")
-
-        # Insert the summary into the Head Office database
-        head_office_conn = connect_to_head_office()
-        write_summary_to_head_office(head_office_conn, summary.to_dict())
-        head_office_conn.close()
-        print("Summary written back to the Head Office database successfully.")
+        sql_conn.close()
     except Exception as e:
-        print(f"An error occurred while inserting the summary: {e}")
+        print(f"An error occurred while inserting into the local SQL database: {e}")
+
+    # Attempt to insert into the Head Office database
+    try:
+        print("Attempting to connect to the Head Office SQL database...")
+        head_office_conn = connect_to_head_office()
+        print("Connected to Head Office SQL database.")
+        write_summary_to_head_office(head_office_conn, summary.to_dict())
+        print("Summary written back to the Head Office database successfully.")
+        head_office_conn.close()
+    except Exception as e:
+        print(f"An error occurred while writing summary to Head Office: {e}")
+
 
 def insert_summary(conn, summary_data):
     """
@@ -48,6 +90,7 @@ def insert_summary(conn, summary_data):
     :param summary_data: Dictionary containing summary details.
     """
     try:
+        print(f"Attempting to insert summary into the local SQL database: {summary_data}")
         cursor = conn.cursor()
         query = """
             INSERT INTO camping.summary (campground_id, summary_date, total_sales, total_bookings)
@@ -61,8 +104,10 @@ def insert_summary(conn, summary_data):
             summary_data['total_bookings']
         )
         conn.commit()
+        print("Insert into local SQL database successful.")
     except Exception as e:
         print(f"An error occurred while inserting summary into the local SQL database: {e}")
+
 
 def write_summary_to_head_office(conn, summary_data):
     """
@@ -72,6 +117,7 @@ def write_summary_to_head_office(conn, summary_data):
     :param summary_data: Dictionary containing summary details.
     """
     try:
+        print(f"Attempting to insert summary into the Head Office database: {summary_data}")
         cursor = conn.cursor()
         query = """
         INSERT INTO head_office.summary (campground_id, summary_date, total_sales, total_bookings)
@@ -80,8 +126,37 @@ def write_summary_to_head_office(conn, summary_data):
         cursor.execute(query, (summary_data["campground_id"], summary_data["summary_date"],
                                summary_data["total_sales"], summary_data["total_bookings"]))
         conn.commit()
+        print("Insert into Head Office database successful.")
     except Exception as e:
         print(f"An error occurred while writing summary to Head Office: {e}")
+
+
+def generate_summary_pdf(summary):
+    """
+    Generates a PDF file for the summary and saves it in the 'confirmation_pdfs' folder.
+    
+    :param summary: Summary object containing the summary data.
+    """
+    try:
+        print(f"Generating PDF for summary: {summary}")
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font("Arial", size=12)
+
+        # Add content to the PDF
+        pdf.cell(200, 10, txt="Daily Summary Report", ln=True, align="C")
+        pdf.cell(200, 10, txt=f"Campground ID: {summary.campground_id}", ln=True)
+        pdf.cell(200, 10, txt=f"Summary Date: {summary.summary_date}", ln=True)
+        pdf.cell(200, 10, txt=f"Total Sales: ${summary.total_sales:.2f}", ln=True)
+        pdf.cell(200, 10, txt=f"Total Bookings: {summary.total_bookings}", ln=True)
+
+        # Define the filename and save the PDF
+        filename = os.path.join(CONFIRMATION_FOLDER, f"summary_{summary.summary_date}.pdf")
+        pdf.output(filename)
+        print(f"Summary PDF saved as {filename}")
+    except Exception as e:
+        print(f"An error occurred while generating the summary PDF: {e}")
+
 
 def generate_summary(bookings, campsites):
     """
@@ -116,6 +191,7 @@ def generate_summary(bookings, campsites):
         }
 
     return summary
+
 
 def display_summary(summary):
     """

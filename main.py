@@ -5,7 +5,7 @@ from Database.cosmos_db import connect_to_cosmos
 from Models.booking import Booking
 from Utils.booking_processor import process_bookings
 from Utils.campsite_manager import initialize_campsites
-from Utils.summary_manager import generate_summary, display_summary  # Import the summary functions
+from Utils.summary_manager import generate_summary, display_summary, create_and_insert_summary  # Import the summary functions
 import logging
 
 # Configure logging to suppress less relevant logs, and only show INFO and above
@@ -41,6 +41,7 @@ def main():
             except Exception as e:
                 print(f"Expected Booking object but got {type(record)}. Skipping this record.")
 
+        # Initialize campsites
         campsites = initialize_campsites()
 
         # Step 4: Connect to Cosmos DB
@@ -55,11 +56,15 @@ def main():
         summary = generate_summary(bookings, campsites)
         display_summary(summary)
 
+        # Step 7: Create and insert the summary into databases and generate the PDF
+        create_and_insert_summary(bookings)
+        print("Summary creation, insertion, and PDF generation completed.")
+
     except Exception as e:
         print(f"An error occurred: {e}")
 
     finally:
-        # Step 7: Close all connections
+        # Step 8: Close all connections
         if sql_conn:
             sql_conn.close()
             print("SQL connection closed.")
