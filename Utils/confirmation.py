@@ -1,5 +1,4 @@
-# Utils/confirmation.py
-
+import os
 from fpdf import FPDF
 
 class ConfirmationPDF(FPDF):
@@ -24,9 +23,18 @@ class ConfirmationPDF(FPDF):
         self.add_booking_details()
         self.output(filename)
 
-# Example usage:
+# Function to generate confirmation and save in a folder
 def generate_confirmation(booking):
+    # Define the folder path
+    folder_path = "confirmation_pdfs"
+    
+    # Create the folder if it doesn't exist
+    os.makedirs(folder_path, exist_ok=True)
+    
+    # Set the filename inside the folder
+    filename = os.path.join(folder_path, f"confirmation_{booking.booking_id}.pdf")
+    
+    # Generate and save the PDF
     pdf = ConfirmationPDF(booking)
-    filename = f"confirmation_{booking.booking_id}.pdf"
     pdf.generate_pdf(filename)
     print(f"Confirmation saved as {filename}.")

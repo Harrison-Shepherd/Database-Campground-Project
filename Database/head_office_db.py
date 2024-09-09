@@ -20,16 +20,33 @@ def connect_to_head_office():
 
 def fetch_bookings(conn):
     """
-    Fetches bookings from the head_office.booking table where campground_id matches your student ID.
+    Fetches bookings from the head_office.booking table and includes customer names.
     :param conn: The connection object to the SQL database.
     :return: A list of bookings fetched from the database.
     """
     cursor = conn.cursor()
-    # Adjust the query to match your specific campground_id (student ID)
-    query = "SELECT * FROM head_office.booking WHERE campground_id = 1121132;"  # Adjust if needed
+    
+    query = """
+    SELECT 
+        b.booking_id, 
+        b.customer_id, 
+        b.booking_date, 
+        b.arrival_date, 
+        b.campground_id, 
+        b.campsite_size, 
+        b.num_campsites, 
+        CONCAT(c.first_name, ' ', c.last_name) AS customer_name  -- Combine first and last name for customer_name
+    FROM 
+        head_office.booking b
+    JOIN 
+        head_office.customers c ON b.customer_id = c.customer_id
+    WHERE 
+        b.campground_id = 1121132;
+    """
     cursor.execute(query)
     bookings = cursor.fetchall()
     return bookings
+
 
 def update_booking_campground(conn, booking_id, new_campground_id):
     """

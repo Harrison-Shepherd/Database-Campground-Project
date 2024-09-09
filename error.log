@@ -1,0 +1,2 @@
+ERROR:root:An error occurred: create_booking_data() takes 1 positional argument but 3 were given
+ERROR:root:An error occurred: process_bookings() missing 3 required positional arguments: 'head_office_conn', 'cosmos_conn', and 'campground_id'

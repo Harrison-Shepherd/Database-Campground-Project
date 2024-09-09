@@ -1,10 +1,10 @@
-# Database/create_tables.py
-
+#Database/setup_sql.py
 import pyodbc
 
 def connect_to_sql():
     """
     Connects to the SQL Server database.
+    :return: Connection object or None if connection fails.
     """
     try:
         connection_string = (
@@ -29,7 +29,6 @@ def create_schema_if_not_exists(cursor):
     Creates the schema 'camping' if it does not exist.
     """
     try:
-        # SQL command to check if schema exists and create it if it does not
         query = """
         IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'camping')
         BEGIN
@@ -41,16 +40,10 @@ def create_schema_if_not_exists(cursor):
     except Exception as e:
         print(f"Error creating schema: {e}")
 
-def create_tables(conn):
+def create_tables(cursor):
     """
-    Creates the necessary tables in the SQL database.
+    Creates the necessary tables in the SQL database if they do not exist.
     """
-    cursor = conn.cursor()
-
-    # Create the schema if it doesn't exist
-    create_schema_if_not_exists(cursor)
-
-    # SQL commands to create the required tables
     create_customers_table = """
     IF OBJECT_ID('camping.customers', 'U') IS NULL
     BEGIN
@@ -94,21 +87,57 @@ def create_tables(conn):
     """
 
     try:
-        # Execute the commands to create tables
         cursor.execute(create_customers_table)
         cursor.execute(create_booking_table)
         cursor.execute(create_summary_table)
-        conn.commit()
         print("Tables created successfully.")
     except Exception as e:
         print(f"Error creating tables: {e}")
-        conn.rollback()
 
-def main():
+def execute_sql_file(cursor, file_path):
+    """
+    Executes an SQL script from a file.
+    :param cursor: Cursor object for the SQL connection.
+    :param file_path: Path to the .sql file to be executed.
+    """
+    try:
+        with open(file_path, 'r') as file:
+            sql_script = file.read()
+
+        cursor.execute(sql_script)
+        print(f"SQL script {file_path} executed successfully.")
+    except Exception as e:
+        print(f"Error executing SQL script: {e}")
+
+def setup_database():
+    """
+    Main function to set up the SQL database: create schema, tables, and load initial data.
+    """
     conn = connect_to_sql()
     if conn:
-        create_tables(conn)
-        conn.close()
+        cursor = conn.cursor()
+        try:
+            # Step 1: Create schema if not exists
+            create_schema_if_not_exists(cursor)
+
+            # Step 2: Create required tables
+            create_tables(cursor)
+            conn.commit()
+
+            # Step 3: Execute initial setup SQL files (if needed)
+            create_schema_path = "Assets/create_head_office_schema.sql"
+            load_data_path = "Assets/load_head_office_data.sql"
+            execute_sql_file(cursor, create_schema_path)
+            execute_sql_file(cursor, load_data_path)
+            conn.commit()
+
+        except Exception as e:
+            print(f"An error occurred during database setup: {e}")
+            conn.rollback()
+        finally:
+            cursor.close()
+            conn.close()
+            print("Database setup completed and connection closed.")
 
 if __name__ == "__main__":
-    main()
+    setup_database()

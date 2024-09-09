@@ -1,6 +1,10 @@
-#Database/cosmos_db.py
 import uuid
 from azure.cosmos import CosmosClient, exceptions
+import logging
+
+# Configure logging to suppress verbose outputs from external libraries and show only necessary information
+logging.basicConfig(level=logging.INFO, format='%(message)s')
+logging.getLogger('azure').setLevel(logging.WARNING)  # Suppresses lower-level logs from Azure SDK
 
 def connect_to_cosmos():
     """
@@ -24,9 +28,10 @@ def fetch_cosmos_bookings(container):
     try:
         query = "SELECT * FROM Bookings"
         items = list(container.query_items(query=query, enable_cross_partition_query=True))
+        logging.info(f"Fetched {len(items)} bookings from Cosmos DB.")
         return items
     except exceptions.CosmosHttpResponseError as e:
-        print(f"An error occurred while fetching bookings: {e}")
+        logging.error(f"An error occurred while fetching bookings: {e}")
         return []
 
 def insert_booking_to_cosmos(container, booking_data):
@@ -39,7 +44,7 @@ def insert_booking_to_cosmos(container, booking_data):
         # Ensure booking_id exists in booking_data
         booking_id = booking_data.get('booking_id')
         if not booking_id:
-            print("Booking data is missing the 'booking_id'.")
+            logging.error("Booking data is missing the 'booking_id'. Skipping insertion.")
             return
 
         # Check if the booking already exists
@@ -50,16 +55,15 @@ def insert_booking_to_cosmos(container, booking_data):
         ))
 
         if existing_booking:
-            print(f"Booking with ID {booking_id} already exists in Cosmos DB. Skipping insertion.")
+            logging.info(f"Booking with ID {booking_id} already exists in Cosmos DB. Skipping insertion.")
         else:
             booking_data['id'] = str(uuid.uuid4())  # Generates a unique ID for the Cosmos DB item
             container.create_item(booking_data)
-            print(f"Booking {booking_id} inserted into Cosmos DB successfully.")
+            logging.info(f"Booking {booking_id} inserted into Cosmos DB successfully.")
     except exceptions.CosmosHttpResponseError as e:
-        print(f"An error occurred while inserting the booking: {e}")
+        logging.error(f"An HTTP error occurred while inserting the booking {booking_id}: {e.status_code} {e.message}")
     except Exception as e:
-        print(f"An error occurred while inserting the booking: {e}")
-
+        logging.error(f"An error occurred while inserting the booking {booking_id}: {e}")
 
 def update_booking_in_cosmos(container, booking_id, update_data):
     """
@@ -74,12 +78,12 @@ def update_booking_in_cosmos(container, booking_id, update_data):
         # Update the booking document with the provided data
         for key, value in update_data.items():
             booking[key] = value
-        container.replace_item(item=booking_id, body=booking)
-        print(f"Booking with ID {booking_id} updated successfully.")
+        container.replace_item(item=booking['id'], body=booking)
+        logging.info(f"Booking with ID {booking_id} updated successfully.")
     except exceptions.CosmosResourceNotFoundError:
-        print(f"Booking with ID {booking_id} not found.")
+        logging.error(f"Booking with ID {booking_id} not found.")
     except Exception as e:
-        print(f"An error occurred while updating the booking: {e}")
+        logging.error(f"An error occurred while updating the booking {booking_id}: {e}")
 
 def delete_booking_from_cosmos(container, booking_id):
     """
@@ -90,8 +94,8 @@ def delete_booking_from_cosmos(container, booking_id):
     try:
         # Attempt to delete the booking document by ID
         container.delete_item(item=booking_id, partition_key=booking_id)
-        print(f"Booking with ID {booking_id} deleted successfully.")
+        logging.info(f"Booking with ID {booking_id} deleted successfully.")
     except exceptions.CosmosResourceNotFoundError:
-        print(f"Booking with ID {booking_id} not found.")
+        logging.error(f"Booking with ID {booking_id} not found.")
     except Exception as e:
-        print(f"An error occurred while deleting the booking: {e}")
+        logging.error(f"An error occurred while deleting the booking {booking_id}: {e}")
