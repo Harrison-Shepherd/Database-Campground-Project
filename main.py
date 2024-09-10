@@ -46,7 +46,7 @@ def main():
         campsites = initialize_campsites()
 
         # Step 4: Connect to Cosmos DB for cloud-based data storage and operations
-        cosmos_conn = connect_to_cosmos()
+        cosmos_conn = connect_to_cosmos("Bookings")  # Provide the correct container name
         print("Connected to Cosmos DB successfully.")
 
         # Step 5: Process the bookings by updating database entries and synchronizing data

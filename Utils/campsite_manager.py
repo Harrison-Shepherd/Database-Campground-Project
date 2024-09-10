@@ -1,4 +1,3 @@
-# If needed, add functions to validate campsite data, check availability, etc.
 # Utils/campsite_manager.py 
 
 from Models.campsite import Campsite

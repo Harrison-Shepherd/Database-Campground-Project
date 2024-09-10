@@ -1,7 +1,11 @@
+# Database/cosmos_db.py
 import uuid
 import json
 import logging
+from datetime import datetime
 from azure.cosmos import CosmosClient, exceptions
+import base64
+
 
 # Configure logging to suppress verbose outputs from external libraries and show only necessary information
 logging.basicConfig(level=logging.INFO, format='%(message)s')
@@ -15,15 +19,17 @@ def load_config():
     with open('Assets/connection_strings.json', 'r') as file:
         return json.load(file)
 
-def connect_to_cosmos():
+def connect_to_cosmos(container_name):
     """
-    Connects to the Cosmos DB using configuration settings and returns the container client.
+    Connects to the specified Cosmos DB container.
+    
+    :param container_name: Name of the container to connect to.
     :return: Cosmos DB container client.
     """
     config = load_config()['cosmos_db']
     client = CosmosClient(config['endpoint'], config['key'])
     database = client.get_database_client(config['database_name'])
-    container = database.get_container_client(config['container_name'])
+    container = database.get_container_client(container_name)
     return container
 
 def fetch_cosmos_bookings(container):
@@ -68,6 +74,36 @@ def insert_booking_to_cosmos(container, booking_data):
         logging.error(f"An HTTP error occurred while inserting the booking {booking_id}: {e.status_code} {e.message}")
     except Exception as e:
         logging.error(f"An error occurred while inserting the booking {booking_id}: {e}")
+
+def insert_pdf_to_cosmos(container, pdf_path):
+    """
+    Inserts a PDF file into the Cosmos DB container.
+
+    :param container: Cosmos DB container client.
+    :param pdf_path: Path to the PDF file to insert.
+    """
+    try:
+        with open(pdf_path, 'rb') as pdf_file:
+            pdf_data = pdf_file.read()
+            pdf_data_base64 = base64.b64encode(pdf_data).decode('utf-8')  # Encode as base64 string
+
+        # Create a document with the PDF data and metadata
+        pdf_document = {
+            'id': str(uuid.uuid4()),  # Adding 'id' field as required by Cosmos DB
+            'pdf_id': str(uuid.uuid4()),  # Use this as the partition key
+            'filename': pdf_path.split('/')[-1],  # Extract the filename from the path
+            'upload_date': str(datetime.utcnow()),  # Store the upload date
+            'pdf_data': pdf_data_base64  # Store the encoded PDF data as a base64 string
+        }
+
+        # Insert the document into the Cosmos DB container
+        container.create_item(body=pdf_document)
+        logging.info(f"PDF {pdf_document['filename']} inserted into Cosmos DB successfully.")
+    
+    except exceptions.CosmosHttpResponseError as e:
+        logging.error(f"An HTTP error occurred while inserting the PDF: {e.status_code} {e.message}")
+    except Exception as e:
+        logging.error(f"An error occurred while inserting the PDF: {e}")
 
 def update_booking_in_cosmos(container, booking_id, update_data):
     """

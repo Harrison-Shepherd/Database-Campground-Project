@@ -47,15 +47,23 @@ def process_bookings(bookings, campsites, head_office_conn, cosmos_conn, campgro
             booking.update_campsite_info(allocated_campsite.site_number, allocated_campsite.rate_per_night)
 
             # Generate booking confirmation
-            generate_confirmation(booking)
+            try:
+                generate_confirmation(booking)
+                logging.info(f"Confirmation PDF for Booking {booking.booking_id} generated and inserted into Cosmos DB successfully.")
+            except Exception as e:
+                logging.error(f"An error occurred while generating or inserting the confirmation PDF for Booking {booking.booking_id}: {e}")
+
         else:
             logging.warning(f"Booking {booking.booking_id} failed: No available campsites for the week starting {adjusted_start_date.strftime('%Y-%m-%d')}.")
 
         # Insert booking data into Cosmos DB if not already inserted
         if booking.booking_id not in inserted_bookings:
             booking_data = create_booking_data(booking)
-            insert_booking_to_cosmos_db(cosmos_conn, booking_data)
-            inserted_bookings.add(booking.booking_id)
+            try:
+                insert_booking_to_cosmos_db(cosmos_conn, booking_data)
+                inserted_bookings.add(booking.booking_id)
+            except Exception as e:
+                logging.error(f"An error occurred while inserting booking {booking_data['booking_id']} into Cosmos DB: {e}")
 
 def insert_booking_to_cosmos_db(cosmos_conn, booking_data):
     """

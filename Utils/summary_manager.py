@@ -4,20 +4,13 @@ from datetime import datetime
 from Database.sql_db import connect_to_sql
 from Database.head_office_db import connect_to_head_office
 from Models.summary import Summary
-from fpdf import FPDF  # Ensure you have installed fpdf using pip install fpdf
-import os
-
-# Define the folder to save confirmation PDFs
-CONFIRMATION_FOLDER = "confirmation_pdfs"
-
-# Ensure the folder exists
-os.makedirs(CONFIRMATION_FOLDER, exist_ok=True)
-
+from Utils.pdf_generator import PDFGenerator
+from Database.cosmos_db import connect_to_cosmos, insert_pdf_to_cosmos
 
 def create_and_insert_summary(bookings):
     """
     Creates and inserts a daily summary of bookings into the local SQL database and the Head Office database.
-    Also generates a PDF confirmation of the summary.
+    Also generates a PDF confirmation of the summary and inserts it into Cosmos DB.
     
     :param bookings: List of processed Booking objects.
     """
@@ -46,11 +39,21 @@ def create_and_insert_summary(bookings):
 
         # Insert into both databases and generate PDF
         insert_summary_into_databases(summary)
-        generate_summary_pdf(summary)
+
+        # Generate the PDF using the new PDF generator
+        pdf_gen = PDFGenerator("Daily Summary Report")
+        pdf_path = pdf_gen.generate_summary(summary)
         print("Summary PDF generated and saved successfully.")
 
+        # Connect to the "PDFs" container in Cosmos DB
+        pdf_container = connect_to_cosmos("PDFs")
+
+        # Insert the generated PDF into Cosmos DB
+        insert_pdf_to_cosmos(pdf_container, pdf_path)
+        print("Summary PDF inserted into Cosmos DB successfully.")
+
     except Exception as e:
-        print(f"An error occurred while creating and inserting the summary: {e}")
+        print(f"An error occurred while creating, saving, or inserting the summary PDF: {e}")
 
 
 def insert_summary_into_databases(summary):
@@ -59,7 +62,6 @@ def insert_summary_into_databases(summary):
     
     :param summary: Summary object containing summary data.
     """
-    # Attempt to insert into the local SQL database
     try:
         print("Attempting to connect to the local SQL database...")
         sql_conn = connect_to_sql()
@@ -70,7 +72,6 @@ def insert_summary_into_databases(summary):
     except Exception as e:
         print(f"An error occurred while inserting into the local SQL database: {e}")
 
-    # Attempt to insert into the Head Office database
     try:
         print("Attempting to connect to the Head Office SQL database...")
         head_office_conn = connect_to_head_office()
@@ -129,33 +130,6 @@ def write_summary_to_head_office(conn, summary_data):
         print("Insert into Head Office database successful.")
     except Exception as e:
         print(f"An error occurred while writing summary to Head Office: {e}")
-
-
-def generate_summary_pdf(summary):
-    """
-    Generates a PDF file for the summary and saves it in the 'confirmation_pdfs' folder.
-    
-    :param summary: Summary object containing the summary data.
-    """
-    try:
-        print(f"Generating PDF for summary: {summary}")
-        pdf = FPDF()
-        pdf.add_page()
-        pdf.set_font("Arial", size=12)
-
-        # Add content to the PDF
-        pdf.cell(200, 10, txt="Daily Summary Report", ln=True, align="C")
-        pdf.cell(200, 10, txt=f"Campground ID: {summary.campground_id}", ln=True)
-        pdf.cell(200, 10, txt=f"Summary Date: {summary.summary_date}", ln=True)
-        pdf.cell(200, 10, txt=f"Total Sales: ${summary.total_sales:.2f}", ln=True)
-        pdf.cell(200, 10, txt=f"Total Bookings: {summary.total_bookings}", ln=True)
-
-        # Define the filename and save the PDF
-        filename = os.path.join(CONFIRMATION_FOLDER, f"summary_{summary.summary_date}.pdf")
-        pdf.output(filename)
-        print(f"Summary PDF saved as {filename}")
-    except Exception as e:
-        print(f"An error occurred while generating the summary PDF: {e}")
 
 
 def generate_summary(bookings, campsites):
