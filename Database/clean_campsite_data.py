@@ -1,29 +1,40 @@
-# clean_campsite_data.py
-
+import logging
 from azure.cosmos import CosmosClient, exceptions
 import pyodbc
-import logging
+from Utils.config_loader import get_connection_string
+
+# Define a filter class to suppress detailed HTTP logs
+class SuppressHttpLogsFilter(logging.Filter):
+    def filter(self, record):
+        # Suppress logs that contain specific HTTP-related keywords
+        if 'Request URL:' in record.getMessage() or 'Request headers:' in record.getMessage() or 'Response headers:' in record.getMessage():
+            return False
+        return True
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(message)s')
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
-# SQL Database Connection Details
-SQL_CONNECTION_STRING = (
-    "Driver={ODBC Driver 18 for SQL Server};"
-    "Server=campground-server.database.windows.net;"
-    "Database=CampgroundBookingsDB;"
-    "Uid=CampgroundAdmin;"
-    "Pwd=CampgroundDatabasePassword!1;"
-    "Encrypt=yes;"
-    "TrustServerCertificate=no;"
-    "Connection Timeout=30;"
-)
+# Filter specific detailed logs from Azure SDK
+logging.getLogger('azure.core.pipeline.policies.http_logging_policy').setLevel(logging.WARNING)
 
-# Cosmos DB Connection Details
-COSMOS_ENDPOINT = "https://harrisonshepherd.documents.azure.com:443/"
-COSMOS_PRIMARY_KEY = "cbl5qkgWcGm0xIWYmUyEZXyXRbxXbGIwQvAwuCXkQ2W7C3768eJH6B5kIP3ji8BlhyctiJQQACTvACDb6LGWqg=="
-COSMOS_DATABASE_NAME = "CampgroundBookingsDB"
-COSMOS_CONTAINER_NAME = "Bookings"
+# Apply the custom filter to suppress HTTP logs
+suppress_http_filter = SuppressHttpLogsFilter()
+for handler in logger.handlers:
+    handler.addFilter(suppress_http_filter)
+
+# Suppress detailed logs from specific libraries
+logging.getLogger('azure.cosmos').setLevel(logging.WARNING)
+logging.getLogger('urllib3').setLevel(logging.CRITICAL)
+
+# Get SQL and Cosmos DB connection details dynamically
+SQL_CONNECTION_STRING = get_connection_string('sql_server')
+cosmos_config = get_connection_string('cosmos_db')
+
+COSMOS_ENDPOINT = cosmos_config['endpoint']
+COSMOS_PRIMARY_KEY = cosmos_config['key']
+COSMOS_DATABASE_NAME = cosmos_config['database_name']
+COSMOS_CONTAINER_NAME = cosmos_config['container_name']
 
 def clean_sql_campsite_data():
     """
@@ -65,15 +76,22 @@ def clean_cosmos_campsite_data():
             logging.info("No items found in Cosmos DB to clean.")
             return
 
-        # Delete each item individually
+        # Iterate over each item and delete it using the correct partition key
         for item in items:
+            item_id = item.get('id')
+            partition_key_value = item.get('booking_id')  # Ensure this matches the new partition key path `/booking_id`
+
+            # Log details for debugging
+            logging.info(f"Attempting to delete item with ID: {item_id} and Partition Key: {partition_key_value}")
+
             try:
-                container.delete_item(item=item['id'], partition_key=item['booking_id'])
-                logging.info(f"Deleted item with ID {item['id']} from Cosmos DB.")
+                # Delete the item using its ID and the exact partition key value
+                container.delete_item(item=item_id, partition_key=partition_key_value)
+                logging.info(f"Deleted item with ID {item_id} from Cosmos DB.")
             except exceptions.CosmosResourceNotFoundError:
-                logging.warning(f"Item with ID {item['id']} not found; it may have already been deleted.")
+                logging.warning(f"Item with ID {item_id} not found; it may have already been deleted or there is a partition key mismatch.")
             except exceptions.CosmosHttpResponseError as e:
-                logging.error(f"An error occurred while deleting item with ID {item['id']}: {e}")
+                logging.error(f"An error occurred while deleting item with ID {item_id}: {e}")
 
         logging.info("Cosmos DB campsite data cleaned successfully.")
     except exceptions.CosmosHttpResponseError as e:
