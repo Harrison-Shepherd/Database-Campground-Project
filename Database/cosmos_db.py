@@ -1,22 +1,29 @@
 import uuid
-from azure.cosmos import CosmosClient, exceptions
+import json
 import logging
+from azure.cosmos import CosmosClient, exceptions
 
 # Configure logging to suppress verbose outputs from external libraries and show only necessary information
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logging.getLogger('azure').setLevel(logging.WARNING)  # Suppresses lower-level logs from Azure SDK
 
+def load_config():
+    """
+    Loads the database connection configurations from a JSON file.
+    :return: A dictionary of configuration settings.
+    """
+    with open('Assets/connection_strings.json', 'r') as file:
+        return json.load(file)
+
 def connect_to_cosmos():
     """
-    Connects to the Cosmos DB and returns the container client.
+    Connects to the Cosmos DB using configuration settings and returns the container client.
     :return: Cosmos DB container client.
     """
-    # Define the connection parameters for Cosmos DB
-    endpoint = "https://harrisonshepherd.documents.azure.com:443/"
-    primary_key = "cbl5qkgWcGm0xIWYmUyEZXyXRbxXbGIwQvAwuCXkQ2W7C3768eJH6B5kIP3ji8BlhyctiJQQACTvACDb6LGWqg=="
-    client = CosmosClient(endpoint, primary_key)
-    database = client.get_database_client('CampgroundBookingsDB')
-    container = database.get_container_client('Bookings')
+    config = load_config()['cosmos_db']
+    client = CosmosClient(config['endpoint'], config['key'])
+    database = client.get_database_client(config['database_name'])
+    container = database.get_container_client(config['container_name'])
     return container
 
 def fetch_cosmos_bookings(container):
@@ -26,7 +33,7 @@ def fetch_cosmos_bookings(container):
     :return: List of booking documents from Cosmos DB.
     """
     try:
-        query = "SELECT * FROM Bookings"
+        query = "SELECT * FROM c"
         items = list(container.query_items(query=query, enable_cross_partition_query=True))
         logging.info(f"Fetched {len(items)} bookings from Cosmos DB.")
         return items
@@ -40,19 +47,16 @@ def insert_booking_to_cosmos(container, booking_data):
     :param container: Cosmos DB container client.
     :param booking_data: The booking data to insert.
     """
-    try:
-        # Ensure booking_id exists in booking_data
-        booking_id = booking_data.get('booking_id')
-        if not booking_id:
-            logging.error("Booking data is missing the 'booking_id'. Skipping insertion.")
-            return
+    booking_id = booking_data.get('booking_id')
+    if not booking_id:
+        logging.error("Booking data is missing the 'booking_id'. Skipping insertion.")
+        return
 
+    try:
         # Check if the booking already exists
-        existing_booking = list(container.query_items(
-            query="SELECT * FROM c WHERE c.booking_id = @booking_id",
-            parameters=[{"name": "@booking_id", "value": booking_id}],
-            enable_cross_partition_query=True
-        ))
+        query = "SELECT * FROM c WHERE c.booking_id = @booking_id"
+        parameters = [{"name": "@booking_id", "value": booking_id}]
+        existing_booking = list(container.query_items(query=query, parameters=parameters, enable_cross_partition_query=True))
 
         if existing_booking:
             logging.info(f"Booking with ID {booking_id} already exists in Cosmos DB. Skipping insertion.")
@@ -76,8 +80,7 @@ def update_booking_in_cosmos(container, booking_id, update_data):
         # Fetch the existing booking document by ID
         booking = container.read_item(item=booking_id, partition_key=booking_id)
         # Update the booking document with the provided data
-        for key, value in update_data.items():
-            booking[key] = value
+        booking.update(update_data)
         container.replace_item(item=booking['id'], body=booking)
         logging.info(f"Booking with ID {booking_id} updated successfully.")
     except exceptions.CosmosResourceNotFoundError:
