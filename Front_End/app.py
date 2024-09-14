@@ -1,55 +1,101 @@
 # Front_End/app.py
-
 import sys
 import os
-from flask import Flask, render_template, request, redirect, url_for
+import logging
+from flask import Flask, render_template, request, redirect, url_for, flash
 
-# Add the root directory of your project to the Python path
-# This ensures that Python can locate the 'Models' directory when importing
-sys.path.insert(0, r"C:\Users\kreti\Database Campground Project")
+# Configure logging to display errors and debug information
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Import the Booking model
+# Add the project root directory to the Python path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+# Now, you can import your modules
 from Models.booking import Booking
+from Utils.booking_processor import process_bookings
+from Utils.campsite_manager import initialize_campsites
+from Utils.summary_manager import create_and_insert_summary, generate_summary, display_summary
+from Database.sql_db import connect_to_sql
+from Database.cosmos_db import connect_to_cosmos, fetch_cosmos_bookings
+from Database.head_office_db import connect_to_head_office, fetch_bookings
 
 # Initialize the Flask application
 app = Flask(__name__)
-
-# Sample data for bookings; replace with actual database integration later
-bookings = [
-    Booking(1, "John Doe", "2024-09-07", "Large", 1),
-    Booking(2, "Jane Smith", "2024-09-14", "Medium", 2),
-]
+app.secret_key = 'your_secret_key'  # For flashing messages
 
 @app.route('/')
 def index():
     """
-    Route to display the bookings overview page.
+    Home page displaying options for processing bookings, viewing summaries, etc.
     """
-    return render_template('index.html', bookings=bookings)
+    return render_template('index.html')
 
-@app.route('/booking/<int:booking_id>')
-def booking_details(booking_id):
+@app.route('/process_bookings', methods=['POST'])
+def process_bookings_route():
     """
-    Route to display the details of a specific booking.
+    Route to process bookings from Head Office and store in Cosmos DB.
     """
-    booking = next((b for b in bookings if b.booking_id == booking_id), None)
-    if not booking:
-        return "Booking not found", 404
-    return render_template('booking.html', booking=booking)
+    try:
+        sql_conn = connect_to_sql()
+        head_office_conn = connect_to_head_office()
+        cosmos_conn = connect_to_cosmos(container_name="Bookings")  # Make sure to pass the correct container name
+
+        # Fetch bookings from the Head Office database
+        raw_bookings = fetch_bookings(head_office_conn)
+        bookings = [Booking.from_db_record(record) for record in raw_bookings]
+
+        # Initialize campsites
+        campsites = initialize_campsites()
+
+        # Process bookings
+        campground_id = 1121132  # Replace with your specific ID
+        process_bookings(bookings, campsites, head_office_conn, cosmos_conn, campground_id)
+
+        flash('Bookings processed successfully!', 'success')
+        return redirect(url_for('index'))
+    except Exception as e:
+        logging.error(f"Error processing bookings: {str(e)}")
+        flash(f'Error processing bookings: {str(e)}', 'danger')
+        return redirect(url_for('index'))
+
+@app.route('/bookings')
+def view_bookings():
+    """
+    Route to display all stored bookings from Cosmos DB.
+    """
+    try:
+        cosmos_conn = connect_to_cosmos(container_name="Bookings")
+        bookings_data = fetch_cosmos_bookings(cosmos_conn)
+        bookings = [Booking.from_dict(b) for b in bookings_data]  # Ensure that bookings are converted to Booking objects
+        return render_template('bookings.html', bookings=bookings)
+    except Exception as e:
+        logging.error(f"Error fetching bookings: {str(e)}")
+        flash(f'Error fetching bookings: {str(e)}', 'danger')
+        return redirect(url_for('index'))
 
 @app.route('/summary')
 def summary():
     """
-    Route to display the daily summary page.
+    Route to display the daily summary of bookings.
     """
-    # Placeholder data; replace with actual database integration later
-    summary_data = {
-        "date": "2024-09-07",
-        "total_sales": 1000,
-        "total_bookings": 10
-    }
-    return render_template('summary.html', summary=summary_data)
+    try:
+        cosmos_conn = connect_to_cosmos(container_name="Bookings")
+        bookings_data = fetch_cosmos_bookings(cosmos_conn)
+        bookings = [Booking.from_dict(b) for b in bookings_data]  # Convert fetched data to Booking objects
+        campsites = initialize_campsites()  # Initialize campsites if needed for the summary
+
+        # Generate and display the summary
+        summary_data = generate_summary(bookings, campsites)
+        display_summary(summary_data)
+
+        # Create and insert summary into the database
+        create_and_insert_summary(bookings)
+        flash('Summary generated and stored successfully!', 'success')
+        return render_template('summary.html', summary=summary_data)
+    except Exception as e:
+        logging.error(f"Error generating summary: {str(e)}")
+        flash(f'Error generating summary: {str(e)}', 'danger')
+        return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    # Run the Flask application in debug mode
     app.run(debug=True)

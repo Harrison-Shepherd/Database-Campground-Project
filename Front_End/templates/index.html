@@ -7,20 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h1>Bookings Overview</h1>
-    <ul>
-        {% for booking in bookings %}
-        <li>
-            <a href="{{ url_for('booking_details', booking_id=booking.booking_id) }}">
-                {{ booking.customer_name }} - {{ booking.arrival_date }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-
-    <!-- Add a link to navigate to the summary page -->
-    <a href="{{ url_for('summary') }}">View Daily Summary</a>
+    <header>
+        <h1>Bookings Overview</h1>
+    </header>
+    <main>
+        <ul class="bookings-list">
+            {% if bookings %}
+                {% for booking in bookings %}
+                    <li>
+                        <a href="{{ url_for('booking_details', booking_id=booking['booking_id']) }}">
+                            {{ booking['customer_name'] }} - {{ booking['arrival_date'] }}
+                        </a>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <p>No bookings available.</p>
+            {% endif %}
+        </ul>
+        <div class="actions">
+            <a class="btn" href="{{ url_for('summary') }}">View Daily Summary</a>
+            <form action="{{ url_for('process_bookings_route') }}" method="post">
+                <button type="submit" class="btn">Process Bookings</button>
+            </form>
+        </div>
+    </main>
 </body>
 </html>

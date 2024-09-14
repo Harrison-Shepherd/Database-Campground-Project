@@ -90,6 +90,24 @@ class Booking:
         else:
             print(f"No available campsites for Booking {self.booking_id} from {adjusted_start_date} to {adjusted_end_date}.")
         return allocated_campsite
+    
+    @staticmethod
+    def from_dict(data):
+        """
+        Creates a Booking object from a dictionary.
+        :param data: Dictionary containing booking data.
+        :return: Booking object.
+        """
+        return Booking(
+            booking_id=data['booking_id'],
+            customer_id=data['customer_id'],
+            booking_date=data['booking_date'],
+            arrival_date=data['arrival_date'],
+            campsite_size=data['campsite_size'],
+            num_campsites=data['num_campsites'],
+            campground_id=data.get('campground_id', None),
+            customer_name=data.get('customer_name', None)
+        )
 
 def create_booking_data(booking):
     """

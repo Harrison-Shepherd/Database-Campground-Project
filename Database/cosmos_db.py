@@ -5,6 +5,7 @@ import logging
 from datetime import datetime
 from azure.cosmos import CosmosClient, exceptions
 import base64
+from Models.booking import Booking  # Ensure you import the Booking model
 
 
 # Configure logging to suppress verbose outputs from external libraries and show only necessary information
@@ -34,15 +35,16 @@ def connect_to_cosmos(container_name):
 
 def fetch_cosmos_bookings(container):
     """
-    Fetches bookings from the Cosmos DB container.
+    Fetches bookings from the Cosmos DB container and converts them to Booking objects.
     :param container: Cosmos DB container client.
-    :return: List of booking documents from Cosmos DB.
+    :return: List of Booking objects from Cosmos DB.
     """
     try:
         query = "SELECT * FROM c"
         items = list(container.query_items(query=query, enable_cross_partition_query=True))
-        logging.info(f"Fetched {len(items)} bookings from Cosmos DB.")
-        return items
+        bookings = [Booking.from_dict(item) for item in items]  # Convert dictionaries to Booking objects
+        logging.info(f"Fetched {len(bookings)} bookings from Cosmos DB.")
+        return bookings
     except exceptions.CosmosHttpResponseError as e:
         logging.error(f"An error occurred while fetching bookings: {e}")
         return []
