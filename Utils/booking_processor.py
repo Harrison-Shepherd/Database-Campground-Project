@@ -29,11 +29,13 @@ def process_bookings(bookings, campsites, head_office_conn, cosmos_conn, campgro
             logging.error(f"Expected Booking object but got {type(booking)}. Skipping this record.")
             continue
         
+        # Adjust start and end dates to Saturday and the following week
         adjusted_start_date = Booking.adjust_to_saturday(booking.arrival_date)
         adjusted_end_date = adjusted_start_date + timedelta(days=7)
 
         # Skip previously allocated bookings
         if booking.booking_id in allocated_bookings:
+            logging.info(f"Booking {booking.booking_id} already allocated. Skipping.")
             continue
 
         logging.info(f"Attempting to allocate Booking {booking.booking_id}...")
@@ -42,17 +44,21 @@ def process_bookings(bookings, campsites, head_office_conn, cosmos_conn, campgro
         allocated_campsite = allocate_campsite(campsites, adjusted_start_date, adjusted_end_date, booking)
         if allocated_campsite:
             logging.info(f"Booking {booking.booking_id} successfully allocated to Campsite {allocated_campsite.site_number}.")
-            update_booking_campground(head_office_conn, booking.booking_id, campground_id)
-            allocated_bookings.add(booking.booking_id)
-            booking.update_campsite_info(allocated_campsite.site_number, allocated_campsite.rate_per_night)
+            
+            # Update booking in the head office database
+            try:
+                update_booking_campground(head_office_conn, booking.booking_id, campground_id)
+                allocated_bookings.add(booking.booking_id)
+                booking.update_campsite_info(allocated_campsite.site_number, allocated_campsite.rate_per_night)
+            except Exception as e:
+                logging.error(f"Failed to update booking in Head Office database: {e}")
 
-            # Generate booking confirmation
+            # Generate booking confirmation PDF
             try:
                 generate_confirmation(booking)
-                logging.info(f"Confirmation PDF for Booking {booking.booking_id} generated and inserted into Cosmos DB successfully.")
+                logging.info(f"Confirmation PDF for Booking {booking.booking_id} generated successfully.")
             except Exception as e:
-                logging.error(f"An error occurred while generating or inserting the confirmation PDF for Booking {booking.booking_id}: {e}")
-
+                logging.error(f"Error generating confirmation PDF for Booking {booking.booking_id}: {e}")
         else:
             logging.warning(f"Booking {booking.booking_id} failed: No available campsites for the week starting {adjusted_start_date.strftime('%Y-%m-%d')}.")
 
@@ -63,7 +69,7 @@ def process_bookings(bookings, campsites, head_office_conn, cosmos_conn, campgro
                 insert_booking_to_cosmos_db(cosmos_conn, booking_data)
                 inserted_bookings.add(booking.booking_id)
             except Exception as e:
-                logging.error(f"An error occurred while inserting booking {booking_data['booking_id']} into Cosmos DB: {e}")
+                logging.error(f"Error inserting Booking {booking.booking_id} into Cosmos DB: {e}")
 
 def insert_booking_to_cosmos_db(cosmos_conn, booking_data):
     """

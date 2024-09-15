@@ -54,11 +54,6 @@ class Booking:
 
     @staticmethod
     def from_db_record(record):
-        # Check the length of the record to avoid index out of range errors
-        if len(record) < 8:
-            logging.error(f"Record does not have enough fields: {record}")
-            raise ValueError(f"Record does not have enough fields. Expected 8 fields, got {len(record)}")
-
         # Create Booking object with all expected fields
         return Booking(
             booking_id=record[0],
@@ -68,9 +63,9 @@ class Booking:
             campground_id=record[4],
             campsite_size=record[5],
             num_campsites=record[6],
-            customer_name=record[7]
+            customer_name=record[7]  # Ensure this field fetches the concatenated customer name
         )
-
+    
     @staticmethod
     def adjust_to_saturday(start_date):
         days_to_saturday = (5 - start_date.weekday() + 7) % 7
@@ -115,5 +110,6 @@ def create_booking_data(booking):
     """
     booking_data = booking.to_dict()
     booking_data["confirmation"] = f"confirmation_{booking.booking_id}.pdf"  # Reference the confirmation PDF
-    # Add any additional data fields necessary
+    booking_data["customer_name"] = booking.customer_name  # Ensure customer_name is included correctly
     return booking_data
+

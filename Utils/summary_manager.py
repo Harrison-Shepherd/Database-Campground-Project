@@ -6,6 +6,7 @@ from Database.head_office_db import connect_to_head_office
 from Models.summary import Summary
 from Utils.pdf_generator import PDFGenerator
 from Database.cosmos_db import connect_to_cosmos, insert_pdf_to_cosmos
+import logging
 
 def create_and_insert_summary(bookings):
     """
@@ -134,37 +135,36 @@ def write_summary_to_head_office(conn, summary_data):
 
 def generate_summary(bookings, campsites):
     """
-    Generates a summary of booking allocations and campsite utilization.
-
+    Generates a summary of the booking allocations and campsite utilization.
     :param bookings: List of Booking objects.
     :param campsites: List of Campsite objects.
-    :return: A dictionary containing summary details.
+    :return: A summary dictionary containing booking statistics and utilization data.
     """
-    summary = {
-        "total_bookings": len(bookings),
-        "successful_allocations": 0,
-        "failed_allocations": 0,
-        "campsite_utilization": {}
-    }
+    logging.info("Starting summary generation with booking data:")
+    for booking in bookings:
+        logging.info(f"Booking ID: {booking.booking_id}, Campsite ID: {booking.campsite_id}, Total Cost: {booking.total_cost}")
 
-    # Track successful and failed allocations
+    total_sales = sum(booking.total_cost for booking in bookings if booking.campsite_id is not None)
+    successful_allocations = sum(1 for booking in bookings if booking.campsite_id is not None)
+    failed_allocations = len(bookings) - successful_allocations
+
+    campsite_utilization = {c.site_number: {'size': c.size, 'rate_per_night': c.rate_per_night, 'bookings_count': 0} for c in campsites}
+
     for booking in bookings:
         if booking.campsite_id is not None:
-            summary["successful_allocations"] += 1
-        else:
-            summary["failed_allocations"] += 1
+            campsite_utilization[booking.campsite_id]['bookings_count'] += 1
 
-    # Calculate campsite utilization
-    for campsite in campsites:
-        site_number = campsite.site_number
-        utilization_count = len(campsite.bookings)
-        summary["campsite_utilization"][site_number] = {
-            "size": campsite.size,
-            "rate_per_night": campsite.rate_per_night,
-            "bookings_count": utilization_count
-        }
+    summary_data = {
+        'date': datetime.now().date(),
+        'total_sales': total_sales,
+        'total_bookings': len(bookings),
+        'successful_allocations': successful_allocations,
+        'failed_allocations': failed_allocations,
+        'campsite_utilization': campsite_utilization
+    }
 
-    return summary
+    logging.info(f"Summary Data: {summary_data}")  # Log summary data for debugging
+    return summary_data
 
 
 def display_summary(summary):
