@@ -6,7 +6,7 @@ from Database.sql_db import connect_to_sql
 from Database.head_office_db import connect_to_head_office
 from Models.summary import Summary
 from Utils.pdf_generator import PDFGenerator
-from Database.cosmos_db import connect_to_cosmos, insert_summary_pdf_to_cosmos  # Updated to use the correct function
+from Database.cosmos_db import connect_to_cosmos, upsert_summary_pdf_to_cosmos  # Updated to use the correct function
 
 
 def create_and_insert_summary(bookings):
@@ -54,7 +54,7 @@ def create_and_insert_summary(bookings):
         summary_id = f"{summary.campground_id}_{summary.summary_date.strftime('%Y-%m-%d')}"
 
         # Insert the generated PDF into Cosmos DB with the correct summary_id
-        insert_summary_pdf_to_cosmos(summary_container, pdf_path, summary_id)
+        upsert_summary_pdf_to_cosmos(summary_container, pdf_path, summary_id)
         print("Summary PDF inserted into Cosmos DB successfully.")
 
     except Exception as e:

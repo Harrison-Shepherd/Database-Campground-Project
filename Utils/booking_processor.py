@@ -3,7 +3,7 @@
 from datetime import timedelta
 import logging
 from Database.head_office_db import update_booking_campground
-from Database.cosmos_db import insert_booking_to_cosmos, insert_booking_pdfs_to_cosmos  # Updated to use correct function
+from Database.cosmos_db import insert_booking_to_cosmos, upsert_booking_pdf_to_cosmos  # Updated to use correct function
 from Models.campsite import allocate_campsite
 from Models.booking import create_booking_data, Booking
 from Utils.confirmation import generate_confirmation

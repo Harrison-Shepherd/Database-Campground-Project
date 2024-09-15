@@ -1,7 +1,7 @@
 # Utils/confirmation.py
 import os
 from fpdf import FPDF
-from Database.cosmos_db import connect_to_cosmos, insert_booking_pdfs_to_cosmos  # Updated to use the correct function
+from Database.cosmos_db import connect_to_cosmos, upsert_booking_pdf_to_cosmos  # Updated to use the correct function
 
 class ConfirmationPDF(FPDF):
     def __init__(self, booking):
@@ -44,7 +44,7 @@ def generate_confirmation(booking):
     # Insert the confirmation PDF into Cosmos DB with the correct parameters
     try:
         cosmos_container = connect_to_cosmos("PDFs")  # Connect to the PDFs container
-        insert_booking_pdfs_to_cosmos(cosmos_container, filename, booking.booking_id)  # Insert using the refactored function
+        upsert_booking_pdf_to_cosmos(cosmos_container, filename, booking.booking_id)  # Insert using the refactored function
         print(f"Confirmation PDF {filename} inserted into Cosmos DB successfully.")
     except Exception as e:
         print(f"An error occurred while inserting the confirmation PDF: {e}")

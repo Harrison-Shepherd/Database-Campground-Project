@@ -76,9 +76,9 @@ def insert_booking_to_cosmos(container, booking_data):
     except Exception as e:
         logging.error(f"An error occurred while inserting the booking {booking_id}: {e}")
 
-def insert_booking_pdfs_to_cosmos(container, pdf_path, booking_id):
+def upsert_booking_pdf_to_cosmos(container, pdf_path, booking_id):
     """
-    Inserts a booking confirmation PDF file into the Cosmos DB container with the pdf_id matching the booking_id.
+    Upserts a PDF file into the Cosmos DB container with the pdf_id matching the booking_id.
 
     :param container: Cosmos DB container client.
     :param pdf_path: Path to the PDF file to insert.
@@ -98,45 +98,46 @@ def insert_booking_pdfs_to_cosmos(container, pdf_path, booking_id):
             'pdf_data': pdf_data_base64  # Store the encoded PDF data as a base64 string
         }
 
-        # Insert the document into the PDFs container
-        container.create_item(body=pdf_document)
-        logging.info(f"Booking PDF {pdf_document['filename']} inserted into Cosmos DB successfully with pdf_id {pdf_document['pdf_id']}.")
-    
-    except exceptions.CosmosHttpResponseError as e:
-        logging.error(f"An HTTP error occurred while inserting the booking PDF: {e.status_code} {e.message}")
-    except Exception as e:
-        logging.error(f"An error occurred while inserting the booking PDF: {e}")
+        # Use upsert instead of create_item
+        container.upsert_item(body=pdf_document)
+        logging.info(f"PDF {pdf_document['filename']} upserted into Cosmos DB successfully with pdf_id {pdf_document['pdf_id']}.")
 
-def insert_summary_pdf_to_cosmos(container, pdf_path, summary_id):
+    except exceptions.CosmosHttpResponseError as e:
+        logging.error(f"An HTTP error occurred while upserting the PDF: {e.status_code} {e.message}")
+    except Exception as e:
+        logging.error(f"An error occurred while upserting the PDF: {e}")
+
+
+def upsert_summary_pdf_to_cosmos(container, pdf_path, summary_id):
     """
-    Inserts a summary PDF into the Cosmos DB container with the correct summary_id.
+    Upserts a summary PDF file into the Cosmos DB container with the summary_id.
 
     :param container: Cosmos DB container client.
-    :param pdf_path: Path to the PDF file to insert.
-    :param summary_id: The summary ID to use as the summary_id in the Cosmos DB document.
+    :param pdf_path: Path to the summary PDF file to insert.
+    :param summary_id: The summary ID to use as the partition key in the Cosmos DB document.
     """
     try:
         with open(pdf_path, 'rb') as pdf_file:
             pdf_data = pdf_file.read()
             pdf_data_base64 = base64.b64encode(pdf_data).decode('utf-8')  # Encode as base64 string
 
-        # Create a document with the PDF data and metadata, setting summary_id correctly
+        # Create a document with the PDF data and metadata, setting summary_id to match the summary date
         pdf_document = {
-            'id': summary_id,  # Use summary_id as the document ID to match the summary date or unique identifier
-            'summary_id': summary_id,  # Set summary_id to match the document ID
+            'id': str(summary_id),  # Unique ID for Cosmos DB
+            'summary_id': str(summary_id),  # Use summary_id for the partition key
             'filename': pdf_path.split('/')[-1],  # Extract the filename from the path
             'upload_date': str(datetime.utcnow()),  # Store the upload date
             'pdf_data': pdf_data_base64  # Store the encoded PDF data as a base64 string
         }
 
-        # Insert the document into the Cosmos DB container
-        container.create_item(body=pdf_document)
-        logging.info(f"Summary PDF {pdf_document['filename']} inserted into Cosmos DB successfully with summary_id {pdf_document['summary_id']}.")
+        # Use upsert instead of create_item
+        container.upsert_item(body=pdf_document)
+        logging.info(f"Summary PDF {pdf_document['filename']} upserted into Cosmos DB successfully with summary_id {pdf_document['summary_id']}.")
 
     except exceptions.CosmosHttpResponseError as e:
-        logging.error(f"An HTTP error occurred while inserting the summary PDF: {e.status_code} {e.message}")
+        logging.error(f"An HTTP error occurred while upserting the summary PDF: {e.status_code} {e.message}")
     except Exception as e:
-        logging.error(f"An error occurred while inserting the summary PDF: {e}")
+        logging.error(f"An error occurred while upserting the summary PDF: {e}")
 
 
 def update_booking_in_cosmos(container, booking_id, update_data):
