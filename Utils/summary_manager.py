@@ -1,12 +1,13 @@
 # Utils/summary_manager.py
 
 from datetime import datetime
+import logging
 from Database.sql_db import connect_to_sql
 from Database.head_office_db import connect_to_head_office
 from Models.summary import Summary
 from Utils.pdf_generator import PDFGenerator
-from Database.cosmos_db import connect_to_cosmos, insert_pdf_to_cosmos
-import logging
+from Database.cosmos_db import connect_to_cosmos, insert_summary_pdf_to_cosmos  # Updated to use the correct function
+
 
 def create_and_insert_summary(bookings):
     """
@@ -46,11 +47,14 @@ def create_and_insert_summary(bookings):
         pdf_path = pdf_gen.generate_summary(summary)
         print("Summary PDF generated and saved successfully.")
 
-        # Connect to the "PDFs" container in Cosmos DB
-        pdf_container = connect_to_cosmos("PDFs")
+        # Connect to the "Summary_PDFs" container in Cosmos DB
+        summary_container = connect_to_cosmos("Summary_PDFs")
 
-        # Insert the generated PDF into Cosmos DB
-        insert_pdf_to_cosmos(pdf_container, pdf_path)
+        # Use the summary date or another unique field as the summary_id
+        summary_id = f"{summary.campground_id}_{summary.summary_date.strftime('%Y-%m-%d')}"
+
+        # Insert the generated PDF into Cosmos DB with the correct summary_id
+        insert_summary_pdf_to_cosmos(summary_container, pdf_path, summary_id)
         print("Summary PDF inserted into Cosmos DB successfully.")
 
     except Exception as e:

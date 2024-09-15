@@ -1,7 +1,7 @@
 # Utils/confirmation.py
 import os
 from fpdf import FPDF
-from Database.cosmos_db import connect_to_cosmos, insert_pdf_to_cosmos
+from Database.cosmos_db import connect_to_cosmos, insert_booking_pdfs_to_cosmos  # Updated to use the correct function
 
 class ConfirmationPDF(FPDF):
     def __init__(self, booking):
@@ -25,10 +25,14 @@ class ConfirmationPDF(FPDF):
         self.add_booking_details()
         self.output(filename)
 
-# Function to generate confirmation and save in a folder
 def generate_confirmation(booking):
-    # Define the folder path
-    folder_path = "pdfs"  # Updated to match the folder name
+    """
+    Generates a confirmation PDF for the given booking and inserts it into the Cosmos DB.
+    
+    :param booking: The booking object containing the details to be included in the PDF.
+    """
+    # Define the folder path for saving PDFs
+    folder_path = "pdfs"
     os.makedirs(folder_path, exist_ok=True)
     filename = os.path.join(folder_path, f"confirmation_{booking.booking_id}.pdf")
 
@@ -37,10 +41,10 @@ def generate_confirmation(booking):
     pdf.generate_pdf(filename)
     print(f"Confirmation saved as {filename}.")
 
-    # Insert the confirmation PDF into Cosmos DB
+    # Insert the confirmation PDF into Cosmos DB with the correct parameters
     try:
-        cosmos_container = connect_to_cosmos("PDFs")
-        insert_pdf_to_cosmos(cosmos_container, filename)
+        cosmos_container = connect_to_cosmos("PDFs")  # Connect to the PDFs container
+        insert_booking_pdfs_to_cosmos(cosmos_container, filename, booking.booking_id)  # Insert using the refactored function
         print(f"Confirmation PDF {filename} inserted into Cosmos DB successfully.")
     except Exception as e:
         print(f"An error occurred while inserting the confirmation PDF: {e}")

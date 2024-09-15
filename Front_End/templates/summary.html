@@ -11,6 +11,13 @@
 <body class="bg-light">
 
 <div class="container mt-5">
+    <!-- Home Button and Title -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Home</a>
+        <h2 class="text-dark">Daily Summary Report</h2>
+    </div>
+
+    <!-- Summary Report Card -->
     <div class="card">
         <div class="card-header bg-dark text-white text-center">
             <h2>Daily Summary Report</h2>
@@ -35,16 +42,6 @@
                     </li>
                 {% endfor %}
             </ul>
-        </div>
-    </div>
-
-    <!-- Debugging Information Section -->
-    <div class="card mt-4">
-        <div class="card-header bg-secondary text-white">
-            <h5>Debugging Information</h5>
-        </div>
-        <div class="card-body">
-            <pre>{{ summary | tojson(indent=4) }}</pre>
         </div>
     </div>
 </div>

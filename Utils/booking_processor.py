@@ -1,12 +1,12 @@
 # Utils/booking_processor.py
 
+from datetime import timedelta
+import logging
 from Database.head_office_db import update_booking_campground
-from Database.cosmos_db import insert_booking_to_cosmos
+from Database.cosmos_db import insert_booking_to_cosmos, insert_booking_pdfs_to_cosmos  # Updated to use correct function
 from Models.campsite import allocate_campsite
 from Models.booking import create_booking_data, Booking
 from Utils.confirmation import generate_confirmation
-from datetime import timedelta
-import logging
 
 # Configure logging to reduce output verbosity
 logging.basicConfig(level=logging.INFO, format='%(message)s')

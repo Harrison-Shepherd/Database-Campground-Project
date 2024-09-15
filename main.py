@@ -1,4 +1,6 @@
 # main.py
+
+import logging
 from Database.sql_db import connect_to_sql
 from Database.head_office_db import connect_to_head_office, fetch_bookings
 from Database.cosmos_db import connect_to_cosmos
@@ -6,7 +8,7 @@ from Models.booking import Booking
 from Utils.booking_processor import process_bookings
 from Utils.campsite_manager import initialize_campsites
 from Utils.summary_manager import generate_summary, display_summary, create_and_insert_summary
-import logging
+
 
 # Configure logging to display only INFO level and above, suppressing verbose logs from external libraries
 logging.basicConfig(level=logging.INFO, format='%(message)s')

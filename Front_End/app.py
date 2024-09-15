@@ -1,3 +1,5 @@
+# app.py
+
 import sys
 import os
 import logging
@@ -100,11 +102,20 @@ def summary():
     try:
         # Check if processed bookings exist; if not, fetch from Cosmos DB as a fallback
         bookings = processed_bookings or fetch_cosmos_bookings(connect_to_cosmos("Bookings"))
-        campsites = initialize_campsites()
 
-        # Log each booking's key information for debugging
-        for booking in bookings:
-            logging.info(f"Summary check: Booking ID: {booking.booking_id}, Campsite ID: {booking.campsite_id}, Total Cost: {booking.total_cost}")
+        # If bookings are fetched but not processed, process them
+        if not processed_bookings and bookings:
+            campsites = initialize_campsites()
+            process_bookings(bookings, campsites, connect_to_head_office(), connect_to_cosmos("Bookings"), campground_id=1121132)
+            processed_bookings = bookings  # Store processed bookings for future use
+            flash('Bookings were repopulated and processed!', 'info')
+
+        # If still no bookings, trigger repopulation
+        if not bookings:
+            flash('No bookings available. Please process the bookings first.', 'warning')
+            return redirect(url_for('process_bookings_route'))
+
+        campsites = initialize_campsites()
 
         # Generate the summary from the processed bookings
         summary_data = generate_summary(bookings, campsites)

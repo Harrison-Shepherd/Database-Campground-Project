@@ -36,6 +36,7 @@ COSMOS_PRIMARY_KEY = cosmos_config['key']
 COSMOS_DATABASE_NAME = cosmos_config['database_name']
 BOOKINGS_CONTAINER_NAME = "Bookings"
 PDFS_CONTAINER_NAME = "PDFs"
+SUMMARY_PDFS_CONTAINER_NAME = "Summary_PDFs"  # Added Summary_PDFs container
 
 def clean_sql_campsite_data():
     """
@@ -112,6 +113,9 @@ def main():
 
     # Clean Cosmos DB PDFs data
     clean_cosmos_container_data(PDFS_CONTAINER_NAME, 'pdf_id')
+
+    # Clean Cosmos DB Summary_PDFs data
+    clean_cosmos_container_data(SUMMARY_PDFS_CONTAINER_NAME, 'summary_id')  # Added cleaning for Summary_PDFs
 
 if __name__ == "__main__":
     main()
