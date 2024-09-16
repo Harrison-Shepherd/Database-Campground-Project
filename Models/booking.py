@@ -1,4 +1,5 @@
 # Models/booking.py
+
 from datetime import datetime, timedelta, date
 from Models.campsite import allocate_campsite
 import logging
@@ -65,7 +66,7 @@ class Booking:
             num_campsites=record[6],
             customer_name=record[7]  # Ensure this field fetches the concatenated customer name
         )
-    
+
     @staticmethod
     def adjust_to_saturday(start_date):
         days_to_saturday = (5 - start_date.weekday() + 7) % 7
@@ -85,7 +86,7 @@ class Booking:
         else:
             print(f"No available campsites for Booking {self.booking_id} from {adjusted_start_date} to {adjusted_end_date}.")
         return allocated_campsite
-    
+
     @staticmethod
     def from_dict(data):
         """
@@ -102,7 +103,16 @@ class Booking:
             num_campsites=data['num_campsites'],
             campground_id=data.get('campground_id', None),
             customer_name=data.get('customer_name', None)
-        )
+        ).set_total_cost(data.get('total_cost', 0))
+
+    def set_total_cost(self, total_cost):
+        """
+        Sets the total cost for the booking.
+        :param total_cost: The total cost value to be set.
+        :return: Self for chaining.
+        """
+        self.total_cost = total_cost
+        return self
 
 def create_booking_data(booking):
     """
@@ -112,4 +122,3 @@ def create_booking_data(booking):
     booking_data["confirmation"] = f"confirmation_{booking.booking_id}.pdf"  # Reference the confirmation PDF
     booking_data["customer_name"] = booking.customer_name  # Ensure customer_name is included correctly
     return booking_data
-
