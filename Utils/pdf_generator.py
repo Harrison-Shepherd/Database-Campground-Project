@@ -1,8 +1,6 @@
-# Utils/pdf_generator.py
 from fpdf import FPDF
 import os
 from Utils.logging_config import logger
-
 
 # Define the folder to save PDFs
 PDF_FOLDER = "pdfs"
@@ -12,14 +10,25 @@ os.makedirs(PDF_FOLDER, exist_ok=True)
 
 class PDFGenerator(FPDF):
     def __init__(self, title):
+        """
+        Initializes the PDF generator with a title.
+
+        :param title: The title of the PDF document.
+        """
         super().__init__()
         self.title = title
 
     def header(self):
+        """
+        Sets the header for the PDF document.
+        """
         self.set_font("Arial", "B", 12)
         self.cell(0, 10, self.title, 0, 1, "C")
 
     def footer(self):
+        """
+        Sets the footer for the PDF document, including the page number.
+        """
         self.set_y(-15)
         self.set_font("Arial", "I", 8)
         self.cell(0, 10, f"Page {self.page_no()}", 0, 0, "C")
@@ -43,7 +52,7 @@ class PDFGenerator(FPDF):
 
         filename = os.path.join(PDF_FOLDER, f"confirmation_{booking.booking_id}.pdf")
         self.output(filename)
-        print(f"Confirmation saved as {filename}.")
+        logger.info(f"Confirmation PDF generated and saved as {filename}.")
         return filename
 
     def generate_summary(self, summary):
@@ -63,5 +72,5 @@ class PDFGenerator(FPDF):
 
         filename = os.path.join(PDF_FOLDER, f"summary_{summary.summary_date}.pdf")
         self.output(filename)
-        print(f"Summary PDF saved as {filename}.")
+        logger.info(f"Summary PDF generated and saved as {filename}.")
         return filename

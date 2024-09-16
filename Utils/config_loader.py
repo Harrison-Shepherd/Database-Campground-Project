@@ -1,41 +1,72 @@
-# Utils/config_loader.py
 import json
 import os
 import re
 from Utils.logging_config import logger
 
-
 def load_config(file_name):
     """
     Loads the configuration JSON file from the assets directory.
+
+    :param file_name: The name of the JSON configuration file.
+    :return: A dictionary containing the configuration settings.
     """
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     file_path = os.path.join(base_dir, 'assets', file_name)
-    with open(file_path, 'r') as file:
-        return json.load(file)
+    try:
+        with open(file_path, 'r') as file:
+            config = json.load(file)
+            logger.info(f"Configuration loaded from {file_name}.")
+            return config
+    except FileNotFoundError:
+        logger.error(f"Configuration file not found: {file_path}")
+        raise
+    except json.JSONDecodeError:
+        logger.error(f"Error decoding JSON from the configuration file: {file_path}")
+        raise
 
 def get_connection_string(db_type):
     """
     Retrieves the connection string or configuration dictionary for the specified database type.
+
+    :param db_type: The type of database (e.g., 'sql_server', 'head_office', or other).
+    :return: A connection string for SQL-based databases or a configuration dictionary for non-SQL databases.
     """
-    config = load_config('connection_strings.json')
-    conn_params = config.get(db_type, {})
-    if db_type in ['sql_server', 'head_office']:
-        # Generate a connection string for SQL-based databases
-        return ';'.join([f"{k}={v}" for k, v in conn_params.items() if v])  # Exclude empty values
-    else:
-        # Return connection parameters for non-SQL databases like Cosmos DB
-        return conn_params
+    try:
+        config = load_config('connection_strings.json')
+        conn_params = config.get(db_type, {})
+        if db_type in ['sql_server', 'head_office']:
+            # Generate a connection string for SQL-based databases, excluding empty values.
+            connection_string = ';'.join([f"{k}={v}" for k, v in conn_params.items() if v])
+            logger.info(f"Connection string prepared for {db_type}.")
+            return connection_string
+        else:
+            # Return connection parameters for non-SQL databases like Cosmos DB.
+            logger.info(f"Configuration parameters retrieved for {db_type}.")
+            return conn_params
+    except KeyError:
+        logger.error(f"Database type {db_type} not found in the configuration.")
+        raise
+    except Exception as e:
+        logger.error(f"Error retrieving connection string for {db_type}: {e}")
+        raise
 
 def prepare_query(sql):
     """
     Replaces placeholders with question marks in SQL queries.
+
+    :param sql: The SQL query string with placeholders.
+    :return: The SQL query with placeholders replaced by '?'.
     """
-    return re.sub(r'/\*\w+\*/\S+', '?', sql)
+    prepared_sql = re.sub(r'/\*\w+\*/\S+', '?', sql)
+    logger.info("SQL query prepared with placeholders.")
+    return prepared_sql
 
 def get_sql_query(filename):
     """
     Reads a SQL file from the assets/sql directory.
+
+    :param filename: The name of the SQL file to read.
+    :return: The content of the SQL file as a string.
     """
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     sql_dir = os.path.join(base_dir, 'assets', 'sql')
@@ -43,15 +74,30 @@ def get_sql_query(filename):
 
     try:
         with open(file_path, 'r') as file:
-            return file.read()
+            sql_query = file.read()
+            logger.info(f"SQL query loaded from {filename}.")
+            return sql_query
     except FileNotFoundError:
-        raise FileNotFoundError(f"SQL file not found: {file_path}")
+        logger.error(f"SQL file not found: {file_path}")
+        raise
 
 def load_sql_query(query_name):
     """
     Loads a specific SQL query from the assets/sql directory.
+
+    :param query_name: The name of the SQL query file without extension.
+    :return: The content of the SQL query file as a string.
     """
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     file_path = os.path.join(base_dir, 'assets', 'sql', f"{query_name}.sql")
-    with open(file_path, 'r') as file:
-        return file.read()
+    try:
+        with open(file_path, 'r') as file:
+            sql_query = file.read()
+            logger.info(f"SQL query {query_name} loaded successfully.")
+            return sql_query
+    except FileNotFoundError:
+        logger.error(f"SQL file not found: {file_path}")
+        raise
+    except Exception as e:
+        logger.error(f"Error loading SQL query {query_name}: {e}")
+        raise

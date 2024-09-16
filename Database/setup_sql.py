@@ -1,34 +1,35 @@
-#Database/setup_sql.py
 import pyodbc
 from Utils.logging_config import logger
-
 
 def connect_to_sql():
     """
     Connects to the SQL Server database.
+
     :return: Connection object or None if connection fails.
     """
+    connection_string = (
+        "Driver={ODBC Driver 18 for SQL Server};"
+        "Server=campground-server.database.windows.net;"  
+        "Database=CampgroundBookingsDB;"                  
+        "Uid=CampgroundAdmin;"                            
+        "Pwd=CampgroundDatabasePassword!1;"               
+        "Encrypt=yes;"
+        "TrustServerCertificate=no;"
+        "Connection Timeout=30;"
+    )
     try:
-        connection_string = (
-            "Driver={ODBC Driver 18 for SQL Server};"
-            "Server=campground-server.database.windows.net;"  # Replace with your server name
-            "Database=CampgroundBookingsDB;"                  # Replace with your database name
-            "Uid=CampgroundAdmin;"                            # Replace with your username
-            "Pwd=CampgroundDatabasePassword!1;"               # Replace with your password
-            "Encrypt=yes;"
-            "TrustServerCertificate=no;"
-            "Connection Timeout=30;"
-        )
         conn = pyodbc.connect(connection_string)
-        print("Connected to SQL database successfully.")
+        logger.info("Connected to SQL database successfully.")
         return conn
-    except Exception as e:
-        print(f"Error connecting to SQL database: {e}")
+    except pyodbc.Error as e:
+        logger.error(f"Error connecting to SQL database: {e}")
         return None
 
 def create_schema_if_not_exists(cursor):
     """
     Creates the schema 'camping' if it does not exist.
+
+    :param cursor: Database cursor object.
     """
     try:
         query = """
@@ -38,13 +39,15 @@ def create_schema_if_not_exists(cursor):
         END
         """
         cursor.execute(query)
-        print("Schema 'camping' checked/created successfully.")
-    except Exception as e:
-        print(f"Error creating schema: {e}")
+        logger.info("Schema 'camping' checked/created successfully.")
+    except pyodbc.Error as e:
+        logger.error(f"Error creating schema: {e}")
 
 def create_tables(cursor):
     """
     Creates the necessary tables in the SQL database if they do not exist.
+
+    :param cursor: Database cursor object.
     """
     create_customers_table = """
     IF OBJECT_ID('camping.customers', 'U') IS NULL
@@ -92,13 +95,14 @@ def create_tables(cursor):
         cursor.execute(create_customers_table)
         cursor.execute(create_booking_table)
         cursor.execute(create_summary_table)
-        print("Tables created successfully.")
-    except Exception as e:
-        print(f"Error creating tables: {e}")
+        logger.info("Tables created successfully.")
+    except pyodbc.Error as e:
+        logger.error(f"Error creating tables: {e}")
 
 def execute_sql_file(cursor, file_path):
     """
     Executes an SQL script from a file.
+
     :param cursor: Cursor object for the SQL connection.
     :param file_path: Path to the .sql file to be executed.
     """
@@ -107,9 +111,11 @@ def execute_sql_file(cursor, file_path):
             sql_script = file.read()
 
         cursor.execute(sql_script)
-        print(f"SQL script {file_path} executed successfully.")
-    except Exception as e:
-        print(f"Error executing SQL script: {e}")
+        logger.info(f"SQL script {file_path} executed successfully.")
+    except FileNotFoundError:
+        logger.error(f"SQL file not found: {file_path}")
+    except pyodbc.Error as e:
+        logger.error(f"Error executing SQL script: {e}")
 
 def setup_database():
     """
@@ -134,12 +140,12 @@ def setup_database():
             conn.commit()
 
         except Exception as e:
-            print(f"An error occurred during database setup: {e}")
+            logger.error(f"An error occurred during database setup: {e}")
             conn.rollback()
         finally:
             cursor.close()
             conn.close()
-            print("Database setup completed and connection closed.")
+            logger.info("Database setup completed and connection closed.")
 
 if __name__ == "__main__":
     setup_database()

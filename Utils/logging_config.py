@@ -1,4 +1,3 @@
-# Utils/logging_config.py
 import logging
 import os
 
@@ -7,13 +6,18 @@ log_file_path = os.path.join(os.path.dirname(__file__), '..', 'app.log')
 
 # Configure the logging
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.INFO,  # Set to INFO for routine events, use DEBUG sparingly
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
         logging.FileHandler(log_file_path),  # Log to file
-        logging.StreamHandler()  # Optional: keep this line if you also want logs to appear in the console
+        logging.StreamHandler()  # Log to console
     ]
 )
 
-# Example logger usage
+# Create a logger instance
 logger = logging.getLogger(__name__)
+
+# Suppress detailed logs from specific libraries, especially HTTP logs from Azure SDK
+logging.getLogger('azure.core.pipeline.policies.http_logging_policy').setLevel(logging.WARNING)
+logging.getLogger('azure.cosmos').setLevel(logging.WARNING)
+logging.getLogger('urllib3').setLevel(logging.CRITICAL)

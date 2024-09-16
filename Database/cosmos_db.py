@@ -1,7 +1,5 @@
-# Database/cosmos_db.py
 import uuid
 import json
-import logging
 from datetime import datetime
 from azure.cosmos import CosmosClient, exceptions
 import base64
@@ -9,23 +7,20 @@ from Models.booking import Booking  # Ensure you import the Booking model
 from Utils.logging_config import logger
 
 
-# Configure logging to suppress verbose outputs from external libraries and show only necessary information
-logging.basicConfig(level=logging.INFO, format='%(message)s')
-logging.getLogger('azure').setLevel(logging.WARNING)  # Suppresses lower-level logs from Azure SDK
-
-
 def load_config():
     """
     Loads the database connection configurations from a JSON file.
+
     :return: A dictionary of configuration settings.
     """
     with open('Assets/connection_strings.json', 'r') as file:
         return json.load(file)
 
+
 def connect_to_cosmos(container_name):
     """
     Connects to the specified Cosmos DB container.
-    
+
     :param container_name: Name of the container to connect to.
     :return: Cosmos DB container client.
     """
@@ -33,11 +28,14 @@ def connect_to_cosmos(container_name):
     client = CosmosClient(config['endpoint'], config['key'])
     database = client.get_database_client(config['database_name'])
     container = database.get_container_client(container_name)
+    logger.info(f"Connected to Cosmos DB container '{container_name}' successfully.")
     return container
+
 
 def fetch_cosmos_bookings(container):
     """
     Fetches bookings from the Cosmos DB container and converts them to Booking objects.
+
     :param container: Cosmos DB container client.
     :return: List of Booking objects from Cosmos DB.
     """
@@ -45,21 +43,23 @@ def fetch_cosmos_bookings(container):
         query = "SELECT * FROM c"
         items = list(container.query_items(query=query, enable_cross_partition_query=True))
         bookings = [Booking.from_dict(item) for item in items]  # Convert dictionaries to Booking objects
-        logging.info(f"Fetched {len(bookings)} bookings from Cosmos DB.")
+        logger.info(f"Fetched {len(bookings)} bookings from Cosmos DB.")
         return bookings
     except exceptions.CosmosHttpResponseError as e:
-        logging.error(f"An error occurred while fetching bookings: {e}")
+        logger.error(f"Error fetching bookings from Cosmos DB: {e}")
         return []
+
 
 def insert_booking_to_cosmos(container, booking_data):
     """
     Inserts a booking into the Cosmos DB container if it does not already exist.
+
     :param container: Cosmos DB container client.
     :param booking_data: The booking data to insert.
     """
     booking_id = booking_data.get('booking_id')
     if not booking_id:
-        logging.error("Booking data is missing the 'booking_id'. Skipping insertion.")
+        logger.error("Booking data is missing the 'booking_id'. Skipping insertion.")
         return
 
     try:
@@ -69,15 +69,16 @@ def insert_booking_to_cosmos(container, booking_data):
         existing_booking = list(container.query_items(query=query, parameters=parameters, enable_cross_partition_query=True))
 
         if existing_booking:
-            logging.info(f"Booking with ID {booking_id} already exists in Cosmos DB. Skipping insertion.")
+            logger.info(f"Booking with ID {booking_id} already exists in Cosmos DB. Skipping insertion.")
         else:
             booking_data['id'] = str(uuid.uuid4())  # Generates a unique ID for the Cosmos DB item
             container.create_item(booking_data)
-            logging.info(f"Booking {booking_id} inserted into Cosmos DB successfully.")
+            logger.info(f"Booking {booking_id} inserted into Cosmos DB successfully.")
     except exceptions.CosmosHttpResponseError as e:
-        logging.error(f"An HTTP error occurred while inserting the booking {booking_id}: {e.status_code} {e.message}")
+        logger.error(f"HTTP error while inserting booking {booking_id} into Cosmos DB: {e.status_code} {e.message}")
     except Exception as e:
-        logging.error(f"An error occurred while inserting the booking {booking_id}: {e}")
+        logger.error(f"Error inserting booking {booking_id} into Cosmos DB: {e}")
+
 
 def upsert_booking_pdf_to_cosmos(container, pdf_path, booking_id):
     """
@@ -92,23 +93,20 @@ def upsert_booking_pdf_to_cosmos(container, pdf_path, booking_id):
             pdf_data = pdf_file.read()
             pdf_data_base64 = base64.b64encode(pdf_data).decode('utf-8')  # Encode as base64 string
 
-        # Create a document with the PDF data and metadata, setting pdf_id to match booking_id
         pdf_document = {
-            'id': str(booking_id),  # Use booking_id as the document ID if unique within container
-            'pdf_id': str(booking_id),  # Set pdf_id to match the booking_id
-            'filename': pdf_path.split('/')[-1],  # Extract the filename from the path
-            'upload_date': str(datetime.utcnow()),  # Store the upload date
-            'pdf_data': pdf_data_base64  # Store the encoded PDF data as a base64 string
+            'id': str(booking_id),
+            'pdf_id': str(booking_id),
+            'filename': pdf_path.split('/')[-1],
+            'upload_date': str(datetime.utcnow()),
+            'pdf_data': pdf_data_base64
         }
 
-        # Use upsert instead of create_item
         container.upsert_item(body=pdf_document)
-        logging.info(f"PDF {pdf_document['filename']} upserted into Cosmos DB successfully with pdf_id {pdf_document['pdf_id']}.")
-
+        logger.info(f"PDF {pdf_document['filename']} upserted into Cosmos DB successfully with pdf_id {pdf_document['pdf_id']}.")
     except exceptions.CosmosHttpResponseError as e:
-        logging.error(f"An HTTP error occurred while upserting the PDF: {e.status_code} {e.message}")
+        logger.error(f"HTTP error while upserting PDF for booking {booking_id}: {e.status_code} {e.message}")
     except Exception as e:
-        logging.error(f"An error occurred while upserting the PDF: {e}")
+        logger.error(f"Error upserting PDF for booking {booking_id}: {e}")
 
 
 def upsert_summary_pdf_to_cosmos(container, pdf_path, summary_id):
@@ -122,57 +120,54 @@ def upsert_summary_pdf_to_cosmos(container, pdf_path, summary_id):
     try:
         with open(pdf_path, 'rb') as pdf_file:
             pdf_data = pdf_file.read()
-            pdf_data_base64 = base64.b64encode(pdf_data).decode('utf-8')  # Encode as base64 string
+            pdf_data_base64 = base64.b64encode(pdf_data).decode('utf-8')
 
-        # Create a document with the PDF data and metadata, setting summary_id to match the summary date
         pdf_document = {
-            'id': str(summary_id),  # Unique ID for Cosmos DB
-            'summary_id': str(summary_id),  # Use summary_id for the partition key
-            'filename': pdf_path.split('/')[-1],  # Extract the filename from the path
-            'upload_date': str(datetime.utcnow()),  # Store the upload date
-            'pdf_data': pdf_data_base64  # Store the encoded PDF data as a base64 string
+            'id': str(summary_id),
+            'summary_id': str(summary_id),
+            'filename': pdf_path.split('/')[-1],
+            'upload_date': str(datetime.utcnow()),
+            'pdf_data': pdf_data_base64
         }
 
-        # Use upsert instead of create_item
         container.upsert_item(body=pdf_document)
-        logging.info(f"Summary PDF {pdf_document['filename']} upserted into Cosmos DB successfully with summary_id {pdf_document['summary_id']}.")
-
+        logger.info(f"Summary PDF {pdf_document['filename']} upserted into Cosmos DB successfully with summary_id {pdf_document['summary_id']}.")
     except exceptions.CosmosHttpResponseError as e:
-        logging.error(f"An HTTP error occurred while upserting the summary PDF: {e.status_code} {e.message}")
+        logger.error(f"HTTP error while upserting summary PDF: {e.status_code} {e.message}")
     except Exception as e:
-        logging.error(f"An error occurred while upserting the summary PDF: {e}")
+        logger.error(f"Error upserting summary PDF: {e}")
 
 
 def update_booking_in_cosmos(container, booking_id, update_data):
     """
     Updates a booking document in Cosmos DB with the given booking ID.
+
     :param container: Cosmos DB container client.
     :param booking_id: The ID of the booking to update.
     :param update_data: A dictionary containing the data to update.
     """
     try:
-        # Fetch the existing booking document by ID
         booking = container.read_item(item=booking_id, partition_key=booking_id)
-        # Update the booking document with the provided data
         booking.update(update_data)
         container.replace_item(item=booking['id'], body=booking)
-        logging.info(f"Booking with ID {booking_id} updated successfully.")
+        logger.info(f"Booking with ID {booking_id} updated successfully in Cosmos DB.")
     except exceptions.CosmosResourceNotFoundError:
-        logging.error(f"Booking with ID {booking_id} not found.")
+        logger.error(f"Booking with ID {booking_id} not found in Cosmos DB.")
     except Exception as e:
-        logging.error(f"An error occurred while updating the booking {booking_id}: {e}")
+        logger.error(f"Error updating booking {booking_id} in Cosmos DB: {e}")
+
 
 def delete_booking_from_cosmos(container, booking_id):
     """
     Deletes a booking document from Cosmos DB using the booking ID.
+
     :param container: Cosmos DB container client.
     :param booking_id: The ID of the booking to delete.
     """
     try:
-        # Attempt to delete the booking document by ID
         container.delete_item(item=booking_id, partition_key=booking_id)
-        logging.info(f"Booking with ID {booking_id} deleted successfully.")
+        logger.info(f"Booking with ID {booking_id} deleted successfully from Cosmos DB.")
     except exceptions.CosmosResourceNotFoundError:
-        logging.error(f"Booking with ID {booking_id} not found.")
+        logger.error(f"Booking with ID {booking_id} not found in Cosmos DB.")
     except Exception as e:
-        logging.error(f"An error occurred while deleting the booking {booking_id}: {e}")
+        logger.error(f"Error deleting booking {booking_id} from Cosmos DB: {e}")

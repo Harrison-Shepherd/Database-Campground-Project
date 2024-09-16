@@ -1,13 +1,21 @@
-# Models/booking.py
-
 from datetime import datetime, timedelta, date
 from Models.campsite import allocate_campsite
-import logging
 from Utils.logging_config import logger
-
 
 class Booking:
     def __init__(self, booking_id, customer_id, booking_date, arrival_date, campsite_size, num_campsites, campground_id=None, customer_name=None):
+        """
+        Initializes a Booking object with relevant details.
+
+        :param booking_id: Unique identifier for the booking.
+        :param customer_id: Unique identifier for the customer.
+        :param booking_date: Date when the booking was made.
+        :param arrival_date: Date when the customer will arrive.
+        :param campsite_size: Size category of the campsite (e.g., 'Small', 'Medium', 'Large').
+        :param num_campsites: Number of campsites booked.
+        :param campground_id: Identifier of the campground (optional).
+        :param customer_name: Name of the customer (optional).
+        """
         self.booking_id = booking_id
         self.customer_id = customer_id
         self.booking_date = self._validate_date(booking_date)
@@ -23,6 +31,12 @@ class Booking:
         return f"<Booking {self.booking_id} - Customer {self.customer_id}>"
 
     def _validate_date(self, date_input):
+        """
+        Validates and converts input to a datetime object.
+
+        :param date_input: Input date which can be a datetime, date, or string.
+        :return: datetime object.
+        """
         if isinstance(date_input, datetime):
             return date_input
         elif isinstance(date_input, date):
@@ -36,13 +50,29 @@ class Booking:
             raise TypeError(f"Unsupported date input type: {type(date_input)}")
 
     def is_arrival_today(self):
+        """
+        Checks if the arrival date is today.
+
+        :return: True if the arrival date is today, False otherwise.
+        """
         return self.arrival_date.date() == datetime.now().date()
 
     def update_campsite_info(self, campsite_id, rate_per_night):
+        """
+        Updates campsite information and calculates the total cost.
+
+        :param campsite_id: The campsite ID allocated.
+        :param rate_per_night: The nightly rate for the campsite.
+        """
         self.campsite_id = campsite_id
         self.total_cost = rate_per_night * 7 * self.num_campsites
 
     def to_dict(self):
+        """
+        Converts the booking object to a dictionary format.
+
+        :return: Dictionary representation of the booking object.
+        """
         return {
             "booking_id": self.booking_id,
             "customer_id": self.customer_id,
@@ -57,7 +87,12 @@ class Booking:
 
     @staticmethod
     def from_db_record(record):
-        # Create Booking object with all expected fields
+        """
+        Creates a Booking object from a database record.
+
+        :param record: Tuple representing a database record.
+        :return: Booking object.
+        """
         return Booking(
             booking_id=record[0],
             customer_id=record[1],
@@ -66,17 +101,29 @@ class Booking:
             campground_id=record[4],
             campsite_size=record[5],
             num_campsites=record[6],
-            customer_name=record[7]  # Ensure this field fetches the concatenated customer name
+            customer_name=record[7]
         )
 
     @staticmethod
     def adjust_to_saturday(start_date):
+        """
+        Adjusts a given date to the nearest Saturday.
+
+        :param start_date: The start date to adjust.
+        :return: Adjusted date on Saturday.
+        """
         days_to_saturday = (5 - start_date.weekday() + 7) % 7
-        if days_to_saturday == 0:
-            return start_date
-        return start_date + timedelta(days=days_to_saturday)
+        return start_date if days_to_saturday == 0 else start_date + timedelta(days=days_to_saturday)
 
     def allocate_campsite(self, campsites, head_office_conn, update_booking_campground_func):
+        """
+        Attempts to allocate a campsite for the booking.
+
+        :param campsites: List of available campsites.
+        :param head_office_conn: Connection to the head office database.
+        :param update_booking_campground_func: Function to update the campground in the database.
+        :return: Allocated campsite object or None.
+        """
         adjusted_start_date = Booking.adjust_to_saturday(self.arrival_date)
         adjusted_end_date = adjusted_start_date + timedelta(days=7)
 
@@ -84,15 +131,16 @@ class Booking:
         if allocated_campsite:
             self.update_campsite_info(allocated_campsite.site_number, allocated_campsite.rate_per_night)
             update_booking_campground_func(head_office_conn, self.booking_id, self.campground_id)
-            print(f"Booking {self.booking_id} successfully allocated to Campsite {allocated_campsite.site_number}.")
+            logger.info(f"Booking {self.booking_id} successfully allocated to Campsite {allocated_campsite.site_number}.")
         else:
-            print(f"No available campsites for Booking {self.booking_id} from {adjusted_start_date} to {adjusted_end_date}.")
+            logger.warning(f"No available campsites for Booking {self.booking_id} from {adjusted_start_date} to {adjusted_end_date}.")
         return allocated_campsite
 
     @staticmethod
     def from_dict(data):
         """
         Creates a Booking object from a dictionary.
+
         :param data: Dictionary containing booking data.
         :return: Booking object.
         """
@@ -110,6 +158,7 @@ class Booking:
     def set_total_cost(self, total_cost):
         """
         Sets the total cost for the booking.
+
         :param total_cost: The total cost value to be set.
         :return: Self for chaining.
         """
@@ -118,7 +167,10 @@ class Booking:
 
 def create_booking_data(booking):
     """
-    Prepare booking data to be stored in Cosmos DB.
+    Prepares booking data to be stored in Cosmos DB.
+
+    :param booking: The Booking object.
+    :return: Dictionary of booking data.
     """
     booking_data = booking.to_dict()
     booking_data["confirmation"] = f"confirmation_{booking.booking_id}.pdf"  # Reference the confirmation PDF
