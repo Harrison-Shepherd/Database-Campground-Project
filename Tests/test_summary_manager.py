@@ -1,8 +1,7 @@
-# Tests/test_summary_manager.py
 import unittest
 from datetime import datetime
 from Models.summary import Summary
-from Utils.summary_manager import generate_summary_pdf, create_and_insert_summary
+from Utils.pdf_generator import PDFGenerator  # Import the PDFGenerator class correctly
 import os
 
 class TestSummaryManager(unittest.TestCase):
@@ -16,6 +15,10 @@ class TestSummaryManager(unittest.TestCase):
                     'campsite_id': i + 1
                 })
             )
+        self.pdf_generator = PDFGenerator("Daily Summary Report")  # Initialize PDFGenerator with a title
+        self.output_dir = "pdfs"
+        if not os.path.exists(self.output_dir):
+            os.makedirs(self.output_dir)
 
     def test_summary_creation(self):
         summary = Summary(
@@ -35,9 +38,15 @@ class TestSummaryManager(unittest.TestCase):
             total_sales=500,
             total_bookings=5
         )
-        generate_summary_pdf(summary)
-        filename = f"confirmation_pdfs/summary_{summary.summary_date}.pdf"
-        self.assertTrue(os.path.exists(filename))
+        filename = self.pdf_generator.generate_summary(summary)  # Use the generate_summary method
+        expected_filename = os.path.join(self.output_dir, f"summary_{summary.summary_date}.pdf")
+        self.assertTrue(os.path.exists(expected_filename), "Summary PDF should be created.")
+
+    def tearDown(self):
+        # Clean up any files created during testing
+        summary_filename = os.path.join(self.output_dir, f"summary_{datetime.now().date()}.pdf")
+        if os.path.exists(summary_filename):
+            os.remove(summary_filename)
 
 if __name__ == "__main__":
     unittest.main()

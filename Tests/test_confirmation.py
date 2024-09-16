@@ -1,7 +1,6 @@
-# Tests/test_confirmation.py
 import unittest
 import os
-from Utils.confirmation import generate_confirmation
+from Utils.pdf_generator import PDFGenerator  # Ensure this is the correct import
 from Models.booking import Booking
 
 class TestConfirmation(unittest.TestCase):
@@ -15,11 +14,37 @@ class TestConfirmation(unittest.TestCase):
             campsite_size='Medium',
             num_campsites=1
         )
+        self.output_dir = "pdfs"  # Ensure this matches the directory used in PDFGenerator
+        self.pdf_generator = PDFGenerator("Booking Confirmation")  # Initialize PDFGenerator with a title
+        if not os.path.exists(self.output_dir):
+            os.makedirs(self.output_dir)
 
     def test_generate_confirmation(self):
-        generate_confirmation(self.booking)
-        filename = f"confirmation_pdfs/confirmation_{self.booking.booking_id}.pdf"
-        self.assertTrue(os.path.exists(filename))
+        # Expected filename path
+        filename = os.path.join(self.output_dir, f"confirmation_{self.booking.booking_id}.pdf")
+
+        # Remove the file if it already exists to ensure a clean test
+        if os.path.exists(filename):
+            os.remove(filename)
+
+        # Call the PDF generation function
+        generated_file = self.pdf_generator.generate_confirmation(self.booking)
+
+        # Debugging output
+        print(f"Expected PDF path: {filename}")
+        print(f"Generated PDF path: {generated_file}")
+
+        # Check if the expected file was generated
+        self.assertTrue(os.path.exists(filename), f"Expected PDF file was not created: {filename}")
+
+        # Additional assertion to verify the function returned the correct path
+        self.assertEqual(generated_file, filename, f"The returned path {generated_file} does not match the expected path {filename}.")
+
+    def tearDown(self):
+        # Clean up by removing the generated file if it exists
+        filename = os.path.join(self.output_dir, f"confirmation_{self.booking.booking_id}.pdf")
+        if os.path.exists(filename):
+            os.remove(filename)
 
 if __name__ == "__main__":
     unittest.main()
