@@ -1,5 +1,7 @@
 #Database/setup_sql.py
 import pyodbc
+from Utils.logging_config import logger
+
 
 def connect_to_sql():
     """

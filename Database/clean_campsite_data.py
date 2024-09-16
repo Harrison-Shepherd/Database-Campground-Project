@@ -2,6 +2,8 @@ import logging
 from azure.cosmos import CosmosClient, exceptions
 import pyodbc
 from Utils.config_loader import get_connection_string
+from Utils.logging_config import logger
+
 
 # Define a filter class to suppress detailed HTTP logs
 class SuppressHttpLogsFilter(logging.Filter):

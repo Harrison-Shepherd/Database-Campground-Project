@@ -6,10 +6,13 @@ from datetime import datetime
 from azure.cosmos import CosmosClient, exceptions
 import base64
 from Models.booking import Booking  # Ensure you import the Booking model
+from Utils.logging_config import logger
+
 
 # Configure logging to suppress verbose outputs from external libraries and show only necessary information
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logging.getLogger('azure').setLevel(logging.WARNING)  # Suppresses lower-level logs from Azure SDK
+
 
 def load_config():
     """

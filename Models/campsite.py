@@ -1,5 +1,7 @@
 #Models/campsite.py
 from datetime import datetime, timedelta
+from Utils.logging_config import logger
+
 
 class Campsite:
     def __init__(self, site_number, size, rate_per_night):

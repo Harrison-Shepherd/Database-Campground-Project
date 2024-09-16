@@ -16,6 +16,8 @@ from Database.cosmos_db import connect_to_cosmos, fetch_cosmos_bookings
 from Utils.campsite_manager import initialize_campsites
 from Utils.summary_manager import create_and_insert_summary, generate_summary, display_summary
 from Database.head_office_db import connect_to_head_office, fetch_bookings
+from Utils.logging_config import logger
+
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'

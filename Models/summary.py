@@ -1,5 +1,8 @@
 # Models/summary.py
 
+from Utils.logging_config import logger
+
+
 class Summary:
     def __init__(self, campground_id, summary_date, total_sales, total_bookings):
         self.campground_id = campground_id

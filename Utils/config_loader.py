@@ -2,6 +2,8 @@
 import json
 import os
 import re
+from Utils.logging_config import logger
+
 
 def load_config(file_name):
     """

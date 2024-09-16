@@ -1,5 +1,5 @@
 # Database/head_office_db.py
-
+from Utils.logging_config import logger
 import pyodbc
 
 def connect_to_head_office():

@@ -7,6 +7,8 @@ from Database.head_office_db import connect_to_head_office
 from Models.summary import Summary
 from Utils.pdf_generator import PDFGenerator
 from Database.cosmos_db import connect_to_cosmos, upsert_summary_pdf_to_cosmos  # Updated to use the correct function
+from Utils.logging_config import logger
+
 
 
 def create_and_insert_summary(bookings):

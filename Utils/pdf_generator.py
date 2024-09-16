@@ -1,6 +1,8 @@
 # Utils/pdf_generator.py
 from fpdf import FPDF
 import os
+from Utils.logging_config import logger
+
 
 # Define the folder to save PDFs
 PDF_FOLDER = "pdfs"

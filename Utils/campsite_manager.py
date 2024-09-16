@@ -1,6 +1,8 @@
 # Utils/campsite_manager.py 
 
 from Models.campsite import Campsite
+from Utils.logging_config import logger
+
 
 def initialize_campsites():
     # Create a list of campsites with more entries

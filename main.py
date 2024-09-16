@@ -8,6 +8,8 @@ from Models.booking import Booking
 from Utils.booking_processor import process_bookings
 from Utils.campsite_manager import initialize_campsites
 from Utils.summary_manager import generate_summary, display_summary, create_and_insert_summary
+from Utils.logging_config import logger
+
 
 
 # Configure logging to display only INFO level and above, suppressing verbose logs from external libraries

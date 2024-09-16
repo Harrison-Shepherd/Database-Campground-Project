@@ -2,6 +2,8 @@
 import os
 from fpdf import FPDF
 from Database.cosmos_db import connect_to_cosmos, upsert_booking_pdf_to_cosmos  # Updated to use the correct function
+from Utils.logging_config import logger
+
 
 class ConfirmationPDF(FPDF):
     def __init__(self, booking):

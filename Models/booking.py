@@ -3,6 +3,8 @@
 from datetime import datetime, timedelta, date
 from Models.campsite import allocate_campsite
 import logging
+from Utils.logging_config import logger
+
 
 class Booking:
     def __init__(self, booking_id, customer_id, booking_date, arrival_date, campsite_size, num_campsites, campground_id=None, customer_name=None):

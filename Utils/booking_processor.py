@@ -7,6 +7,8 @@ from Database.cosmos_db import insert_booking_to_cosmos, upsert_booking_pdf_to_c
 from Models.campsite import allocate_campsite
 from Models.booking import create_booking_data, Booking
 from Utils.confirmation import generate_confirmation
+from Utils.logging_config import logger
+
 
 # Configure logging to reduce output verbosity
 logging.basicConfig(level=logging.INFO, format='%(message)s')
