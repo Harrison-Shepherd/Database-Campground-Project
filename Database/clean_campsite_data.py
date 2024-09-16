@@ -59,11 +59,16 @@ def clean_sql_campsite_data():
             cursor.execute(f"DELETE FROM {table}")
             conn.commit()
             logger.info(f"Cleaned table {table} successfully.")
+            print(f"Cleaned table {table} successfully.")
+
 
         conn.close()
         logger.info("SQL campsite data cleaned successfully.")
+        print("SQL campsite data cleaned successfully.")
     except Exception as e:
         logger.error(f"An error occurred while cleaning SQL campsite data: {e}")
+        print(f"An error occurred while cleaning SQL campsite data: {e}")
+
 
 
 def clean_cosmos_container_data(container_name, partition_key_name):
@@ -82,6 +87,7 @@ def clean_cosmos_container_data(container_name, partition_key_name):
         items = list(container.read_all_items())
         if not items:
             logger.info(f"No items found in {container_name} to clean.")
+            print(f"No items found in {container_name} to clean.")
             return
 
         # Iterate over each item and delete it using the correct partition key
@@ -96,16 +102,18 @@ def clean_cosmos_container_data(container_name, partition_key_name):
                 # Delete the item using its ID and the exact partition key value
                 container.delete_item(item=item_id, partition_key=partition_key_value)
                 logger.info(f"Deleted item with ID {item_id} from {container_name}.")
+                print(f"Deleted item with ID {item_id} from {container_name}.")
             except exceptions.CosmosResourceNotFoundError:
                 logger.warning(f"Item with ID {item_id} not found; it may have already been deleted or there is a partition key mismatch.")
             except exceptions.CosmosHttpResponseError as e:
                 logger.error(f"An error occurred while deleting item with ID {item_id}: {e}")
+                print(f"An error occurred while deleting item with ID {partition_key_value}: {e}")
 
         logger.info(f"{container_name} data cleaned successfully.")
     except exceptions.CosmosHttpResponseError as e:
-        logger.error(f"An error occurred while cleaning {container_name} data: {e}")
+        logger.warning(f"An error occurred while cleaning {container_name} data: {e}")
     except Exception as e:
-        logger.error(f"An error occurred while cleaning {container_name} data: {e}")
+        logger.warning(f"An error occurred while cleaning {container_name} data: {e}")
 
 
 def main():

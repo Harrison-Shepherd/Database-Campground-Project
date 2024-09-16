@@ -132,6 +132,7 @@ class Booking:
             self.update_campsite_info(allocated_campsite.site_number, allocated_campsite.rate_per_night)
             update_booking_campground_func(head_office_conn, self.booking_id, self.campground_id)
             logger.info(f"Booking {self.booking_id} successfully allocated to Campsite {allocated_campsite.site_number}.")
+            print(f"Booking {self.booking_id} successfully allocated to Campsite {allocated_campsite.site_number}.")
         else:
             logger.warning(f"No available campsites for Booking {self.booking_id} from {adjusted_start_date} to {adjusted_end_date}.")
         return allocated_campsite

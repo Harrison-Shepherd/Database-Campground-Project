@@ -45,10 +45,8 @@ def process_bookings(bookings, campsites, head_office_conn, cosmos_conn, campgro
                 insert_booking_to_cosmos_db(cosmos_conn, booking_data)
                 
                 # Log a single success message for the processed booking
-                logger.info(
-                    f"Booking {booking.booking_id} processed successfully: "
-                    f"allocated to Campsite {allocated_campsite.site_number} and inserted into Cosmos DB."
-                )
+                logger.info(f"Booking {booking.booking_id} processed successfully: " + f"allocated to Campsite {allocated_campsite.site_number} and inserted into Cosmos DB.")
+                print(f"Booking {booking.booking_id} processed successfully: " + f"allocated to Campsite {allocated_campsite.site_number} and inserted into Cosmos DB.")
             except Exception as e:
                 # Log any errors encountered during processing
                 logger.error(f"Error processing Booking {booking.booking_id}: {e}")

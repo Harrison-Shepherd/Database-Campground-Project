@@ -20,6 +20,8 @@ def connect_to_head_office():
     try:
         conn = pyodbc.connect(connection_string)
         logger.info("Connected to Head Office SQL database successfully.")
+        print("Connected to Head Office SQL database successfully.")
+
         return conn
     except pyodbc.Error as e:
         logger.error(f"Error connecting to Head Office SQL database: {e}")
@@ -56,7 +58,7 @@ def fetch_bookings(conn):
         logger.info(f"Fetched {len(rows)} bookings from the Head Office database.")
         return rows
     except pyodbc.Error as e:
-        logger.error(f"Error fetching bookings from Head Office database: {e}")
+        logger.warning(f"Error fetching bookings from Head Office database: {e}")
         return []
 
 def update_booking_campground(conn, booking_id, new_campground_id):
@@ -74,4 +76,4 @@ def update_booking_campground(conn, booking_id, new_campground_id):
         conn.commit()
         logger.info(f"Booking {booking_id} updated with new campground ID {new_campground_id} successfully.")
     except pyodbc.Error as e:
-        logger.error(f"Error updating booking {booking_id} in Head Office database: {e}")
+        logger.warning(f"Error updating booking {booking_id} in Head Office database: {e}")

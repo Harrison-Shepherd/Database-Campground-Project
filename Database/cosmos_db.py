@@ -28,7 +28,9 @@ def connect_to_cosmos(container_name):
     client = CosmosClient(config['endpoint'], config['key'])
     database = client.get_database_client(config['database_name'])
     container = database.get_container_client(container_name)
-    logger.info(f"Connected to Cosmos DB container '{container_name}' successfully.")
+    logger.info(f"Connected to Cosmos DB container '{container_name}' successfully. \n")
+    # print(f"Connected to Cosmos DB container '{container_name}' successfully. \n")
+
     return container
 
 

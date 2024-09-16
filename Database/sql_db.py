@@ -21,6 +21,8 @@ def connect_to_sql():
     try:
         conn = pyodbc.connect(connection_string)
         logger.info("Connected to SQL database successfully.")
+        print("Connected to SQL database successfully.")
+
         return conn
     except pyodbc.Error as e:
         logger.error(f"Error connecting to SQL database: {e}")
