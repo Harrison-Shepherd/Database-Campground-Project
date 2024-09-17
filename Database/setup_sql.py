@@ -9,14 +9,14 @@ def connect_to_sql():
     """
     # Define the connection string with required parameters for SQL Server
     connection_string = (
-        "Driver={ODBC Driver 18 for SQL Server};"           # Specifies the ODBC driver for SQL Server
-        "Server=campground-server.database.windows.net;"    # SQL Server address
-        "Database=CampgroundBookingsDB;"                    # Name of the database to connect to
-        "Uid=CampgroundAdmin;"                              # Database username
-        "Pwd=CampgroundDatabasePassword!1;"                 # Database password
-        "Encrypt=yes;"                                      # Encrypt the connection
-        "TrustServerCertificate=no;"                        # Do not trust the server certificate
-        "Connection Timeout=30;"                            # Timeout period for the connection attempt
+        "Driver={ODBC Driver 18 for SQL Server};"           
+        "Server=campground-server.database.windows.net;"    
+        "Database=CampgroundBookingsDB;"                    
+        "Uid=CampgroundAdmin;"                              
+        "Pwd=CampgroundDatabasePassword!1;"                 
+        "Encrypt=yes;"                                      
+        "TrustServerCertificate=no;"                        
+        "Connection Timeout=30;"                            
     )
     try:
         # Attempt to connect to the SQL database
@@ -141,14 +141,14 @@ def setup_database():
     if conn:
         cursor = conn.cursor()
         try:
-            # Step 1: Create schema if not exists
+            #Create schema if not exists
             create_schema_if_not_exists(cursor)
 
-            # Step 2: Create required tables
+            #Create required tables
             create_tables(cursor)
             conn.commit()  # Commit the changes to the database
 
-            # Step 3: Execute initial setup SQL files (if needed)
+            #Execute initial setup SQL files (if needed)
             create_schema_path = "Assets/create_head_office_schema.sql"  # Path to schema creation script
             load_data_path = "Assets/load_head_office_data.sql"          # Path to data loading script
             execute_sql_file(cursor, create_schema_path)

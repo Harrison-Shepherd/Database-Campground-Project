@@ -5,14 +5,14 @@ from Utils.logging_config import logger
 
 def load_config(file_name):
     """
-    Loads the configuration JSON file from the assets directory.
+    Loads the configuration JSON file from the assets folder.
 
     :param file_name: The name of the JSON configuration file.
     :return: A dictionary containing the configuration settings.
     :raises FileNotFoundError: If the configuration file does not exist.
     :raises JSONDecodeError: If the file content is not valid JSON.
     """
-    # Define the base directory and file path for the configuration file
+    # Defines the base directory and file path for the configuration file
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     file_path = os.path.join(base_dir, 'assets', file_name)
     
@@ -29,6 +29,7 @@ def load_config(file_name):
         logger.error(f"Error decoding JSON from the configuration file: {file_path}")
         raise
 
+# helps to normalise connection setup
 def get_connection_string(db_type):
     """
     Retrieves the connection string or configuration dictionary for the specified database type.
@@ -59,7 +60,7 @@ def get_connection_string(db_type):
         logger.error(f"Error retrieving connection string for {db_type}: {e}")
         raise
 
-def prepare_query(sql):
+def prepare_query(sql): #TODO not sure if needed anymore ? sql files just have "?" placeholders for pyodbc
     """
     Replaces placeholders with question marks in SQL queries.
 

@@ -8,15 +8,15 @@ def connect_to_head_office():
     :return: Connection object to the Head Office SQL database or None if connection fails.
     """
     # Define the connection string with parameters for connecting to the Head Office SQL database
-    connection_string = (
-        "Driver={ODBC Driver 18 for SQL Server};"           # Specifies the ODBC driver for SQL Server
-        "Server=campground-server.database.windows.net;"    # Server address for Head Office
-        "Database=CampgroundBookingsDB;"                    # Name of the target database
-        "Uid=CampgroundAdmin;"                              # Username for authentication
-        "Pwd=CampgroundDatabasePassword!1;"                 # Password for authentication
-        "Encrypt=yes;"                                      # Encrypt the connection
-        "TrustServerCertificate=no;"                        # Do not trust the server certificate
-        "Connection Timeout=60;"                            # Increased connection timeout to handle delays
+    connection_string = ( #FIXME change to Andrew's sql database
+        "Driver={ODBC Driver 18 for SQL Server};"           
+        "Server=campground-server.database.windows.net;"    
+        "Database=CampgroundBookingsDB;"                    
+        "Uid=CampgroundAdmin;"                              
+        "Pwd=CampgroundDatabasePassword!1;"                 
+        "Encrypt=yes;"                                      
+        "TrustServerCertificate=no;"                        
+        "Connection Timeout=60;"                            
     )
     try:
         # Attempt to connect to the Head Office SQL database

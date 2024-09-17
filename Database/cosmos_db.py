@@ -3,9 +3,11 @@ import json
 from datetime import datetime
 from azure.cosmos import CosmosClient, exceptions
 import base64
-from Models.booking import Booking  # Ensure you import the Booking model
+from Models.booking import Booking  
 from Utils.logging_config import logger
 
+
+#connection_strings.json file 
 def load_config():
     """
     Loads the database connection configurations from a JSON file.
@@ -47,7 +49,7 @@ def fetch_cosmos_bookings(container):
         logger.info(f"Fetched {len(bookings)} bookings from Cosmos DB.")
         return bookings
     except exceptions.CosmosHttpResponseError as e:
-        # Log any errors during fetching
+        # Log any errors 
         logger.error(f"Error fetching bookings from Cosmos DB: {e}")
         return []
 

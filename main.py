@@ -1,5 +1,3 @@
-# main.py
-
 import logging
 from Database.sql_db import connect_to_sql
 from Database.head_office_db import connect_to_head_office, fetch_bookings
@@ -8,7 +6,7 @@ from Models.booking import Booking
 from Utils.booking_processor import process_bookings
 from Utils.campsite_manager import initialize_campsites
 from Utils.summary_manager import generate_summary, display_summary, create_and_insert_summary
-from Utils.logging_config import logger  # Import the logger configured to save logs to a file
+from Utils.logging_config import logger  
 
 # Configure logging to display only INFO level and above, suppressing verbose logs from external libraries
 logging.basicConfig(level=logging.INFO, format='%(message)s')
@@ -32,16 +30,16 @@ def main():
     cosmos_conn = None
 
     try:
-        # Step 1: Connect to SQL, Head Office, and Cosmos DB
+        # Connect to SQL, Head Office, and Cosmos DB
         sql_conn = connect_to_sql()
         head_office_conn = connect_to_head_office()
         cosmos_conn = connect_to_cosmos("Bookings")
 
-        # Step 2: Initialize campsites and fetch all bookings from Head Office database
+        # Initialize campsites and fetch all bookings from Head Office database
         campsites = initialize_campsites()
         raw_bookings = fetch_bookings(head_office_conn)
 
-        # Step 3: Convert raw booking records into Booking objects
+        # Convert raw booking records into Booking objects
         bookings = []
         for record in raw_bookings:
             try:
@@ -50,15 +48,15 @@ def main():
             except Exception as e:
                 logger.error(f"Error processing booking record: {e}")
 
-        # Step 4: Process bookings, allocate campsites, and update databases
-        campground_id = 1121132  # Set the campground ID for processing
+        # Process bookings, allocate campsites, and update databases
+        campground_id = 1121132  # Set campground ID to my student ID
         process_bookings(bookings, campsites, head_office_conn, cosmos_conn, campground_id)
 
-        # Step 5: Generate and display a summary of the bookings
+        # Generate and display a summary of the bookings
         summary = generate_summary(bookings, campsites)
         display_summary(summary)
 
-        # Step 6: Create and insert the summary into the relevant databases
+        # Create and insert the summary into the relevant databases
         create_and_insert_summary(bookings)
 
     except Exception as e:

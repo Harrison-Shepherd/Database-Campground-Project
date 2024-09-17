@@ -4,7 +4,7 @@ import pyodbc
 from Utils.config_loader import get_connection_string
 from Utils.logging_config import logger
 
-# Define a filter class to suppress detailed HTTP logs
+# helps suppress http data flooding output
 class SuppressHttpLogsFilter(logging.Filter):
     def filter(self, record):
         # Suppress logs that contain specific HTTP-related keywords
@@ -119,7 +119,7 @@ def clean_cosmos_container_data(container_name, partition_key_name):
         # Log other exceptions encountered during cleanup
         logger.warning(f"An error occurred while cleaning {container_name} data: {e}")
 
-def main():
+def main(): #FIXME currently can only run using terminal, python -m Database.clean_campsite_data
     """
     Main function to clean campsite data from SQL and Cosmos DB.
 

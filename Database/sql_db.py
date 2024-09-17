@@ -10,14 +10,14 @@ def connect_to_sql():
     """
     # Define the connection string with necessary parameters
     connection_string = (
-        "Driver={ODBC Driver 18 for SQL Server};"           # ODBC driver for SQL Server
-        "Server=campground-server.database.windows.net;"    # Server address
-        "Database=CampgroundBookingsDB;"                    # Name of the target database
-        "Uid=CampgroundAdmin;"                              # Username for authentication
-        "Pwd=CampgroundDatabasePassword!1;"                 # Password for authentication
-        "Encrypt=yes;"                                      # Encrypt the connection for security
-        "TrustServerCertificate=no;"                        # Do not trust the server certificate (standard for secure connections)
-        "Connection Timeout=30;"                            # Time in seconds to wait for a connection before timing out
+        "Driver={ODBC Driver 18 for SQL Server};"           
+        "Server=campground-server.database.windows.net;"    
+        "Database=CampgroundBookingsDB;"                    
+        "Uid=CampgroundAdmin;"                              
+        "Pwd=CampgroundDatabasePassword!1;"                 
+        "Encrypt=yes;"                                      
+        "TrustServerCertificate=no;"                         
+        "Connection Timeout=30;"                            
     )
     try:
         # Attempt to connect to the SQL database using the connection string

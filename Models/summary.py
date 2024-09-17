@@ -17,7 +17,7 @@ class Summary:
 
     def to_dict(self):
         """
-        Converts the Summary object into a dictionary format suitable for database insertion.
+        Converts the Summary object into a dictionary format.
 
         :return: Dictionary containing summary details.
         """

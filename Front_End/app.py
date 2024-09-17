@@ -2,7 +2,6 @@ import sys
 import os
 import logging
 import io
-# Add the project root directory to the Python path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from flask import Flask, render_template, request, redirect, url_for, flash, send_file
 from Models.booking import Booking
@@ -15,7 +14,7 @@ from Database.head_office_db import connect_to_head_office, fetch_bookings
 from Utils.logging_config import logger
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Set a secret key for session management
+app.secret_key = b'\x89\xfa\x1d\xfe\x2c\x88\x9b\xfd\x8c\x2e\xbf\x4a\x7d\xea\x3f\xce\xa1\x23\x64\xbf\x8e\x59\x22'
 
 # Configure logging to display only INFO level and above
 logging.basicConfig(level=logging.INFO, format='%(message)s')

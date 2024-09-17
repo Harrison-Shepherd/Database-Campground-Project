@@ -1,6 +1,6 @@
 from datetime import timedelta
 from Database.head_office_db import update_booking_campground
-from Database.cosmos_db import insert_booking_to_cosmos  # Corrected import for the Cosmos DB insert function
+from Database.cosmos_db import insert_booking_to_cosmos 
 from Models.campsite import allocate_campsite
 from Models.booking import create_booking_data, Booking
 from Utils.confirmation import generate_confirmation
