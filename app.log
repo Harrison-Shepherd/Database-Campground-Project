@@ -60959,3 +60959,48 @@ Response headers:
 2024-09-17 13:59:08,605 - INFO - SQL connection closed.
 2024-09-17 13:59:08,634 - INFO - Head Office connection closed.
 2024-09-17 13:59:08,634 - INFO - Cosmos connection closed.
+2024-09-17 15:37:32,214 - INFO - Attempting to allocate Booking 1 from 2024-09-07 to 2024-09-14...
+2024-09-17 15:37:32,214 - INFO - Booking 1 successfully allocated to Campsite 1.
+2024-09-17 15:37:32,215 - INFO - Processing Booking 1...
+2024-09-17 15:37:32,215 - INFO - Attempting to allocate Booking 1 from 2024-09-07 to 2024-09-14...
+2024-09-17 15:37:32,215 - WARNING - No available campsites for Booking 1 from 2024-09-07 to 2024-09-14.
+2024-09-17 15:37:32,215 - WARNING - Booking 1 failed: No available campsites for the week starting 2024-09-07.
+2024-09-17 15:37:32,216 - INFO - Processing Booking 1...
+2024-09-17 15:37:32,216 - INFO - Attempting to allocate Booking 1 from 2024-09-07 to 2024-09-14...
+2024-09-17 15:37:32,216 - INFO - Booking 1 successfully allocated to Campsite 1.
+2024-09-17 15:37:32,217 - INFO - Booking 1 updated with new campground ID 1121132 successfully.
+2024-09-17 15:37:32,218 - INFO - Confirmation saved as pdfs\confirmation_1.pdf.
+2024-09-17 15:37:32,525 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-17 15:37:32,901 - INFO - PDF pdfs\confirmation_1.pdf upserted into Cosmos DB successfully with pdf_id 1.
+2024-09-17 15:37:32,901 - INFO - Confirmation PDF pdfs\confirmation_1.pdf inserted into Cosmos DB successfully.
+2024-09-17 15:37:32,902 - INFO - Booking 1 inserted into Cosmos DB successfully.
+2024-09-17 15:37:32,902 - INFO - Booking 1 inserted into Cosmos DB successfully.
+2024-09-17 15:37:32,902 - INFO - Booking 1 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-09-17 15:37:32,903 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-09-17 15:37:32,903 - INFO - Configuration loaded from connection_strings.json.
+2024-09-17 15:37:32,903 - INFO - Connection string prepared for sql_server.
+2024-09-17 15:37:32,903 - INFO - Configuration loaded from connection_strings.json.
+2024-09-17 15:37:32,904 - ERROR - Configuration file not found: C:\Users\kreti\Database Campground Project\assets\non_existent_config.json
+2024-09-17 15:37:32,905 - INFO - Confirmation PDF generated and saved as pdfs\confirmation_1.pdf.
+2024-09-17 15:37:32,906 - INFO - Booking 1 inserted into Cosmos DB successfully.
+2024-09-17 15:37:32,907 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-09-17 15:37:32,907 - INFO - Generating summary from booking data.
+2024-09-17 15:37:32,907 - INFO - Summary Data: {'date': datetime.date(2024, 9, 17), 'total_sales': 0, 'total_bookings': 0, 'successful_allocations': 0, 'failed_allocations': 0, 'campsite_utilization': {1: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 2: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 3: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 4: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 5: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 6: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 7: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 8: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 9: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 10: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 0}, 11: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 12: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 13: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 14: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 15: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 16: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 17: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 18: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 19: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 20: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 21: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 22: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 23: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 24: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 25: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 26: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 27: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 28: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 29: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 30: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}}}
+2024-09-17 15:37:32,911 - INFO - Summary validated and created for 2024-09-17.
+2024-09-17 15:37:33,443 - INFO - Connected to SQL database successfully.
+2024-09-17 15:37:33,516 - INFO - Insert into local SQL database successful.
+2024-09-17 15:37:33,572 - INFO - Summary inserted into the local SQL database.
+2024-09-17 15:37:33,907 - INFO - Connected to Head Office SQL database successfully.
+2024-09-17 15:37:33,969 - INFO - Insert into Head Office database successful.
+2024-09-17 15:37:34,023 - INFO - Summary written to the Head Office database.
+2024-09-17 15:37:34,024 - INFO - Summary PDF generated and saved as pdfs\summary_2024-09-17.pdf.
+2024-09-17 15:37:34,024 - INFO - Summary PDF generated and saved.
+2024-09-17 15:37:34,294 - INFO - Connected to Cosmos DB container 'Summary_PDFs' successfully.
+2024-09-17 15:37:34,623 - INFO - Summary PDF pdfs\summary_2024-09-17.pdf upserted into Cosmos DB successfully with summary_id 1121132_2024-09-17.
+2024-09-17 15:37:34,623 - INFO - Summary PDF upserted into Cosmos DB successfully.
+2024-09-17 15:37:34,624 - INFO - SQL connection closed.
+2024-09-17 15:37:34,625 - INFO - Head Office connection closed.
+2024-09-17 15:37:34,625 - INFO - Cosmos connection closed.
+2024-09-17 15:37:34,626 - INFO - Confirmation PDF generated and saved as pdfs\confirmation_1.pdf.
+2024-09-17 15:37:34,654 - INFO - Connected to SQL database successfully.
+2024-09-17 15:37:34,682 - INFO - Summary PDF generated and saved as pdfs\summary_2024-09-17.pdf.
