@@ -15,9 +15,11 @@ def create_and_insert_summary(bookings):
     :param bookings: List of processed Booking objects.
     """
     try:
+        # Calculate total sales and count of successful bookings
         total_sales = sum(booking.total_cost for booking in bookings if booking.campsite_id is not None)
         total_bookings = len([booking for booking in bookings if booking.campsite_id is not None])
 
+        # Create a summary object with the calculated data
         summary = Summary(
             campground_id=1121132,
             summary_date=datetime.now().date(),
@@ -25,15 +27,19 @@ def create_and_insert_summary(bookings):
             total_bookings=total_bookings
         )
 
+        # Validate the summary data before inserting
         summary.validate()
         logger.info(f"Summary validated and created for {summary.summary_date}.")
         
+        # Insert summary into local and Head Office databases
         insert_summary_into_databases(summary)
         
+        # Generate and save the summary PDF
         pdf_gen = PDFGenerator("Daily Summary Report")
         pdf_path = pdf_gen.generate_summary(summary)
         logger.info("Summary PDF generated and saved.")
 
+        # Connect to Cosmos DB and upsert the summary PDF
         summary_container = connect_to_cosmos("Summary_PDFs")
         summary_id = f"{summary.campground_id}_{summary.summary_date.strftime('%Y-%m-%d')}"
         upsert_summary_pdf_to_cosmos(summary_container, pdf_path, summary_id)
@@ -52,6 +58,7 @@ def insert_summary_into_databases(summary):
     :param summary: Summary object containing summary data.
     """
     try:
+        # Connect to the local SQL database and insert the summary
         sql_conn = connect_to_sql()
         insert_summary(sql_conn, summary.to_dict())
         sql_conn.close()
@@ -61,6 +68,7 @@ def insert_summary_into_databases(summary):
         logger.error(f"Error inserting into the local SQL database: {e}")
 
     try:
+        # Connect to the Head Office database and write the summary
         head_office_conn = connect_to_head_office()
         write_summary_to_head_office(head_office_conn, summary.to_dict())
         head_office_conn.close()
@@ -78,10 +86,12 @@ def insert_summary(conn, summary_data):
     """
     try:
         cursor = conn.cursor()
+        # SQL query to insert summary data into the local database
         query = """
             INSERT INTO camping.summary (campground_id, summary_date, total_sales, total_bookings)
             VALUES (?, ?, ?, ?)
         """
+        # Execute the query with the summary data
         cursor.execute(
             query,
             summary_data['campground_id'],
@@ -104,10 +114,12 @@ def write_summary_to_head_office(conn, summary_data):
     """
     try:
         cursor = conn.cursor()
+        # SQL query to insert summary data into the Head Office database
         query = """
         INSERT INTO head_office.summary (campground_id, summary_date, total_sales, total_bookings)
         VALUES (?, ?, ?, ?)
         """
+        # Execute the query with the summary data
         cursor.execute(query, (
             summary_data["campground_id"], 
             summary_data["summary_date"],
@@ -130,16 +142,20 @@ def generate_summary(bookings, campsites):
     """
     logger.info("Generating summary from booking data.")
     
+    # Calculate total sales, successful allocations, and failed allocations
     total_sales = sum(booking.total_cost for booking in bookings if booking.campsite_id is not None)
     successful_allocations = sum(1 for booking in bookings if booking.campsite_id is not None)
     failed_allocations = len(bookings) - successful_allocations
 
+    # Initialize campsite utilization data
     campsite_utilization = {c.site_number: {'size': c.size, 'rate_per_night': c.rate_per_night, 'bookings_count': 0} for c in campsites}
 
+    # Update utilization data based on successful bookings
     for booking in bookings:
         if booking.campsite_id is not None:
             campsite_utilization[booking.campsite_id]['bookings_count'] += 1
 
+    # Compile summary data into a dictionary
     summary_data = {
         'date': datetime.now().date(),
         'total_sales': total_sales,
@@ -158,11 +174,13 @@ def display_summary(summary):
 
     :param summary: A dictionary containing summary details.
     """
+    # Print the overall summary statistics
     print("\nSummary of Booking Allocations:")
     print(f"Total Bookings: {summary['total_bookings']}")
     print(f"Successful Allocations: {summary['successful_allocations']}")
     print(f"Failed Allocations: {summary['failed_allocations']}")
 
+    # Print detailed campsite utilization statistics
     print("\nCampsite Utilization:")
     for site_number, details in summary['campsite_utilization'].items():
         print(f"Campsite {site_number}: Size - {details['size']}, Rate - ${details['rate_per_night']} per night, "

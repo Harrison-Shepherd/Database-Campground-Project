@@ -14,12 +14,10 @@ from Utils.summary_manager import create_and_insert_summary, generate_summary, d
 from Database.head_office_db import connect_to_head_office, fetch_bookings
 from Utils.logging_config import logger
 
-
-
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.secret_key = 'your_secret_key'  # Set a secret key for session management
 
-# Configure logging
+# Configure logging to display only INFO level and above
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
 # Global variable to hold processed bookings
@@ -27,6 +25,11 @@ processed_bookings = []
 
 @app.route('/')
 def index():
+    """
+    Route to display the main index page, showing bookings fetched from Cosmos DB.
+
+    :return: Rendered index page with bookings data.
+    """
     try:
         cosmos_conn = connect_to_cosmos("Bookings")
         bookings = fetch_cosmos_bookings(cosmos_conn)
@@ -43,6 +46,11 @@ def index():
 
 @app.route('/process_bookings', methods=['POST'])
 def process_bookings_route():
+    """
+    Route to process bookings from the Head Office database, allocate campsites, and update Cosmos DB.
+
+    :return: Redirects to the summary page if successful or index page if an error occurs.
+    """
     global processed_bookings
     try:
         sql_conn = connect_to_sql()
@@ -65,6 +73,11 @@ def process_bookings_route():
 
 @app.route('/bookings')
 def view_bookings():
+    """
+    Route to view all bookings currently stored in Cosmos DB.
+
+    :return: Rendered bookings list page.
+    """
     try:
         cosmos_conn = connect_to_cosmos("Bookings")
         bookings = fetch_cosmos_bookings(cosmos_conn)
@@ -79,6 +92,11 @@ def view_bookings():
 
 @app.route('/summary')
 def summary():
+    """
+    Route to generate and display a summary of the processed bookings.
+
+    :return: Rendered summary page with summary data.
+    """
     global processed_bookings
     try:
         bookings = processed_bookings or fetch_cosmos_bookings(connect_to_cosmos("Bookings"))
@@ -108,6 +126,12 @@ def summary():
 
 @app.route('/pdf/<int:booking_id>')
 def show_pdf(booking_id):
+    """
+    Route to fetch and display a PDF confirmation for a specific booking.
+
+    :param booking_id: ID of the booking whose PDF is to be shown.
+    :return: PDF file response for download.
+    """
     try:
         cosmos_conn_bookings = connect_to_cosmos("Bookings")
         cosmos_conn_pdfs = connect_to_cosmos("PDFs")
@@ -124,6 +148,15 @@ def show_pdf(booking_id):
         return redirect(url_for('view_bookings'))
 
 def fetch_pdf_from_cosmos(cosmos_conn_bookings, cosmos_conn_pdfs, booking_id):
+    """
+    Fetches PDF data associated with a booking from Cosmos DB.
+
+    :param cosmos_conn_bookings: Cosmos DB connection to the bookings container.
+    :param cosmos_conn_pdfs: Cosmos DB connection to the PDFs container.
+    :param booking_id: The ID of the booking to fetch the PDF for.
+    :return: The PDF data in bytes.
+    :raises: ValueError if the booking or PDF data is not found.
+    """
     try:
         query_booking = f"SELECT * FROM c WHERE c.booking_id = {booking_id}"
         booking_items = cosmos_conn_bookings.query_items(query=query_booking, enable_cross_partition_query=True)

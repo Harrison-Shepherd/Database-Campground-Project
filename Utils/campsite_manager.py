@@ -7,20 +7,21 @@ def initialize_campsites():
 
     :return: A list of Campsite objects.
     """
-    campsites = []
+    campsites = []  # List to hold the initialized campsites
 
-    # Add 10 Small campsites with a rate of 50 per night
+    # Add 10 Small campsites with a nightly rate of 50
     for i in range(1, 11):
         campsites.append(Campsite(site_number=i, size='Small', rate_per_night=50))
 
-    # Add 10 Medium campsites with a rate of 60 per night
+    # Add 10 Medium campsites with a nightly rate of 60
     for i in range(11, 21):
         campsites.append(Campsite(site_number=i, size='Medium', rate_per_night=60))
 
-    # Add 10 Large campsites with a rate of 70 per night
+    # Add 10 Large campsites with a nightly rate of 70
     for i in range(21, 31):
         campsites.append(Campsite(site_number=i, size='Large', rate_per_night=70))
 
+    # Log the initialization of campsites
     logger.info(f"Initialized {len(campsites)} campsites: 10 Small, 10 Medium, 10 Large.")
     
     return campsites

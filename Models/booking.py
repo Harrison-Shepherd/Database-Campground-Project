@@ -23,11 +23,12 @@ class Booking:
         self.campsite_size = campsite_size
         self.num_campsites = num_campsites
         self.campground_id = campground_id
-        self.campsite_id = None
-        self.total_cost = 0
+        self.campsite_id = None  # Initially set campsite_id to None until allocated
+        self.total_cost = 0  # Default total cost set to zero
         self.customer_name = customer_name
 
     def __repr__(self):
+        """Provides a string representation of the Booking object."""
         return f"<Booking {self.booking_id} - Customer {self.customer_id}>"
 
     def _validate_date(self, date_input):
@@ -36,6 +37,8 @@ class Booking:
 
         :param date_input: Input date which can be a datetime, date, or string.
         :return: datetime object.
+        :raises ValueError: If the date format is incorrect.
+        :raises TypeError: If the input type is unsupported.
         """
         if isinstance(date_input, datetime):
             return date_input
@@ -65,7 +68,7 @@ class Booking:
         :param rate_per_night: The nightly rate for the campsite.
         """
         self.campsite_id = campsite_id
-        self.total_cost = rate_per_night * 7 * self.num_campsites
+        self.total_cost = rate_per_night * 7 * self.num_campsites  # Calculate cost based on the 7-day booking duration
 
     def to_dict(self):
         """
@@ -112,7 +115,7 @@ class Booking:
         :param start_date: The start date to adjust.
         :return: Adjusted date on Saturday.
         """
-        days_to_saturday = (5 - start_date.weekday() + 7) % 7
+        days_to_saturday = (5 - start_date.weekday() + 7) % 7  # Calculate days to next Saturday
         return start_date if days_to_saturday == 0 else start_date + timedelta(days=days_to_saturday)
 
     def allocate_campsite(self, campsites, head_office_conn, update_booking_campground_func):
@@ -124,16 +127,20 @@ class Booking:
         :param update_booking_campground_func: Function to update the campground in the database.
         :return: Allocated campsite object or None.
         """
+        # Adjust booking dates to start and end on a Saturday
         adjusted_start_date = Booking.adjust_to_saturday(self.arrival_date)
         adjusted_end_date = adjusted_start_date + timedelta(days=7)
 
+        # Attempt to allocate a campsite
         allocated_campsite = allocate_campsite(campsites, adjusted_start_date, adjusted_end_date, self)
         if allocated_campsite:
+            # Update campsite info and log the successful allocation
             self.update_campsite_info(allocated_campsite.site_number, allocated_campsite.rate_per_night)
             update_booking_campground_func(head_office_conn, self.booking_id, self.campground_id)
             logger.info(f"Booking {self.booking_id} successfully allocated to Campsite {allocated_campsite.site_number}.")
             print(f"Booking {self.booking_id} successfully allocated to Campsite {allocated_campsite.site_number}.")
         else:
+            # Log if no campsite is available
             logger.warning(f"No available campsites for Booking {self.booking_id} from {adjusted_start_date} to {adjusted_end_date}.")
         return allocated_campsite
 

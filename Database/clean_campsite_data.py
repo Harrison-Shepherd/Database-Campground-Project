@@ -4,7 +4,6 @@ import pyodbc
 from Utils.config_loader import get_connection_string
 from Utils.logging_config import logger
 
-
 # Define a filter class to suppress detailed HTTP logs
 class SuppressHttpLogsFilter(logging.Filter):
     def filter(self, record):
@@ -12,7 +11,6 @@ class SuppressHttpLogsFilter(logging.Filter):
         return 'Request URL:' not in record.getMessage() and \
                'Request headers:' not in record.getMessage() and \
                'Response headers:' not in record.getMessage()
-
 
 # Configure logging
 logger = logging.getLogger()
@@ -32,6 +30,7 @@ logging.getLogger('urllib3').setLevel(logging.CRITICAL)
 SQL_CONNECTION_STRING = get_connection_string('sql_server')
 cosmos_config = get_connection_string('cosmos_db')
 
+# Cosmos DB connection details
 COSMOS_ENDPOINT = cosmos_config['endpoint']
 COSMOS_PRIMARY_KEY = cosmos_config['key']
 COSMOS_DATABASE_NAME = cosmos_config['database_name']
@@ -39,10 +38,12 @@ BOOKINGS_CONTAINER_NAME = "Bookings"
 PDFS_CONTAINER_NAME = "PDFs"
 SUMMARY_PDFS_CONTAINER_NAME = "Summary_PDFs"
 
-
 def clean_sql_campsite_data():
     """
-    Cleans campsite-related data from SQL tables.
+    Cleans campsite-related data from specified SQL tables.
+
+    Deletes all data from the 'camping.booking' and 'camping.summary' tables
+    to reset the campsite data in the SQL database.
     """
     try:
         conn = pyodbc.connect(SQL_CONNECTION_STRING)
@@ -56,20 +57,18 @@ def clean_sql_campsite_data():
 
         # Iterate over each table and delete the data
         for table in tables_to_clean:
-            cursor.execute(f"DELETE FROM {table}")
-            conn.commit()
+            cursor.execute(f"DELETE FROM {table}")  # Delete all records from the table
+            conn.commit()  # Commit changes to the database
             logger.info(f"Cleaned table {table} successfully.")
             print(f"Cleaned table {table} successfully.")
 
-
-        conn.close()
+        conn.close()  # Close the SQL connection
         logger.info("SQL campsite data cleaned successfully.")
         print("SQL campsite data cleaned successfully.")
     except Exception as e:
+        # Log any errors encountered during the cleanup process
         logger.error(f"An error occurred while cleaning SQL campsite data: {e}")
         print(f"An error occurred while cleaning SQL campsite data: {e}")
-
-
 
 def clean_cosmos_container_data(container_name, partition_key_name):
     """
@@ -79,6 +78,7 @@ def clean_cosmos_container_data(container_name, partition_key_name):
     :param partition_key_name: The name of the partition key used in the container.
     """
     try:
+        # Connect to the specified Cosmos DB container
         client = CosmosClient(COSMOS_ENDPOINT, COSMOS_PRIMARY_KEY)
         database = client.get_database_client(COSMOS_DATABASE_NAME)
         container = database.get_container_client(container_name)
@@ -104,19 +104,27 @@ def clean_cosmos_container_data(container_name, partition_key_name):
                 logger.info(f"Deleted item with ID {item_id} from {container_name}.")
                 print(f"Deleted item with ID {item_id} from {container_name}.")
             except exceptions.CosmosResourceNotFoundError:
+                # Handle case where the item was not found or partition key mismatch
                 logger.warning(f"Item with ID {item_id} not found; it may have already been deleted or there is a partition key mismatch.")
             except exceptions.CosmosHttpResponseError as e:
+                # Log errors that occur during deletion
                 logger.error(f"An error occurred while deleting item with ID {item_id}: {e}")
                 print(f"An error occurred while deleting item with ID {partition_key_value}: {e}")
 
         logger.info(f"{container_name} data cleaned successfully.")
     except exceptions.CosmosHttpResponseError as e:
+        # Log HTTP response errors from Cosmos DB
         logger.warning(f"An error occurred while cleaning {container_name} data: {e}")
     except Exception as e:
+        # Log other exceptions encountered during cleanup
         logger.warning(f"An error occurred while cleaning {container_name} data: {e}")
 
-
 def main():
+    """
+    Main function to clean campsite data from SQL and Cosmos DB.
+
+    It sequentially cleans data from the SQL database and various Cosmos DB containers.
+    """
     # Clean SQL campsite data
     clean_sql_campsite_data()
 
@@ -126,9 +134,8 @@ def main():
     # Clean Cosmos DB PDFs data
     clean_cosmos_container_data(PDFS_CONTAINER_NAME, 'pdf_id')
 
-    # Clean Cosmos DB Summary_PDFs data
+    # Clean Cosmos DB Summary PDFs data
     clean_cosmos_container_data(SUMMARY_PDFS_CONTAINER_NAME, 'summary_id')
-
 
 if __name__ == "__main__":
     main()

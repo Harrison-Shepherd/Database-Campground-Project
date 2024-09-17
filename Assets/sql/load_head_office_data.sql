@@ -1,6 +1,12 @@
 
 
-INSERT INTO head_office.customers (first_name, last_name, phone, address, post_code)
+INSERT INTO head_office.customers (
+    first_name,   -- Customer's first name
+    last_name,    -- Customer's last name
+    phone,        -- Customer's phone number (optional)
+    address,      -- Customer's address (optional)
+    post_code     -- Customer's postal code (optional)
+) 
 VALUES
     ('John', 'Doe', '0412 345 678', '123 Main St', '4000'),
     ('Jane', 'Smith', '0423 456 789', '456 Elm St', '4011'),
@@ -105,7 +111,14 @@ VALUES
     ('Grace', 'Lewis', '0411 456 789', '765 Walnut St', '4551');
 
 
-INSERT INTO head_office.booking (customer_id, booking_date, arrival_date, campground_id, campsite_size , num_campsites )
+INSERT INTO head_office.booking (
+    customer_id,        -- ID of the customer making the booking (foreign key reference)
+    booking_date,       -- Date when the booking was made
+    arrival_date,       -- Date when the customer is scheduled to arrive
+    campground_id,      -- ID of the campground where the booking is made
+    campsite_size,      -- Size of the campsite booked (e.g., 'Small', 'Medium', 'Large')
+    num_campsites       -- Number of campsites booked
+) 
 VALUES
  
  (1, '2024-08-15', '2024-10-05',1,'Small',1),

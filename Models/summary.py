@@ -34,9 +34,12 @@ class Summary:
 
         :raises ValueError: If any required fields are empty or if any values are negative.
         """
+        # Check if campground_id and summary_date are not empty
         if not self.campground_id or not self.summary_date:
             logger.error("Validation Error: Campground ID and summary date must not be empty.")
             raise ValueError("Campground ID and summary date must not be empty.")
+        
+        # Ensure total sales and bookings are non-negative
         if self.total_sales < 0 or self.total_bookings < 0:
             logger.error("Validation Error: Total sales and bookings cannot be negative.")
             raise ValueError("Total sales and bookings cannot be negative.")
