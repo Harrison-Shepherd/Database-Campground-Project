@@ -61004,3 +61004,1583 @@ Response headers:
 2024-09-17 15:37:34,626 - INFO - Confirmation PDF generated and saved as pdfs\confirmation_1.pdf.
 2024-09-17 15:37:34,654 - INFO - Connected to SQL database successfully.
 2024-09-17 15:37:34,682 - INFO - Summary PDF generated and saved as pdfs\summary_2024-09-17.pdf.
+2024-09-19 10:00:30,704 - INFO - Configuration loaded from connection_strings.json.
+2024-09-19 10:00:30,705 - INFO - Connection string prepared for sql_server.
+2024-09-19 10:00:30,705 - INFO - Configuration loaded from connection_strings.json.
+2024-09-19 10:00:30,705 - INFO - Configuration parameters retrieved for cosmos_db.
+2024-09-19 10:00:45,836 - ERROR - An error occurred while cleaning SQL campsite data: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: Timeout error [258].  (258) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Unable to complete login process due to delay in login response (258)')
+2024-09-19 10:00:46,755 - INFO - Attempting to delete item with ID: 8689de03-0232-4013-ac12-fe9b8b3c2e9f and Partition Key: 1
+2024-09-19 10:00:46,815 - INFO - Deleted item with ID 8689de03-0232-4013-ac12-fe9b8b3c2e9f from Bookings.
+2024-09-19 10:00:46,815 - INFO - Attempting to delete item with ID: 01e787a8-016c-4f58-ac76-2187f4ac8157 and Partition Key: 2
+2024-09-19 10:00:46,854 - INFO - Deleted item with ID 01e787a8-016c-4f58-ac76-2187f4ac8157 from Bookings.
+2024-09-19 10:00:46,854 - INFO - Attempting to delete item with ID: f6d7eb88-c698-435e-ab03-2f7b81db1803 and Partition Key: 3
+2024-09-19 10:00:46,894 - INFO - Deleted item with ID f6d7eb88-c698-435e-ab03-2f7b81db1803 from Bookings.
+2024-09-19 10:00:46,894 - INFO - Attempting to delete item with ID: 9c3ac1b8-3f1d-4980-a9fb-8522931284d9 and Partition Key: 4
+2024-09-19 10:00:46,935 - INFO - Deleted item with ID 9c3ac1b8-3f1d-4980-a9fb-8522931284d9 from Bookings.
+2024-09-19 10:00:46,936 - INFO - Attempting to delete item with ID: 6386ff80-eeec-4b42-b23c-83eb981f43e6 and Partition Key: 5
+2024-09-19 10:00:46,973 - INFO - Deleted item with ID 6386ff80-eeec-4b42-b23c-83eb981f43e6 from Bookings.
+2024-09-19 10:00:46,973 - INFO - Attempting to delete item with ID: 312934b9-ab08-4c32-8664-492d0d1a5e66 and Partition Key: 6
+2024-09-19 10:00:47,011 - INFO - Deleted item with ID 312934b9-ab08-4c32-8664-492d0d1a5e66 from Bookings.
+2024-09-19 10:00:47,011 - INFO - Attempting to delete item with ID: 53bf7133-dec1-4d8d-bd27-cb347b7570f0 and Partition Key: 7
+2024-09-19 10:00:47,050 - INFO - Deleted item with ID 53bf7133-dec1-4d8d-bd27-cb347b7570f0 from Bookings.
+2024-09-19 10:00:47,050 - INFO - Attempting to delete item with ID: 38e16bd6-46bc-4064-906c-57488c7ec95c and Partition Key: 8
+2024-09-19 10:00:47,088 - INFO - Deleted item with ID 38e16bd6-46bc-4064-906c-57488c7ec95c from Bookings.
+2024-09-19 10:00:47,088 - INFO - Attempting to delete item with ID: 3b5e4222-3ab3-4557-b210-81de40379efd and Partition Key: 9
+2024-09-19 10:00:47,125 - INFO - Deleted item with ID 3b5e4222-3ab3-4557-b210-81de40379efd from Bookings.
+2024-09-19 10:00:47,126 - INFO - Attempting to delete item with ID: 5c5c3300-75f1-49aa-b7da-6424be0ce38e and Partition Key: 10
+2024-09-19 10:00:47,163 - INFO - Deleted item with ID 5c5c3300-75f1-49aa-b7da-6424be0ce38e from Bookings.
+2024-09-19 10:00:47,163 - INFO - Attempting to delete item with ID: fa0d6f3c-aa85-4542-95a3-98a9a250b561 and Partition Key: 11
+2024-09-19 10:00:47,200 - INFO - Deleted item with ID fa0d6f3c-aa85-4542-95a3-98a9a250b561 from Bookings.
+2024-09-19 10:00:47,200 - INFO - Attempting to delete item with ID: b5ae40e9-913d-4874-a02c-abe5c5bb5525 and Partition Key: 12
+2024-09-19 10:00:47,238 - INFO - Deleted item with ID b5ae40e9-913d-4874-a02c-abe5c5bb5525 from Bookings.
+2024-09-19 10:00:47,238 - INFO - Attempting to delete item with ID: f3f7a1b6-5622-41c8-bd10-50117bcd1df9 and Partition Key: 13
+2024-09-19 10:00:47,275 - INFO - Deleted item with ID f3f7a1b6-5622-41c8-bd10-50117bcd1df9 from Bookings.
+2024-09-19 10:00:47,276 - INFO - Attempting to delete item with ID: 68d4b8c8-ea94-4794-b4a4-bbf922616e79 and Partition Key: 14
+2024-09-19 10:00:47,313 - INFO - Deleted item with ID 68d4b8c8-ea94-4794-b4a4-bbf922616e79 from Bookings.
+2024-09-19 10:00:47,313 - INFO - Attempting to delete item with ID: a279def2-0665-4d69-b0e3-0d826f2f8036 and Partition Key: 15
+2024-09-19 10:00:47,349 - INFO - Deleted item with ID a279def2-0665-4d69-b0e3-0d826f2f8036 from Bookings.
+2024-09-19 10:00:47,349 - INFO - Attempting to delete item with ID: a7d01b0e-ae4a-4ce6-92f2-23d7ad6f1250 and Partition Key: 16
+2024-09-19 10:00:47,388 - INFO - Deleted item with ID a7d01b0e-ae4a-4ce6-92f2-23d7ad6f1250 from Bookings.
+2024-09-19 10:00:47,388 - INFO - Attempting to delete item with ID: e4f84ff0-a094-4d20-8050-751764863322 and Partition Key: 17
+2024-09-19 10:00:47,425 - INFO - Deleted item with ID e4f84ff0-a094-4d20-8050-751764863322 from Bookings.
+2024-09-19 10:00:47,425 - INFO - Attempting to delete item with ID: 76515aa3-e74d-49c6-a8dd-486bdec63b8f and Partition Key: 18
+2024-09-19 10:00:47,463 - INFO - Deleted item with ID 76515aa3-e74d-49c6-a8dd-486bdec63b8f from Bookings.
+2024-09-19 10:00:47,463 - INFO - Attempting to delete item with ID: 8c2fd8c8-d2be-4a1e-8eaf-d3a5811cc20e and Partition Key: 19
+2024-09-19 10:00:47,501 - INFO - Deleted item with ID 8c2fd8c8-d2be-4a1e-8eaf-d3a5811cc20e from Bookings.
+2024-09-19 10:00:47,501 - INFO - Attempting to delete item with ID: b84c77d0-a372-4e28-8791-5f780dbb7f7d and Partition Key: 20
+2024-09-19 10:00:47,538 - INFO - Deleted item with ID b84c77d0-a372-4e28-8791-5f780dbb7f7d from Bookings.
+2024-09-19 10:00:47,538 - INFO - Attempting to delete item with ID: 594776ac-d137-44d3-aef8-64b1313eda2d and Partition Key: 21
+2024-09-19 10:00:47,576 - INFO - Deleted item with ID 594776ac-d137-44d3-aef8-64b1313eda2d from Bookings.
+2024-09-19 10:00:47,576 - INFO - Attempting to delete item with ID: 9cc79c18-6826-4945-bda9-94c71cd9a905 and Partition Key: 22
+2024-09-19 10:00:47,613 - INFO - Deleted item with ID 9cc79c18-6826-4945-bda9-94c71cd9a905 from Bookings.
+2024-09-19 10:00:47,614 - INFO - Attempting to delete item with ID: 1bad2519-ed18-4507-abd0-7c17d5e22b9b and Partition Key: 23
+2024-09-19 10:00:47,651 - INFO - Deleted item with ID 1bad2519-ed18-4507-abd0-7c17d5e22b9b from Bookings.
+2024-09-19 10:00:47,651 - INFO - Attempting to delete item with ID: 2a07b8ea-fa0c-4eae-b441-b35361918c6b and Partition Key: 24
+2024-09-19 10:00:47,689 - INFO - Deleted item with ID 2a07b8ea-fa0c-4eae-b441-b35361918c6b from Bookings.
+2024-09-19 10:00:47,689 - INFO - Attempting to delete item with ID: b7fc7820-6eb5-4645-9ca6-a1c365b662b0 and Partition Key: 25
+2024-09-19 10:00:47,728 - INFO - Deleted item with ID b7fc7820-6eb5-4645-9ca6-a1c365b662b0 from Bookings.
+2024-09-19 10:00:47,728 - INFO - Attempting to delete item with ID: ed3160c3-702d-4031-9d97-1fa0c9c2e2aa and Partition Key: 26
+2024-09-19 10:00:47,765 - INFO - Deleted item with ID ed3160c3-702d-4031-9d97-1fa0c9c2e2aa from Bookings.
+2024-09-19 10:00:47,765 - INFO - Attempting to delete item with ID: d9dc3a1d-bced-475b-8eeb-4deb3c8488b6 and Partition Key: 27
+2024-09-19 10:00:47,805 - INFO - Deleted item with ID d9dc3a1d-bced-475b-8eeb-4deb3c8488b6 from Bookings.
+2024-09-19 10:00:47,805 - INFO - Attempting to delete item with ID: d588223c-f4d6-4e75-b791-913f0f5e6a75 and Partition Key: 28
+2024-09-19 10:00:47,843 - INFO - Deleted item with ID d588223c-f4d6-4e75-b791-913f0f5e6a75 from Bookings.
+2024-09-19 10:00:47,843 - INFO - Attempting to delete item with ID: 7b4c2fcd-f610-4a2c-a056-736bf39bdc09 and Partition Key: 29
+2024-09-19 10:00:47,882 - INFO - Deleted item with ID 7b4c2fcd-f610-4a2c-a056-736bf39bdc09 from Bookings.
+2024-09-19 10:00:47,882 - INFO - Attempting to delete item with ID: 84b2b979-4dd5-4fb7-901c-0948ad8e0a37 and Partition Key: 30
+2024-09-19 10:00:47,922 - INFO - Deleted item with ID 84b2b979-4dd5-4fb7-901c-0948ad8e0a37 from Bookings.
+2024-09-19 10:00:47,923 - INFO - Attempting to delete item with ID: 83a44566-87fc-4eb1-8fdf-39898296fcb0 and Partition Key: 31
+2024-09-19 10:00:47,960 - INFO - Deleted item with ID 83a44566-87fc-4eb1-8fdf-39898296fcb0 from Bookings.
+2024-09-19 10:00:47,960 - INFO - Attempting to delete item with ID: 148f06a7-2688-4881-8cdc-b13cf693b095 and Partition Key: 32
+2024-09-19 10:00:47,998 - INFO - Deleted item with ID 148f06a7-2688-4881-8cdc-b13cf693b095 from Bookings.
+2024-09-19 10:00:47,998 - INFO - Attempting to delete item with ID: d9ebc8d7-7423-48fb-a14a-16b3fee40665 and Partition Key: 33
+2024-09-19 10:00:48,035 - INFO - Deleted item with ID d9ebc8d7-7423-48fb-a14a-16b3fee40665 from Bookings.
+2024-09-19 10:00:48,036 - INFO - Attempting to delete item with ID: 18cb3b48-009e-4e68-a3e1-842773238a71 and Partition Key: 34
+2024-09-19 10:00:48,075 - INFO - Deleted item with ID 18cb3b48-009e-4e68-a3e1-842773238a71 from Bookings.
+2024-09-19 10:00:48,075 - INFO - Attempting to delete item with ID: f7ea04a0-0acc-425e-8b69-82d88a5d5a57 and Partition Key: 35
+2024-09-19 10:00:48,113 - INFO - Deleted item with ID f7ea04a0-0acc-425e-8b69-82d88a5d5a57 from Bookings.
+2024-09-19 10:00:48,113 - INFO - Attempting to delete item with ID: 342b512e-57fe-4bbf-b206-6a8ca52f2ebc and Partition Key: 36
+2024-09-19 10:00:48,151 - INFO - Deleted item with ID 342b512e-57fe-4bbf-b206-6a8ca52f2ebc from Bookings.
+2024-09-19 10:00:48,151 - INFO - Attempting to delete item with ID: 02d9ea72-2fe7-4ad0-ad4f-9fad645e79a1 and Partition Key: 37
+2024-09-19 10:00:48,188 - INFO - Deleted item with ID 02d9ea72-2fe7-4ad0-ad4f-9fad645e79a1 from Bookings.
+2024-09-19 10:00:48,188 - INFO - Attempting to delete item with ID: e6fe4c35-77a5-47ed-a3b7-30d6af3c4299 and Partition Key: 38
+2024-09-19 10:00:48,226 - INFO - Deleted item with ID e6fe4c35-77a5-47ed-a3b7-30d6af3c4299 from Bookings.
+2024-09-19 10:00:48,226 - INFO - Attempting to delete item with ID: 76234904-8022-4661-bfff-bc185435bd68 and Partition Key: 39
+2024-09-19 10:00:48,264 - INFO - Deleted item with ID 76234904-8022-4661-bfff-bc185435bd68 from Bookings.
+2024-09-19 10:00:48,264 - INFO - Attempting to delete item with ID: 5733d092-8dce-44ba-b40c-c1028df84ced and Partition Key: 40
+2024-09-19 10:00:48,302 - INFO - Deleted item with ID 5733d092-8dce-44ba-b40c-c1028df84ced from Bookings.
+2024-09-19 10:00:48,302 - INFO - Attempting to delete item with ID: 60094161-8426-4d4b-b7bd-969c806b94d4 and Partition Key: 41
+2024-09-19 10:00:48,342 - INFO - Deleted item with ID 60094161-8426-4d4b-b7bd-969c806b94d4 from Bookings.
+2024-09-19 10:00:48,342 - INFO - Attempting to delete item with ID: 97e429ec-75b2-44ba-9bf7-fdfb9d48b28d and Partition Key: 42
+2024-09-19 10:00:48,379 - INFO - Deleted item with ID 97e429ec-75b2-44ba-9bf7-fdfb9d48b28d from Bookings.
+2024-09-19 10:00:48,380 - INFO - Attempting to delete item with ID: a43d330e-898c-4d7a-9def-1d59b21ca7fd and Partition Key: 43
+2024-09-19 10:00:48,418 - INFO - Deleted item with ID a43d330e-898c-4d7a-9def-1d59b21ca7fd from Bookings.
+2024-09-19 10:00:48,418 - INFO - Attempting to delete item with ID: 9351735f-b28c-48d8-9964-57499eb13eb2 and Partition Key: 44
+2024-09-19 10:00:48,455 - INFO - Deleted item with ID 9351735f-b28c-48d8-9964-57499eb13eb2 from Bookings.
+2024-09-19 10:00:48,455 - INFO - Attempting to delete item with ID: f3260d8c-3949-422b-b6ba-0e4866c79ef3 and Partition Key: 45
+2024-09-19 10:00:48,491 - INFO - Deleted item with ID f3260d8c-3949-422b-b6ba-0e4866c79ef3 from Bookings.
+2024-09-19 10:00:48,491 - INFO - Attempting to delete item with ID: de6b55be-ecbd-42f7-87df-b7d4883e308e and Partition Key: 46
+2024-09-19 10:00:48,529 - INFO - Deleted item with ID de6b55be-ecbd-42f7-87df-b7d4883e308e from Bookings.
+2024-09-19 10:00:48,529 - INFO - Bookings data cleaned successfully.
+2024-09-19 10:00:49,153 - INFO - Attempting to delete item with ID: 1 and Partition Key: 1
+2024-09-19 10:00:49,212 - INFO - Deleted item with ID 1 from PDFs.
+2024-09-19 10:00:49,212 - INFO - Attempting to delete item with ID: 2 and Partition Key: 2
+2024-09-19 10:00:49,247 - INFO - Deleted item with ID 2 from PDFs.
+2024-09-19 10:00:49,248 - INFO - Attempting to delete item with ID: 3 and Partition Key: 3
+2024-09-19 10:00:49,287 - INFO - Deleted item with ID 3 from PDFs.
+2024-09-19 10:00:49,287 - INFO - Attempting to delete item with ID: 4 and Partition Key: 4
+2024-09-19 10:00:49,327 - INFO - Deleted item with ID 4 from PDFs.
+2024-09-19 10:00:49,327 - INFO - Attempting to delete item with ID: 5 and Partition Key: 5
+2024-09-19 10:00:49,367 - INFO - Deleted item with ID 5 from PDFs.
+2024-09-19 10:00:49,367 - INFO - Attempting to delete item with ID: 6 and Partition Key: 6
+2024-09-19 10:00:49,407 - INFO - Deleted item with ID 6 from PDFs.
+2024-09-19 10:00:49,407 - INFO - Attempting to delete item with ID: 7 and Partition Key: 7
+2024-09-19 10:00:49,447 - INFO - Deleted item with ID 7 from PDFs.
+2024-09-19 10:00:49,448 - INFO - Attempting to delete item with ID: 8 and Partition Key: 8
+2024-09-19 10:00:49,489 - INFO - Deleted item with ID 8 from PDFs.
+2024-09-19 10:00:49,489 - INFO - Attempting to delete item with ID: 9 and Partition Key: 9
+2024-09-19 10:00:49,528 - INFO - Deleted item with ID 9 from PDFs.
+2024-09-19 10:00:49,528 - INFO - Attempting to delete item with ID: 10 and Partition Key: 10
+2024-09-19 10:00:49,569 - INFO - Deleted item with ID 10 from PDFs.
+2024-09-19 10:00:49,569 - INFO - Attempting to delete item with ID: 11 and Partition Key: 11
+2024-09-19 10:00:49,608 - INFO - Deleted item with ID 11 from PDFs.
+2024-09-19 10:00:49,609 - INFO - Attempting to delete item with ID: 12 and Partition Key: 12
+2024-09-19 10:00:49,647 - INFO - Deleted item with ID 12 from PDFs.
+2024-09-19 10:00:49,647 - INFO - Attempting to delete item with ID: 13 and Partition Key: 13
+2024-09-19 10:00:49,687 - INFO - Deleted item with ID 13 from PDFs.
+2024-09-19 10:00:49,688 - INFO - Attempting to delete item with ID: 14 and Partition Key: 14
+2024-09-19 10:00:49,727 - INFO - Deleted item with ID 14 from PDFs.
+2024-09-19 10:00:49,728 - INFO - Attempting to delete item with ID: 15 and Partition Key: 15
+2024-09-19 10:00:49,767 - INFO - Deleted item with ID 15 from PDFs.
+2024-09-19 10:00:49,768 - INFO - Attempting to delete item with ID: 16 and Partition Key: 16
+2024-09-19 10:00:49,807 - INFO - Deleted item with ID 16 from PDFs.
+2024-09-19 10:00:49,808 - INFO - Attempting to delete item with ID: 17 and Partition Key: 17
+2024-09-19 10:00:49,848 - INFO - Deleted item with ID 17 from PDFs.
+2024-09-19 10:00:49,848 - INFO - Attempting to delete item with ID: 18 and Partition Key: 18
+2024-09-19 10:00:49,888 - INFO - Deleted item with ID 18 from PDFs.
+2024-09-19 10:00:49,888 - INFO - Attempting to delete item with ID: 19 and Partition Key: 19
+2024-09-19 10:00:49,928 - INFO - Deleted item with ID 19 from PDFs.
+2024-09-19 10:00:49,928 - INFO - Attempting to delete item with ID: 20 and Partition Key: 20
+2024-09-19 10:00:49,970 - INFO - Deleted item with ID 20 from PDFs.
+2024-09-19 10:00:49,971 - INFO - Attempting to delete item with ID: 21 and Partition Key: 21
+2024-09-19 10:00:50,009 - INFO - Deleted item with ID 21 from PDFs.
+2024-09-19 10:00:50,009 - INFO - Attempting to delete item with ID: 22 and Partition Key: 22
+2024-09-19 10:00:50,047 - INFO - Deleted item with ID 22 from PDFs.
+2024-09-19 10:00:50,047 - INFO - Attempting to delete item with ID: 23 and Partition Key: 23
+2024-09-19 10:00:50,086 - INFO - Deleted item with ID 23 from PDFs.
+2024-09-19 10:00:50,086 - INFO - Attempting to delete item with ID: 24 and Partition Key: 24
+2024-09-19 10:00:50,128 - INFO - Deleted item with ID 24 from PDFs.
+2024-09-19 10:00:50,128 - INFO - Attempting to delete item with ID: 25 and Partition Key: 25
+2024-09-19 10:00:50,167 - INFO - Deleted item with ID 25 from PDFs.
+2024-09-19 10:00:50,167 - INFO - Attempting to delete item with ID: 26 and Partition Key: 26
+2024-09-19 10:00:50,208 - INFO - Deleted item with ID 26 from PDFs.
+2024-09-19 10:00:50,208 - INFO - Attempting to delete item with ID: 27 and Partition Key: 27
+2024-09-19 10:00:50,248 - INFO - Deleted item with ID 27 from PDFs.
+2024-09-19 10:00:50,248 - INFO - Attempting to delete item with ID: 28 and Partition Key: 28
+2024-09-19 10:00:50,288 - INFO - Deleted item with ID 28 from PDFs.
+2024-09-19 10:00:50,289 - INFO - Attempting to delete item with ID: 29 and Partition Key: 29
+2024-09-19 10:00:50,328 - INFO - Deleted item with ID 29 from PDFs.
+2024-09-19 10:00:50,328 - INFO - Attempting to delete item with ID: 30 and Partition Key: 30
+2024-09-19 10:00:50,367 - INFO - Deleted item with ID 30 from PDFs.
+2024-09-19 10:00:50,367 - INFO - Attempting to delete item with ID: 31 and Partition Key: 31
+2024-09-19 10:00:50,408 - INFO - Deleted item with ID 31 from PDFs.
+2024-09-19 10:00:50,409 - INFO - Attempting to delete item with ID: 32 and Partition Key: 32
+2024-09-19 10:00:50,447 - INFO - Deleted item with ID 32 from PDFs.
+2024-09-19 10:00:50,447 - INFO - Attempting to delete item with ID: 33 and Partition Key: 33
+2024-09-19 10:00:50,488 - INFO - Deleted item with ID 33 from PDFs.
+2024-09-19 10:00:50,488 - INFO - Attempting to delete item with ID: 34 and Partition Key: 34
+2024-09-19 10:00:50,528 - INFO - Deleted item with ID 34 from PDFs.
+2024-09-19 10:00:50,528 - INFO - Attempting to delete item with ID: 35 and Partition Key: 35
+2024-09-19 10:00:50,568 - INFO - Deleted item with ID 35 from PDFs.
+2024-09-19 10:00:50,568 - INFO - Attempting to delete item with ID: 36 and Partition Key: 36
+2024-09-19 10:00:50,608 - INFO - Deleted item with ID 36 from PDFs.
+2024-09-19 10:00:50,609 - INFO - Attempting to delete item with ID: 37 and Partition Key: 37
+2024-09-19 10:00:50,648 - INFO - Deleted item with ID 37 from PDFs.
+2024-09-19 10:00:50,649 - INFO - Attempting to delete item with ID: 38 and Partition Key: 38
+2024-09-19 10:00:50,689 - INFO - Deleted item with ID 38 from PDFs.
+2024-09-19 10:00:50,689 - INFO - Attempting to delete item with ID: 39 and Partition Key: 39
+2024-09-19 10:00:50,727 - INFO - Deleted item with ID 39 from PDFs.
+2024-09-19 10:00:50,727 - INFO - Attempting to delete item with ID: 40 and Partition Key: 40
+2024-09-19 10:00:50,770 - INFO - Deleted item with ID 40 from PDFs.
+2024-09-19 10:00:50,770 - INFO - Attempting to delete item with ID: 41 and Partition Key: 41
+2024-09-19 10:00:50,807 - INFO - Deleted item with ID 41 from PDFs.
+2024-09-19 10:00:50,808 - INFO - Attempting to delete item with ID: 42 and Partition Key: 42
+2024-09-19 10:00:50,848 - INFO - Deleted item with ID 42 from PDFs.
+2024-09-19 10:00:50,848 - INFO - Attempting to delete item with ID: 43 and Partition Key: 43
+2024-09-19 10:00:50,888 - INFO - Deleted item with ID 43 from PDFs.
+2024-09-19 10:00:50,888 - INFO - Attempting to delete item with ID: 44 and Partition Key: 44
+2024-09-19 10:00:50,928 - INFO - Deleted item with ID 44 from PDFs.
+2024-09-19 10:00:50,928 - INFO - Attempting to delete item with ID: 45 and Partition Key: 45
+2024-09-19 10:00:50,968 - INFO - Deleted item with ID 45 from PDFs.
+2024-09-19 10:00:50,968 - INFO - Attempting to delete item with ID: 46 and Partition Key: 46
+2024-09-19 10:00:51,008 - INFO - Deleted item with ID 46 from PDFs.
+2024-09-19 10:00:51,008 - INFO - PDFs data cleaned successfully.
+2024-09-19 10:00:51,591 - INFO - Attempting to delete item with ID: 1121132_2024-09-17 and Partition Key: 1121132_2024-09-17
+2024-09-19 10:00:51,633 - INFO - Deleted item with ID 1121132_2024-09-17 from Summary_PDFs.
+2024-09-19 10:00:51,633 - INFO - Summary_PDFs data cleaned successfully.
+2024-09-19 10:00:56,117 - INFO - Configuration loaded from connection_strings.json.
+2024-09-19 10:00:56,117 - INFO - Connection string prepared for sql_server.
+2024-09-19 10:00:56,117 - INFO - Configuration loaded from connection_strings.json.
+2024-09-19 10:00:56,117 - INFO - Configuration parameters retrieved for cosmos_db.
+2024-09-19 10:01:11,233 - ERROR - An error occurred while cleaning SQL campsite data: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: Timeout error [258].  (258) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Unable to complete login process due to delay in login response (258)')
+2024-09-19 10:01:11,941 - INFO - No items found in Bookings to clean.
+2024-09-19 10:01:12,500 - INFO - No items found in PDFs to clean.
+2024-09-19 10:01:12,970 - INFO - No items found in Summary_PDFs to clean.
+2024-09-19 10:02:06,852 - INFO - Configuration loaded from connection_strings.json.
+2024-09-19 10:02:06,852 - INFO - Connection string prepared for sql_server.
+2024-09-19 10:02:06,853 - INFO - Configuration loaded from connection_strings.json.
+2024-09-19 10:02:06,853 - INFO - Configuration parameters retrieved for cosmos_db.
+2024-09-19 10:02:07,556 - INFO - Cleaned table camping.booking successfully.
+2024-09-19 10:02:07,621 - INFO - Cleaned table camping.summary successfully.
+2024-09-19 10:02:07,651 - INFO - SQL campsite data cleaned successfully.
+2024-09-19 10:02:08,443 - INFO - No items found in Bookings to clean.
+2024-09-19 10:02:08,949 - INFO - No items found in PDFs to clean.
+2024-09-19 10:02:09,472 - INFO - No items found in Summary_PDFs to clean.
+2024-09-19 10:16:50,492 - INFO - Connected to SQL database successfully.
+2024-09-19 10:16:50,849 - INFO - Connected to Head Office SQL database successfully.
+2024-09-19 10:16:51,236 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-09-19 10:16:51,236 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-09-19 10:16:51,313 - INFO - Fetched 46 bookings from the Head Office database.
+2024-09-19 10:16:51,313 - INFO - Processing Booking 1...
+2024-09-19 10:16:51,313 - INFO - Attempting to allocate Booking 1 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:16:51,313 - INFO - Booking 1 successfully allocated to Campsite 1.
+2024-09-19 10:16:51,383 - INFO - Booking 1 updated with new campground ID 1121132 successfully.
+2024-09-19 10:16:51,417 - INFO - Confirmation saved as pdfs\confirmation_1.pdf.
+2024-09-19 10:16:51,668 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:16:52,132 - INFO - PDF pdfs\confirmation_1.pdf upserted into Cosmos DB successfully with pdf_id 1.
+2024-09-19 10:16:52,132 - INFO - Confirmation PDF pdfs\confirmation_1.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:16:52,585 - INFO - Booking 1 inserted into Cosmos DB successfully.
+2024-09-19 10:16:52,586 - INFO - Booking 1 inserted into Cosmos DB successfully.
+2024-09-19 10:16:52,586 - INFO - Booking 1 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-09-19 10:16:52,586 - INFO - Processing Booking 2...
+2024-09-19 10:16:52,586 - INFO - Attempting to allocate Booking 2 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:16:52,586 - INFO - Booking 2 successfully allocated to Campsite 2.
+2024-09-19 10:16:52,653 - INFO - Booking 2 updated with new campground ID 1121132 successfully.
+2024-09-19 10:16:52,685 - INFO - Confirmation saved as pdfs\confirmation_2.pdf.
+2024-09-19 10:16:52,885 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:16:53,289 - INFO - PDF pdfs\confirmation_2.pdf upserted into Cosmos DB successfully with pdf_id 2.
+2024-09-19 10:16:53,289 - INFO - Confirmation PDF pdfs\confirmation_2.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:16:53,383 - INFO - Booking 2 inserted into Cosmos DB successfully.
+2024-09-19 10:16:53,383 - INFO - Booking 2 inserted into Cosmos DB successfully.
+2024-09-19 10:16:53,383 - INFO - Booking 2 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-09-19 10:16:53,383 - INFO - Processing Booking 3...
+2024-09-19 10:16:53,383 - INFO - Attempting to allocate Booking 3 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:16:53,383 - INFO - Booking 3 successfully allocated to Campsite 3.
+2024-09-19 10:16:53,453 - INFO - Booking 3 updated with new campground ID 1121132 successfully.
+2024-09-19 10:16:53,486 - INFO - Confirmation saved as pdfs\confirmation_3.pdf.
+2024-09-19 10:16:53,694 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:16:54,062 - INFO - PDF pdfs\confirmation_3.pdf upserted into Cosmos DB successfully with pdf_id 3.
+2024-09-19 10:16:54,062 - INFO - Confirmation PDF pdfs\confirmation_3.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:16:54,167 - INFO - Booking 3 inserted into Cosmos DB successfully.
+2024-09-19 10:16:54,167 - INFO - Booking 3 inserted into Cosmos DB successfully.
+2024-09-19 10:16:54,167 - INFO - Booking 3 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-09-19 10:16:54,168 - INFO - Processing Booking 4...
+2024-09-19 10:16:54,168 - INFO - Attempting to allocate Booking 4 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:16:54,168 - INFO - Booking 4 successfully allocated to Campsite 4.
+2024-09-19 10:16:54,234 - INFO - Booking 4 updated with new campground ID 1121132 successfully.
+2024-09-19 10:16:54,266 - INFO - Confirmation saved as pdfs\confirmation_4.pdf.
+2024-09-19 10:16:54,465 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:16:54,819 - INFO - PDF pdfs\confirmation_4.pdf upserted into Cosmos DB successfully with pdf_id 4.
+2024-09-19 10:16:54,819 - INFO - Confirmation PDF pdfs\confirmation_4.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:16:54,924 - INFO - Booking 4 inserted into Cosmos DB successfully.
+2024-09-19 10:16:54,924 - INFO - Booking 4 inserted into Cosmos DB successfully.
+2024-09-19 10:16:54,924 - INFO - Booking 4 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-09-19 10:16:54,924 - INFO - Processing Booking 5...
+2024-09-19 10:16:54,924 - INFO - Attempting to allocate Booking 5 from 2024-10-12 to 2024-10-19...
+2024-09-19 10:16:54,924 - INFO - Booking 5 successfully allocated to Campsite 1.
+2024-09-19 10:16:54,990 - INFO - Booking 5 updated with new campground ID 1121132 successfully.
+2024-09-19 10:16:55,030 - INFO - Confirmation saved as pdfs\confirmation_5.pdf.
+2024-09-19 10:16:55,183 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:16:55,551 - INFO - PDF pdfs\confirmation_5.pdf upserted into Cosmos DB successfully with pdf_id 5.
+2024-09-19 10:16:55,551 - INFO - Confirmation PDF pdfs\confirmation_5.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:16:55,646 - INFO - Booking 5 inserted into Cosmos DB successfully.
+2024-09-19 10:16:55,646 - INFO - Booking 5 inserted into Cosmos DB successfully.
+2024-09-19 10:16:55,646 - INFO - Booking 5 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-09-19 10:16:55,646 - INFO - Processing Booking 6...
+2024-09-19 10:16:55,646 - INFO - Attempting to allocate Booking 6 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:16:55,646 - INFO - Booking 6 successfully allocated to Campsite 1.
+2024-09-19 10:16:55,712 - INFO - Booking 6 updated with new campground ID 1121132 successfully.
+2024-09-19 10:16:55,742 - INFO - Confirmation saved as pdfs\confirmation_6.pdf.
+2024-09-19 10:16:55,960 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:16:56,248 - INFO - PDF pdfs\confirmation_6.pdf upserted into Cosmos DB successfully with pdf_id 6.
+2024-09-19 10:16:56,248 - INFO - Confirmation PDF pdfs\confirmation_6.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:16:56,341 - INFO - Booking 6 inserted into Cosmos DB successfully.
+2024-09-19 10:16:56,341 - INFO - Booking 6 inserted into Cosmos DB successfully.
+2024-09-19 10:16:56,341 - INFO - Booking 6 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-09-19 10:16:56,342 - INFO - Processing Booking 7...
+2024-09-19 10:16:56,342 - INFO - Attempting to allocate Booking 7 from 2024-10-12 to 2024-10-19...
+2024-09-19 10:16:56,342 - INFO - Booking 7 successfully allocated to Campsite 2.
+2024-09-19 10:16:56,407 - INFO - Booking 7 updated with new campground ID 1121132 successfully.
+2024-09-19 10:16:56,441 - INFO - Confirmation saved as pdfs\confirmation_7.pdf.
+2024-09-19 10:16:56,598 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:16:56,871 - INFO - PDF pdfs\confirmation_7.pdf upserted into Cosmos DB successfully with pdf_id 7.
+2024-09-19 10:16:56,871 - INFO - Confirmation PDF pdfs\confirmation_7.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:16:56,965 - INFO - Booking 7 inserted into Cosmos DB successfully.
+2024-09-19 10:16:56,965 - INFO - Booking 7 inserted into Cosmos DB successfully.
+2024-09-19 10:16:56,965 - INFO - Booking 7 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-09-19 10:16:56,965 - INFO - Processing Booking 8...
+2024-09-19 10:16:56,966 - INFO - Attempting to allocate Booking 8 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:16:56,966 - INFO - Booking 8 successfully allocated to Campsite 1.
+2024-09-19 10:16:57,032 - INFO - Booking 8 updated with new campground ID 1121132 successfully.
+2024-09-19 10:16:57,073 - INFO - Confirmation saved as pdfs\confirmation_8.pdf.
+2024-09-19 10:16:57,248 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:16:57,589 - INFO - PDF pdfs\confirmation_8.pdf upserted into Cosmos DB successfully with pdf_id 8.
+2024-09-19 10:16:57,590 - INFO - Confirmation PDF pdfs\confirmation_8.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:16:57,685 - INFO - Booking 8 inserted into Cosmos DB successfully.
+2024-09-19 10:16:57,685 - INFO - Booking 8 inserted into Cosmos DB successfully.
+2024-09-19 10:16:57,685 - INFO - Booking 8 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-09-19 10:16:57,685 - INFO - Processing Booking 9...
+2024-09-19 10:16:57,685 - INFO - Attempting to allocate Booking 9 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:16:57,685 - INFO - Booking 9 successfully allocated to Campsite 2.
+2024-09-19 10:16:57,751 - INFO - Booking 9 updated with new campground ID 1121132 successfully.
+2024-09-19 10:16:57,784 - INFO - Confirmation saved as pdfs\confirmation_9.pdf.
+2024-09-19 10:16:57,976 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:16:58,271 - INFO - PDF pdfs\confirmation_9.pdf upserted into Cosmos DB successfully with pdf_id 9.
+2024-09-19 10:16:58,271 - INFO - Confirmation PDF pdfs\confirmation_9.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:16:58,365 - INFO - Booking 9 inserted into Cosmos DB successfully.
+2024-09-19 10:16:58,365 - INFO - Booking 9 inserted into Cosmos DB successfully.
+2024-09-19 10:16:58,365 - INFO - Booking 9 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-09-19 10:16:58,366 - INFO - Processing Booking 10...
+2024-09-19 10:16:58,366 - INFO - Attempting to allocate Booking 10 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:16:58,366 - INFO - Booking 10 successfully allocated to Campsite 5.
+2024-09-19 10:16:58,432 - INFO - Booking 10 updated with new campground ID 1121132 successfully.
+2024-09-19 10:16:58,465 - INFO - Confirmation saved as pdfs\confirmation_10.pdf.
+2024-09-19 10:16:58,607 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:16:58,931 - INFO - PDF pdfs\confirmation_10.pdf upserted into Cosmos DB successfully with pdf_id 10.
+2024-09-19 10:16:58,931 - INFO - Confirmation PDF pdfs\confirmation_10.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:16:59,024 - INFO - Booking 10 inserted into Cosmos DB successfully.
+2024-09-19 10:16:59,024 - INFO - Booking 10 inserted into Cosmos DB successfully.
+2024-09-19 10:16:59,024 - INFO - Booking 10 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-09-19 10:16:59,024 - INFO - Processing Booking 11...
+2024-09-19 10:16:59,025 - INFO - Attempting to allocate Booking 11 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:16:59,025 - INFO - Booking 11 successfully allocated to Campsite 1.
+2024-09-19 10:16:59,091 - INFO - Booking 11 updated with new campground ID 1121132 successfully.
+2024-09-19 10:16:59,131 - INFO - Confirmation saved as pdfs\confirmation_11.pdf.
+2024-09-19 10:16:59,324 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:16:59,588 - INFO - PDF pdfs\confirmation_11.pdf upserted into Cosmos DB successfully with pdf_id 11.
+2024-09-19 10:16:59,588 - INFO - Confirmation PDF pdfs\confirmation_11.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:16:59,682 - INFO - Booking 11 inserted into Cosmos DB successfully.
+2024-09-19 10:16:59,682 - INFO - Booking 11 inserted into Cosmos DB successfully.
+2024-09-19 10:16:59,682 - INFO - Booking 11 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-09-19 10:16:59,682 - INFO - Processing Booking 12...
+2024-09-19 10:16:59,682 - INFO - Attempting to allocate Booking 12 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:16:59,682 - INFO - Booking 12 successfully allocated to Campsite 3.
+2024-09-19 10:16:59,748 - INFO - Booking 12 updated with new campground ID 1121132 successfully.
+2024-09-19 10:16:59,788 - INFO - Confirmation saved as pdfs\confirmation_12.pdf.
+2024-09-19 10:16:59,969 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:00,310 - INFO - PDF pdfs\confirmation_12.pdf upserted into Cosmos DB successfully with pdf_id 12.
+2024-09-19 10:17:00,310 - INFO - Confirmation PDF pdfs\confirmation_12.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:00,412 - INFO - Booking 12 inserted into Cosmos DB successfully.
+2024-09-19 10:17:00,412 - INFO - Booking 12 inserted into Cosmos DB successfully.
+2024-09-19 10:17:00,412 - INFO - Booking 12 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-09-19 10:17:00,412 - INFO - Processing Booking 13...
+2024-09-19 10:17:00,412 - INFO - Attempting to allocate Booking 13 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:17:00,413 - INFO - Booking 13 successfully allocated to Campsite 2.
+2024-09-19 10:17:00,478 - INFO - Booking 13 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:00,511 - INFO - Confirmation saved as pdfs\confirmation_13.pdf.
+2024-09-19 10:17:00,736 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:01,090 - INFO - PDF pdfs\confirmation_13.pdf upserted into Cosmos DB successfully with pdf_id 13.
+2024-09-19 10:17:01,090 - INFO - Confirmation PDF pdfs\confirmation_13.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:01,183 - INFO - Booking 13 inserted into Cosmos DB successfully.
+2024-09-19 10:17:01,184 - INFO - Booking 13 inserted into Cosmos DB successfully.
+2024-09-19 10:17:01,184 - INFO - Booking 13 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-09-19 10:17:01,184 - INFO - Processing Booking 14...
+2024-09-19 10:17:01,184 - INFO - Attempting to allocate Booking 14 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:17:01,184 - INFO - Booking 14 successfully allocated to Campsite 2.
+2024-09-19 10:17:01,247 - INFO - Booking 14 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:01,287 - INFO - Confirmation saved as pdfs\confirmation_14.pdf.
+2024-09-19 10:17:01,504 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:01,838 - INFO - PDF pdfs\confirmation_14.pdf upserted into Cosmos DB successfully with pdf_id 14.
+2024-09-19 10:17:01,838 - INFO - Confirmation PDF pdfs\confirmation_14.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:01,934 - INFO - Booking 14 inserted into Cosmos DB successfully.
+2024-09-19 10:17:01,934 - INFO - Booking 14 inserted into Cosmos DB successfully.
+2024-09-19 10:17:01,934 - INFO - Booking 14 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-09-19 10:17:01,934 - INFO - Processing Booking 15...
+2024-09-19 10:17:01,934 - INFO - Attempting to allocate Booking 15 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:17:01,934 - INFO - Booking 15 successfully allocated to Campsite 6.
+2024-09-19 10:17:02,002 - INFO - Booking 15 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:02,041 - INFO - Confirmation saved as pdfs\confirmation_15.pdf.
+2024-09-19 10:17:02,195 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:02,448 - INFO - PDF pdfs\confirmation_15.pdf upserted into Cosmos DB successfully with pdf_id 15.
+2024-09-19 10:17:02,448 - INFO - Confirmation PDF pdfs\confirmation_15.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:02,542 - INFO - Booking 15 inserted into Cosmos DB successfully.
+2024-09-19 10:17:02,542 - INFO - Booking 15 inserted into Cosmos DB successfully.
+2024-09-19 10:17:02,542 - INFO - Booking 15 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-09-19 10:17:02,542 - INFO - Processing Booking 16...
+2024-09-19 10:17:02,543 - INFO - Attempting to allocate Booking 16 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:17:02,543 - INFO - Booking 16 successfully allocated to Campsite 7.
+2024-09-19 10:17:02,610 - INFO - Booking 16 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:02,643 - INFO - Confirmation saved as pdfs\confirmation_16.pdf.
+2024-09-19 10:17:02,800 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:03,109 - INFO - PDF pdfs\confirmation_16.pdf upserted into Cosmos DB successfully with pdf_id 16.
+2024-09-19 10:17:03,109 - INFO - Confirmation PDF pdfs\confirmation_16.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:03,205 - INFO - Booking 16 inserted into Cosmos DB successfully.
+2024-09-19 10:17:03,205 - INFO - Booking 16 inserted into Cosmos DB successfully.
+2024-09-19 10:17:03,205 - INFO - Booking 16 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-09-19 10:17:03,206 - INFO - Processing Booking 17...
+2024-09-19 10:17:03,206 - INFO - Attempting to allocate Booking 17 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:17:03,206 - INFO - Booking 17 successfully allocated to Campsite 3.
+2024-09-19 10:17:03,273 - INFO - Booking 17 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:03,306 - INFO - Confirmation saved as pdfs\confirmation_17.pdf.
+2024-09-19 10:17:03,486 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:03,779 - INFO - PDF pdfs\confirmation_17.pdf upserted into Cosmos DB successfully with pdf_id 17.
+2024-09-19 10:17:03,779 - INFO - Confirmation PDF pdfs\confirmation_17.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:03,873 - INFO - Booking 17 inserted into Cosmos DB successfully.
+2024-09-19 10:17:03,873 - INFO - Booking 17 inserted into Cosmos DB successfully.
+2024-09-19 10:17:03,873 - INFO - Booking 17 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-09-19 10:17:03,873 - INFO - Processing Booking 18...
+2024-09-19 10:17:03,873 - INFO - Attempting to allocate Booking 18 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:17:03,873 - INFO - Booking 18 successfully allocated to Campsite 3.
+2024-09-19 10:17:03,940 - INFO - Booking 18 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:03,973 - INFO - Confirmation saved as pdfs\confirmation_18.pdf.
+2024-09-19 10:17:04,124 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:04,421 - INFO - PDF pdfs\confirmation_18.pdf upserted into Cosmos DB successfully with pdf_id 18.
+2024-09-19 10:17:04,421 - INFO - Confirmation PDF pdfs\confirmation_18.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:04,514 - INFO - Booking 18 inserted into Cosmos DB successfully.
+2024-09-19 10:17:04,514 - INFO - Booking 18 inserted into Cosmos DB successfully.
+2024-09-19 10:17:04,515 - INFO - Booking 18 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-09-19 10:17:04,515 - INFO - Processing Booking 19...
+2024-09-19 10:17:04,515 - INFO - Attempting to allocate Booking 19 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:17:04,515 - INFO - Booking 19 successfully allocated to Campsite 4.
+2024-09-19 10:17:04,584 - INFO - Booking 19 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:04,625 - INFO - Confirmation saved as pdfs\confirmation_19.pdf.
+2024-09-19 10:17:04,819 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:05,051 - INFO - PDF pdfs\confirmation_19.pdf upserted into Cosmos DB successfully with pdf_id 19.
+2024-09-19 10:17:05,051 - INFO - Confirmation PDF pdfs\confirmation_19.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:05,150 - INFO - Booking 19 inserted into Cosmos DB successfully.
+2024-09-19 10:17:05,150 - INFO - Booking 19 inserted into Cosmos DB successfully.
+2024-09-19 10:17:05,150 - INFO - Booking 19 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-09-19 10:17:05,150 - INFO - Processing Booking 20...
+2024-09-19 10:17:05,150 - INFO - Attempting to allocate Booking 20 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:17:05,150 - INFO - Booking 20 successfully allocated to Campsite 4.
+2024-09-19 10:17:05,218 - INFO - Booking 20 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:05,249 - INFO - Confirmation saved as pdfs\confirmation_20.pdf.
+2024-09-19 10:17:05,396 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:05,679 - INFO - PDF pdfs\confirmation_20.pdf upserted into Cosmos DB successfully with pdf_id 20.
+2024-09-19 10:17:05,679 - INFO - Confirmation PDF pdfs\confirmation_20.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:05,778 - INFO - Booking 20 inserted into Cosmos DB successfully.
+2024-09-19 10:17:05,778 - INFO - Booking 20 inserted into Cosmos DB successfully.
+2024-09-19 10:17:05,778 - INFO - Booking 20 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-09-19 10:17:05,778 - INFO - Processing Booking 21...
+2024-09-19 10:17:05,778 - INFO - Attempting to allocate Booking 21 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:17:05,778 - INFO - Booking 21 successfully allocated to Campsite 4.
+2024-09-19 10:17:05,844 - INFO - Booking 21 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:05,875 - INFO - Confirmation saved as pdfs\confirmation_21.pdf.
+2024-09-19 10:17:06,054 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:06,382 - INFO - PDF pdfs\confirmation_21.pdf upserted into Cosmos DB successfully with pdf_id 21.
+2024-09-19 10:17:06,382 - INFO - Confirmation PDF pdfs\confirmation_21.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:06,495 - INFO - Booking 21 inserted into Cosmos DB successfully.
+2024-09-19 10:17:06,496 - INFO - Booking 21 inserted into Cosmos DB successfully.
+2024-09-19 10:17:06,496 - INFO - Booking 21 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-09-19 10:17:06,496 - INFO - Processing Booking 22...
+2024-09-19 10:17:06,496 - INFO - Attempting to allocate Booking 22 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:17:06,496 - INFO - Booking 22 successfully allocated to Campsite 8.
+2024-09-19 10:17:06,592 - INFO - Booking 22 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:06,646 - INFO - Confirmation saved as pdfs\confirmation_22.pdf.
+2024-09-19 10:17:06,853 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:07,155 - INFO - PDF pdfs\confirmation_22.pdf upserted into Cosmos DB successfully with pdf_id 22.
+2024-09-19 10:17:07,155 - INFO - Confirmation PDF pdfs\confirmation_22.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:07,308 - INFO - Booking 22 inserted into Cosmos DB successfully.
+2024-09-19 10:17:07,308 - INFO - Booking 22 inserted into Cosmos DB successfully.
+2024-09-19 10:17:07,308 - INFO - Booking 22 processed successfully: allocated to Campsite 8 and inserted into Cosmos DB.
+2024-09-19 10:17:07,308 - INFO - Processing Booking 23...
+2024-09-19 10:17:07,308 - INFO - Attempting to allocate Booking 23 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:17:07,308 - INFO - Booking 23 successfully allocated to Campsite 9.
+2024-09-19 10:17:07,415 - INFO - Booking 23 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:07,471 - INFO - Confirmation saved as pdfs\confirmation_23.pdf.
+2024-09-19 10:17:07,634 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:07,909 - INFO - PDF pdfs\confirmation_23.pdf upserted into Cosmos DB successfully with pdf_id 23.
+2024-09-19 10:17:07,909 - INFO - Confirmation PDF pdfs\confirmation_23.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:08,009 - INFO - Booking 23 inserted into Cosmos DB successfully.
+2024-09-19 10:17:08,009 - INFO - Booking 23 inserted into Cosmos DB successfully.
+2024-09-19 10:17:08,009 - INFO - Booking 23 processed successfully: allocated to Campsite 9 and inserted into Cosmos DB.
+2024-09-19 10:17:08,010 - INFO - Processing Booking 24...
+2024-09-19 10:17:08,010 - INFO - Attempting to allocate Booking 24 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:17:08,010 - INFO - Booking 24 successfully allocated to Campsite 5.
+2024-09-19 10:17:08,077 - INFO - Booking 24 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:08,108 - INFO - Confirmation saved as pdfs\confirmation_24.pdf.
+2024-09-19 10:17:08,259 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:08,535 - INFO - PDF pdfs\confirmation_24.pdf upserted into Cosmos DB successfully with pdf_id 24.
+2024-09-19 10:17:08,535 - INFO - Confirmation PDF pdfs\confirmation_24.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:08,631 - INFO - Booking 24 inserted into Cosmos DB successfully.
+2024-09-19 10:17:08,631 - INFO - Booking 24 inserted into Cosmos DB successfully.
+2024-09-19 10:17:08,631 - INFO - Booking 24 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-09-19 10:17:08,631 - INFO - Processing Booking 25...
+2024-09-19 10:17:08,631 - INFO - Attempting to allocate Booking 25 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:17:08,631 - INFO - Booking 25 successfully allocated to Campsite 10.
+2024-09-19 10:17:08,697 - INFO - Booking 25 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:08,736 - INFO - Confirmation saved as pdfs\confirmation_25.pdf.
+2024-09-19 10:17:08,874 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:09,200 - INFO - PDF pdfs\confirmation_25.pdf upserted into Cosmos DB successfully with pdf_id 25.
+2024-09-19 10:17:09,200 - INFO - Confirmation PDF pdfs\confirmation_25.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:09,300 - INFO - Booking 25 inserted into Cosmos DB successfully.
+2024-09-19 10:17:09,300 - INFO - Booking 25 inserted into Cosmos DB successfully.
+2024-09-19 10:17:09,300 - INFO - Booking 25 processed successfully: allocated to Campsite 10 and inserted into Cosmos DB.
+2024-09-19 10:17:09,300 - INFO - Processing Booking 26...
+2024-09-19 10:17:09,300 - INFO - Attempting to allocate Booking 26 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:17:09,300 - INFO - Booking 26 successfully allocated to Campsite 5.
+2024-09-19 10:17:09,367 - INFO - Booking 26 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:09,399 - INFO - Confirmation saved as pdfs\confirmation_26.pdf.
+2024-09-19 10:17:09,576 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:09,859 - INFO - PDF pdfs\confirmation_26.pdf upserted into Cosmos DB successfully with pdf_id 26.
+2024-09-19 10:17:09,859 - INFO - Confirmation PDF pdfs\confirmation_26.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:09,956 - INFO - Booking 26 inserted into Cosmos DB successfully.
+2024-09-19 10:17:09,956 - INFO - Booking 26 inserted into Cosmos DB successfully.
+2024-09-19 10:17:09,956 - INFO - Booking 26 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-09-19 10:17:09,956 - INFO - Processing Booking 27...
+2024-09-19 10:17:09,956 - INFO - Attempting to allocate Booking 27 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:17:09,957 - INFO - Booking 27 successfully allocated to Campsite 6.
+2024-09-19 10:17:10,024 - INFO - Booking 27 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:10,064 - INFO - Confirmation saved as pdfs\confirmation_27.pdf.
+2024-09-19 10:17:10,189 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:10,468 - INFO - PDF pdfs\confirmation_27.pdf upserted into Cosmos DB successfully with pdf_id 27.
+2024-09-19 10:17:10,468 - INFO - Confirmation PDF pdfs\confirmation_27.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:10,562 - INFO - Booking 27 inserted into Cosmos DB successfully.
+2024-09-19 10:17:10,562 - INFO - Booking 27 inserted into Cosmos DB successfully.
+2024-09-19 10:17:10,562 - INFO - Booking 27 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-09-19 10:17:10,562 - INFO - Processing Booking 28...
+2024-09-19 10:17:10,562 - INFO - Attempting to allocate Booking 28 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:17:10,562 - INFO - Booking 28 successfully allocated to Campsite 5.
+2024-09-19 10:17:10,628 - INFO - Booking 28 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:10,661 - INFO - Confirmation saved as pdfs\confirmation_28.pdf.
+2024-09-19 10:17:10,894 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:11,150 - INFO - PDF pdfs\confirmation_28.pdf upserted into Cosmos DB successfully with pdf_id 28.
+2024-09-19 10:17:11,150 - INFO - Confirmation PDF pdfs\confirmation_28.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:11,244 - INFO - Booking 28 inserted into Cosmos DB successfully.
+2024-09-19 10:17:11,244 - INFO - Booking 28 inserted into Cosmos DB successfully.
+2024-09-19 10:17:11,244 - INFO - Booking 28 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-09-19 10:17:11,244 - INFO - Processing Booking 29...
+2024-09-19 10:17:11,244 - INFO - Attempting to allocate Booking 29 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:17:11,244 - INFO - Booking 29 successfully allocated to Campsite 11.
+2024-09-19 10:17:11,310 - INFO - Booking 29 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:11,343 - INFO - Confirmation saved as pdfs\confirmation_29.pdf.
+2024-09-19 10:17:11,487 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:11,704 - INFO - PDF pdfs\confirmation_29.pdf upserted into Cosmos DB successfully with pdf_id 29.
+2024-09-19 10:17:11,705 - INFO - Confirmation PDF pdfs\confirmation_29.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:11,800 - INFO - Booking 29 inserted into Cosmos DB successfully.
+2024-09-19 10:17:11,800 - INFO - Booking 29 inserted into Cosmos DB successfully.
+2024-09-19 10:17:11,800 - INFO - Booking 29 processed successfully: allocated to Campsite 11 and inserted into Cosmos DB.
+2024-09-19 10:17:11,800 - INFO - Processing Booking 30...
+2024-09-19 10:17:11,800 - INFO - Attempting to allocate Booking 30 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:17:11,801 - INFO - Booking 30 successfully allocated to Campsite 12.
+2024-09-19 10:17:11,869 - INFO - Booking 30 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:11,908 - INFO - Confirmation saved as pdfs\confirmation_30.pdf.
+2024-09-19 10:17:12,085 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:12,449 - INFO - PDF pdfs\confirmation_30.pdf upserted into Cosmos DB successfully with pdf_id 30.
+2024-09-19 10:17:12,449 - INFO - Confirmation PDF pdfs\confirmation_30.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:12,542 - INFO - Booking 30 inserted into Cosmos DB successfully.
+2024-09-19 10:17:12,542 - INFO - Booking 30 inserted into Cosmos DB successfully.
+2024-09-19 10:17:12,542 - INFO - Booking 30 processed successfully: allocated to Campsite 12 and inserted into Cosmos DB.
+2024-09-19 10:17:12,542 - INFO - Processing Booking 31...
+2024-09-19 10:17:12,542 - INFO - Attempting to allocate Booking 31 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:17:12,542 - INFO - Booking 31 successfully allocated to Campsite 13.
+2024-09-19 10:17:12,609 - INFO - Booking 31 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:12,641 - INFO - Confirmation saved as pdfs\confirmation_31.pdf.
+2024-09-19 10:17:12,831 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:13,140 - INFO - PDF pdfs\confirmation_31.pdf upserted into Cosmos DB successfully with pdf_id 31.
+2024-09-19 10:17:13,140 - INFO - Confirmation PDF pdfs\confirmation_31.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:13,234 - INFO - Booking 31 inserted into Cosmos DB successfully.
+2024-09-19 10:17:13,235 - INFO - Booking 31 inserted into Cosmos DB successfully.
+2024-09-19 10:17:13,235 - INFO - Booking 31 processed successfully: allocated to Campsite 13 and inserted into Cosmos DB.
+2024-09-19 10:17:13,235 - INFO - Processing Booking 32...
+2024-09-19 10:17:13,235 - INFO - Attempting to allocate Booking 32 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:17:13,235 - INFO - Booking 32 successfully allocated to Campsite 7.
+2024-09-19 10:17:13,303 - INFO - Booking 32 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:13,337 - INFO - Confirmation saved as pdfs\confirmation_32.pdf.
+2024-09-19 10:17:13,516 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:13,778 - INFO - PDF pdfs\confirmation_32.pdf upserted into Cosmos DB successfully with pdf_id 32.
+2024-09-19 10:17:13,779 - INFO - Confirmation PDF pdfs\confirmation_32.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:13,876 - INFO - Booking 32 inserted into Cosmos DB successfully.
+2024-09-19 10:17:13,876 - INFO - Booking 32 inserted into Cosmos DB successfully.
+2024-09-19 10:17:13,876 - INFO - Booking 32 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-09-19 10:17:13,877 - INFO - Processing Booking 33...
+2024-09-19 10:17:13,877 - INFO - Attempting to allocate Booking 33 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:17:13,877 - INFO - Booking 33 successfully allocated to Campsite 14.
+2024-09-19 10:17:13,944 - INFO - Booking 33 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:13,977 - INFO - Confirmation saved as pdfs\confirmation_33.pdf.
+2024-09-19 10:17:14,117 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:14,351 - INFO - PDF pdfs\confirmation_33.pdf upserted into Cosmos DB successfully with pdf_id 33.
+2024-09-19 10:17:14,351 - INFO - Confirmation PDF pdfs\confirmation_33.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:14,450 - INFO - Booking 33 inserted into Cosmos DB successfully.
+2024-09-19 10:17:14,450 - INFO - Booking 33 inserted into Cosmos DB successfully.
+2024-09-19 10:17:14,450 - INFO - Booking 33 processed successfully: allocated to Campsite 14 and inserted into Cosmos DB.
+2024-09-19 10:17:14,451 - INFO - Processing Booking 34...
+2024-09-19 10:17:14,451 - INFO - Attempting to allocate Booking 34 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:17:14,451 - INFO - Booking 34 successfully allocated to Campsite 6.
+2024-09-19 10:17:14,517 - INFO - Booking 34 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:14,556 - INFO - Confirmation saved as pdfs\confirmation_34.pdf.
+2024-09-19 10:17:14,759 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:15,120 - INFO - PDF pdfs\confirmation_34.pdf upserted into Cosmos DB successfully with pdf_id 34.
+2024-09-19 10:17:15,120 - INFO - Confirmation PDF pdfs\confirmation_34.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:15,215 - INFO - Booking 34 inserted into Cosmos DB successfully.
+2024-09-19 10:17:15,215 - INFO - Booking 34 inserted into Cosmos DB successfully.
+2024-09-19 10:17:15,215 - INFO - Booking 34 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-09-19 10:17:15,216 - INFO - Processing Booking 35...
+2024-09-19 10:17:15,216 - INFO - Attempting to allocate Booking 35 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:17:15,216 - INFO - Booking 35 successfully allocated to Campsite 6.
+2024-09-19 10:17:15,281 - INFO - Booking 35 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:15,314 - INFO - Confirmation saved as pdfs\confirmation_35.pdf.
+2024-09-19 10:17:15,493 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:15,701 - INFO - PDF pdfs\confirmation_35.pdf upserted into Cosmos DB successfully with pdf_id 35.
+2024-09-19 10:17:15,701 - INFO - Confirmation PDF pdfs\confirmation_35.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:15,796 - INFO - Booking 35 inserted into Cosmos DB successfully.
+2024-09-19 10:17:15,796 - INFO - Booking 35 inserted into Cosmos DB successfully.
+2024-09-19 10:17:15,796 - INFO - Booking 35 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-09-19 10:17:15,796 - INFO - Processing Booking 36...
+2024-09-19 10:17:15,796 - INFO - Attempting to allocate Booking 36 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:17:15,796 - INFO - Booking 36 successfully allocated to Campsite 15.
+2024-09-19 10:17:15,862 - INFO - Booking 36 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:15,893 - INFO - Confirmation saved as pdfs\confirmation_36.pdf.
+2024-09-19 10:17:16,101 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:16,381 - INFO - PDF pdfs\confirmation_36.pdf upserted into Cosmos DB successfully with pdf_id 36.
+2024-09-19 10:17:16,381 - INFO - Confirmation PDF pdfs\confirmation_36.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:16,474 - INFO - Booking 36 inserted into Cosmos DB successfully.
+2024-09-19 10:17:16,474 - INFO - Booking 36 inserted into Cosmos DB successfully.
+2024-09-19 10:17:16,474 - INFO - Booking 36 processed successfully: allocated to Campsite 15 and inserted into Cosmos DB.
+2024-09-19 10:17:16,475 - INFO - Processing Booking 37...
+2024-09-19 10:17:16,475 - INFO - Attempting to allocate Booking 37 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:17:16,475 - INFO - Booking 37 successfully allocated to Campsite 7.
+2024-09-19 10:17:16,541 - INFO - Booking 37 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:16,573 - INFO - Confirmation saved as pdfs\confirmation_37.pdf.
+2024-09-19 10:17:16,711 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:16,920 - INFO - PDF pdfs\confirmation_37.pdf upserted into Cosmos DB successfully with pdf_id 37.
+2024-09-19 10:17:16,920 - INFO - Confirmation PDF pdfs\confirmation_37.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:17,016 - INFO - Booking 37 inserted into Cosmos DB successfully.
+2024-09-19 10:17:17,016 - INFO - Booking 37 inserted into Cosmos DB successfully.
+2024-09-19 10:17:17,016 - INFO - Booking 37 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-09-19 10:17:17,017 - INFO - Processing Booking 38...
+2024-09-19 10:17:17,017 - INFO - Attempting to allocate Booking 38 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:17:17,017 - INFO - Booking 38 successfully allocated to Campsite 7.
+2024-09-19 10:17:17,083 - INFO - Booking 38 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:17,123 - INFO - Confirmation saved as pdfs\confirmation_38.pdf.
+2024-09-19 10:17:17,309 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:17,519 - INFO - PDF pdfs\confirmation_38.pdf upserted into Cosmos DB successfully with pdf_id 38.
+2024-09-19 10:17:17,519 - INFO - Confirmation PDF pdfs\confirmation_38.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:17,613 - INFO - Booking 38 inserted into Cosmos DB successfully.
+2024-09-19 10:17:17,613 - INFO - Booking 38 inserted into Cosmos DB successfully.
+2024-09-19 10:17:17,613 - INFO - Booking 38 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-09-19 10:17:17,613 - INFO - Processing Booking 39...
+2024-09-19 10:17:17,613 - INFO - Attempting to allocate Booking 39 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:17:17,613 - INFO - Booking 39 successfully allocated to Campsite 8.
+2024-09-19 10:17:17,678 - INFO - Booking 39 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:17,712 - INFO - Confirmation saved as pdfs\confirmation_39.pdf.
+2024-09-19 10:17:17,881 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:18,141 - INFO - PDF pdfs\confirmation_39.pdf upserted into Cosmos DB successfully with pdf_id 39.
+2024-09-19 10:17:18,141 - INFO - Confirmation PDF pdfs\confirmation_39.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:18,237 - INFO - Booking 39 inserted into Cosmos DB successfully.
+2024-09-19 10:17:18,237 - INFO - Booking 39 inserted into Cosmos DB successfully.
+2024-09-19 10:17:18,237 - INFO - Booking 39 processed successfully: allocated to Campsite 8 and inserted into Cosmos DB.
+2024-09-19 10:17:18,238 - INFO - Processing Booking 40...
+2024-09-19 10:17:18,238 - INFO - Attempting to allocate Booking 40 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:17:18,238 - INFO - Booking 40 successfully allocated to Campsite 16.
+2024-09-19 10:17:18,304 - INFO - Booking 40 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:18,337 - INFO - Confirmation saved as pdfs\confirmation_40.pdf.
+2024-09-19 10:17:18,528 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:18,818 - INFO - PDF pdfs\confirmation_40.pdf upserted into Cosmos DB successfully with pdf_id 40.
+2024-09-19 10:17:18,818 - INFO - Confirmation PDF pdfs\confirmation_40.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:18,913 - INFO - Booking 40 inserted into Cosmos DB successfully.
+2024-09-19 10:17:18,913 - INFO - Booking 40 inserted into Cosmos DB successfully.
+2024-09-19 10:17:18,913 - INFO - Booking 40 processed successfully: allocated to Campsite 16 and inserted into Cosmos DB.
+2024-09-19 10:17:18,913 - INFO - Processing Booking 41...
+2024-09-19 10:17:18,913 - INFO - Attempting to allocate Booking 41 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:17:18,913 - INFO - Booking 41 successfully allocated to Campsite 8.
+2024-09-19 10:17:18,981 - INFO - Booking 41 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:19,014 - INFO - Confirmation saved as pdfs\confirmation_41.pdf.
+2024-09-19 10:17:19,175 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:19,439 - INFO - PDF pdfs\confirmation_41.pdf upserted into Cosmos DB successfully with pdf_id 41.
+2024-09-19 10:17:19,439 - INFO - Confirmation PDF pdfs\confirmation_41.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:19,533 - INFO - Booking 41 inserted into Cosmos DB successfully.
+2024-09-19 10:17:19,533 - INFO - Booking 41 inserted into Cosmos DB successfully.
+2024-09-19 10:17:19,533 - INFO - Booking 41 processed successfully: allocated to Campsite 8 and inserted into Cosmos DB.
+2024-09-19 10:17:19,533 - INFO - Processing Booking 42...
+2024-09-19 10:17:19,533 - INFO - Attempting to allocate Booking 42 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:17:19,533 - INFO - Booking 42 successfully allocated to Campsite 9.
+2024-09-19 10:17:19,599 - INFO - Booking 42 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:19,639 - INFO - Confirmation saved as pdfs\confirmation_42.pdf.
+2024-09-19 10:17:19,786 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:20,108 - INFO - PDF pdfs\confirmation_42.pdf upserted into Cosmos DB successfully with pdf_id 42.
+2024-09-19 10:17:20,108 - INFO - Confirmation PDF pdfs\confirmation_42.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:20,202 - INFO - Booking 42 inserted into Cosmos DB successfully.
+2024-09-19 10:17:20,202 - INFO - Booking 42 inserted into Cosmos DB successfully.
+2024-09-19 10:17:20,202 - INFO - Booking 42 processed successfully: allocated to Campsite 9 and inserted into Cosmos DB.
+2024-09-19 10:17:20,202 - INFO - Processing Booking 43...
+2024-09-19 10:17:20,202 - INFO - Attempting to allocate Booking 43 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:17:20,202 - INFO - Booking 43 successfully allocated to Campsite 17.
+2024-09-19 10:17:20,268 - INFO - Booking 43 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:20,299 - INFO - Confirmation saved as pdfs\confirmation_43.pdf.
+2024-09-19 10:17:20,475 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:20,791 - INFO - PDF pdfs\confirmation_43.pdf upserted into Cosmos DB successfully with pdf_id 43.
+2024-09-19 10:17:20,791 - INFO - Confirmation PDF pdfs\confirmation_43.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:20,886 - INFO - Booking 43 inserted into Cosmos DB successfully.
+2024-09-19 10:17:20,886 - INFO - Booking 43 inserted into Cosmos DB successfully.
+2024-09-19 10:17:20,886 - INFO - Booking 43 processed successfully: allocated to Campsite 17 and inserted into Cosmos DB.
+2024-09-19 10:17:20,886 - INFO - Processing Booking 44...
+2024-09-19 10:17:20,886 - INFO - Attempting to allocate Booking 44 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:17:20,886 - INFO - Booking 44 successfully allocated to Campsite 9.
+2024-09-19 10:17:20,953 - INFO - Booking 44 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:20,993 - INFO - Confirmation saved as pdfs\confirmation_44.pdf.
+2024-09-19 10:17:21,206 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:21,420 - INFO - PDF pdfs\confirmation_44.pdf upserted into Cosmos DB successfully with pdf_id 44.
+2024-09-19 10:17:21,420 - INFO - Confirmation PDF pdfs\confirmation_44.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:21,512 - INFO - Booking 44 inserted into Cosmos DB successfully.
+2024-09-19 10:17:21,512 - INFO - Booking 44 inserted into Cosmos DB successfully.
+2024-09-19 10:17:21,512 - INFO - Booking 44 processed successfully: allocated to Campsite 9 and inserted into Cosmos DB.
+2024-09-19 10:17:21,512 - INFO - Processing Booking 45...
+2024-09-19 10:17:21,512 - INFO - Attempting to allocate Booking 45 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:17:21,512 - INFO - Booking 45 successfully allocated to Campsite 10.
+2024-09-19 10:17:21,578 - INFO - Booking 45 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:21,611 - INFO - Confirmation saved as pdfs\confirmation_45.pdf.
+2024-09-19 10:17:21,767 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:22,102 - INFO - PDF pdfs\confirmation_45.pdf upserted into Cosmos DB successfully with pdf_id 45.
+2024-09-19 10:17:22,102 - INFO - Confirmation PDF pdfs\confirmation_45.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:22,204 - INFO - Booking 45 inserted into Cosmos DB successfully.
+2024-09-19 10:17:22,204 - INFO - Booking 45 inserted into Cosmos DB successfully.
+2024-09-19 10:17:22,204 - INFO - Booking 45 processed successfully: allocated to Campsite 10 and inserted into Cosmos DB.
+2024-09-19 10:17:22,205 - INFO - Processing Booking 46...
+2024-09-19 10:17:22,205 - INFO - Attempting to allocate Booking 46 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:17:22,205 - INFO - Booking 46 successfully allocated to Campsite 18.
+2024-09-19 10:17:22,273 - INFO - Booking 46 updated with new campground ID 1121132 successfully.
+2024-09-19 10:17:22,307 - INFO - Confirmation saved as pdfs\confirmation_46.pdf.
+2024-09-19 10:17:22,452 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:17:22,720 - INFO - PDF pdfs\confirmation_46.pdf upserted into Cosmos DB successfully with pdf_id 46.
+2024-09-19 10:17:22,720 - INFO - Confirmation PDF pdfs\confirmation_46.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:17:22,814 - INFO - Booking 46 inserted into Cosmos DB successfully.
+2024-09-19 10:17:22,814 - INFO - Booking 46 inserted into Cosmos DB successfully.
+2024-09-19 10:17:22,814 - INFO - Booking 46 processed successfully: allocated to Campsite 18 and inserted into Cosmos DB.
+2024-09-19 10:17:22,815 - INFO - Generating summary from booking data.
+2024-09-19 10:17:22,815 - INFO - Summary Data: {'date': datetime.date(2024, 9, 19), 'total_sales': 24640, 'total_bookings': 46, 'successful_allocations': 46, 'failed_allocations': 0, 'campsite_utilization': {1: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 2: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 3: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 4: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 5: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 6: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 7: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 8: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 9: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 10: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 2}, 11: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 12: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 13: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 14: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 15: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 16: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 17: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 18: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 19: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 20: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 21: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 22: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 23: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 24: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 25: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 26: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 27: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 28: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 29: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 30: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}}}
+2024-09-19 10:17:22,818 - INFO - Summary validated and created for 2024-09-19.
+2024-09-19 10:17:23,036 - INFO - Connected to SQL database successfully.
+2024-09-19 10:17:23,094 - INFO - Insert into local SQL database successful.
+2024-09-19 10:17:23,147 - INFO - Summary inserted into the local SQL database.
+2024-09-19 10:17:23,361 - INFO - Connected to Head Office SQL database successfully.
+2024-09-19 10:17:23,431 - INFO - Insert into Head Office database successful.
+2024-09-19 10:17:23,489 - INFO - Summary written to the Head Office database.
+2024-09-19 10:17:23,490 - INFO - Summary PDF generated and saved as pdfs\summary_2024-09-19.pdf.
+2024-09-19 10:17:23,490 - INFO - Summary PDF generated and saved.
+2024-09-19 10:17:23,632 - INFO - Connected to Cosmos DB container 'Summary_PDFs' successfully.
+2024-09-19 10:17:23,992 - INFO - Summary PDF pdfs\summary_2024-09-19.pdf upserted into Cosmos DB successfully with summary_id 1121132_2024-09-19.
+2024-09-19 10:17:23,992 - INFO - Summary PDF upserted into Cosmos DB successfully.
+2024-09-19 10:17:24,056 - INFO - SQL connection closed.
+2024-09-19 10:17:24,089 - INFO - Head Office connection closed.
+2024-09-19 10:17:24,089 - INFO - Cosmos connection closed.
+2024-09-19 10:17:54,680 - INFO - Configuration loaded from connection_strings.json.
+2024-09-19 10:17:54,680 - INFO - Connection string prepared for sql_server.
+2024-09-19 10:17:54,680 - INFO - Configuration loaded from connection_strings.json.
+2024-09-19 10:17:54,680 - INFO - Configuration parameters retrieved for cosmos_db.
+2024-09-19 10:17:55,168 - INFO - Cleaned table camping.booking successfully.
+2024-09-19 10:17:55,231 - INFO - Cleaned table camping.summary successfully.
+2024-09-19 10:17:55,260 - INFO - SQL campsite data cleaned successfully.
+2024-09-19 10:17:55,881 - INFO - Attempting to delete item with ID: 12985335-e215-46f7-b9c3-db3b089f8b97 and Partition Key: 1
+2024-09-19 10:17:55,926 - INFO - Deleted item with ID 12985335-e215-46f7-b9c3-db3b089f8b97 from Bookings.
+2024-09-19 10:17:55,926 - INFO - Attempting to delete item with ID: 06aacfc1-78ec-4539-b5a1-a9e8859ac9ab and Partition Key: 2
+2024-09-19 10:17:55,959 - INFO - Deleted item with ID 06aacfc1-78ec-4539-b5a1-a9e8859ac9ab from Bookings.
+2024-09-19 10:17:55,959 - INFO - Attempting to delete item with ID: 189f7a83-a79e-42be-9cbb-7b181872493c and Partition Key: 3
+2024-09-19 10:17:55,993 - INFO - Deleted item with ID 189f7a83-a79e-42be-9cbb-7b181872493c from Bookings.
+2024-09-19 10:17:55,994 - INFO - Attempting to delete item with ID: 636c93a5-842c-4466-b46a-3e6cd516d30a and Partition Key: 4
+2024-09-19 10:17:56,028 - INFO - Deleted item with ID 636c93a5-842c-4466-b46a-3e6cd516d30a from Bookings.
+2024-09-19 10:17:56,029 - INFO - Attempting to delete item with ID: 8b29d250-3012-479e-8d31-9c800ef4e6f1 and Partition Key: 5
+2024-09-19 10:17:56,063 - INFO - Deleted item with ID 8b29d250-3012-479e-8d31-9c800ef4e6f1 from Bookings.
+2024-09-19 10:17:56,063 - INFO - Attempting to delete item with ID: 7b2a9f72-a2e2-47fa-b2d0-3cc92d36c67c and Partition Key: 6
+2024-09-19 10:17:56,096 - INFO - Deleted item with ID 7b2a9f72-a2e2-47fa-b2d0-3cc92d36c67c from Bookings.
+2024-09-19 10:17:56,096 - INFO - Attempting to delete item with ID: be721d3c-d006-4a49-91ad-94097b0b3cd4 and Partition Key: 7
+2024-09-19 10:17:56,130 - INFO - Deleted item with ID be721d3c-d006-4a49-91ad-94097b0b3cd4 from Bookings.
+2024-09-19 10:17:56,130 - INFO - Attempting to delete item with ID: cc60c6ac-299b-4f39-85d3-a9ecf54f25ee and Partition Key: 8
+2024-09-19 10:17:56,162 - INFO - Deleted item with ID cc60c6ac-299b-4f39-85d3-a9ecf54f25ee from Bookings.
+2024-09-19 10:17:56,162 - INFO - Attempting to delete item with ID: 8e04e8cc-4911-416e-a12c-f64df1115649 and Partition Key: 9
+2024-09-19 10:17:56,198 - INFO - Deleted item with ID 8e04e8cc-4911-416e-a12c-f64df1115649 from Bookings.
+2024-09-19 10:17:56,198 - INFO - Attempting to delete item with ID: a566666d-ef69-42dd-bb58-5b1d6b716c9d and Partition Key: 10
+2024-09-19 10:17:56,230 - INFO - Deleted item with ID a566666d-ef69-42dd-bb58-5b1d6b716c9d from Bookings.
+2024-09-19 10:17:56,230 - INFO - Attempting to delete item with ID: 3bc512ce-edb6-46f0-a6f7-828217a15386 and Partition Key: 11
+2024-09-19 10:17:56,265 - INFO - Deleted item with ID 3bc512ce-edb6-46f0-a6f7-828217a15386 from Bookings.
+2024-09-19 10:17:56,265 - INFO - Attempting to delete item with ID: 4cf17d64-5abc-4994-8ad9-d2b3aa07a769 and Partition Key: 12
+2024-09-19 10:17:56,299 - INFO - Deleted item with ID 4cf17d64-5abc-4994-8ad9-d2b3aa07a769 from Bookings.
+2024-09-19 10:17:56,299 - INFO - Attempting to delete item with ID: d5ac7f3c-4d2b-4809-9432-763a14aa6d34 and Partition Key: 13
+2024-09-19 10:17:56,331 - INFO - Deleted item with ID d5ac7f3c-4d2b-4809-9432-763a14aa6d34 from Bookings.
+2024-09-19 10:17:56,331 - INFO - Attempting to delete item with ID: 4149ae82-d2c0-4694-92b7-0a9da45365f5 and Partition Key: 14
+2024-09-19 10:17:56,365 - INFO - Deleted item with ID 4149ae82-d2c0-4694-92b7-0a9da45365f5 from Bookings.
+2024-09-19 10:17:56,365 - INFO - Attempting to delete item with ID: 2cb74e11-f3df-4f84-8c3e-aa1bfda3fe19 and Partition Key: 15
+2024-09-19 10:17:56,399 - INFO - Deleted item with ID 2cb74e11-f3df-4f84-8c3e-aa1bfda3fe19 from Bookings.
+2024-09-19 10:17:56,400 - INFO - Attempting to delete item with ID: 594f726e-3a2f-4996-b230-442f7d1558c2 and Partition Key: 16
+2024-09-19 10:17:56,434 - INFO - Deleted item with ID 594f726e-3a2f-4996-b230-442f7d1558c2 from Bookings.
+2024-09-19 10:17:56,434 - INFO - Attempting to delete item with ID: 03cea748-1f20-4d18-b6f3-7b22b970685f and Partition Key: 17
+2024-09-19 10:17:56,467 - INFO - Deleted item with ID 03cea748-1f20-4d18-b6f3-7b22b970685f from Bookings.
+2024-09-19 10:17:56,467 - INFO - Attempting to delete item with ID: 77ffbb97-d4fc-41b7-9fdb-eb099e3967ad and Partition Key: 18
+2024-09-19 10:17:56,500 - INFO - Deleted item with ID 77ffbb97-d4fc-41b7-9fdb-eb099e3967ad from Bookings.
+2024-09-19 10:17:56,500 - INFO - Attempting to delete item with ID: e9098e0b-b109-476f-88da-65a9c43bd516 and Partition Key: 19
+2024-09-19 10:17:56,533 - INFO - Deleted item with ID e9098e0b-b109-476f-88da-65a9c43bd516 from Bookings.
+2024-09-19 10:17:56,533 - INFO - Attempting to delete item with ID: 61408e8c-7cc6-493d-9060-5d62749908c0 and Partition Key: 20
+2024-09-19 10:17:56,566 - INFO - Deleted item with ID 61408e8c-7cc6-493d-9060-5d62749908c0 from Bookings.
+2024-09-19 10:17:56,566 - INFO - Attempting to delete item with ID: d89650e0-d391-462d-95ed-d1cd59503113 and Partition Key: 21
+2024-09-19 10:17:56,600 - INFO - Deleted item with ID d89650e0-d391-462d-95ed-d1cd59503113 from Bookings.
+2024-09-19 10:17:56,600 - INFO - Attempting to delete item with ID: e0eb85df-1a4e-4dd6-b66c-71db3f4381a3 and Partition Key: 22
+2024-09-19 10:17:56,633 - INFO - Deleted item with ID e0eb85df-1a4e-4dd6-b66c-71db3f4381a3 from Bookings.
+2024-09-19 10:17:56,633 - INFO - Attempting to delete item with ID: d830ae0b-7fc8-49e4-b2bd-74f87abb3beb and Partition Key: 23
+2024-09-19 10:17:56,667 - INFO - Deleted item with ID d830ae0b-7fc8-49e4-b2bd-74f87abb3beb from Bookings.
+2024-09-19 10:17:56,667 - INFO - Attempting to delete item with ID: 011e49c1-6927-46c0-bd54-996c496a00f3 and Partition Key: 24
+2024-09-19 10:17:56,700 - INFO - Deleted item with ID 011e49c1-6927-46c0-bd54-996c496a00f3 from Bookings.
+2024-09-19 10:17:56,701 - INFO - Attempting to delete item with ID: af801953-f099-47a2-aa1e-7f3890798c32 and Partition Key: 25
+2024-09-19 10:17:56,734 - INFO - Deleted item with ID af801953-f099-47a2-aa1e-7f3890798c32 from Bookings.
+2024-09-19 10:17:56,735 - INFO - Attempting to delete item with ID: 2203332a-a92f-4de5-9d60-562aa1bba607 and Partition Key: 26
+2024-09-19 10:17:56,767 - INFO - Deleted item with ID 2203332a-a92f-4de5-9d60-562aa1bba607 from Bookings.
+2024-09-19 10:17:56,767 - INFO - Attempting to delete item with ID: b618e090-f53b-432b-b46f-c46443cd3cd5 and Partition Key: 27
+2024-09-19 10:17:56,800 - INFO - Deleted item with ID b618e090-f53b-432b-b46f-c46443cd3cd5 from Bookings.
+2024-09-19 10:17:56,800 - INFO - Attempting to delete item with ID: 4fedd39d-3771-4cb4-b6c5-32b37d5ab75a and Partition Key: 28
+2024-09-19 10:17:56,835 - INFO - Deleted item with ID 4fedd39d-3771-4cb4-b6c5-32b37d5ab75a from Bookings.
+2024-09-19 10:17:56,836 - INFO - Attempting to delete item with ID: 2591ab72-553d-4113-8e0a-25812fe83f50 and Partition Key: 29
+2024-09-19 10:17:56,869 - INFO - Deleted item with ID 2591ab72-553d-4113-8e0a-25812fe83f50 from Bookings.
+2024-09-19 10:17:56,869 - INFO - Attempting to delete item with ID: a499152e-8e09-48c5-b407-49ba6affeb36 and Partition Key: 30
+2024-09-19 10:17:56,903 - INFO - Deleted item with ID a499152e-8e09-48c5-b407-49ba6affeb36 from Bookings.
+2024-09-19 10:17:56,904 - INFO - Attempting to delete item with ID: 8c3588d7-33b2-4c5c-b8b3-0b3465cd7b78 and Partition Key: 31
+2024-09-19 10:17:56,938 - INFO - Deleted item with ID 8c3588d7-33b2-4c5c-b8b3-0b3465cd7b78 from Bookings.
+2024-09-19 10:17:56,939 - INFO - Attempting to delete item with ID: 150b0f7d-01eb-44aa-b218-a0ca829aab23 and Partition Key: 32
+2024-09-19 10:17:56,972 - INFO - Deleted item with ID 150b0f7d-01eb-44aa-b218-a0ca829aab23 from Bookings.
+2024-09-19 10:17:56,972 - INFO - Attempting to delete item with ID: b5dc4e7c-a571-427f-be45-81ebb2d7210e and Partition Key: 33
+2024-09-19 10:17:57,006 - INFO - Deleted item with ID b5dc4e7c-a571-427f-be45-81ebb2d7210e from Bookings.
+2024-09-19 10:17:57,006 - INFO - Attempting to delete item with ID: 8dda9f26-18f6-479d-8d75-9096f46ac60c and Partition Key: 34
+2024-09-19 10:17:57,042 - INFO - Deleted item with ID 8dda9f26-18f6-479d-8d75-9096f46ac60c from Bookings.
+2024-09-19 10:17:57,042 - INFO - Attempting to delete item with ID: aa6a3244-c413-4be1-8303-c17600ab78e3 and Partition Key: 35
+2024-09-19 10:17:57,076 - INFO - Deleted item with ID aa6a3244-c413-4be1-8303-c17600ab78e3 from Bookings.
+2024-09-19 10:17:57,076 - INFO - Attempting to delete item with ID: 211eb446-1d3f-4cd8-9063-635832e32c6f and Partition Key: 36
+2024-09-19 10:17:57,110 - INFO - Deleted item with ID 211eb446-1d3f-4cd8-9063-635832e32c6f from Bookings.
+2024-09-19 10:17:57,111 - INFO - Attempting to delete item with ID: 6deb401e-502a-4db5-a041-9eb548ffaaf8 and Partition Key: 37
+2024-09-19 10:17:57,143 - INFO - Deleted item with ID 6deb401e-502a-4db5-a041-9eb548ffaaf8 from Bookings.
+2024-09-19 10:17:57,144 - INFO - Attempting to delete item with ID: 47dad152-e06a-43f8-b334-8c708ae65a1b and Partition Key: 38
+2024-09-19 10:17:57,176 - INFO - Deleted item with ID 47dad152-e06a-43f8-b334-8c708ae65a1b from Bookings.
+2024-09-19 10:17:57,176 - INFO - Attempting to delete item with ID: d51c0080-75d9-4c7a-9dac-12841442bd53 and Partition Key: 39
+2024-09-19 10:17:57,212 - INFO - Deleted item with ID d51c0080-75d9-4c7a-9dac-12841442bd53 from Bookings.
+2024-09-19 10:17:57,213 - INFO - Attempting to delete item with ID: 1c5c5bb8-b568-4a3c-8cf8-4c5a7a9874f6 and Partition Key: 40
+2024-09-19 10:17:57,247 - INFO - Deleted item with ID 1c5c5bb8-b568-4a3c-8cf8-4c5a7a9874f6 from Bookings.
+2024-09-19 10:17:57,248 - INFO - Attempting to delete item with ID: 2b979864-4674-423a-90ed-986b0be5bad3 and Partition Key: 41
+2024-09-19 10:17:57,281 - INFO - Deleted item with ID 2b979864-4674-423a-90ed-986b0be5bad3 from Bookings.
+2024-09-19 10:17:57,281 - INFO - Attempting to delete item with ID: 2499d456-9817-405c-af43-af1033ff3707 and Partition Key: 42
+2024-09-19 10:17:57,315 - INFO - Deleted item with ID 2499d456-9817-405c-af43-af1033ff3707 from Bookings.
+2024-09-19 10:17:57,315 - INFO - Attempting to delete item with ID: c265dda2-f791-4c28-ab01-5c741a3e24cf and Partition Key: 43
+2024-09-19 10:17:57,347 - INFO - Deleted item with ID c265dda2-f791-4c28-ab01-5c741a3e24cf from Bookings.
+2024-09-19 10:17:57,348 - INFO - Attempting to delete item with ID: 16cbca12-dd78-4ed4-89f2-1f8cca242b56 and Partition Key: 44
+2024-09-19 10:17:57,382 - INFO - Deleted item with ID 16cbca12-dd78-4ed4-89f2-1f8cca242b56 from Bookings.
+2024-09-19 10:17:57,382 - INFO - Attempting to delete item with ID: 94c49d38-34df-4cfb-9195-a7930a7b1b6e and Partition Key: 45
+2024-09-19 10:17:57,414 - INFO - Deleted item with ID 94c49d38-34df-4cfb-9195-a7930a7b1b6e from Bookings.
+2024-09-19 10:17:57,414 - INFO - Attempting to delete item with ID: 5fcf1f70-cbfe-4c89-8344-755edf734dfc and Partition Key: 46
+2024-09-19 10:17:57,448 - INFO - Deleted item with ID 5fcf1f70-cbfe-4c89-8344-755edf734dfc from Bookings.
+2024-09-19 10:17:57,449 - INFO - Bookings data cleaned successfully.
+2024-09-19 10:17:57,877 - INFO - Attempting to delete item with ID: 1 and Partition Key: 1
+2024-09-19 10:17:57,921 - INFO - Deleted item with ID 1 from PDFs.
+2024-09-19 10:17:57,921 - INFO - Attempting to delete item with ID: 2 and Partition Key: 2
+2024-09-19 10:17:57,960 - INFO - Deleted item with ID 2 from PDFs.
+2024-09-19 10:17:57,960 - INFO - Attempting to delete item with ID: 3 and Partition Key: 3
+2024-09-19 10:17:58,000 - INFO - Deleted item with ID 3 from PDFs.
+2024-09-19 10:17:58,000 - INFO - Attempting to delete item with ID: 4 and Partition Key: 4
+2024-09-19 10:17:58,041 - INFO - Deleted item with ID 4 from PDFs.
+2024-09-19 10:17:58,041 - INFO - Attempting to delete item with ID: 5 and Partition Key: 5
+2024-09-19 10:17:58,078 - INFO - Deleted item with ID 5 from PDFs.
+2024-09-19 10:17:58,078 - INFO - Attempting to delete item with ID: 6 and Partition Key: 6
+2024-09-19 10:17:58,120 - INFO - Deleted item with ID 6 from PDFs.
+2024-09-19 10:17:58,121 - INFO - Attempting to delete item with ID: 7 and Partition Key: 7
+2024-09-19 10:17:58,160 - INFO - Deleted item with ID 7 from PDFs.
+2024-09-19 10:17:58,160 - INFO - Attempting to delete item with ID: 8 and Partition Key: 8
+2024-09-19 10:17:58,201 - INFO - Deleted item with ID 8 from PDFs.
+2024-09-19 10:17:58,201 - INFO - Attempting to delete item with ID: 9 and Partition Key: 9
+2024-09-19 10:17:58,241 - INFO - Deleted item with ID 9 from PDFs.
+2024-09-19 10:17:58,241 - INFO - Attempting to delete item with ID: 10 and Partition Key: 10
+2024-09-19 10:17:58,281 - INFO - Deleted item with ID 10 from PDFs.
+2024-09-19 10:17:58,281 - INFO - Attempting to delete item with ID: 11 and Partition Key: 11
+2024-09-19 10:17:58,321 - INFO - Deleted item with ID 11 from PDFs.
+2024-09-19 10:17:58,322 - INFO - Attempting to delete item with ID: 12 and Partition Key: 12
+2024-09-19 10:17:58,360 - INFO - Deleted item with ID 12 from PDFs.
+2024-09-19 10:17:58,360 - INFO - Attempting to delete item with ID: 13 and Partition Key: 13
+2024-09-19 10:17:58,399 - INFO - Deleted item with ID 13 from PDFs.
+2024-09-19 10:17:58,399 - INFO - Attempting to delete item with ID: 14 and Partition Key: 14
+2024-09-19 10:17:58,440 - INFO - Deleted item with ID 14 from PDFs.
+2024-09-19 10:17:58,440 - INFO - Attempting to delete item with ID: 15 and Partition Key: 15
+2024-09-19 10:17:58,479 - INFO - Deleted item with ID 15 from PDFs.
+2024-09-19 10:17:58,479 - INFO - Attempting to delete item with ID: 16 and Partition Key: 16
+2024-09-19 10:17:58,520 - INFO - Deleted item with ID 16 from PDFs.
+2024-09-19 10:17:58,521 - INFO - Attempting to delete item with ID: 17 and Partition Key: 17
+2024-09-19 10:17:58,561 - INFO - Deleted item with ID 17 from PDFs.
+2024-09-19 10:17:58,561 - INFO - Attempting to delete item with ID: 18 and Partition Key: 18
+2024-09-19 10:17:58,601 - INFO - Deleted item with ID 18 from PDFs.
+2024-09-19 10:17:58,601 - INFO - Attempting to delete item with ID: 19 and Partition Key: 19
+2024-09-19 10:17:58,643 - INFO - Deleted item with ID 19 from PDFs.
+2024-09-19 10:17:58,643 - INFO - Attempting to delete item with ID: 20 and Partition Key: 20
+2024-09-19 10:17:58,680 - INFO - Deleted item with ID 20 from PDFs.
+2024-09-19 10:17:58,681 - INFO - Attempting to delete item with ID: 21 and Partition Key: 21
+2024-09-19 10:17:58,722 - INFO - Deleted item with ID 21 from PDFs.
+2024-09-19 10:17:58,722 - INFO - Attempting to delete item with ID: 22 and Partition Key: 22
+2024-09-19 10:17:58,762 - INFO - Deleted item with ID 22 from PDFs.
+2024-09-19 10:17:58,763 - INFO - Attempting to delete item with ID: 23 and Partition Key: 23
+2024-09-19 10:17:58,801 - INFO - Deleted item with ID 23 from PDFs.
+2024-09-19 10:17:58,801 - INFO - Attempting to delete item with ID: 24 and Partition Key: 24
+2024-09-19 10:17:58,841 - INFO - Deleted item with ID 24 from PDFs.
+2024-09-19 10:17:58,841 - INFO - Attempting to delete item with ID: 25 and Partition Key: 25
+2024-09-19 10:17:58,881 - INFO - Deleted item with ID 25 from PDFs.
+2024-09-19 10:17:58,881 - INFO - Attempting to delete item with ID: 26 and Partition Key: 26
+2024-09-19 10:17:58,920 - INFO - Deleted item with ID 26 from PDFs.
+2024-09-19 10:17:58,921 - INFO - Attempting to delete item with ID: 27 and Partition Key: 27
+2024-09-19 10:17:58,961 - INFO - Deleted item with ID 27 from PDFs.
+2024-09-19 10:17:58,961 - INFO - Attempting to delete item with ID: 28 and Partition Key: 28
+2024-09-19 10:17:59,000 - INFO - Deleted item with ID 28 from PDFs.
+2024-09-19 10:17:59,001 - INFO - Attempting to delete item with ID: 29 and Partition Key: 29
+2024-09-19 10:17:59,040 - INFO - Deleted item with ID 29 from PDFs.
+2024-09-19 10:17:59,040 - INFO - Attempting to delete item with ID: 30 and Partition Key: 30
+2024-09-19 10:17:59,081 - INFO - Deleted item with ID 30 from PDFs.
+2024-09-19 10:17:59,081 - INFO - Attempting to delete item with ID: 31 and Partition Key: 31
+2024-09-19 10:17:59,120 - INFO - Deleted item with ID 31 from PDFs.
+2024-09-19 10:17:59,120 - INFO - Attempting to delete item with ID: 32 and Partition Key: 32
+2024-09-19 10:17:59,160 - INFO - Deleted item with ID 32 from PDFs.
+2024-09-19 10:17:59,160 - INFO - Attempting to delete item with ID: 33 and Partition Key: 33
+2024-09-19 10:17:59,200 - INFO - Deleted item with ID 33 from PDFs.
+2024-09-19 10:17:59,200 - INFO - Attempting to delete item with ID: 34 and Partition Key: 34
+2024-09-19 10:17:59,241 - INFO - Deleted item with ID 34 from PDFs.
+2024-09-19 10:17:59,241 - INFO - Attempting to delete item with ID: 35 and Partition Key: 35
+2024-09-19 10:17:59,281 - INFO - Deleted item with ID 35 from PDFs.
+2024-09-19 10:17:59,281 - INFO - Attempting to delete item with ID: 36 and Partition Key: 36
+2024-09-19 10:17:59,320 - INFO - Deleted item with ID 36 from PDFs.
+2024-09-19 10:17:59,320 - INFO - Attempting to delete item with ID: 37 and Partition Key: 37
+2024-09-19 10:17:59,361 - INFO - Deleted item with ID 37 from PDFs.
+2024-09-19 10:17:59,361 - INFO - Attempting to delete item with ID: 38 and Partition Key: 38
+2024-09-19 10:17:59,401 - INFO - Deleted item with ID 38 from PDFs.
+2024-09-19 10:17:59,401 - INFO - Attempting to delete item with ID: 39 and Partition Key: 39
+2024-09-19 10:17:59,441 - INFO - Deleted item with ID 39 from PDFs.
+2024-09-19 10:17:59,441 - INFO - Attempting to delete item with ID: 40 and Partition Key: 40
+2024-09-19 10:17:59,481 - INFO - Deleted item with ID 40 from PDFs.
+2024-09-19 10:17:59,482 - INFO - Attempting to delete item with ID: 41 and Partition Key: 41
+2024-09-19 10:17:59,520 - INFO - Deleted item with ID 41 from PDFs.
+2024-09-19 10:17:59,520 - INFO - Attempting to delete item with ID: 42 and Partition Key: 42
+2024-09-19 10:17:59,562 - INFO - Deleted item with ID 42 from PDFs.
+2024-09-19 10:17:59,562 - INFO - Attempting to delete item with ID: 43 and Partition Key: 43
+2024-09-19 10:17:59,600 - INFO - Deleted item with ID 43 from PDFs.
+2024-09-19 10:17:59,600 - INFO - Attempting to delete item with ID: 44 and Partition Key: 44
+2024-09-19 10:17:59,640 - INFO - Deleted item with ID 44 from PDFs.
+2024-09-19 10:17:59,640 - INFO - Attempting to delete item with ID: 45 and Partition Key: 45
+2024-09-19 10:17:59,681 - INFO - Deleted item with ID 45 from PDFs.
+2024-09-19 10:17:59,681 - INFO - Attempting to delete item with ID: 46 and Partition Key: 46
+2024-09-19 10:17:59,720 - INFO - Deleted item with ID 46 from PDFs.
+2024-09-19 10:17:59,721 - INFO - PDFs data cleaned successfully.
+2024-09-19 10:18:00,064 - INFO - Attempting to delete item with ID: 1121132_2024-09-19 and Partition Key: 1121132_2024-09-19
+2024-09-19 10:18:00,104 - INFO - Deleted item with ID 1121132_2024-09-19 from Summary_PDFs.
+2024-09-19 10:18:00,104 - INFO - Summary_PDFs data cleaned successfully.
+2024-09-19 10:30:43,488 - INFO - Configuration loaded from connection_strings.json.
+2024-09-19 10:30:43,488 - INFO - Connection string prepared for sql_server.
+2024-09-19 10:30:43,488 - INFO - Configuration loaded from connection_strings.json.
+2024-09-19 10:30:43,488 - INFO - Configuration parameters retrieved for cosmos_db.
+2024-09-19 10:30:43,954 - INFO - Cleaned table camping.booking successfully.
+2024-09-19 10:30:44,012 - INFO - Cleaned table camping.summary successfully.
+2024-09-19 10:30:44,041 - INFO - SQL campsite data cleaned successfully.
+2024-09-19 10:30:44,710 - INFO - No items found in Bookings to clean.
+2024-09-19 10:30:45,078 - INFO - No items found in PDFs to clean.
+2024-09-19 10:30:45,488 - INFO - No items found in Summary_PDFs to clean.
+2024-09-19 10:31:10,046 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-09-19 10:31:10,046 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-19 10:31:14,706 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-09-19 10:31:15,025 - INFO - Fetched 0 bookings from Cosmos DB.
+2024-09-19 10:31:15,058 - INFO - 127.0.0.1 - - [19/Sep/2024 10:31:15] "GET / HTTP/1.1" 200 -
+2024-09-19 10:31:15,297 - INFO - 127.0.0.1 - - [19/Sep/2024 10:31:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-09-19 10:31:18,604 - INFO - Connected to SQL database successfully.
+2024-09-19 10:31:18,934 - INFO - Connected to Head Office SQL database successfully.
+2024-09-19 10:31:19,092 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-09-19 10:31:19,122 - INFO - Fetched 46 bookings from the Head Office database.
+2024-09-19 10:31:19,122 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-09-19 10:31:19,122 - INFO - Processing Booking 1...
+2024-09-19 10:31:19,122 - INFO - Attempting to allocate Booking 1 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:19,122 - INFO - Booking 1 successfully allocated to Campsite 1.
+2024-09-19 10:31:19,218 - INFO - Booking 1 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:19,248 - INFO - Confirmation saved as pdfs\confirmation_1.pdf.
+2024-09-19 10:31:19,435 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:19,740 - INFO - PDF pdfs\confirmation_1.pdf upserted into Cosmos DB successfully with pdf_id 1.
+2024-09-19 10:31:19,740 - INFO - Confirmation PDF pdfs\confirmation_1.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:20,120 - INFO - Booking 1 inserted into Cosmos DB successfully.
+2024-09-19 10:31:20,120 - INFO - Booking 1 inserted into Cosmos DB successfully.
+2024-09-19 10:31:20,120 - INFO - Booking 1 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-09-19 10:31:20,120 - INFO - Processing Booking 2...
+2024-09-19 10:31:20,120 - INFO - Attempting to allocate Booking 2 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:20,120 - INFO - Booking 2 successfully allocated to Campsite 2.
+2024-09-19 10:31:20,178 - INFO - Booking 2 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:20,208 - INFO - Confirmation saved as pdfs\confirmation_2.pdf.
+2024-09-19 10:31:20,387 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:20,719 - INFO - PDF pdfs\confirmation_2.pdf upserted into Cosmos DB successfully with pdf_id 2.
+2024-09-19 10:31:20,719 - INFO - Confirmation PDF pdfs\confirmation_2.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:20,814 - INFO - Booking 2 inserted into Cosmos DB successfully.
+2024-09-19 10:31:20,814 - INFO - Booking 2 inserted into Cosmos DB successfully.
+2024-09-19 10:31:20,814 - INFO - Booking 2 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-09-19 10:31:20,814 - INFO - Processing Booking 3...
+2024-09-19 10:31:20,814 - INFO - Attempting to allocate Booking 3 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:20,814 - INFO - Booking 3 successfully allocated to Campsite 3.
+2024-09-19 10:31:20,874 - INFO - Booking 3 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:20,902 - INFO - Confirmation saved as pdfs\confirmation_3.pdf.
+2024-09-19 10:31:21,120 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:21,401 - INFO - PDF pdfs\confirmation_3.pdf upserted into Cosmos DB successfully with pdf_id 3.
+2024-09-19 10:31:21,401 - INFO - Confirmation PDF pdfs\confirmation_3.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:21,496 - INFO - Booking 3 inserted into Cosmos DB successfully.
+2024-09-19 10:31:21,496 - INFO - Booking 3 inserted into Cosmos DB successfully.
+2024-09-19 10:31:21,496 - INFO - Booking 3 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-09-19 10:31:21,496 - INFO - Processing Booking 4...
+2024-09-19 10:31:21,496 - INFO - Attempting to allocate Booking 4 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:21,496 - INFO - Booking 4 successfully allocated to Campsite 4.
+2024-09-19 10:31:21,557 - INFO - Booking 4 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:21,586 - INFO - Confirmation saved as pdfs\confirmation_4.pdf.
+2024-09-19 10:31:21,794 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:22,114 - INFO - PDF pdfs\confirmation_4.pdf upserted into Cosmos DB successfully with pdf_id 4.
+2024-09-19 10:31:22,114 - INFO - Confirmation PDF pdfs\confirmation_4.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:22,207 - INFO - Booking 4 inserted into Cosmos DB successfully.
+2024-09-19 10:31:22,208 - INFO - Booking 4 inserted into Cosmos DB successfully.
+2024-09-19 10:31:22,208 - INFO - Booking 4 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-09-19 10:31:22,208 - INFO - Processing Booking 5...
+2024-09-19 10:31:22,208 - INFO - Attempting to allocate Booking 5 from 2024-10-12 to 2024-10-19...
+2024-09-19 10:31:22,208 - INFO - Booking 5 successfully allocated to Campsite 1.
+2024-09-19 10:31:22,267 - INFO - Booking 5 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:22,297 - INFO - Confirmation saved as pdfs\confirmation_5.pdf.
+2024-09-19 10:31:22,485 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:22,810 - INFO - PDF pdfs\confirmation_5.pdf upserted into Cosmos DB successfully with pdf_id 5.
+2024-09-19 10:31:22,810 - INFO - Confirmation PDF pdfs\confirmation_5.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:22,916 - INFO - Booking 5 inserted into Cosmos DB successfully.
+2024-09-19 10:31:22,916 - INFO - Booking 5 inserted into Cosmos DB successfully.
+2024-09-19 10:31:22,916 - INFO - Booking 5 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-09-19 10:31:22,916 - INFO - Processing Booking 6...
+2024-09-19 10:31:22,916 - INFO - Attempting to allocate Booking 6 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:31:22,916 - INFO - Booking 6 successfully allocated to Campsite 1.
+2024-09-19 10:31:22,976 - INFO - Booking 6 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:23,006 - INFO - Confirmation saved as pdfs\confirmation_6.pdf.
+2024-09-19 10:31:23,137 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:23,410 - INFO - PDF pdfs\confirmation_6.pdf upserted into Cosmos DB successfully with pdf_id 6.
+2024-09-19 10:31:23,410 - INFO - Confirmation PDF pdfs\confirmation_6.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:23,505 - INFO - Booking 6 inserted into Cosmos DB successfully.
+2024-09-19 10:31:23,505 - INFO - Booking 6 inserted into Cosmos DB successfully.
+2024-09-19 10:31:23,505 - INFO - Booking 6 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-09-19 10:31:23,505 - INFO - Processing Booking 7...
+2024-09-19 10:31:23,505 - INFO - Attempting to allocate Booking 7 from 2024-10-12 to 2024-10-19...
+2024-09-19 10:31:23,505 - INFO - Booking 7 successfully allocated to Campsite 2.
+2024-09-19 10:31:23,566 - INFO - Booking 7 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:23,594 - INFO - Confirmation saved as pdfs\confirmation_7.pdf.
+2024-09-19 10:31:23,789 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:24,060 - INFO - PDF pdfs\confirmation_7.pdf upserted into Cosmos DB successfully with pdf_id 7.
+2024-09-19 10:31:24,061 - INFO - Confirmation PDF pdfs\confirmation_7.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:24,160 - INFO - Booking 7 inserted into Cosmos DB successfully.
+2024-09-19 10:31:24,160 - INFO - Booking 7 inserted into Cosmos DB successfully.
+2024-09-19 10:31:24,160 - INFO - Booking 7 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-09-19 10:31:24,160 - INFO - Processing Booking 8...
+2024-09-19 10:31:24,160 - INFO - Attempting to allocate Booking 8 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:31:24,160 - INFO - Booking 8 successfully allocated to Campsite 1.
+2024-09-19 10:31:24,242 - INFO - Booking 8 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:24,270 - INFO - Confirmation saved as pdfs\confirmation_8.pdf.
+2024-09-19 10:31:24,445 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:24,754 - INFO - PDF pdfs\confirmation_8.pdf upserted into Cosmos DB successfully with pdf_id 8.
+2024-09-19 10:31:24,754 - INFO - Confirmation PDF pdfs\confirmation_8.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:24,848 - INFO - Booking 8 inserted into Cosmos DB successfully.
+2024-09-19 10:31:24,848 - INFO - Booking 8 inserted into Cosmos DB successfully.
+2024-09-19 10:31:24,848 - INFO - Booking 8 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-09-19 10:31:24,848 - INFO - Processing Booking 9...
+2024-09-19 10:31:24,848 - INFO - Attempting to allocate Booking 9 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:31:24,848 - INFO - Booking 9 successfully allocated to Campsite 2.
+2024-09-19 10:31:24,908 - INFO - Booking 9 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:24,936 - INFO - Confirmation saved as pdfs\confirmation_9.pdf.
+2024-09-19 10:31:25,139 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:25,403 - INFO - PDF pdfs\confirmation_9.pdf upserted into Cosmos DB successfully with pdf_id 9.
+2024-09-19 10:31:25,403 - INFO - Confirmation PDF pdfs\confirmation_9.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:25,497 - INFO - Booking 9 inserted into Cosmos DB successfully.
+2024-09-19 10:31:25,497 - INFO - Booking 9 inserted into Cosmos DB successfully.
+2024-09-19 10:31:25,497 - INFO - Booking 9 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-09-19 10:31:25,497 - INFO - Processing Booking 10...
+2024-09-19 10:31:25,497 - INFO - Attempting to allocate Booking 10 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:25,497 - INFO - Booking 10 successfully allocated to Campsite 5.
+2024-09-19 10:31:25,557 - INFO - Booking 10 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:25,586 - INFO - Confirmation saved as pdfs\confirmation_10.pdf.
+2024-09-19 10:31:25,784 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:26,149 - INFO - PDF pdfs\confirmation_10.pdf upserted into Cosmos DB successfully with pdf_id 10.
+2024-09-19 10:31:26,150 - INFO - Confirmation PDF pdfs\confirmation_10.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:26,244 - INFO - Booking 10 inserted into Cosmos DB successfully.
+2024-09-19 10:31:26,244 - INFO - Booking 10 inserted into Cosmos DB successfully.
+2024-09-19 10:31:26,244 - INFO - Booking 10 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-09-19 10:31:26,244 - INFO - Processing Booking 11...
+2024-09-19 10:31:26,244 - INFO - Attempting to allocate Booking 11 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:31:26,244 - INFO - Booking 11 successfully allocated to Campsite 1.
+2024-09-19 10:31:26,304 - INFO - Booking 11 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:26,332 - INFO - Confirmation saved as pdfs\confirmation_11.pdf.
+2024-09-19 10:31:26,487 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:26,761 - INFO - PDF pdfs\confirmation_11.pdf upserted into Cosmos DB successfully with pdf_id 11.
+2024-09-19 10:31:26,761 - INFO - Confirmation PDF pdfs\confirmation_11.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:26,856 - INFO - Booking 11 inserted into Cosmos DB successfully.
+2024-09-19 10:31:26,856 - INFO - Booking 11 inserted into Cosmos DB successfully.
+2024-09-19 10:31:26,856 - INFO - Booking 11 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-09-19 10:31:26,856 - INFO - Processing Booking 12...
+2024-09-19 10:31:26,857 - INFO - Attempting to allocate Booking 12 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:31:26,857 - INFO - Booking 12 successfully allocated to Campsite 3.
+2024-09-19 10:31:26,916 - INFO - Booking 12 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:26,946 - INFO - Confirmation saved as pdfs\confirmation_12.pdf.
+2024-09-19 10:31:27,094 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:27,382 - INFO - PDF pdfs\confirmation_12.pdf upserted into Cosmos DB successfully with pdf_id 12.
+2024-09-19 10:31:27,382 - INFO - Confirmation PDF pdfs\confirmation_12.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:27,479 - INFO - Booking 12 inserted into Cosmos DB successfully.
+2024-09-19 10:31:27,479 - INFO - Booking 12 inserted into Cosmos DB successfully.
+2024-09-19 10:31:27,479 - INFO - Booking 12 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-09-19 10:31:27,480 - INFO - Processing Booking 13...
+2024-09-19 10:31:27,480 - INFO - Attempting to allocate Booking 13 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:31:27,480 - INFO - Booking 13 successfully allocated to Campsite 2.
+2024-09-19 10:31:27,540 - INFO - Booking 13 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:27,568 - INFO - Confirmation saved as pdfs\confirmation_13.pdf.
+2024-09-19 10:31:27,736 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:28,061 - INFO - PDF pdfs\confirmation_13.pdf upserted into Cosmos DB successfully with pdf_id 13.
+2024-09-19 10:31:28,061 - INFO - Confirmation PDF pdfs\confirmation_13.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:28,154 - INFO - Booking 13 inserted into Cosmos DB successfully.
+2024-09-19 10:31:28,154 - INFO - Booking 13 inserted into Cosmos DB successfully.
+2024-09-19 10:31:28,154 - INFO - Booking 13 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-09-19 10:31:28,154 - INFO - Processing Booking 14...
+2024-09-19 10:31:28,155 - INFO - Attempting to allocate Booking 14 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:31:28,155 - INFO - Booking 14 successfully allocated to Campsite 2.
+2024-09-19 10:31:28,213 - INFO - Booking 14 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:28,242 - INFO - Confirmation saved as pdfs\confirmation_14.pdf.
+2024-09-19 10:31:28,388 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:28,661 - INFO - PDF pdfs\confirmation_14.pdf upserted into Cosmos DB successfully with pdf_id 14.
+2024-09-19 10:31:28,661 - INFO - Confirmation PDF pdfs\confirmation_14.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:28,793 - INFO - Booking 14 inserted into Cosmos DB successfully.
+2024-09-19 10:31:28,793 - INFO - Booking 14 inserted into Cosmos DB successfully.
+2024-09-19 10:31:28,793 - INFO - Booking 14 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-09-19 10:31:28,793 - INFO - Processing Booking 15...
+2024-09-19 10:31:28,793 - INFO - Attempting to allocate Booking 15 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:28,793 - INFO - Booking 15 successfully allocated to Campsite 6.
+2024-09-19 10:31:28,854 - INFO - Booking 15 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:28,883 - INFO - Confirmation saved as pdfs\confirmation_15.pdf.
+2024-09-19 10:31:29,030 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:29,252 - INFO - PDF pdfs\confirmation_15.pdf upserted into Cosmos DB successfully with pdf_id 15.
+2024-09-19 10:31:29,252 - INFO - Confirmation PDF pdfs\confirmation_15.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:29,345 - INFO - Booking 15 inserted into Cosmos DB successfully.
+2024-09-19 10:31:29,346 - INFO - Booking 15 inserted into Cosmos DB successfully.
+2024-09-19 10:31:29,346 - INFO - Booking 15 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-09-19 10:31:29,346 - INFO - Processing Booking 16...
+2024-09-19 10:31:29,346 - INFO - Attempting to allocate Booking 16 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:29,346 - INFO - Booking 16 successfully allocated to Campsite 7.
+2024-09-19 10:31:29,406 - INFO - Booking 16 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:29,436 - INFO - Confirmation saved as pdfs\confirmation_16.pdf.
+2024-09-19 10:31:29,740 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:30,142 - INFO - PDF pdfs\confirmation_16.pdf upserted into Cosmos DB successfully with pdf_id 16.
+2024-09-19 10:31:30,142 - INFO - Confirmation PDF pdfs\confirmation_16.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:30,236 - INFO - Booking 16 inserted into Cosmos DB successfully.
+2024-09-19 10:31:30,236 - INFO - Booking 16 inserted into Cosmos DB successfully.
+2024-09-19 10:31:30,236 - INFO - Booking 16 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-09-19 10:31:30,236 - INFO - Processing Booking 17...
+2024-09-19 10:31:30,236 - INFO - Attempting to allocate Booking 17 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:31:30,236 - INFO - Booking 17 successfully allocated to Campsite 3.
+2024-09-19 10:31:30,297 - INFO - Booking 17 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:30,326 - INFO - Confirmation saved as pdfs\confirmation_17.pdf.
+2024-09-19 10:31:30,545 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:30,851 - INFO - PDF pdfs\confirmation_17.pdf upserted into Cosmos DB successfully with pdf_id 17.
+2024-09-19 10:31:30,851 - INFO - Confirmation PDF pdfs\confirmation_17.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:31,000 - INFO - Booking 17 inserted into Cosmos DB successfully.
+2024-09-19 10:31:31,000 - INFO - Booking 17 inserted into Cosmos DB successfully.
+2024-09-19 10:31:31,000 - INFO - Booking 17 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-09-19 10:31:31,001 - INFO - Processing Booking 18...
+2024-09-19 10:31:31,001 - INFO - Attempting to allocate Booking 18 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:31:31,001 - INFO - Booking 18 successfully allocated to Campsite 3.
+2024-09-19 10:31:31,136 - INFO - Booking 18 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:31,213 - INFO - Confirmation saved as pdfs\confirmation_18.pdf.
+2024-09-19 10:31:31,481 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:31,832 - INFO - PDF pdfs\confirmation_18.pdf upserted into Cosmos DB successfully with pdf_id 18.
+2024-09-19 10:31:31,832 - INFO - Confirmation PDF pdfs\confirmation_18.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:31,966 - INFO - Booking 18 inserted into Cosmos DB successfully.
+2024-09-19 10:31:31,966 - INFO - Booking 18 inserted into Cosmos DB successfully.
+2024-09-19 10:31:31,966 - INFO - Booking 18 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-09-19 10:31:31,967 - INFO - Processing Booking 19...
+2024-09-19 10:31:31,967 - INFO - Attempting to allocate Booking 19 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:31:31,967 - INFO - Booking 19 successfully allocated to Campsite 4.
+2024-09-19 10:31:32,102 - INFO - Booking 19 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:32,172 - INFO - Confirmation saved as pdfs\confirmation_19.pdf.
+2024-09-19 10:31:32,341 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:32,641 - INFO - PDF pdfs\confirmation_19.pdf upserted into Cosmos DB successfully with pdf_id 19.
+2024-09-19 10:31:32,641 - INFO - Confirmation PDF pdfs\confirmation_19.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:32,779 - INFO - Booking 19 inserted into Cosmos DB successfully.
+2024-09-19 10:31:32,779 - INFO - Booking 19 inserted into Cosmos DB successfully.
+2024-09-19 10:31:32,779 - INFO - Booking 19 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-09-19 10:31:32,780 - INFO - Processing Booking 20...
+2024-09-19 10:31:32,780 - INFO - Attempting to allocate Booking 20 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:31:32,780 - INFO - Booking 20 successfully allocated to Campsite 4.
+2024-09-19 10:31:32,915 - INFO - Booking 20 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:32,985 - INFO - Confirmation saved as pdfs\confirmation_20.pdf.
+2024-09-19 10:31:33,268 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:33,538 - INFO - PDF pdfs\confirmation_20.pdf upserted into Cosmos DB successfully with pdf_id 20.
+2024-09-19 10:31:33,538 - INFO - Confirmation PDF pdfs\confirmation_20.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:33,643 - INFO - Booking 20 inserted into Cosmos DB successfully.
+2024-09-19 10:31:33,644 - INFO - Booking 20 inserted into Cosmos DB successfully.
+2024-09-19 10:31:33,644 - INFO - Booking 20 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-09-19 10:31:33,644 - INFO - Processing Booking 21...
+2024-09-19 10:31:33,644 - INFO - Attempting to allocate Booking 21 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:31:33,644 - INFO - Booking 21 successfully allocated to Campsite 4.
+2024-09-19 10:31:33,704 - INFO - Booking 21 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:33,733 - INFO - Confirmation saved as pdfs\confirmation_21.pdf.
+2024-09-19 10:31:34,008 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:34,353 - INFO - PDF pdfs\confirmation_21.pdf upserted into Cosmos DB successfully with pdf_id 21.
+2024-09-19 10:31:34,353 - INFO - Confirmation PDF pdfs\confirmation_21.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:34,491 - INFO - Booking 21 inserted into Cosmos DB successfully.
+2024-09-19 10:31:34,491 - INFO - Booking 21 inserted into Cosmos DB successfully.
+2024-09-19 10:31:34,492 - INFO - Booking 21 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-09-19 10:31:34,492 - INFO - Processing Booking 22...
+2024-09-19 10:31:34,492 - INFO - Attempting to allocate Booking 22 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:34,492 - INFO - Booking 22 successfully allocated to Campsite 8.
+2024-09-19 10:31:34,628 - INFO - Booking 22 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:34,657 - INFO - Confirmation saved as pdfs\confirmation_22.pdf.
+2024-09-19 10:31:34,933 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:35,306 - INFO - PDF pdfs\confirmation_22.pdf upserted into Cosmos DB successfully with pdf_id 22.
+2024-09-19 10:31:35,306 - INFO - Confirmation PDF pdfs\confirmation_22.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:35,443 - INFO - Booking 22 inserted into Cosmos DB successfully.
+2024-09-19 10:31:35,443 - INFO - Booking 22 inserted into Cosmos DB successfully.
+2024-09-19 10:31:35,443 - INFO - Booking 22 processed successfully: allocated to Campsite 8 and inserted into Cosmos DB.
+2024-09-19 10:31:35,444 - INFO - Processing Booking 23...
+2024-09-19 10:31:35,444 - INFO - Attempting to allocate Booking 23 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:35,444 - INFO - Booking 23 successfully allocated to Campsite 9.
+2024-09-19 10:31:35,549 - INFO - Booking 23 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:35,577 - INFO - Confirmation saved as pdfs\confirmation_23.pdf.
+2024-09-19 10:31:35,872 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:36,159 - INFO - PDF pdfs\confirmation_23.pdf upserted into Cosmos DB successfully with pdf_id 23.
+2024-09-19 10:31:36,160 - INFO - Confirmation PDF pdfs\confirmation_23.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:36,252 - INFO - Booking 23 inserted into Cosmos DB successfully.
+2024-09-19 10:31:36,252 - INFO - Booking 23 inserted into Cosmos DB successfully.
+2024-09-19 10:31:36,252 - INFO - Booking 23 processed successfully: allocated to Campsite 9 and inserted into Cosmos DB.
+2024-09-19 10:31:36,252 - INFO - Processing Booking 24...
+2024-09-19 10:31:36,253 - INFO - Attempting to allocate Booking 24 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:31:36,253 - INFO - Booking 24 successfully allocated to Campsite 5.
+2024-09-19 10:31:36,312 - INFO - Booking 24 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:36,341 - INFO - Confirmation saved as pdfs\confirmation_24.pdf.
+2024-09-19 10:31:36,478 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:36,703 - INFO - PDF pdfs\confirmation_24.pdf upserted into Cosmos DB successfully with pdf_id 24.
+2024-09-19 10:31:36,703 - INFO - Confirmation PDF pdfs\confirmation_24.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:36,799 - INFO - Booking 24 inserted into Cosmos DB successfully.
+2024-09-19 10:31:36,799 - INFO - Booking 24 inserted into Cosmos DB successfully.
+2024-09-19 10:31:36,799 - INFO - Booking 24 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-09-19 10:31:36,799 - INFO - Processing Booking 25...
+2024-09-19 10:31:36,800 - INFO - Attempting to allocate Booking 25 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:36,800 - INFO - Booking 25 successfully allocated to Campsite 10.
+2024-09-19 10:31:36,859 - INFO - Booking 25 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:36,888 - INFO - Confirmation saved as pdfs\confirmation_25.pdf.
+2024-09-19 10:31:37,086 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:37,330 - INFO - PDF pdfs\confirmation_25.pdf upserted into Cosmos DB successfully with pdf_id 25.
+2024-09-19 10:31:37,330 - INFO - Confirmation PDF pdfs\confirmation_25.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:37,451 - INFO - Booking 25 inserted into Cosmos DB successfully.
+2024-09-19 10:31:37,452 - INFO - Booking 25 inserted into Cosmos DB successfully.
+2024-09-19 10:31:37,452 - INFO - Booking 25 processed successfully: allocated to Campsite 10 and inserted into Cosmos DB.
+2024-09-19 10:31:37,452 - INFO - Processing Booking 26...
+2024-09-19 10:31:37,452 - INFO - Attempting to allocate Booking 26 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:31:37,452 - INFO - Booking 26 successfully allocated to Campsite 5.
+2024-09-19 10:31:37,511 - INFO - Booking 26 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:37,541 - INFO - Confirmation saved as pdfs\confirmation_26.pdf.
+2024-09-19 10:31:37,711 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:37,951 - INFO - PDF pdfs\confirmation_26.pdf upserted into Cosmos DB successfully with pdf_id 26.
+2024-09-19 10:31:37,952 - INFO - Confirmation PDF pdfs\confirmation_26.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:38,047 - INFO - Booking 26 inserted into Cosmos DB successfully.
+2024-09-19 10:31:38,047 - INFO - Booking 26 inserted into Cosmos DB successfully.
+2024-09-19 10:31:38,048 - INFO - Booking 26 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-09-19 10:31:38,048 - INFO - Processing Booking 27...
+2024-09-19 10:31:38,048 - INFO - Attempting to allocate Booking 27 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:31:38,048 - INFO - Booking 27 successfully allocated to Campsite 6.
+2024-09-19 10:31:38,110 - INFO - Booking 27 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:38,139 - INFO - Confirmation saved as pdfs\confirmation_27.pdf.
+2024-09-19 10:31:38,278 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:38,519 - INFO - PDF pdfs\confirmation_27.pdf upserted into Cosmos DB successfully with pdf_id 27.
+2024-09-19 10:31:38,519 - INFO - Confirmation PDF pdfs\confirmation_27.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:38,614 - INFO - Booking 27 inserted into Cosmos DB successfully.
+2024-09-19 10:31:38,614 - INFO - Booking 27 inserted into Cosmos DB successfully.
+2024-09-19 10:31:38,614 - INFO - Booking 27 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-09-19 10:31:38,614 - INFO - Processing Booking 28...
+2024-09-19 10:31:38,615 - INFO - Attempting to allocate Booking 28 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:31:38,615 - INFO - Booking 28 successfully allocated to Campsite 5.
+2024-09-19 10:31:38,674 - INFO - Booking 28 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:38,705 - INFO - Confirmation saved as pdfs\confirmation_28.pdf.
+2024-09-19 10:31:38,892 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:39,162 - INFO - PDF pdfs\confirmation_28.pdf upserted into Cosmos DB successfully with pdf_id 28.
+2024-09-19 10:31:39,162 - INFO - Confirmation PDF pdfs\confirmation_28.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:39,256 - INFO - Booking 28 inserted into Cosmos DB successfully.
+2024-09-19 10:31:39,256 - INFO - Booking 28 inserted into Cosmos DB successfully.
+2024-09-19 10:31:39,256 - INFO - Booking 28 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-09-19 10:31:39,256 - INFO - Processing Booking 29...
+2024-09-19 10:31:39,256 - INFO - Attempting to allocate Booking 29 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:39,256 - INFO - Booking 29 successfully allocated to Campsite 11.
+2024-09-19 10:31:39,316 - INFO - Booking 29 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:39,345 - INFO - Confirmation saved as pdfs\confirmation_29.pdf.
+2024-09-19 10:31:39,481 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:39,690 - INFO - PDF pdfs\confirmation_29.pdf upserted into Cosmos DB successfully with pdf_id 29.
+2024-09-19 10:31:39,691 - INFO - Confirmation PDF pdfs\confirmation_29.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:39,785 - INFO - Booking 29 inserted into Cosmos DB successfully.
+2024-09-19 10:31:39,785 - INFO - Booking 29 inserted into Cosmos DB successfully.
+2024-09-19 10:31:39,785 - INFO - Booking 29 processed successfully: allocated to Campsite 11 and inserted into Cosmos DB.
+2024-09-19 10:31:39,785 - INFO - Processing Booking 30...
+2024-09-19 10:31:39,785 - INFO - Attempting to allocate Booking 30 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:39,785 - INFO - Booking 30 successfully allocated to Campsite 12.
+2024-09-19 10:31:39,846 - INFO - Booking 30 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:39,876 - INFO - Confirmation saved as pdfs\confirmation_30.pdf.
+2024-09-19 10:31:40,032 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:40,293 - INFO - PDF pdfs\confirmation_30.pdf upserted into Cosmos DB successfully with pdf_id 30.
+2024-09-19 10:31:40,293 - INFO - Confirmation PDF pdfs\confirmation_30.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:40,386 - INFO - Booking 30 inserted into Cosmos DB successfully.
+2024-09-19 10:31:40,386 - INFO - Booking 30 inserted into Cosmos DB successfully.
+2024-09-19 10:31:40,386 - INFO - Booking 30 processed successfully: allocated to Campsite 12 and inserted into Cosmos DB.
+2024-09-19 10:31:40,386 - INFO - Processing Booking 31...
+2024-09-19 10:31:40,386 - INFO - Attempting to allocate Booking 31 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:40,386 - INFO - Booking 31 successfully allocated to Campsite 13.
+2024-09-19 10:31:40,447 - INFO - Booking 31 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:40,475 - INFO - Confirmation saved as pdfs\confirmation_31.pdf.
+2024-09-19 10:31:40,610 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:40,887 - INFO - PDF pdfs\confirmation_31.pdf upserted into Cosmos DB successfully with pdf_id 31.
+2024-09-19 10:31:40,887 - INFO - Confirmation PDF pdfs\confirmation_31.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:40,982 - INFO - Booking 31 inserted into Cosmos DB successfully.
+2024-09-19 10:31:40,982 - INFO - Booking 31 inserted into Cosmos DB successfully.
+2024-09-19 10:31:40,982 - INFO - Booking 31 processed successfully: allocated to Campsite 13 and inserted into Cosmos DB.
+2024-09-19 10:31:40,982 - INFO - Processing Booking 32...
+2024-09-19 10:31:40,982 - INFO - Attempting to allocate Booking 32 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:31:40,983 - INFO - Booking 32 successfully allocated to Campsite 7.
+2024-09-19 10:31:41,042 - INFO - Booking 32 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:41,071 - INFO - Confirmation saved as pdfs\confirmation_32.pdf.
+2024-09-19 10:31:41,237 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:41,480 - INFO - PDF pdfs\confirmation_32.pdf upserted into Cosmos DB successfully with pdf_id 32.
+2024-09-19 10:31:41,480 - INFO - Confirmation PDF pdfs\confirmation_32.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:41,575 - INFO - Booking 32 inserted into Cosmos DB successfully.
+2024-09-19 10:31:41,575 - INFO - Booking 32 inserted into Cosmos DB successfully.
+2024-09-19 10:31:41,575 - INFO - Booking 32 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-09-19 10:31:41,575 - INFO - Processing Booking 33...
+2024-09-19 10:31:41,576 - INFO - Attempting to allocate Booking 33 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:41,576 - INFO - Booking 33 successfully allocated to Campsite 14.
+2024-09-19 10:31:41,634 - INFO - Booking 33 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:41,664 - INFO - Confirmation saved as pdfs\confirmation_33.pdf.
+2024-09-19 10:31:41,817 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:42,130 - INFO - PDF pdfs\confirmation_33.pdf upserted into Cosmos DB successfully with pdf_id 33.
+2024-09-19 10:31:42,130 - INFO - Confirmation PDF pdfs\confirmation_33.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:42,270 - INFO - Booking 33 inserted into Cosmos DB successfully.
+2024-09-19 10:31:42,270 - INFO - Booking 33 inserted into Cosmos DB successfully.
+2024-09-19 10:31:42,270 - INFO - Booking 33 processed successfully: allocated to Campsite 14 and inserted into Cosmos DB.
+2024-09-19 10:31:42,271 - INFO - Processing Booking 34...
+2024-09-19 10:31:42,271 - INFO - Attempting to allocate Booking 34 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:31:42,271 - INFO - Booking 34 successfully allocated to Campsite 6.
+2024-09-19 10:31:42,377 - INFO - Booking 34 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:42,417 - INFO - Confirmation saved as pdfs\confirmation_34.pdf.
+2024-09-19 10:31:42,633 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:42,880 - INFO - PDF pdfs\confirmation_34.pdf upserted into Cosmos DB successfully with pdf_id 34.
+2024-09-19 10:31:42,881 - INFO - Confirmation PDF pdfs\confirmation_34.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:42,974 - INFO - Booking 34 inserted into Cosmos DB successfully.
+2024-09-19 10:31:42,974 - INFO - Booking 34 inserted into Cosmos DB successfully.
+2024-09-19 10:31:42,974 - INFO - Booking 34 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-09-19 10:31:42,974 - INFO - Processing Booking 35...
+2024-09-19 10:31:42,974 - INFO - Attempting to allocate Booking 35 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:31:42,974 - INFO - Booking 35 successfully allocated to Campsite 6.
+2024-09-19 10:31:43,033 - INFO - Booking 35 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:43,061 - INFO - Confirmation saved as pdfs\confirmation_35.pdf.
+2024-09-19 10:31:43,203 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:43,469 - INFO - PDF pdfs\confirmation_35.pdf upserted into Cosmos DB successfully with pdf_id 35.
+2024-09-19 10:31:43,469 - INFO - Confirmation PDF pdfs\confirmation_35.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:43,562 - INFO - Booking 35 inserted into Cosmos DB successfully.
+2024-09-19 10:31:43,562 - INFO - Booking 35 inserted into Cosmos DB successfully.
+2024-09-19 10:31:43,562 - INFO - Booking 35 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-09-19 10:31:43,562 - INFO - Processing Booking 36...
+2024-09-19 10:31:43,562 - INFO - Attempting to allocate Booking 36 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:43,562 - INFO - Booking 36 successfully allocated to Campsite 15.
+2024-09-19 10:31:43,621 - INFO - Booking 36 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:43,650 - INFO - Confirmation saved as pdfs\confirmation_36.pdf.
+2024-09-19 10:31:43,825 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:44,102 - INFO - PDF pdfs\confirmation_36.pdf upserted into Cosmos DB successfully with pdf_id 36.
+2024-09-19 10:31:44,102 - INFO - Confirmation PDF pdfs\confirmation_36.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:44,199 - INFO - Booking 36 inserted into Cosmos DB successfully.
+2024-09-19 10:31:44,199 - INFO - Booking 36 inserted into Cosmos DB successfully.
+2024-09-19 10:31:44,199 - INFO - Booking 36 processed successfully: allocated to Campsite 15 and inserted into Cosmos DB.
+2024-09-19 10:31:44,199 - INFO - Processing Booking 37...
+2024-09-19 10:31:44,199 - INFO - Attempting to allocate Booking 37 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:31:44,199 - INFO - Booking 37 successfully allocated to Campsite 7.
+2024-09-19 10:31:44,260 - INFO - Booking 37 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:44,290 - INFO - Confirmation saved as pdfs\confirmation_37.pdf.
+2024-09-19 10:31:44,465 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:44,742 - INFO - PDF pdfs\confirmation_37.pdf upserted into Cosmos DB successfully with pdf_id 37.
+2024-09-19 10:31:44,742 - INFO - Confirmation PDF pdfs\confirmation_37.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:44,836 - INFO - Booking 37 inserted into Cosmos DB successfully.
+2024-09-19 10:31:44,836 - INFO - Booking 37 inserted into Cosmos DB successfully.
+2024-09-19 10:31:44,836 - INFO - Booking 37 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-09-19 10:31:44,836 - INFO - Processing Booking 38...
+2024-09-19 10:31:44,836 - INFO - Attempting to allocate Booking 38 from 2024-10-19 to 2024-10-26...
+2024-09-19 10:31:44,837 - INFO - Booking 38 successfully allocated to Campsite 7.
+2024-09-19 10:31:44,897 - INFO - Booking 38 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:44,926 - INFO - Confirmation saved as pdfs\confirmation_38.pdf.
+2024-09-19 10:31:45,139 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:45,372 - INFO - PDF pdfs\confirmation_38.pdf upserted into Cosmos DB successfully with pdf_id 38.
+2024-09-19 10:31:45,372 - INFO - Confirmation PDF pdfs\confirmation_38.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:45,467 - INFO - Booking 38 inserted into Cosmos DB successfully.
+2024-09-19 10:31:45,467 - INFO - Booking 38 inserted into Cosmos DB successfully.
+2024-09-19 10:31:45,467 - INFO - Booking 38 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-09-19 10:31:45,467 - INFO - Processing Booking 39...
+2024-09-19 10:31:45,467 - INFO - Attempting to allocate Booking 39 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:31:45,467 - INFO - Booking 39 successfully allocated to Campsite 8.
+2024-09-19 10:31:45,528 - INFO - Booking 39 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:45,558 - INFO - Confirmation saved as pdfs\confirmation_39.pdf.
+2024-09-19 10:31:45,706 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:45,979 - INFO - PDF pdfs\confirmation_39.pdf upserted into Cosmos DB successfully with pdf_id 39.
+2024-09-19 10:31:45,979 - INFO - Confirmation PDF pdfs\confirmation_39.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:46,074 - INFO - Booking 39 inserted into Cosmos DB successfully.
+2024-09-19 10:31:46,074 - INFO - Booking 39 inserted into Cosmos DB successfully.
+2024-09-19 10:31:46,074 - INFO - Booking 39 processed successfully: allocated to Campsite 8 and inserted into Cosmos DB.
+2024-09-19 10:31:46,074 - INFO - Processing Booking 40...
+2024-09-19 10:31:46,074 - INFO - Attempting to allocate Booking 40 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:46,074 - INFO - Booking 40 successfully allocated to Campsite 16.
+2024-09-19 10:31:46,135 - INFO - Booking 40 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:46,164 - INFO - Confirmation saved as pdfs\confirmation_40.pdf.
+2024-09-19 10:31:46,309 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:46,532 - INFO - PDF pdfs\confirmation_40.pdf upserted into Cosmos DB successfully with pdf_id 40.
+2024-09-19 10:31:46,532 - INFO - Confirmation PDF pdfs\confirmation_40.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:46,623 - INFO - Booking 40 inserted into Cosmos DB successfully.
+2024-09-19 10:31:46,623 - INFO - Booking 40 inserted into Cosmos DB successfully.
+2024-09-19 10:31:46,623 - INFO - Booking 40 processed successfully: allocated to Campsite 16 and inserted into Cosmos DB.
+2024-09-19 10:31:46,623 - INFO - Processing Booking 41...
+2024-09-19 10:31:46,623 - INFO - Attempting to allocate Booking 41 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:31:46,623 - INFO - Booking 41 successfully allocated to Campsite 8.
+2024-09-19 10:31:46,684 - INFO - Booking 41 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:46,712 - INFO - Confirmation saved as pdfs\confirmation_41.pdf.
+2024-09-19 10:31:46,850 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:47,072 - INFO - PDF pdfs\confirmation_41.pdf upserted into Cosmos DB successfully with pdf_id 41.
+2024-09-19 10:31:47,072 - INFO - Confirmation PDF pdfs\confirmation_41.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:47,164 - INFO - Booking 41 inserted into Cosmos DB successfully.
+2024-09-19 10:31:47,164 - INFO - Booking 41 inserted into Cosmos DB successfully.
+2024-09-19 10:31:47,164 - INFO - Booking 41 processed successfully: allocated to Campsite 8 and inserted into Cosmos DB.
+2024-09-19 10:31:47,164 - INFO - Processing Booking 42...
+2024-09-19 10:31:47,164 - INFO - Attempting to allocate Booking 42 from 2024-11-02 to 2024-11-09...
+2024-09-19 10:31:47,164 - INFO - Booking 42 successfully allocated to Campsite 9.
+2024-09-19 10:31:47,225 - INFO - Booking 42 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:47,254 - INFO - Confirmation saved as pdfs\confirmation_42.pdf.
+2024-09-19 10:31:47,394 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:47,620 - INFO - PDF pdfs\confirmation_42.pdf upserted into Cosmos DB successfully with pdf_id 42.
+2024-09-19 10:31:47,620 - INFO - Confirmation PDF pdfs\confirmation_42.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:47,714 - INFO - Booking 42 inserted into Cosmos DB successfully.
+2024-09-19 10:31:47,714 - INFO - Booking 42 inserted into Cosmos DB successfully.
+2024-09-19 10:31:47,714 - INFO - Booking 42 processed successfully: allocated to Campsite 9 and inserted into Cosmos DB.
+2024-09-19 10:31:47,714 - INFO - Processing Booking 43...
+2024-09-19 10:31:47,714 - INFO - Attempting to allocate Booking 43 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:47,714 - INFO - Booking 43 successfully allocated to Campsite 17.
+2024-09-19 10:31:47,774 - INFO - Booking 43 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:47,803 - INFO - Confirmation saved as pdfs\confirmation_43.pdf.
+2024-09-19 10:31:47,946 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:48,151 - INFO - PDF pdfs\confirmation_43.pdf upserted into Cosmos DB successfully with pdf_id 43.
+2024-09-19 10:31:48,151 - INFO - Confirmation PDF pdfs\confirmation_43.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:48,245 - INFO - Booking 43 inserted into Cosmos DB successfully.
+2024-09-19 10:31:48,245 - INFO - Booking 43 inserted into Cosmos DB successfully.
+2024-09-19 10:31:48,245 - INFO - Booking 43 processed successfully: allocated to Campsite 17 and inserted into Cosmos DB.
+2024-09-19 10:31:48,245 - INFO - Processing Booking 44...
+2024-09-19 10:31:48,245 - INFO - Attempting to allocate Booking 44 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:31:48,245 - INFO - Booking 44 successfully allocated to Campsite 9.
+2024-09-19 10:31:48,306 - INFO - Booking 44 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:48,334 - INFO - Confirmation saved as pdfs\confirmation_44.pdf.
+2024-09-19 10:31:48,469 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:48,701 - INFO - PDF pdfs\confirmation_44.pdf upserted into Cosmos DB successfully with pdf_id 44.
+2024-09-19 10:31:48,701 - INFO - Confirmation PDF pdfs\confirmation_44.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:48,793 - INFO - Booking 44 inserted into Cosmos DB successfully.
+2024-09-19 10:31:48,793 - INFO - Booking 44 inserted into Cosmos DB successfully.
+2024-09-19 10:31:48,793 - INFO - Booking 44 processed successfully: allocated to Campsite 9 and inserted into Cosmos DB.
+2024-09-19 10:31:48,793 - INFO - Processing Booking 45...
+2024-09-19 10:31:48,793 - INFO - Attempting to allocate Booking 45 from 2024-10-26 to 2024-11-02...
+2024-09-19 10:31:48,793 - INFO - Booking 45 successfully allocated to Campsite 10.
+2024-09-19 10:31:48,854 - INFO - Booking 45 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:48,882 - INFO - Confirmation saved as pdfs\confirmation_45.pdf.
+2024-09-19 10:31:49,010 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:49,252 - INFO - PDF pdfs\confirmation_45.pdf upserted into Cosmos DB successfully with pdf_id 45.
+2024-09-19 10:31:49,252 - INFO - Confirmation PDF pdfs\confirmation_45.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:49,346 - INFO - Booking 45 inserted into Cosmos DB successfully.
+2024-09-19 10:31:49,347 - INFO - Booking 45 inserted into Cosmos DB successfully.
+2024-09-19 10:31:49,347 - INFO - Booking 45 processed successfully: allocated to Campsite 10 and inserted into Cosmos DB.
+2024-09-19 10:31:49,347 - INFO - Processing Booking 46...
+2024-09-19 10:31:49,347 - INFO - Attempting to allocate Booking 46 from 2024-10-05 to 2024-10-12...
+2024-09-19 10:31:49,347 - INFO - Booking 46 successfully allocated to Campsite 18.
+2024-09-19 10:31:49,407 - INFO - Booking 46 updated with new campground ID 1121132 successfully.
+2024-09-19 10:31:49,437 - INFO - Confirmation saved as pdfs\confirmation_46.pdf.
+2024-09-19 10:31:49,601 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-09-19 10:31:49,811 - INFO - PDF pdfs\confirmation_46.pdf upserted into Cosmos DB successfully with pdf_id 46.
+2024-09-19 10:31:49,811 - INFO - Confirmation PDF pdfs\confirmation_46.pdf inserted into Cosmos DB successfully.
+2024-09-19 10:31:49,905 - INFO - Booking 46 inserted into Cosmos DB successfully.
+2024-09-19 10:31:49,906 - INFO - Booking 46 inserted into Cosmos DB successfully.
+2024-09-19 10:31:49,906 - INFO - Booking 46 processed successfully: allocated to Campsite 18 and inserted into Cosmos DB.
+2024-09-19 10:31:49,997 - INFO - 127.0.0.1 - - [19/Sep/2024 10:31:49] "[32mPOST /process_bookings HTTP/1.1[0m" 302 -
+2024-09-19 10:31:50,000 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-09-19 10:31:50,000 - INFO - Generating summary from booking data.
+2024-09-19 10:31:50,001 - INFO - Summary Data: {'date': datetime.date(2024, 9, 19), 'total_sales': 24640, 'total_bookings': 46, 'successful_allocations': 46, 'failed_allocations': 0, 'campsite_utilization': {1: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 2: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 3: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 4: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 5: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 6: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 7: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 8: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 9: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 10: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 2}, 11: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 12: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 13: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 14: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 15: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 16: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 17: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 18: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 19: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 20: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 21: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 22: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 23: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 24: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 25: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 26: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 27: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 28: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 29: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 30: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}}}
+2024-09-19 10:31:50,001 - INFO - Generated Summary Data: {'date': datetime.date(2024, 9, 19), 'total_sales': 24640, 'total_bookings': 46, 'successful_allocations': 46, 'failed_allocations': 0, 'campsite_utilization': {1: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 2: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 3: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 4: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 5: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 6: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 7: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 8: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 9: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 10: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 2}, 11: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 12: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 13: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 14: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 15: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 16: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 17: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 18: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 19: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 20: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 21: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 22: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 23: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 24: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 25: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 26: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 27: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 28: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 29: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 30: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}}}
+2024-09-19 10:31:50,005 - INFO - Summary validated and created for 2024-09-19.
+2024-09-19 10:31:50,263 - INFO - Connected to SQL database successfully.
+2024-09-19 10:31:50,325 - INFO - Insert into local SQL database successful.
+2024-09-19 10:31:50,384 - INFO - Summary inserted into the local SQL database.
+2024-09-19 10:31:50,414 - INFO - Connected to Head Office SQL database successfully.
+2024-09-19 10:31:50,475 - INFO - Insert into Head Office database successful.
+2024-09-19 10:31:50,532 - INFO - Summary written to the Head Office database.
+2024-09-19 10:31:50,533 - INFO - Summary PDF generated and saved as pdfs\summary_2024-09-19.pdf.
+2024-09-19 10:31:50,533 - INFO - Summary PDF generated and saved.
+2024-09-19 10:31:50,665 - INFO - Connected to Cosmos DB container 'Summary_PDFs' successfully.
+2024-09-19 10:31:50,931 - INFO - Summary PDF pdfs\summary_2024-09-19.pdf upserted into Cosmos DB successfully with summary_id 1121132_2024-09-19.
+2024-09-19 10:31:50,931 - INFO - Summary PDF upserted into Cosmos DB successfully.
+2024-09-19 10:31:50,947 - INFO - 127.0.0.1 - - [19/Sep/2024 10:31:50] "GET /summary HTTP/1.1" 200 -
+2024-09-19 10:32:38,785 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-09-19 10:32:39,167 - INFO - Fetched 46 bookings from Cosmos DB.
+2024-09-19 10:32:39,167 - INFO - Booking ID: 1, Customer Name: John Doe
+2024-09-19 10:32:39,167 - INFO - Booking ID: 2, Customer Name: Jane Smith
+2024-09-19 10:32:39,167 - INFO - Booking ID: 3, Customer Name: Michael Johnson
+2024-09-19 10:32:39,167 - INFO - Booking ID: 4, Customer Name: Emily Williams
+2024-09-19 10:32:39,167 - INFO - Booking ID: 5, Customer Name: William Brown
+2024-09-19 10:32:39,167 - INFO - Booking ID: 6, Customer Name: Olivia Jones
+2024-09-19 10:32:39,167 - INFO - Booking ID: 7, Customer Name: James Davis
+2024-09-19 10:32:39,167 - INFO - Booking ID: 8, Customer Name: Sophia Miller
+2024-09-19 10:32:39,167 - INFO - Booking ID: 9, Customer Name: Benjamin Wilson
+2024-09-19 10:32:39,167 - INFO - Booking ID: 10, Customer Name: Isabella Moore
+2024-09-19 10:32:39,167 - INFO - Booking ID: 11, Customer Name: Alexander Taylor
+2024-09-19 10:32:39,167 - INFO - Booking ID: 12, Customer Name: Mia Anderson
+2024-09-19 10:32:39,167 - INFO - Booking ID: 13, Customer Name: Ethan White
+2024-09-19 10:32:39,167 - INFO - Booking ID: 14, Customer Name: Emma Martin
+2024-09-19 10:32:39,167 - INFO - Booking ID: 15, Customer Name: Daniel Thompson
+2024-09-19 10:32:39,167 - INFO - Booking ID: 16, Customer Name: Ava Hall
+2024-09-19 10:32:39,167 - INFO - Booking ID: 17, Customer Name: Matthew Adams
+2024-09-19 10:32:39,167 - INFO - Booking ID: 18, Customer Name: Liam Clark
+2024-09-19 10:32:39,167 - INFO - Booking ID: 19, Customer Name: Sofia Rodriguez
+2024-09-19 10:32:39,167 - INFO - Booking ID: 20, Customer Name: Amelia Lewis
+2024-09-19 10:32:39,167 - INFO - Booking ID: 21, Customer Name: Lucas Lee
+2024-09-19 10:32:39,167 - INFO - Booking ID: 22, Customer Name: Grace Walker
+2024-09-19 10:32:39,167 - INFO - Booking ID: 23, Customer Name: Jackson Hall
+2024-09-19 10:32:39,167 - INFO - Booking ID: 24, Customer Name: Chloe Green
+2024-09-19 10:32:39,167 - INFO - Booking ID: 25, Customer Name: Sebastian Turner
+2024-09-19 10:32:39,167 - INFO - Booking ID: 26, Customer Name: Lily Harris
+2024-09-19 10:32:39,167 - INFO - Booking ID: 27, Customer Name: Zoe King
+2024-09-19 10:32:39,167 - INFO - Booking ID: 28, Customer Name: Gabriel Baker
+2024-09-19 10:32:39,167 - INFO - Booking ID: 29, Customer Name: Penelope Evans
+2024-09-19 10:32:39,168 - INFO - Booking ID: 30, Customer Name: Anthony Martinez
+2024-09-19 10:32:39,168 - INFO - Booking ID: 31, Customer Name: Aria Wright
+2024-09-19 10:32:39,168 - INFO - Booking ID: 32, Customer Name: Leo Robinson
+2024-09-19 10:32:39,168 - INFO - Booking ID: 33, Customer Name: Victoria Perez
+2024-09-19 10:32:39,168 - INFO - Booking ID: 34, Customer Name: Thomas Garcia
+2024-09-19 10:32:39,168 - INFO - Booking ID: 35, Customer Name: Riley Jones
+2024-09-19 10:32:39,168 - INFO - Booking ID: 36, Customer Name: Ella Davis
+2024-09-19 10:32:39,168 - INFO - Booking ID: 37, Customer Name: Aaron Moore
+2024-09-19 10:32:39,168 - INFO - Booking ID: 38, Customer Name: Nora Smith
+2024-09-19 10:32:39,168 - INFO - Booking ID: 39, Customer Name: Elijah Johnson
+2024-09-19 10:32:39,168 - INFO - Booking ID: 40, Customer Name: Hannah Brown
+2024-09-19 10:32:39,168 - INFO - Booking ID: 41, Customer Name: Eli Williams
+2024-09-19 10:32:39,168 - INFO - Booking ID: 42, Customer Name: Layla Taylor
+2024-09-19 10:32:39,168 - INFO - Booking ID: 43, Customer Name: David Anderson
+2024-09-19 10:32:39,168 - INFO - Booking ID: 44, Customer Name: Aubrey Martin
+2024-09-19 10:32:39,168 - INFO - Booking ID: 45, Customer Name: Samuel Thompson
+2024-09-19 10:32:39,168 - INFO - Booking ID: 46, Customer Name: Avery Hall
+2024-09-19 10:32:39,169 - INFO - 127.0.0.1 - - [19/Sep/2024 10:32:39] "GET / HTTP/1.1" 200 -
+2024-09-19 10:32:40,348 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-09-19 10:32:40,698 - INFO - Fetched 46 bookings from Cosmos DB.
+2024-09-19 10:32:40,698 - INFO - Booking ID: 1, Customer Name: John Doe
+2024-09-19 10:32:40,698 - INFO - Booking ID: 2, Customer Name: Jane Smith
+2024-09-19 10:32:40,698 - INFO - Booking ID: 3, Customer Name: Michael Johnson
+2024-09-19 10:32:40,698 - INFO - Booking ID: 4, Customer Name: Emily Williams
+2024-09-19 10:32:40,698 - INFO - Booking ID: 5, Customer Name: William Brown
+2024-09-19 10:32:40,698 - INFO - Booking ID: 6, Customer Name: Olivia Jones
+2024-09-19 10:32:40,698 - INFO - Booking ID: 7, Customer Name: James Davis
+2024-09-19 10:32:40,698 - INFO - Booking ID: 8, Customer Name: Sophia Miller
+2024-09-19 10:32:40,698 - INFO - Booking ID: 9, Customer Name: Benjamin Wilson
+2024-09-19 10:32:40,698 - INFO - Booking ID: 10, Customer Name: Isabella Moore
+2024-09-19 10:32:40,698 - INFO - Booking ID: 11, Customer Name: Alexander Taylor
+2024-09-19 10:32:40,698 - INFO - Booking ID: 12, Customer Name: Mia Anderson
+2024-09-19 10:32:40,698 - INFO - Booking ID: 13, Customer Name: Ethan White
+2024-09-19 10:32:40,698 - INFO - Booking ID: 14, Customer Name: Emma Martin
+2024-09-19 10:32:40,698 - INFO - Booking ID: 15, Customer Name: Daniel Thompson
+2024-09-19 10:32:40,698 - INFO - Booking ID: 16, Customer Name: Ava Hall
+2024-09-19 10:32:40,698 - INFO - Booking ID: 17, Customer Name: Matthew Adams
+2024-09-19 10:32:40,698 - INFO - Booking ID: 18, Customer Name: Liam Clark
+2024-09-19 10:32:40,698 - INFO - Booking ID: 19, Customer Name: Sofia Rodriguez
+2024-09-19 10:32:40,698 - INFO - Booking ID: 20, Customer Name: Amelia Lewis
+2024-09-19 10:32:40,698 - INFO - Booking ID: 21, Customer Name: Lucas Lee
+2024-09-19 10:32:40,698 - INFO - Booking ID: 22, Customer Name: Grace Walker
+2024-09-19 10:32:40,698 - INFO - Booking ID: 23, Customer Name: Jackson Hall
+2024-09-19 10:32:40,698 - INFO - Booking ID: 24, Customer Name: Chloe Green
+2024-09-19 10:32:40,698 - INFO - Booking ID: 25, Customer Name: Sebastian Turner
+2024-09-19 10:32:40,698 - INFO - Booking ID: 26, Customer Name: Lily Harris
+2024-09-19 10:32:40,699 - INFO - Booking ID: 27, Customer Name: Zoe King
+2024-09-19 10:32:40,699 - INFO - Booking ID: 28, Customer Name: Gabriel Baker
+2024-09-19 10:32:40,699 - INFO - Booking ID: 29, Customer Name: Penelope Evans
+2024-09-19 10:32:40,699 - INFO - Booking ID: 30, Customer Name: Anthony Martinez
+2024-09-19 10:32:40,699 - INFO - Booking ID: 31, Customer Name: Aria Wright
+2024-09-19 10:32:40,699 - INFO - Booking ID: 32, Customer Name: Leo Robinson
+2024-09-19 10:32:40,699 - INFO - Booking ID: 33, Customer Name: Victoria Perez
+2024-09-19 10:32:40,699 - INFO - Booking ID: 34, Customer Name: Thomas Garcia
+2024-09-19 10:32:40,699 - INFO - Booking ID: 35, Customer Name: Riley Jones
+2024-09-19 10:32:40,699 - INFO - Booking ID: 36, Customer Name: Ella Davis
+2024-09-19 10:32:40,699 - INFO - Booking ID: 37, Customer Name: Aaron Moore
+2024-09-19 10:32:40,699 - INFO - Booking ID: 38, Customer Name: Nora Smith
+2024-09-19 10:32:40,699 - INFO - Booking ID: 39, Customer Name: Elijah Johnson
+2024-09-19 10:32:40,699 - INFO - Booking ID: 40, Customer Name: Hannah Brown
+2024-09-19 10:32:40,699 - INFO - Booking ID: 41, Customer Name: Eli Williams
+2024-09-19 10:32:40,699 - INFO - Booking ID: 42, Customer Name: Layla Taylor
+2024-09-19 10:32:40,699 - INFO - Booking ID: 43, Customer Name: David Anderson
+2024-09-19 10:32:40,699 - INFO - Booking ID: 44, Customer Name: Aubrey Martin
+2024-09-19 10:32:40,699 - INFO - Booking ID: 45, Customer Name: Samuel Thompson
+2024-09-19 10:32:40,699 - INFO - Booking ID: 46, Customer Name: Avery Hall
+2024-09-19 10:32:40,721 - INFO - 127.0.0.1 - - [19/Sep/2024 10:32:40] "GET /bookings HTTP/1.1" 200 -
