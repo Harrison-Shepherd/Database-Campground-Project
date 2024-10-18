@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import MagicMock
 from Database.cosmos_db import connect_to_cosmos, insert_booking_to_cosmos
 
+# Define a test class for the Cosmos DB interactions
 class TestCosmosDB(unittest.TestCase):
     """
     Test class for testing Cosmos DB interactions.
@@ -10,6 +11,7 @@ class TestCosmosDB(unittest.TestCase):
     by mocking the container and checking the behavior of the insert function.
     """
 
+    #
     def setUp(self):
         """
         Set up the test environment before each test.
@@ -19,6 +21,7 @@ class TestCosmosDB(unittest.TestCase):
         # Create a mock container to simulate Cosmos DB operations
         self.container = MagicMock()
 
+    # Test the insertion of booking data into the Cosmos DB container
     def test_insert_booking_to_cosmos(self):
         """
         Test the insertion of booking data into the Cosmos DB container.

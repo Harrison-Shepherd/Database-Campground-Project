@@ -17,6 +17,7 @@ def load_config():
     with open('Assets/connection_strings.json', 'r') as file:
         return json.load(file)  # Load and return the JSON configuration data
 
+# Function to connect to Cosmos DB
 def connect_to_cosmos(container_name):
     """
     Connects to the specified Cosmos DB container.
@@ -34,6 +35,7 @@ def connect_to_cosmos(container_name):
     logger.info(f"Connected to Cosmos DB container '{container_name}' successfully.")
     return container
 
+# Function to fetch bookings from Cosmos DB
 def fetch_cosmos_bookings(container):
     """
     Fetches bookings from the Cosmos DB container and converts them to Booking objects.
@@ -53,6 +55,7 @@ def fetch_cosmos_bookings(container):
         logger.error(f"Error fetching bookings from Cosmos DB: {e}")
         return []
 
+# Function to fetch a booking by ID from Cosmos DB
 def insert_booking_to_cosmos(container, booking_data):
     """
     Inserts a booking into the Cosmos DB container if it does not already exist.
@@ -65,6 +68,7 @@ def insert_booking_to_cosmos(container, booking_data):
         logger.error("Booking data is missing the 'booking_id'. Skipping insertion.")
         return
 
+    # Try to insert the booking into the container
     try:
         # Check if the booking already exists in the container
         query = "SELECT * FROM c WHERE c.booking_id = @booking_id"
@@ -85,6 +89,7 @@ def insert_booking_to_cosmos(container, booking_data):
         # Log other exceptions
         logger.error(f"Error inserting booking {booking_id} into Cosmos DB: {e}")
 
+# Function to upsert a booking into Cosmos DB
 def upsert_booking_pdf_to_cosmos(container, pdf_path, booking_id):
     """
     Upserts a PDF file into the Cosmos DB container with the pdf_id matching the booking_id.
@@ -117,6 +122,7 @@ def upsert_booking_pdf_to_cosmos(container, pdf_path, booking_id):
         # Log other exceptions
         logger.error(f"Error upserting PDF for booking {booking_id}: {e}")
 
+# Function to upsert a summary PDF into Cosmos DB
 def upsert_summary_pdf_to_cosmos(container, pdf_path, summary_id):
     """
     Upserts a summary PDF file into the Cosmos DB container with the summary_id.
@@ -149,6 +155,7 @@ def upsert_summary_pdf_to_cosmos(container, pdf_path, summary_id):
         # Log other exceptions
         logger.error(f"Error upserting summary PDF: {e}")
 
+# Function to fetch a PDF file from Cosmos DB
 def update_booking_in_cosmos(container, booking_id, update_data):
     """
     Updates a booking document in Cosmos DB with the given booking ID.
@@ -170,6 +177,7 @@ def update_booking_in_cosmos(container, booking_id, update_data):
         # Log other exceptions
         logger.error(f"Error updating booking {booking_id} in Cosmos DB: {e}")
 
+# Function to delete a booking from Cosmos DB
 def delete_booking_from_cosmos(container, booking_id):
     """
     Deletes a booking document from Cosmos DB using the booking ID.

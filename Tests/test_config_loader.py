@@ -1,6 +1,7 @@
 import unittest
 from Utils.config_loader import load_config, get_connection_string
 
+# Define a test class for the configuration loader
 class TestConfigLoader(unittest.TestCase):
     """
     Test class for testing the configuration loader functionality.
@@ -9,6 +10,7 @@ class TestConfigLoader(unittest.TestCase):
     and that connection strings are correctly retrieved and formatted.
     """
 
+    # Test loading a valid configuration file
     def test_load_valid_config(self):
         """
         Test loading a valid configuration file.
@@ -21,6 +23,7 @@ class TestConfigLoader(unittest.TestCase):
         # Assert that the loaded configuration includes SQL server settings
         self.assertIn('sql_server', config, "Config should load SQL server settings.")
 
+    # Test loading a missing configuration file
     def test_missing_config_file(self):
         """
         Test loading a missing configuration file.
@@ -31,6 +34,7 @@ class TestConfigLoader(unittest.TestCase):
         with self.assertRaises(FileNotFoundError):
             load_config('non_existent_config.json')
 
+    # Test retrieving a connection string
     def test_get_connection_string(self):
         """
         Test retrieving a connection string from the configuration.

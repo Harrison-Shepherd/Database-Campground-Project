@@ -35,12 +35,12 @@ def retrieve_booking(cosmos_container, identifier):
 
         if items:
             for item in items:
-                print(f"\nBooking ID: {item.get('booking_id')}")
-                print(f"Customer Name: {item.get('customer_name')}")
-                print(f"Arrival Date: {item.get('arrival_date')}")
-                print(f"Campsite Size: {item.get('campsite_size')}")
-                print(f"Total Cost: ${item.get('total_cost'):.2f}")
-                print(f"Number of Campsites: {item.get('num_campsites')}")
+                print(f"\nBooking ID: {item.get('booking_id')}") # Display booking details
+                print(f"Customer Name: {item.get('customer_name')}") # Display customer name
+                print(f"Arrival Date: {item.get('arrival_date')}") # Display arrival date
+                print(f"Campsite Size: {item.get('campsite_size')}") # Display campsite size
+                print(f"Total Cost: ${item.get('total_cost'):.2f}") # Display total cost
+                print(f"Number of Campsites: {item.get('num_campsites')}") # Display number of campsites
                 # Display campsite allocations correctly
                 allocations = item.get('campsite_allocations', 'None')
                 if isinstance(allocations, list) and allocations:

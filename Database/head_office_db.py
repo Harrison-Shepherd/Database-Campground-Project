@@ -3,6 +3,8 @@ import pyodbc
 import json
 import os
 
+
+# Function to connect to the Head Office SQL database
 def connect_to_head_office():
     """
     Connects to the Head Office SQL database using values from the connection_strings.json file in the Assets folder.
@@ -12,6 +14,7 @@ def connect_to_head_office():
     # Define the path to the connection_strings.json file
     json_file_path = os.path.join('Assets', 'connection_strings.json')
     
+    # Attempt to connect to the Head Office SQL database
     try:
         # Load connection details from the JSON file
         with open(json_file_path, 'r') as config_file:
@@ -38,6 +41,7 @@ def connect_to_head_office():
         print("Connected to Head Office SQL database successfully.")
         return conn  # Return the active database connection object
 
+    # Handle exceptions that may occur during the connection process
     except FileNotFoundError as fnf_error:
         logger.error(f"Connection string file not found: {fnf_error}")
         print(f"Connection string file not found: {fnf_error}")
@@ -53,9 +57,10 @@ def connect_to_head_office():
         print(f"Error connecting to Head Office SQL database: {db_error}")
         return None
 
+# Function to fetch bookings from the Head Office SQL database
 def fetch_bookings(conn):
     """
-    Fetches bookings from the head_office.booking table and includes customer names.
+    Fetches bookings from the head office camping.booking table and includes customer names.
 
     :param conn: The connection object to the SQL database.
     :return: A list of booking records or an empty list if an error occurs.
@@ -74,11 +79,11 @@ def fetch_bookings(conn):
             b.num_campsites, 
             CONCAT(c.first_name, ' ', c.last_name) AS customer_name
         FROM 
-            head_office.booking b
+            camping.booking b
         JOIN 
-            head_office.customers c ON b.customer_id = c.customer_id
+            camping.customers c ON b.customer_id = c.customer_id
         WHERE 
-            b.campground_id = 1121132;
+            b.campground_id = 1;
         """
         cursor.execute(query)  # Execute the query
         rows = cursor.fetchall()  # Fetch all the rows from the executed query
@@ -90,9 +95,10 @@ def fetch_bookings(conn):
         logger.warning(f"Error fetching bookings from Head Office database: {e}")
         return []  # Return an empty list if an error occurs
 
+# Function to update the campground_id of a specific booking in the camping.booking table
 def update_booking_campground(conn, booking_id, new_campground_id):
     """
-    Updates the campground_id of a specific booking in the head_office.booking table.
+    Updates the campground_id of a specific booking in the camping.booking table.
 
     :param conn: The connection object to the SQL database.
     :param booking_id: The ID of the booking to be updated.
@@ -101,7 +107,7 @@ def update_booking_campground(conn, booking_id, new_campground_id):
     try:
         cursor = conn.cursor()
         # SQL query to update the campground_id of a specific booking
-        query = "UPDATE head_office.booking SET campground_id = ? WHERE booking_id = ?"
+        query = "UPDATE camping.booking SET campground_id = ? WHERE booking_id = ?"
         cursor.execute(query, (new_campground_id, booking_id))  # Execute the update query with parameters
         conn.commit()  # Commit the changes to the database
         logger.info(f"Booking {booking_id} updated with new campground ID {new_campground_id} successfully.")

@@ -74,3 +74,4 @@ def generate_confirmation(booking):
     except Exception as e:
         # Log any errors encountered during the insertion process
         logger.error(f"An error occurred while inserting the confirmation PDF: {e}")
+        

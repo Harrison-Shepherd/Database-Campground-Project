@@ -3,6 +3,7 @@ import os
 from Utils.pdf_generator import PDFGenerator  
 from Models.booking import Booking
 
+# Define a test class for the PDF confirmation generation
 class TestPDFGeneration(unittest.TestCase):
     """
     Test class for testing the PDF generation functionality of the PDFGenerator class.
@@ -10,6 +11,7 @@ class TestPDFGeneration(unittest.TestCase):
     This class tests the generation of booking confirmation PDFs to ensure that the PDFs are created
     correctly in the specified output directory.
     """
+
 
     def setUp(self):
         """
@@ -48,6 +50,7 @@ class TestPDFGeneration(unittest.TestCase):
         self.pdf_generator.generate_confirmation(self.booking)
         # Assert that the PDF file was created successfully
         self.assertTrue(os.path.exists(filename), "Confirmation PDF should be created.")
+
 
     def tearDown(self):
         """

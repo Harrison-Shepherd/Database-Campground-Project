@@ -25,3 +25,4 @@ def initialize_campsites():
     logger.info(f"Initialized {len(campsites)} campsites: 10 Small, 10 Medium, 10 Large.")
     
     return campsites
+

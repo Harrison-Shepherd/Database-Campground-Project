@@ -3,6 +3,7 @@ import os
 from Utils.pdf_generator import PDFGenerator  
 from Models.booking import Booking
 
+# Define a test class for the PDF confirmation generation
 class TestConfirmation(unittest.TestCase):
     """
     Test class for testing the PDF confirmation generation functionality.
@@ -11,6 +12,7 @@ class TestConfirmation(unittest.TestCase):
     the returned file path matches the expected output.
     """
 
+    # Set up the test environment before each test
     def setUp(self):
         """
         Set up the test environment before each test.
@@ -36,6 +38,7 @@ class TestConfirmation(unittest.TestCase):
         if not os.path.exists(self.output_dir):
             os.makedirs(self.output_dir)
 
+    # Test the generation of a booking confirmation PDF
     def test_generate_confirmation(self):
         """
         Test the generation of a booking confirmation PDF.
@@ -62,6 +65,7 @@ class TestConfirmation(unittest.TestCase):
         # Additional assertion to verify the function returned the correct path
         self.assertEqual(generated_file, filename, f"The returned path {generated_file} does not match the expected path {filename}.")
 
+    # Clean up after each test
     def tearDown(self):
         """
         Clean up after each test.

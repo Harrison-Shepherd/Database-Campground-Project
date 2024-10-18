@@ -1,0 +1,1297 @@
+2024-10-18 16:16:30,000 - INFO - Connected to SQL database successfully.
+2024-10-18 16:16:45,110 - ERROR - Error connecting to Head Office SQL database: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: Timeout error [258].  (258) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Unable to complete login process due to delay in login response (258)')
+2024-10-18 16:16:45,446 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-18 16:16:45,446 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-18 16:16:45,446 - ERROR - An error occurred during the main process: 'NoneType' object has no attribute 'cursor'
+2024-10-18 16:16:45,495 - INFO - SQL connection closed.
+2024-10-18 16:16:45,495 - INFO - Cosmos connection closed.
+2024-10-18 16:16:54,205 - INFO - Connected to SQL database successfully.
+2024-10-18 16:17:09,295 - ERROR - Error connecting to Head Office SQL database: ('08001', '[08001] [Microsoft][ODBC Driver 18 for SQL Server]TCP Provider: Timeout error [258].  (258) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Invalid connection string attribute (0); [08001] [Microsoft][ODBC Driver 18 for SQL Server]Unable to complete login process due to delay in login response (258)')
+2024-10-18 16:17:09,604 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-18 16:17:09,604 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-18 16:17:09,604 - ERROR - An error occurred during the main process: 'NoneType' object has no attribute 'cursor'
+2024-10-18 16:17:09,671 - INFO - SQL connection closed.
+2024-10-18 16:17:09,671 - INFO - Cosmos connection closed.
+2024-10-18 16:17:56,454 - INFO - Connected to SQL database successfully.
+2024-10-18 16:17:56,891 - INFO - Connected to Head Office SQL database successfully.
+2024-10-18 16:17:57,215 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-18 16:17:57,215 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-18 16:17:57,259 - INFO - Fetched 46 bookings from the Head Office database.
+2024-10-18 16:17:57,259 - INFO - Processing Booking 1...
+2024-10-18 16:17:57,259 - INFO - Attempting to allocate Booking 1 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:17:57,259 - INFO - Booking 1 successfully allocated to Campsite 1.
+2024-10-18 16:17:57,260 - INFO - Confirmation saved as pdfs\confirmation_1.pdf.
+2024-10-18 16:17:57,402 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:17:57,763 - INFO - PDF pdfs\confirmation_1.pdf upserted into Cosmos DB successfully with pdf_id 1.
+2024-10-18 16:17:57,764 - INFO - Confirmation PDF pdfs\confirmation_1.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:17:58,224 - INFO - Booking 1 inserted into Cosmos DB successfully.
+2024-10-18 16:17:58,224 - INFO - Booking 1 inserted into Cosmos DB successfully.
+2024-10-18 16:17:58,224 - INFO - Booking 1 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-10-18 16:17:58,224 - INFO - Processing Booking 2...
+2024-10-18 16:17:58,224 - INFO - Attempting to allocate Booking 2 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:17:58,224 - INFO - Booking 2 successfully allocated to Campsite 2.
+2024-10-18 16:17:58,225 - INFO - Confirmation saved as pdfs\confirmation_2.pdf.
+2024-10-18 16:17:58,422 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:17:58,715 - INFO - PDF pdfs\confirmation_2.pdf upserted into Cosmos DB successfully with pdf_id 2.
+2024-10-18 16:17:58,715 - INFO - Confirmation PDF pdfs\confirmation_2.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:17:58,840 - INFO - Booking 2 inserted into Cosmos DB successfully.
+2024-10-18 16:17:58,840 - INFO - Booking 2 inserted into Cosmos DB successfully.
+2024-10-18 16:17:58,840 - INFO - Booking 2 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-10-18 16:17:58,840 - INFO - Processing Booking 3...
+2024-10-18 16:17:58,840 - INFO - Attempting to allocate Booking 3 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:17:58,840 - INFO - Booking 3 successfully allocated to Campsite 3.
+2024-10-18 16:17:58,841 - INFO - Confirmation saved as pdfs\confirmation_3.pdf.
+2024-10-18 16:17:59,075 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:17:59,461 - INFO - PDF pdfs\confirmation_3.pdf upserted into Cosmos DB successfully with pdf_id 3.
+2024-10-18 16:17:59,461 - INFO - Confirmation PDF pdfs\confirmation_3.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:17:59,590 - INFO - Booking 3 inserted into Cosmos DB successfully.
+2024-10-18 16:17:59,591 - INFO - Booking 3 inserted into Cosmos DB successfully.
+2024-10-18 16:17:59,591 - INFO - Booking 3 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-10-18 16:17:59,591 - INFO - Processing Booking 4...
+2024-10-18 16:17:59,591 - INFO - Attempting to allocate Booking 4 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:17:59,591 - INFO - Booking 4 successfully allocated to Campsite 4.
+2024-10-18 16:17:59,592 - INFO - Confirmation saved as pdfs\confirmation_4.pdf.
+2024-10-18 16:17:59,765 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:00,166 - INFO - PDF pdfs\confirmation_4.pdf upserted into Cosmos DB successfully with pdf_id 4.
+2024-10-18 16:18:00,166 - INFO - Confirmation PDF pdfs\confirmation_4.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:00,380 - INFO - Booking 4 inserted into Cosmos DB successfully.
+2024-10-18 16:18:00,380 - INFO - Booking 4 inserted into Cosmos DB successfully.
+2024-10-18 16:18:00,380 - INFO - Booking 4 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-10-18 16:18:00,380 - INFO - Processing Booking 5...
+2024-10-18 16:18:00,380 - INFO - Attempting to allocate Booking 5 from 2024-10-12 to 2024-10-19...
+2024-10-18 16:18:00,381 - INFO - Booking 5 successfully allocated to Campsite 1.
+2024-10-18 16:18:00,381 - INFO - Confirmation saved as pdfs\confirmation_5.pdf.
+2024-10-18 16:18:00,836 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:01,357 - INFO - PDF pdfs\confirmation_5.pdf upserted into Cosmos DB successfully with pdf_id 5.
+2024-10-18 16:18:01,357 - INFO - Confirmation PDF pdfs\confirmation_5.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:01,632 - INFO - Booking 5 inserted into Cosmos DB successfully.
+2024-10-18 16:18:01,632 - INFO - Booking 5 inserted into Cosmos DB successfully.
+2024-10-18 16:18:01,633 - INFO - Booking 5 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-10-18 16:18:01,633 - INFO - Processing Booking 6...
+2024-10-18 16:18:01,633 - INFO - Attempting to allocate Booking 6 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:18:01,633 - INFO - Booking 6 successfully allocated to Campsite 1.
+2024-10-18 16:18:01,634 - INFO - Confirmation saved as pdfs\confirmation_6.pdf.
+2024-10-18 16:18:01,970 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:02,444 - INFO - PDF pdfs\confirmation_6.pdf upserted into Cosmos DB successfully with pdf_id 6.
+2024-10-18 16:18:02,444 - INFO - Confirmation PDF pdfs\confirmation_6.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:02,560 - INFO - Booking 6 inserted into Cosmos DB successfully.
+2024-10-18 16:18:02,560 - INFO - Booking 6 inserted into Cosmos DB successfully.
+2024-10-18 16:18:02,560 - INFO - Booking 6 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-10-18 16:18:02,560 - INFO - Processing Booking 7...
+2024-10-18 16:18:02,560 - INFO - Attempting to allocate Booking 7 from 2024-10-12 to 2024-10-19...
+2024-10-18 16:18:02,560 - INFO - Booking 7 successfully allocated to Campsite 2.
+2024-10-18 16:18:02,561 - INFO - Confirmation saved as pdfs\confirmation_7.pdf.
+2024-10-18 16:18:02,716 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:03,064 - INFO - PDF pdfs\confirmation_7.pdf upserted into Cosmos DB successfully with pdf_id 7.
+2024-10-18 16:18:03,064 - INFO - Confirmation PDF pdfs\confirmation_7.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:03,168 - INFO - Booking 7 inserted into Cosmos DB successfully.
+2024-10-18 16:18:03,168 - INFO - Booking 7 inserted into Cosmos DB successfully.
+2024-10-18 16:18:03,168 - INFO - Booking 7 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-10-18 16:18:03,169 - INFO - Processing Booking 8...
+2024-10-18 16:18:03,169 - INFO - Attempting to allocate Booking 8 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:18:03,169 - INFO - Booking 8 successfully allocated to Campsite 1.
+2024-10-18 16:18:03,169 - INFO - Confirmation saved as pdfs\confirmation_8.pdf.
+2024-10-18 16:18:03,354 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:03,646 - INFO - PDF pdfs\confirmation_8.pdf upserted into Cosmos DB successfully with pdf_id 8.
+2024-10-18 16:18:03,646 - INFO - Confirmation PDF pdfs\confirmation_8.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:03,760 - INFO - Booking 8 inserted into Cosmos DB successfully.
+2024-10-18 16:18:03,760 - INFO - Booking 8 inserted into Cosmos DB successfully.
+2024-10-18 16:18:03,760 - INFO - Booking 8 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-10-18 16:18:03,760 - INFO - Processing Booking 9...
+2024-10-18 16:18:03,760 - INFO - Attempting to allocate Booking 9 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:18:03,760 - INFO - Booking 9 successfully allocated to Campsite 2.
+2024-10-18 16:18:03,761 - INFO - Confirmation saved as pdfs\confirmation_9.pdf.
+2024-10-18 16:18:03,913 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:04,267 - INFO - PDF pdfs\confirmation_9.pdf upserted into Cosmos DB successfully with pdf_id 9.
+2024-10-18 16:18:04,267 - INFO - Confirmation PDF pdfs\confirmation_9.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:04,380 - INFO - Booking 9 inserted into Cosmos DB successfully.
+2024-10-18 16:18:04,380 - INFO - Booking 9 inserted into Cosmos DB successfully.
+2024-10-18 16:18:04,380 - INFO - Booking 9 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-10-18 16:18:04,380 - INFO - Processing Booking 10...
+2024-10-18 16:18:04,380 - INFO - Attempting to allocate Booking 10 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:04,380 - INFO - Booking 10 successfully allocated to Campsite 5.
+2024-10-18 16:18:04,381 - INFO - Confirmation saved as pdfs\confirmation_10.pdf.
+2024-10-18 16:18:04,543 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:04,834 - INFO - PDF pdfs\confirmation_10.pdf upserted into Cosmos DB successfully with pdf_id 10.
+2024-10-18 16:18:04,834 - INFO - Confirmation PDF pdfs\confirmation_10.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:04,939 - INFO - Booking 10 inserted into Cosmos DB successfully.
+2024-10-18 16:18:04,939 - INFO - Booking 10 inserted into Cosmos DB successfully.
+2024-10-18 16:18:04,939 - INFO - Booking 10 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-10-18 16:18:04,939 - INFO - Processing Booking 11...
+2024-10-18 16:18:04,940 - INFO - Attempting to allocate Booking 11 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:18:04,940 - INFO - Booking 11 successfully allocated to Campsite 1.
+2024-10-18 16:18:04,940 - INFO - Confirmation saved as pdfs\confirmation_11.pdf.
+2024-10-18 16:18:05,107 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:05,433 - INFO - PDF pdfs\confirmation_11.pdf upserted into Cosmos DB successfully with pdf_id 11.
+2024-10-18 16:18:05,433 - INFO - Confirmation PDF pdfs\confirmation_11.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:05,539 - INFO - Booking 11 inserted into Cosmos DB successfully.
+2024-10-18 16:18:05,539 - INFO - Booking 11 inserted into Cosmos DB successfully.
+2024-10-18 16:18:05,539 - INFO - Booking 11 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-10-18 16:18:05,539 - INFO - Processing Booking 12...
+2024-10-18 16:18:05,539 - INFO - Attempting to allocate Booking 12 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:18:05,539 - INFO - Booking 12 successfully allocated to Campsite 3.
+2024-10-18 16:18:05,540 - INFO - Confirmation saved as pdfs\confirmation_12.pdf.
+2024-10-18 16:18:05,668 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:05,907 - INFO - PDF pdfs\confirmation_12.pdf upserted into Cosmos DB successfully with pdf_id 12.
+2024-10-18 16:18:05,907 - INFO - Confirmation PDF pdfs\confirmation_12.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:06,019 - INFO - Booking 12 inserted into Cosmos DB successfully.
+2024-10-18 16:18:06,019 - INFO - Booking 12 inserted into Cosmos DB successfully.
+2024-10-18 16:18:06,019 - INFO - Booking 12 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-10-18 16:18:06,019 - INFO - Processing Booking 13...
+2024-10-18 16:18:06,020 - INFO - Attempting to allocate Booking 13 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:18:06,020 - INFO - Booking 13 successfully allocated to Campsite 2.
+2024-10-18 16:18:06,028 - INFO - Confirmation saved as pdfs\confirmation_13.pdf.
+2024-10-18 16:18:06,195 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:06,535 - INFO - PDF pdfs\confirmation_13.pdf upserted into Cosmos DB successfully with pdf_id 13.
+2024-10-18 16:18:06,535 - INFO - Confirmation PDF pdfs\confirmation_13.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:06,650 - INFO - Booking 13 inserted into Cosmos DB successfully.
+2024-10-18 16:18:06,650 - INFO - Booking 13 inserted into Cosmos DB successfully.
+2024-10-18 16:18:06,650 - INFO - Booking 13 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-10-18 16:18:06,650 - INFO - Processing Booking 14...
+2024-10-18 16:18:06,650 - INFO - Attempting to allocate Booking 14 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:18:06,650 - INFO - Booking 14 successfully allocated to Campsite 2.
+2024-10-18 16:18:06,651 - INFO - Confirmation saved as pdfs\confirmation_14.pdf.
+2024-10-18 16:18:06,890 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:07,282 - INFO - PDF pdfs\confirmation_14.pdf upserted into Cosmos DB successfully with pdf_id 14.
+2024-10-18 16:18:07,282 - INFO - Confirmation PDF pdfs\confirmation_14.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:07,389 - INFO - Booking 14 inserted into Cosmos DB successfully.
+2024-10-18 16:18:07,389 - INFO - Booking 14 inserted into Cosmos DB successfully.
+2024-10-18 16:18:07,389 - INFO - Booking 14 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-10-18 16:18:07,389 - INFO - Processing Booking 15...
+2024-10-18 16:18:07,389 - INFO - Attempting to allocate Booking 15 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:07,389 - INFO - Booking 15 successfully allocated to Campsite 6.
+2024-10-18 16:18:07,390 - INFO - Confirmation saved as pdfs\confirmation_15.pdf.
+2024-10-18 16:18:07,636 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:08,053 - INFO - PDF pdfs\confirmation_15.pdf upserted into Cosmos DB successfully with pdf_id 15.
+2024-10-18 16:18:08,053 - INFO - Confirmation PDF pdfs\confirmation_15.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:08,158 - INFO - Booking 15 inserted into Cosmos DB successfully.
+2024-10-18 16:18:08,158 - INFO - Booking 15 inserted into Cosmos DB successfully.
+2024-10-18 16:18:08,159 - INFO - Booking 15 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-10-18 16:18:08,159 - INFO - Processing Booking 16...
+2024-10-18 16:18:08,159 - INFO - Attempting to allocate Booking 16 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:08,159 - INFO - Booking 16 successfully allocated to Campsite 7.
+2024-10-18 16:18:08,160 - INFO - Confirmation saved as pdfs\confirmation_16.pdf.
+2024-10-18 16:18:08,328 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:08,644 - INFO - PDF pdfs\confirmation_16.pdf upserted into Cosmos DB successfully with pdf_id 16.
+2024-10-18 16:18:08,644 - INFO - Confirmation PDF pdfs\confirmation_16.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:08,758 - INFO - Booking 16 inserted into Cosmos DB successfully.
+2024-10-18 16:18:08,758 - INFO - Booking 16 inserted into Cosmos DB successfully.
+2024-10-18 16:18:08,758 - INFO - Booking 16 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-10-18 16:18:08,758 - INFO - Processing Booking 17...
+2024-10-18 16:18:08,758 - INFO - Attempting to allocate Booking 17 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:18:08,758 - INFO - Booking 17 successfully allocated to Campsite 3.
+2024-10-18 16:18:08,761 - INFO - Confirmation saved as pdfs\confirmation_17.pdf.
+2024-10-18 16:18:08,881 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:09,238 - INFO - PDF pdfs\confirmation_17.pdf upserted into Cosmos DB successfully with pdf_id 17.
+2024-10-18 16:18:09,238 - INFO - Confirmation PDF pdfs\confirmation_17.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:09,350 - INFO - Booking 17 inserted into Cosmos DB successfully.
+2024-10-18 16:18:09,350 - INFO - Booking 17 inserted into Cosmos DB successfully.
+2024-10-18 16:18:09,350 - INFO - Booking 17 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-10-18 16:18:09,350 - INFO - Processing Booking 18...
+2024-10-18 16:18:09,350 - INFO - Attempting to allocate Booking 18 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:18:09,350 - INFO - Booking 18 successfully allocated to Campsite 3.
+2024-10-18 16:18:09,358 - INFO - Confirmation saved as pdfs\confirmation_18.pdf.
+2024-10-18 16:18:09,521 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:09,746 - INFO - PDF pdfs\confirmation_18.pdf upserted into Cosmos DB successfully with pdf_id 18.
+2024-10-18 16:18:09,747 - INFO - Confirmation PDF pdfs\confirmation_18.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:09,859 - INFO - Booking 18 inserted into Cosmos DB successfully.
+2024-10-18 16:18:09,859 - INFO - Booking 18 inserted into Cosmos DB successfully.
+2024-10-18 16:18:09,859 - INFO - Booking 18 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-10-18 16:18:09,859 - INFO - Processing Booking 19...
+2024-10-18 16:18:09,860 - INFO - Attempting to allocate Booking 19 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:18:09,860 - INFO - Booking 19 successfully allocated to Campsite 4.
+2024-10-18 16:18:09,861 - INFO - Confirmation saved as pdfs\confirmation_19.pdf.
+2024-10-18 16:18:09,982 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:10,314 - INFO - PDF pdfs\confirmation_19.pdf upserted into Cosmos DB successfully with pdf_id 19.
+2024-10-18 16:18:10,314 - INFO - Confirmation PDF pdfs\confirmation_19.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:10,430 - INFO - Booking 19 inserted into Cosmos DB successfully.
+2024-10-18 16:18:10,430 - INFO - Booking 19 inserted into Cosmos DB successfully.
+2024-10-18 16:18:10,430 - INFO - Booking 19 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-10-18 16:18:10,430 - INFO - Processing Booking 20...
+2024-10-18 16:18:10,430 - INFO - Attempting to allocate Booking 20 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:18:10,430 - INFO - Booking 20 successfully allocated to Campsite 4.
+2024-10-18 16:18:10,431 - INFO - Confirmation saved as pdfs\confirmation_20.pdf.
+2024-10-18 16:18:10,593 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:10,913 - INFO - PDF pdfs\confirmation_20.pdf upserted into Cosmos DB successfully with pdf_id 20.
+2024-10-18 16:18:10,913 - INFO - Confirmation PDF pdfs\confirmation_20.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:11,019 - INFO - Booking 20 inserted into Cosmos DB successfully.
+2024-10-18 16:18:11,019 - INFO - Booking 20 inserted into Cosmos DB successfully.
+2024-10-18 16:18:11,019 - INFO - Booking 20 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-10-18 16:18:11,019 - INFO - Processing Booking 21...
+2024-10-18 16:18:11,019 - INFO - Attempting to allocate Booking 21 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:18:11,019 - INFO - Booking 21 successfully allocated to Campsite 4.
+2024-10-18 16:18:11,020 - INFO - Confirmation saved as pdfs\confirmation_21.pdf.
+2024-10-18 16:18:11,152 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:11,464 - INFO - PDF pdfs\confirmation_21.pdf upserted into Cosmos DB successfully with pdf_id 21.
+2024-10-18 16:18:11,464 - INFO - Confirmation PDF pdfs\confirmation_21.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:11,580 - INFO - Booking 21 inserted into Cosmos DB successfully.
+2024-10-18 16:18:11,580 - INFO - Booking 21 inserted into Cosmos DB successfully.
+2024-10-18 16:18:11,580 - INFO - Booking 21 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-10-18 16:18:11,580 - INFO - Processing Booking 22...
+2024-10-18 16:18:11,580 - INFO - Attempting to allocate Booking 22 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:11,580 - INFO - Booking 22 successfully allocated to Campsite 8.
+2024-10-18 16:18:11,581 - INFO - Confirmation saved as pdfs\confirmation_22.pdf.
+2024-10-18 16:18:11,703 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:11,996 - INFO - PDF pdfs\confirmation_22.pdf upserted into Cosmos DB successfully with pdf_id 22.
+2024-10-18 16:18:11,996 - INFO - Confirmation PDF pdfs\confirmation_22.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:12,109 - INFO - Booking 22 inserted into Cosmos DB successfully.
+2024-10-18 16:18:12,109 - INFO - Booking 22 inserted into Cosmos DB successfully.
+2024-10-18 16:18:12,109 - INFO - Booking 22 processed successfully: allocated to Campsite 8 and inserted into Cosmos DB.
+2024-10-18 16:18:12,109 - INFO - Processing Booking 23...
+2024-10-18 16:18:12,109 - INFO - Attempting to allocate Booking 23 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:12,109 - INFO - Booking 23 successfully allocated to Campsite 9.
+2024-10-18 16:18:12,110 - INFO - Confirmation saved as pdfs\confirmation_23.pdf.
+2024-10-18 16:18:12,254 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:12,605 - INFO - PDF pdfs\confirmation_23.pdf upserted into Cosmos DB successfully with pdf_id 23.
+2024-10-18 16:18:12,605 - INFO - Confirmation PDF pdfs\confirmation_23.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:12,719 - INFO - Booking 23 inserted into Cosmos DB successfully.
+2024-10-18 16:18:12,719 - INFO - Booking 23 inserted into Cosmos DB successfully.
+2024-10-18 16:18:12,719 - INFO - Booking 23 processed successfully: allocated to Campsite 9 and inserted into Cosmos DB.
+2024-10-18 16:18:12,719 - INFO - Processing Booking 24...
+2024-10-18 16:18:12,719 - INFO - Attempting to allocate Booking 24 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:18:12,719 - INFO - Booking 24 successfully allocated to Campsite 5.
+2024-10-18 16:18:12,720 - INFO - Confirmation saved as pdfs\confirmation_24.pdf.
+2024-10-18 16:18:12,863 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:13,074 - INFO - PDF pdfs\confirmation_24.pdf upserted into Cosmos DB successfully with pdf_id 24.
+2024-10-18 16:18:13,074 - INFO - Confirmation PDF pdfs\confirmation_24.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:13,178 - INFO - Booking 24 inserted into Cosmos DB successfully.
+2024-10-18 16:18:13,179 - INFO - Booking 24 inserted into Cosmos DB successfully.
+2024-10-18 16:18:13,179 - INFO - Booking 24 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-10-18 16:18:13,179 - INFO - Processing Booking 25...
+2024-10-18 16:18:13,179 - INFO - Attempting to allocate Booking 25 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:13,179 - INFO - Booking 25 successfully allocated to Campsite 10.
+2024-10-18 16:18:13,180 - INFO - Confirmation saved as pdfs\confirmation_25.pdf.
+2024-10-18 16:18:13,307 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:13,615 - INFO - PDF pdfs\confirmation_25.pdf upserted into Cosmos DB successfully with pdf_id 25.
+2024-10-18 16:18:13,616 - INFO - Confirmation PDF pdfs\confirmation_25.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:13,750 - INFO - Booking 25 inserted into Cosmos DB successfully.
+2024-10-18 16:18:13,750 - INFO - Booking 25 inserted into Cosmos DB successfully.
+2024-10-18 16:18:13,750 - INFO - Booking 25 processed successfully: allocated to Campsite 10 and inserted into Cosmos DB.
+2024-10-18 16:18:13,750 - INFO - Processing Booking 26...
+2024-10-18 16:18:13,750 - INFO - Attempting to allocate Booking 26 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:18:13,750 - INFO - Booking 26 successfully allocated to Campsite 5.
+2024-10-18 16:18:13,751 - INFO - Confirmation saved as pdfs\confirmation_26.pdf.
+2024-10-18 16:18:13,872 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:14,162 - INFO - PDF pdfs\confirmation_26.pdf upserted into Cosmos DB successfully with pdf_id 26.
+2024-10-18 16:18:14,162 - INFO - Confirmation PDF pdfs\confirmation_26.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:14,290 - INFO - Booking 26 inserted into Cosmos DB successfully.
+2024-10-18 16:18:14,290 - INFO - Booking 26 inserted into Cosmos DB successfully.
+2024-10-18 16:18:14,290 - INFO - Booking 26 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-10-18 16:18:14,290 - INFO - Processing Booking 27...
+2024-10-18 16:18:14,291 - INFO - Attempting to allocate Booking 27 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:18:14,291 - INFO - Booking 27 successfully allocated to Campsite 6.
+2024-10-18 16:18:14,293 - INFO - Confirmation saved as pdfs\confirmation_27.pdf.
+2024-10-18 16:18:14,441 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:14,676 - INFO - PDF pdfs\confirmation_27.pdf upserted into Cosmos DB successfully with pdf_id 27.
+2024-10-18 16:18:14,676 - INFO - Confirmation PDF pdfs\confirmation_27.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:14,789 - INFO - Booking 27 inserted into Cosmos DB successfully.
+2024-10-18 16:18:14,789 - INFO - Booking 27 inserted into Cosmos DB successfully.
+2024-10-18 16:18:14,789 - INFO - Booking 27 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-10-18 16:18:14,790 - INFO - Processing Booking 28...
+2024-10-18 16:18:14,790 - INFO - Attempting to allocate Booking 28 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:18:14,790 - INFO - Booking 28 successfully allocated to Campsite 5.
+2024-10-18 16:18:14,791 - INFO - Confirmation saved as pdfs\confirmation_28.pdf.
+2024-10-18 16:18:14,930 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:15,156 - INFO - PDF pdfs\confirmation_28.pdf upserted into Cosmos DB successfully with pdf_id 28.
+2024-10-18 16:18:15,156 - INFO - Confirmation PDF pdfs\confirmation_28.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:15,270 - INFO - Booking 28 inserted into Cosmos DB successfully.
+2024-10-18 16:18:15,270 - INFO - Booking 28 inserted into Cosmos DB successfully.
+2024-10-18 16:18:15,270 - INFO - Booking 28 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-10-18 16:18:15,270 - INFO - Processing Booking 29...
+2024-10-18 16:18:15,270 - INFO - Attempting to allocate Booking 29 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:15,270 - INFO - Booking 29 successfully allocated to Campsite 11.
+2024-10-18 16:18:15,271 - INFO - Confirmation saved as pdfs\confirmation_29.pdf.
+2024-10-18 16:18:15,407 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:15,669 - INFO - PDF pdfs\confirmation_29.pdf upserted into Cosmos DB successfully with pdf_id 29.
+2024-10-18 16:18:15,669 - INFO - Confirmation PDF pdfs\confirmation_29.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:15,780 - INFO - Booking 29 inserted into Cosmos DB successfully.
+2024-10-18 16:18:15,780 - INFO - Booking 29 inserted into Cosmos DB successfully.
+2024-10-18 16:18:15,780 - INFO - Booking 29 processed successfully: allocated to Campsite 11 and inserted into Cosmos DB.
+2024-10-18 16:18:15,781 - INFO - Processing Booking 30...
+2024-10-18 16:18:15,781 - INFO - Attempting to allocate Booking 30 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:15,781 - INFO - Booking 30 successfully allocated to Campsite 12.
+2024-10-18 16:18:15,781 - INFO - Confirmation saved as pdfs\confirmation_30.pdf.
+2024-10-18 16:18:15,922 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:16,243 - INFO - PDF pdfs\confirmation_30.pdf upserted into Cosmos DB successfully with pdf_id 30.
+2024-10-18 16:18:16,243 - INFO - Confirmation PDF pdfs\confirmation_30.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:16,349 - INFO - Booking 30 inserted into Cosmos DB successfully.
+2024-10-18 16:18:16,349 - INFO - Booking 30 inserted into Cosmos DB successfully.
+2024-10-18 16:18:16,349 - INFO - Booking 30 processed successfully: allocated to Campsite 12 and inserted into Cosmos DB.
+2024-10-18 16:18:16,349 - INFO - Processing Booking 31...
+2024-10-18 16:18:16,349 - INFO - Attempting to allocate Booking 31 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:16,349 - INFO - Booking 31 successfully allocated to Campsite 13.
+2024-10-18 16:18:16,352 - INFO - Confirmation saved as pdfs\confirmation_31.pdf.
+2024-10-18 16:18:16,509 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:16,804 - INFO - PDF pdfs\confirmation_31.pdf upserted into Cosmos DB successfully with pdf_id 31.
+2024-10-18 16:18:16,804 - INFO - Confirmation PDF pdfs\confirmation_31.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:16,919 - INFO - Booking 31 inserted into Cosmos DB successfully.
+2024-10-18 16:18:16,919 - INFO - Booking 31 inserted into Cosmos DB successfully.
+2024-10-18 16:18:16,919 - INFO - Booking 31 processed successfully: allocated to Campsite 13 and inserted into Cosmos DB.
+2024-10-18 16:18:16,919 - INFO - Processing Booking 32...
+2024-10-18 16:18:16,919 - INFO - Attempting to allocate Booking 32 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:18:16,919 - INFO - Booking 32 successfully allocated to Campsite 7.
+2024-10-18 16:18:16,920 - INFO - Confirmation saved as pdfs\confirmation_32.pdf.
+2024-10-18 16:18:17,093 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:17,334 - INFO - PDF pdfs\confirmation_32.pdf upserted into Cosmos DB successfully with pdf_id 32.
+2024-10-18 16:18:17,334 - INFO - Confirmation PDF pdfs\confirmation_32.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:17,449 - INFO - Booking 32 inserted into Cosmos DB successfully.
+2024-10-18 16:18:17,449 - INFO - Booking 32 inserted into Cosmos DB successfully.
+2024-10-18 16:18:17,449 - INFO - Booking 32 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-10-18 16:18:17,449 - INFO - Processing Booking 33...
+2024-10-18 16:18:17,449 - INFO - Attempting to allocate Booking 33 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:17,449 - INFO - Booking 33 successfully allocated to Campsite 14.
+2024-10-18 16:18:17,450 - INFO - Confirmation saved as pdfs\confirmation_33.pdf.
+2024-10-18 16:18:17,590 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:17,805 - INFO - PDF pdfs\confirmation_33.pdf upserted into Cosmos DB successfully with pdf_id 33.
+2024-10-18 16:18:17,805 - INFO - Confirmation PDF pdfs\confirmation_33.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:17,919 - INFO - Booking 33 inserted into Cosmos DB successfully.
+2024-10-18 16:18:17,919 - INFO - Booking 33 inserted into Cosmos DB successfully.
+2024-10-18 16:18:17,919 - INFO - Booking 33 processed successfully: allocated to Campsite 14 and inserted into Cosmos DB.
+2024-10-18 16:18:17,919 - INFO - Processing Booking 34...
+2024-10-18 16:18:17,919 - INFO - Attempting to allocate Booking 34 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:18:17,919 - INFO - Booking 34 successfully allocated to Campsite 6.
+2024-10-18 16:18:17,920 - INFO - Confirmation saved as pdfs\confirmation_34.pdf.
+2024-10-18 16:18:18,042 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:18,268 - INFO - PDF pdfs\confirmation_34.pdf upserted into Cosmos DB successfully with pdf_id 34.
+2024-10-18 16:18:18,268 - INFO - Confirmation PDF pdfs\confirmation_34.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:18,378 - INFO - Booking 34 inserted into Cosmos DB successfully.
+2024-10-18 16:18:18,378 - INFO - Booking 34 inserted into Cosmos DB successfully.
+2024-10-18 16:18:18,378 - INFO - Booking 34 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-10-18 16:18:18,379 - INFO - Processing Booking 35...
+2024-10-18 16:18:18,379 - INFO - Attempting to allocate Booking 35 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:18:18,379 - INFO - Booking 35 successfully allocated to Campsite 6.
+2024-10-18 16:18:18,388 - INFO - Confirmation saved as pdfs\confirmation_35.pdf.
+2024-10-18 16:18:18,514 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:18,794 - INFO - PDF pdfs\confirmation_35.pdf upserted into Cosmos DB successfully with pdf_id 35.
+2024-10-18 16:18:18,794 - INFO - Confirmation PDF pdfs\confirmation_35.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:18,910 - INFO - Booking 35 inserted into Cosmos DB successfully.
+2024-10-18 16:18:18,910 - INFO - Booking 35 inserted into Cosmos DB successfully.
+2024-10-18 16:18:18,910 - INFO - Booking 35 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-10-18 16:18:18,910 - INFO - Processing Booking 36...
+2024-10-18 16:18:18,910 - INFO - Attempting to allocate Booking 36 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:18,910 - INFO - Booking 36 successfully allocated to Campsite 15.
+2024-10-18 16:18:18,911 - INFO - Confirmation saved as pdfs\confirmation_36.pdf.
+2024-10-18 16:18:19,067 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:19,324 - INFO - PDF pdfs\confirmation_36.pdf upserted into Cosmos DB successfully with pdf_id 36.
+2024-10-18 16:18:19,324 - INFO - Confirmation PDF pdfs\confirmation_36.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:19,435 - INFO - Booking 36 inserted into Cosmos DB successfully.
+2024-10-18 16:18:19,435 - INFO - Booking 36 inserted into Cosmos DB successfully.
+2024-10-18 16:18:19,435 - INFO - Booking 36 processed successfully: allocated to Campsite 15 and inserted into Cosmos DB.
+2024-10-18 16:18:19,436 - INFO - Processing Booking 37...
+2024-10-18 16:18:19,436 - INFO - Attempting to allocate Booking 37 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:18:19,436 - INFO - Booking 37 successfully allocated to Campsite 7.
+2024-10-18 16:18:19,437 - INFO - Confirmation saved as pdfs\confirmation_37.pdf.
+2024-10-18 16:18:19,605 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:19,823 - INFO - PDF pdfs\confirmation_37.pdf upserted into Cosmos DB successfully with pdf_id 37.
+2024-10-18 16:18:19,824 - INFO - Confirmation PDF pdfs\confirmation_37.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:19,930 - INFO - Booking 37 inserted into Cosmos DB successfully.
+2024-10-18 16:18:19,930 - INFO - Booking 37 inserted into Cosmos DB successfully.
+2024-10-18 16:18:19,930 - INFO - Booking 37 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-10-18 16:18:19,931 - INFO - Processing Booking 38...
+2024-10-18 16:18:19,931 - INFO - Attempting to allocate Booking 38 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:18:19,931 - INFO - Booking 38 successfully allocated to Campsite 7.
+2024-10-18 16:18:19,932 - INFO - Confirmation saved as pdfs\confirmation_38.pdf.
+2024-10-18 16:18:20,070 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:20,306 - INFO - PDF pdfs\confirmation_38.pdf upserted into Cosmos DB successfully with pdf_id 38.
+2024-10-18 16:18:20,306 - INFO - Confirmation PDF pdfs\confirmation_38.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:20,418 - INFO - Booking 38 inserted into Cosmos DB successfully.
+2024-10-18 16:18:20,418 - INFO - Booking 38 inserted into Cosmos DB successfully.
+2024-10-18 16:18:20,419 - INFO - Booking 38 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-10-18 16:18:20,419 - INFO - Processing Booking 39...
+2024-10-18 16:18:20,419 - INFO - Attempting to allocate Booking 39 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:18:20,419 - INFO - Booking 39 successfully allocated to Campsite 8.
+2024-10-18 16:18:20,421 - INFO - Confirmation saved as pdfs\confirmation_39.pdf.
+2024-10-18 16:18:20,566 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:20,777 - INFO - PDF pdfs\confirmation_39.pdf upserted into Cosmos DB successfully with pdf_id 39.
+2024-10-18 16:18:20,777 - INFO - Confirmation PDF pdfs\confirmation_39.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:20,890 - INFO - Booking 39 inserted into Cosmos DB successfully.
+2024-10-18 16:18:20,890 - INFO - Booking 39 inserted into Cosmos DB successfully.
+2024-10-18 16:18:20,890 - INFO - Booking 39 processed successfully: allocated to Campsite 8 and inserted into Cosmos DB.
+2024-10-18 16:18:20,890 - INFO - Processing Booking 40...
+2024-10-18 16:18:20,890 - INFO - Attempting to allocate Booking 40 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:20,890 - INFO - Booking 40 successfully allocated to Campsite 16.
+2024-10-18 16:18:20,891 - INFO - Confirmation saved as pdfs\confirmation_40.pdf.
+2024-10-18 16:18:21,030 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:21,243 - INFO - PDF pdfs\confirmation_40.pdf upserted into Cosmos DB successfully with pdf_id 40.
+2024-10-18 16:18:21,243 - INFO - Confirmation PDF pdfs\confirmation_40.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:21,349 - INFO - Booking 40 inserted into Cosmos DB successfully.
+2024-10-18 16:18:21,349 - INFO - Booking 40 inserted into Cosmos DB successfully.
+2024-10-18 16:18:21,349 - INFO - Booking 40 processed successfully: allocated to Campsite 16 and inserted into Cosmos DB.
+2024-10-18 16:18:21,350 - INFO - Processing Booking 41...
+2024-10-18 16:18:21,350 - INFO - Attempting to allocate Booking 41 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:18:21,350 - INFO - Booking 41 successfully allocated to Campsite 8.
+2024-10-18 16:18:21,351 - INFO - Confirmation saved as pdfs\confirmation_41.pdf.
+2024-10-18 16:18:21,506 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:21,765 - INFO - PDF pdfs\confirmation_41.pdf upserted into Cosmos DB successfully with pdf_id 41.
+2024-10-18 16:18:21,765 - INFO - Confirmation PDF pdfs\confirmation_41.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:21,930 - INFO - Booking 41 inserted into Cosmos DB successfully.
+2024-10-18 16:18:21,930 - INFO - Booking 41 inserted into Cosmos DB successfully.
+2024-10-18 16:18:21,930 - INFO - Booking 41 processed successfully: allocated to Campsite 8 and inserted into Cosmos DB.
+2024-10-18 16:18:21,930 - INFO - Processing Booking 42...
+2024-10-18 16:18:21,930 - INFO - Attempting to allocate Booking 42 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:18:21,930 - INFO - Booking 42 successfully allocated to Campsite 9.
+2024-10-18 16:18:21,931 - INFO - Confirmation saved as pdfs\confirmation_42.pdf.
+2024-10-18 16:18:22,072 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:22,293 - INFO - PDF pdfs\confirmation_42.pdf upserted into Cosmos DB successfully with pdf_id 42.
+2024-10-18 16:18:22,293 - INFO - Confirmation PDF pdfs\confirmation_42.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:22,443 - INFO - Booking 42 inserted into Cosmos DB successfully.
+2024-10-18 16:18:22,443 - INFO - Booking 42 inserted into Cosmos DB successfully.
+2024-10-18 16:18:22,443 - INFO - Booking 42 processed successfully: allocated to Campsite 9 and inserted into Cosmos DB.
+2024-10-18 16:18:22,443 - INFO - Processing Booking 43...
+2024-10-18 16:18:22,443 - INFO - Attempting to allocate Booking 43 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:22,443 - INFO - Booking 43 successfully allocated to Campsite 17.
+2024-10-18 16:18:22,444 - INFO - Confirmation saved as pdfs\confirmation_43.pdf.
+2024-10-18 16:18:22,612 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:22,953 - INFO - PDF pdfs\confirmation_43.pdf upserted into Cosmos DB successfully with pdf_id 43.
+2024-10-18 16:18:22,953 - INFO - Confirmation PDF pdfs\confirmation_43.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:23,060 - INFO - Booking 43 inserted into Cosmos DB successfully.
+2024-10-18 16:18:23,060 - INFO - Booking 43 inserted into Cosmos DB successfully.
+2024-10-18 16:18:23,060 - INFO - Booking 43 processed successfully: allocated to Campsite 17 and inserted into Cosmos DB.
+2024-10-18 16:18:23,060 - INFO - Processing Booking 44...
+2024-10-18 16:18:23,060 - INFO - Attempting to allocate Booking 44 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:18:23,060 - INFO - Booking 44 successfully allocated to Campsite 9.
+2024-10-18 16:18:23,061 - INFO - Confirmation saved as pdfs\confirmation_44.pdf.
+2024-10-18 16:18:23,218 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:23,515 - INFO - PDF pdfs\confirmation_44.pdf upserted into Cosmos DB successfully with pdf_id 44.
+2024-10-18 16:18:23,515 - INFO - Confirmation PDF pdfs\confirmation_44.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:23,629 - INFO - Booking 44 inserted into Cosmos DB successfully.
+2024-10-18 16:18:23,629 - INFO - Booking 44 inserted into Cosmos DB successfully.
+2024-10-18 16:18:23,629 - INFO - Booking 44 processed successfully: allocated to Campsite 9 and inserted into Cosmos DB.
+2024-10-18 16:18:23,629 - INFO - Processing Booking 45...
+2024-10-18 16:18:23,629 - INFO - Attempting to allocate Booking 45 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:18:23,629 - INFO - Booking 45 successfully allocated to Campsite 10.
+2024-10-18 16:18:23,630 - INFO - Confirmation saved as pdfs\confirmation_45.pdf.
+2024-10-18 16:18:23,885 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:24,123 - INFO - PDF pdfs\confirmation_45.pdf upserted into Cosmos DB successfully with pdf_id 45.
+2024-10-18 16:18:24,123 - INFO - Confirmation PDF pdfs\confirmation_45.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:24,229 - INFO - Booking 45 inserted into Cosmos DB successfully.
+2024-10-18 16:18:24,229 - INFO - Booking 45 inserted into Cosmos DB successfully.
+2024-10-18 16:18:24,229 - INFO - Booking 45 processed successfully: allocated to Campsite 10 and inserted into Cosmos DB.
+2024-10-18 16:18:24,229 - INFO - Processing Booking 46...
+2024-10-18 16:18:24,229 - INFO - Attempting to allocate Booking 46 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:18:24,229 - INFO - Booking 46 successfully allocated to Campsite 18.
+2024-10-18 16:18:24,237 - INFO - Confirmation saved as pdfs\confirmation_46.pdf.
+2024-10-18 16:18:24,396 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:18:24,788 - INFO - PDF pdfs\confirmation_46.pdf upserted into Cosmos DB successfully with pdf_id 46.
+2024-10-18 16:18:24,788 - INFO - Confirmation PDF pdfs\confirmation_46.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:18:24,911 - INFO - Booking 46 inserted into Cosmos DB successfully.
+2024-10-18 16:18:24,911 - INFO - Booking 46 inserted into Cosmos DB successfully.
+2024-10-18 16:18:24,911 - INFO - Booking 46 processed successfully: allocated to Campsite 18 and inserted into Cosmos DB.
+2024-10-18 16:18:24,911 - INFO - Generating summary from booking data.
+2024-10-18 16:18:24,911 - INFO - Summary Data: {'date': datetime.date(2024, 10, 18), 'total_sales': 24640, 'total_bookings': 46, 'successful_allocations': 46, 'failed_allocations': 0, 'campsite_utilization': {1: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 2: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 3: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 4: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 5: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 6: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 7: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 8: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 9: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 10: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 2}, 11: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 12: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 13: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 14: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 15: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 16: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 17: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 18: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 19: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 20: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 21: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 22: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 23: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 24: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 25: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 26: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 27: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 28: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 29: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 30: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}}}
+2024-10-18 16:18:24,915 - INFO - Summary validated and created for 2024-10-18.
+2024-10-18 16:18:25,338 - INFO - Connected to SQL database successfully.
+2024-10-18 16:18:25,485 - INFO - Insert into local SQL database successful.
+2024-10-18 16:18:25,599 - INFO - Summary inserted into the local SQL database.
+2024-10-18 16:18:25,956 - INFO - Connected to Head Office SQL database successfully.
+2024-10-18 16:18:26,022 - INFO - Insert into Head Office database successful.
+2024-10-18 16:18:26,075 - INFO - Summary written to the Head Office database.
+2024-10-18 16:18:26,076 - INFO - Summary PDF generated and saved as pdfs\summary_2024-10-18.pdf.
+2024-10-18 16:18:26,076 - INFO - Summary PDF generated and saved.
+2024-10-18 16:18:26,215 - INFO - Connected to Cosmos DB container 'Summary_PDFs' successfully.
+2024-10-18 16:18:26,479 - INFO - Summary PDF pdfs\summary_2024-10-18.pdf upserted into Cosmos DB successfully with summary_id 1121132_2024-10-18.
+2024-10-18 16:18:26,479 - INFO - Summary PDF upserted into Cosmos DB successfully.
+2024-10-18 16:18:26,538 - INFO - SQL connection closed.
+2024-10-18 16:18:26,593 - INFO - Head Office connection closed.
+2024-10-18 16:18:26,593 - INFO - Cosmos connection closed.
+2024-10-18 16:29:53,815 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-18 16:29:53,816 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-18 16:29:56,560 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-18 16:29:56,929 - INFO - Fetched 46 bookings from Cosmos DB.
+2024-10-18 16:29:56,929 - INFO - Booking ID: 1, Customer Name: John Doe
+2024-10-18 16:29:56,929 - INFO - Booking ID: 2, Customer Name: Jane Smith
+2024-10-18 16:29:56,929 - INFO - Booking ID: 3, Customer Name: Michael Johnson
+2024-10-18 16:29:56,929 - INFO - Booking ID: 4, Customer Name: Emily Williams
+2024-10-18 16:29:56,929 - INFO - Booking ID: 5, Customer Name: William Brown
+2024-10-18 16:29:56,929 - INFO - Booking ID: 6, Customer Name: Olivia Jones
+2024-10-18 16:29:56,929 - INFO - Booking ID: 7, Customer Name: James Davis
+2024-10-18 16:29:56,929 - INFO - Booking ID: 8, Customer Name: Sophia Miller
+2024-10-18 16:29:56,929 - INFO - Booking ID: 9, Customer Name: Benjamin Wilson
+2024-10-18 16:29:56,929 - INFO - Booking ID: 10, Customer Name: Isabella Moore
+2024-10-18 16:29:56,929 - INFO - Booking ID: 11, Customer Name: Alexander Taylor
+2024-10-18 16:29:56,929 - INFO - Booking ID: 12, Customer Name: Mia Anderson
+2024-10-18 16:29:56,929 - INFO - Booking ID: 13, Customer Name: Ethan White
+2024-10-18 16:29:56,929 - INFO - Booking ID: 14, Customer Name: Emma Martin
+2024-10-18 16:29:56,929 - INFO - Booking ID: 15, Customer Name: Daniel Thompson
+2024-10-18 16:29:56,929 - INFO - Booking ID: 16, Customer Name: Ava Hall
+2024-10-18 16:29:56,929 - INFO - Booking ID: 17, Customer Name: Matthew Adams
+2024-10-18 16:29:56,929 - INFO - Booking ID: 18, Customer Name: Liam Clark
+2024-10-18 16:29:56,929 - INFO - Booking ID: 19, Customer Name: Sofia Rodriguez
+2024-10-18 16:29:56,930 - INFO - Booking ID: 20, Customer Name: Amelia Lewis
+2024-10-18 16:29:56,930 - INFO - Booking ID: 21, Customer Name: Lucas Lee
+2024-10-18 16:29:56,930 - INFO - Booking ID: 22, Customer Name: Grace Walker
+2024-10-18 16:29:56,930 - INFO - Booking ID: 23, Customer Name: Jackson Hall
+2024-10-18 16:29:56,930 - INFO - Booking ID: 24, Customer Name: Chloe Green
+2024-10-18 16:29:56,930 - INFO - Booking ID: 25, Customer Name: Sebastian Turner
+2024-10-18 16:29:56,930 - INFO - Booking ID: 26, Customer Name: Lily Harris
+2024-10-18 16:29:56,930 - INFO - Booking ID: 27, Customer Name: Zoe King
+2024-10-18 16:29:56,930 - INFO - Booking ID: 28, Customer Name: Gabriel Baker
+2024-10-18 16:29:56,930 - INFO - Booking ID: 29, Customer Name: Penelope Evans
+2024-10-18 16:29:56,930 - INFO - Booking ID: 30, Customer Name: Anthony Martinez
+2024-10-18 16:29:56,930 - INFO - Booking ID: 31, Customer Name: Aria Wright
+2024-10-18 16:29:56,930 - INFO - Booking ID: 32, Customer Name: Leo Robinson
+2024-10-18 16:29:56,930 - INFO - Booking ID: 33, Customer Name: Victoria Perez
+2024-10-18 16:29:56,930 - INFO - Booking ID: 34, Customer Name: Thomas Garcia
+2024-10-18 16:29:56,930 - INFO - Booking ID: 35, Customer Name: Riley Jones
+2024-10-18 16:29:56,930 - INFO - Booking ID: 36, Customer Name: Ella Davis
+2024-10-18 16:29:56,930 - INFO - Booking ID: 37, Customer Name: Aaron Moore
+2024-10-18 16:29:56,930 - INFO - Booking ID: 38, Customer Name: Nora Smith
+2024-10-18 16:29:56,930 - INFO - Booking ID: 39, Customer Name: Elijah Johnson
+2024-10-18 16:29:56,930 - INFO - Booking ID: 40, Customer Name: Hannah Brown
+2024-10-18 16:29:56,930 - INFO - Booking ID: 41, Customer Name: Eli Williams
+2024-10-18 16:29:56,930 - INFO - Booking ID: 42, Customer Name: Layla Taylor
+2024-10-18 16:29:56,930 - INFO - Booking ID: 43, Customer Name: David Anderson
+2024-10-18 16:29:56,930 - INFO - Booking ID: 44, Customer Name: Aubrey Martin
+2024-10-18 16:29:56,930 - INFO - Booking ID: 45, Customer Name: Samuel Thompson
+2024-10-18 16:29:56,930 - INFO - Booking ID: 46, Customer Name: Avery Hall
+2024-10-18 16:29:56,959 - INFO - 127.0.0.1 - - [18/Oct/2024 16:29:56] "GET / HTTP/1.1" 200 -
+2024-10-18 16:29:57,277 - INFO - 127.0.0.1 - - [18/Oct/2024 16:29:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-10-18 16:29:59,083 - INFO - Connected to SQL database successfully.
+2024-10-18 16:29:59,433 - INFO - Connected to Head Office SQL database successfully.
+2024-10-18 16:29:59,640 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-18 16:29:59,748 - INFO - Fetched 46 bookings from the Head Office database.
+2024-10-18 16:29:59,749 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-18 16:29:59,749 - INFO - Processing Booking 1...
+2024-10-18 16:29:59,749 - INFO - Attempting to allocate Booking 1 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:29:59,749 - INFO - Booking 1 successfully allocated to Campsite 1.
+2024-10-18 16:29:59,757 - INFO - Confirmation saved as pdfs\confirmation_1.pdf.
+2024-10-18 16:30:00,154 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:00,658 - INFO - PDF pdfs\confirmation_1.pdf upserted into Cosmos DB successfully with pdf_id 1.
+2024-10-18 16:30:00,658 - INFO - Confirmation PDF pdfs\confirmation_1.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:00,975 - INFO - Booking with ID 1 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:00,976 - INFO - Booking 1 inserted into Cosmos DB successfully.
+2024-10-18 16:30:00,976 - INFO - Booking 1 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-10-18 16:30:00,976 - INFO - Processing Booking 2...
+2024-10-18 16:30:00,976 - INFO - Attempting to allocate Booking 2 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:00,976 - INFO - Booking 2 successfully allocated to Campsite 2.
+2024-10-18 16:30:00,984 - INFO - Confirmation saved as pdfs\confirmation_2.pdf.
+2024-10-18 16:30:01,161 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:01,453 - INFO - PDF pdfs\confirmation_2.pdf upserted into Cosmos DB successfully with pdf_id 2.
+2024-10-18 16:30:01,453 - INFO - Confirmation PDF pdfs\confirmation_2.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:01,513 - INFO - Booking with ID 2 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:01,513 - INFO - Booking 2 inserted into Cosmos DB successfully.
+2024-10-18 16:30:01,513 - INFO - Booking 2 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-10-18 16:30:01,513 - INFO - Processing Booking 3...
+2024-10-18 16:30:01,514 - INFO - Attempting to allocate Booking 3 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:01,514 - INFO - Booking 3 successfully allocated to Campsite 3.
+2024-10-18 16:30:01,516 - INFO - Confirmation saved as pdfs\confirmation_3.pdf.
+2024-10-18 16:30:01,672 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:01,968 - INFO - PDF pdfs\confirmation_3.pdf upserted into Cosmos DB successfully with pdf_id 3.
+2024-10-18 16:30:01,968 - INFO - Confirmation PDF pdfs\confirmation_3.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:02,019 - INFO - Booking with ID 3 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:02,019 - INFO - Booking 3 inserted into Cosmos DB successfully.
+2024-10-18 16:30:02,019 - INFO - Booking 3 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-10-18 16:30:02,019 - INFO - Processing Booking 4...
+2024-10-18 16:30:02,019 - INFO - Attempting to allocate Booking 4 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:02,019 - INFO - Booking 4 successfully allocated to Campsite 4.
+2024-10-18 16:30:02,022 - INFO - Confirmation saved as pdfs\confirmation_4.pdf.
+2024-10-18 16:30:02,167 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:02,462 - INFO - PDF pdfs\confirmation_4.pdf upserted into Cosmos DB successfully with pdf_id 4.
+2024-10-18 16:30:02,462 - INFO - Confirmation PDF pdfs\confirmation_4.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:02,512 - INFO - Booking with ID 4 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:02,512 - INFO - Booking 4 inserted into Cosmos DB successfully.
+2024-10-18 16:30:02,512 - INFO - Booking 4 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-10-18 16:30:02,512 - INFO - Processing Booking 5...
+2024-10-18 16:30:02,512 - INFO - Attempting to allocate Booking 5 from 2024-10-12 to 2024-10-19...
+2024-10-18 16:30:02,512 - INFO - Booking 5 successfully allocated to Campsite 1.
+2024-10-18 16:30:02,513 - INFO - Confirmation saved as pdfs\confirmation_5.pdf.
+2024-10-18 16:30:02,681 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:02,944 - INFO - PDF pdfs\confirmation_5.pdf upserted into Cosmos DB successfully with pdf_id 5.
+2024-10-18 16:30:02,944 - INFO - Confirmation PDF pdfs\confirmation_5.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:02,996 - INFO - Booking with ID 5 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:02,996 - INFO - Booking 5 inserted into Cosmos DB successfully.
+2024-10-18 16:30:02,996 - INFO - Booking 5 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-10-18 16:30:02,996 - INFO - Processing Booking 6...
+2024-10-18 16:30:02,997 - INFO - Attempting to allocate Booking 6 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:30:02,997 - INFO - Booking 6 successfully allocated to Campsite 1.
+2024-10-18 16:30:02,999 - INFO - Confirmation saved as pdfs\confirmation_6.pdf.
+2024-10-18 16:30:03,179 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:03,492 - INFO - PDF pdfs\confirmation_6.pdf upserted into Cosmos DB successfully with pdf_id 6.
+2024-10-18 16:30:03,492 - INFO - Confirmation PDF pdfs\confirmation_6.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:03,542 - INFO - Booking with ID 6 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:03,542 - INFO - Booking 6 inserted into Cosmos DB successfully.
+2024-10-18 16:30:03,542 - INFO - Booking 6 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-10-18 16:30:03,542 - INFO - Processing Booking 7...
+2024-10-18 16:30:03,542 - INFO - Attempting to allocate Booking 7 from 2024-10-12 to 2024-10-19...
+2024-10-18 16:30:03,542 - INFO - Booking 7 successfully allocated to Campsite 2.
+2024-10-18 16:30:03,543 - INFO - Confirmation saved as pdfs\confirmation_7.pdf.
+2024-10-18 16:30:03,684 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:03,970 - INFO - PDF pdfs\confirmation_7.pdf upserted into Cosmos DB successfully with pdf_id 7.
+2024-10-18 16:30:03,970 - INFO - Confirmation PDF pdfs\confirmation_7.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:04,031 - INFO - Booking with ID 7 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:04,032 - INFO - Booking 7 inserted into Cosmos DB successfully.
+2024-10-18 16:30:04,032 - INFO - Booking 7 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-10-18 16:30:04,032 - INFO - Processing Booking 8...
+2024-10-18 16:30:04,032 - INFO - Attempting to allocate Booking 8 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:30:04,032 - INFO - Booking 8 successfully allocated to Campsite 1.
+2024-10-18 16:30:04,033 - INFO - Confirmation saved as pdfs\confirmation_8.pdf.
+2024-10-18 16:30:04,207 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:04,441 - INFO - PDF pdfs\confirmation_8.pdf upserted into Cosmos DB successfully with pdf_id 8.
+2024-10-18 16:30:04,441 - INFO - Confirmation PDF pdfs\confirmation_8.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:04,490 - INFO - Booking with ID 8 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:04,490 - INFO - Booking 8 inserted into Cosmos DB successfully.
+2024-10-18 16:30:04,490 - INFO - Booking 8 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-10-18 16:30:04,490 - INFO - Processing Booking 9...
+2024-10-18 16:30:04,490 - INFO - Attempting to allocate Booking 9 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:30:04,491 - INFO - Booking 9 successfully allocated to Campsite 2.
+2024-10-18 16:30:04,492 - INFO - Confirmation saved as pdfs\confirmation_9.pdf.
+2024-10-18 16:30:04,671 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:04,944 - INFO - PDF pdfs\confirmation_9.pdf upserted into Cosmos DB successfully with pdf_id 9.
+2024-10-18 16:30:04,944 - INFO - Confirmation PDF pdfs\confirmation_9.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:04,993 - INFO - Booking with ID 9 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:04,993 - INFO - Booking 9 inserted into Cosmos DB successfully.
+2024-10-18 16:30:04,993 - INFO - Booking 9 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-10-18 16:30:04,993 - INFO - Processing Booking 10...
+2024-10-18 16:30:04,993 - INFO - Attempting to allocate Booking 10 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:04,993 - INFO - Booking 10 successfully allocated to Campsite 5.
+2024-10-18 16:30:04,996 - INFO - Confirmation saved as pdfs\confirmation_10.pdf.
+2024-10-18 16:30:05,154 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:05,453 - INFO - PDF pdfs\confirmation_10.pdf upserted into Cosmos DB successfully with pdf_id 10.
+2024-10-18 16:30:05,453 - INFO - Confirmation PDF pdfs\confirmation_10.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:05,502 - INFO - Booking with ID 10 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:05,502 - INFO - Booking 10 inserted into Cosmos DB successfully.
+2024-10-18 16:30:05,502 - INFO - Booking 10 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-10-18 16:30:05,503 - INFO - Processing Booking 11...
+2024-10-18 16:30:05,503 - INFO - Attempting to allocate Booking 11 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:30:05,503 - INFO - Booking 11 successfully allocated to Campsite 1.
+2024-10-18 16:30:05,504 - INFO - Confirmation saved as pdfs\confirmation_11.pdf.
+2024-10-18 16:30:05,657 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:06,002 - INFO - PDF pdfs\confirmation_11.pdf upserted into Cosmos DB successfully with pdf_id 11.
+2024-10-18 16:30:06,002 - INFO - Confirmation PDF pdfs\confirmation_11.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:06,054 - INFO - Booking with ID 11 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:06,054 - INFO - Booking 11 inserted into Cosmos DB successfully.
+2024-10-18 16:30:06,054 - INFO - Booking 11 processed successfully: allocated to Campsite 1 and inserted into Cosmos DB.
+2024-10-18 16:30:06,054 - INFO - Processing Booking 12...
+2024-10-18 16:30:06,054 - INFO - Attempting to allocate Booking 12 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:30:06,054 - INFO - Booking 12 successfully allocated to Campsite 3.
+2024-10-18 16:30:06,062 - INFO - Confirmation saved as pdfs\confirmation_12.pdf.
+2024-10-18 16:30:06,300 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:06,626 - INFO - PDF pdfs\confirmation_12.pdf upserted into Cosmos DB successfully with pdf_id 12.
+2024-10-18 16:30:06,626 - INFO - Confirmation PDF pdfs\confirmation_12.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:06,678 - INFO - Booking with ID 12 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:06,679 - INFO - Booking 12 inserted into Cosmos DB successfully.
+2024-10-18 16:30:06,679 - INFO - Booking 12 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-10-18 16:30:06,679 - INFO - Processing Booking 13...
+2024-10-18 16:30:06,679 - INFO - Attempting to allocate Booking 13 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:30:06,679 - INFO - Booking 13 successfully allocated to Campsite 2.
+2024-10-18 16:30:06,680 - INFO - Confirmation saved as pdfs\confirmation_13.pdf.
+2024-10-18 16:30:06,807 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:07,103 - INFO - PDF pdfs\confirmation_13.pdf upserted into Cosmos DB successfully with pdf_id 13.
+2024-10-18 16:30:07,103 - INFO - Confirmation PDF pdfs\confirmation_13.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:07,152 - INFO - Booking with ID 13 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:07,152 - INFO - Booking 13 inserted into Cosmos DB successfully.
+2024-10-18 16:30:07,152 - INFO - Booking 13 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-10-18 16:30:07,152 - INFO - Processing Booking 14...
+2024-10-18 16:30:07,152 - INFO - Attempting to allocate Booking 14 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:30:07,152 - INFO - Booking 14 successfully allocated to Campsite 2.
+2024-10-18 16:30:07,153 - INFO - Confirmation saved as pdfs\confirmation_14.pdf.
+2024-10-18 16:30:07,273 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:07,564 - INFO - PDF pdfs\confirmation_14.pdf upserted into Cosmos DB successfully with pdf_id 14.
+2024-10-18 16:30:07,564 - INFO - Confirmation PDF pdfs\confirmation_14.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:07,612 - INFO - Booking with ID 14 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:07,612 - INFO - Booking 14 inserted into Cosmos DB successfully.
+2024-10-18 16:30:07,612 - INFO - Booking 14 processed successfully: allocated to Campsite 2 and inserted into Cosmos DB.
+2024-10-18 16:30:07,612 - INFO - Processing Booking 15...
+2024-10-18 16:30:07,612 - INFO - Attempting to allocate Booking 15 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:07,612 - INFO - Booking 15 successfully allocated to Campsite 6.
+2024-10-18 16:30:07,613 - INFO - Confirmation saved as pdfs\confirmation_15.pdf.
+2024-10-18 16:30:07,748 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:08,052 - INFO - PDF pdfs\confirmation_15.pdf upserted into Cosmos DB successfully with pdf_id 15.
+2024-10-18 16:30:08,052 - INFO - Confirmation PDF pdfs\confirmation_15.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:08,101 - INFO - Booking with ID 15 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:08,101 - INFO - Booking 15 inserted into Cosmos DB successfully.
+2024-10-18 16:30:08,101 - INFO - Booking 15 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-10-18 16:30:08,101 - INFO - Processing Booking 16...
+2024-10-18 16:30:08,101 - INFO - Attempting to allocate Booking 16 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:08,101 - INFO - Booking 16 successfully allocated to Campsite 7.
+2024-10-18 16:30:08,102 - INFO - Confirmation saved as pdfs\confirmation_16.pdf.
+2024-10-18 16:30:08,250 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:08,575 - INFO - PDF pdfs\confirmation_16.pdf upserted into Cosmos DB successfully with pdf_id 16.
+2024-10-18 16:30:08,575 - INFO - Confirmation PDF pdfs\confirmation_16.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:08,625 - INFO - Booking with ID 16 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:08,625 - INFO - Booking 16 inserted into Cosmos DB successfully.
+2024-10-18 16:30:08,625 - INFO - Booking 16 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-10-18 16:30:08,625 - INFO - Processing Booking 17...
+2024-10-18 16:30:08,625 - INFO - Attempting to allocate Booking 17 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:30:08,625 - INFO - Booking 17 successfully allocated to Campsite 3.
+2024-10-18 16:30:08,626 - INFO - Confirmation saved as pdfs\confirmation_17.pdf.
+2024-10-18 16:30:08,800 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:09,204 - INFO - PDF pdfs\confirmation_17.pdf upserted into Cosmos DB successfully with pdf_id 17.
+2024-10-18 16:30:09,204 - INFO - Confirmation PDF pdfs\confirmation_17.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:09,261 - INFO - Booking with ID 17 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:09,261 - INFO - Booking 17 inserted into Cosmos DB successfully.
+2024-10-18 16:30:09,261 - INFO - Booking 17 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-10-18 16:30:09,261 - INFO - Processing Booking 18...
+2024-10-18 16:30:09,261 - INFO - Attempting to allocate Booking 18 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:30:09,262 - INFO - Booking 18 successfully allocated to Campsite 3.
+2024-10-18 16:30:09,270 - INFO - Confirmation saved as pdfs\confirmation_18.pdf.
+2024-10-18 16:30:09,536 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:09,953 - INFO - PDF pdfs\confirmation_18.pdf upserted into Cosmos DB successfully with pdf_id 18.
+2024-10-18 16:30:09,953 - INFO - Confirmation PDF pdfs\confirmation_18.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:10,020 - INFO - Booking with ID 18 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:10,020 - INFO - Booking 18 inserted into Cosmos DB successfully.
+2024-10-18 16:30:10,020 - INFO - Booking 18 processed successfully: allocated to Campsite 3 and inserted into Cosmos DB.
+2024-10-18 16:30:10,020 - INFO - Processing Booking 19...
+2024-10-18 16:30:10,021 - INFO - Attempting to allocate Booking 19 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:30:10,021 - INFO - Booking 19 successfully allocated to Campsite 4.
+2024-10-18 16:30:10,029 - INFO - Confirmation saved as pdfs\confirmation_19.pdf.
+2024-10-18 16:30:10,276 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:10,704 - INFO - PDF pdfs\confirmation_19.pdf upserted into Cosmos DB successfully with pdf_id 19.
+2024-10-18 16:30:10,704 - INFO - Confirmation PDF pdfs\confirmation_19.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:10,766 - INFO - Booking with ID 19 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:10,766 - INFO - Booking 19 inserted into Cosmos DB successfully.
+2024-10-18 16:30:10,766 - INFO - Booking 19 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-10-18 16:30:10,766 - INFO - Processing Booking 20...
+2024-10-18 16:30:10,766 - INFO - Attempting to allocate Booking 20 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:30:10,767 - INFO - Booking 20 successfully allocated to Campsite 4.
+2024-10-18 16:30:10,767 - INFO - Confirmation saved as pdfs\confirmation_20.pdf.
+2024-10-18 16:30:11,386 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:11,662 - INFO - PDF pdfs\confirmation_20.pdf upserted into Cosmos DB successfully with pdf_id 20.
+2024-10-18 16:30:11,662 - INFO - Confirmation PDF pdfs\confirmation_20.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:11,711 - INFO - Booking with ID 20 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:11,711 - INFO - Booking 20 inserted into Cosmos DB successfully.
+2024-10-18 16:30:11,711 - INFO - Booking 20 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-10-18 16:30:11,711 - INFO - Processing Booking 21...
+2024-10-18 16:30:11,711 - INFO - Attempting to allocate Booking 21 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:30:11,711 - INFO - Booking 21 successfully allocated to Campsite 4.
+2024-10-18 16:30:11,712 - INFO - Confirmation saved as pdfs\confirmation_21.pdf.
+2024-10-18 16:30:11,882 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:12,339 - INFO - PDF pdfs\confirmation_21.pdf upserted into Cosmos DB successfully with pdf_id 21.
+2024-10-18 16:30:12,339 - INFO - Confirmation PDF pdfs\confirmation_21.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:12,408 - INFO - Booking with ID 21 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:12,408 - INFO - Booking 21 inserted into Cosmos DB successfully.
+2024-10-18 16:30:12,408 - INFO - Booking 21 processed successfully: allocated to Campsite 4 and inserted into Cosmos DB.
+2024-10-18 16:30:12,408 - INFO - Processing Booking 22...
+2024-10-18 16:30:12,408 - INFO - Attempting to allocate Booking 22 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:12,408 - INFO - Booking 22 successfully allocated to Campsite 8.
+2024-10-18 16:30:12,409 - INFO - Confirmation saved as pdfs\confirmation_22.pdf.
+2024-10-18 16:30:12,684 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:13,003 - INFO - PDF pdfs\confirmation_22.pdf upserted into Cosmos DB successfully with pdf_id 22.
+2024-10-18 16:30:13,003 - INFO - Confirmation PDF pdfs\confirmation_22.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:13,062 - INFO - Booking with ID 22 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:13,062 - INFO - Booking 22 inserted into Cosmos DB successfully.
+2024-10-18 16:30:13,062 - INFO - Booking 22 processed successfully: allocated to Campsite 8 and inserted into Cosmos DB.
+2024-10-18 16:30:13,062 - INFO - Processing Booking 23...
+2024-10-18 16:30:13,062 - INFO - Attempting to allocate Booking 23 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:13,062 - INFO - Booking 23 successfully allocated to Campsite 9.
+2024-10-18 16:30:13,063 - INFO - Confirmation saved as pdfs\confirmation_23.pdf.
+2024-10-18 16:30:13,293 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:13,638 - INFO - PDF pdfs\confirmation_23.pdf upserted into Cosmos DB successfully with pdf_id 23.
+2024-10-18 16:30:13,638 - INFO - Confirmation PDF pdfs\confirmation_23.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:13,710 - INFO - Booking with ID 23 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:13,711 - INFO - Booking 23 inserted into Cosmos DB successfully.
+2024-10-18 16:30:13,711 - INFO - Booking 23 processed successfully: allocated to Campsite 9 and inserted into Cosmos DB.
+2024-10-18 16:30:13,711 - INFO - Processing Booking 24...
+2024-10-18 16:30:13,711 - INFO - Attempting to allocate Booking 24 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:30:13,711 - INFO - Booking 24 successfully allocated to Campsite 5.
+2024-10-18 16:30:13,712 - INFO - Confirmation saved as pdfs\confirmation_24.pdf.
+2024-10-18 16:30:13,980 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:14,290 - INFO - PDF pdfs\confirmation_24.pdf upserted into Cosmos DB successfully with pdf_id 24.
+2024-10-18 16:30:14,290 - INFO - Confirmation PDF pdfs\confirmation_24.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:14,339 - INFO - Booking with ID 24 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:14,339 - INFO - Booking 24 inserted into Cosmos DB successfully.
+2024-10-18 16:30:14,339 - INFO - Booking 24 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-10-18 16:30:14,339 - INFO - Processing Booking 25...
+2024-10-18 16:30:14,339 - INFO - Attempting to allocate Booking 25 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:14,339 - INFO - Booking 25 successfully allocated to Campsite 10.
+2024-10-18 16:30:14,340 - INFO - Confirmation saved as pdfs\confirmation_25.pdf.
+2024-10-18 16:30:14,522 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:14,763 - INFO - PDF pdfs\confirmation_25.pdf upserted into Cosmos DB successfully with pdf_id 25.
+2024-10-18 16:30:14,763 - INFO - Confirmation PDF pdfs\confirmation_25.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:14,812 - INFO - Booking with ID 25 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:14,812 - INFO - Booking 25 inserted into Cosmos DB successfully.
+2024-10-18 16:30:14,812 - INFO - Booking 25 processed successfully: allocated to Campsite 10 and inserted into Cosmos DB.
+2024-10-18 16:30:14,812 - INFO - Processing Booking 26...
+2024-10-18 16:30:14,812 - INFO - Attempting to allocate Booking 26 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:30:14,812 - INFO - Booking 26 successfully allocated to Campsite 5.
+2024-10-18 16:30:14,813 - INFO - Confirmation saved as pdfs\confirmation_26.pdf.
+2024-10-18 16:30:14,977 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:15,233 - INFO - PDF pdfs\confirmation_26.pdf upserted into Cosmos DB successfully with pdf_id 26.
+2024-10-18 16:30:15,233 - INFO - Confirmation PDF pdfs\confirmation_26.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:15,282 - INFO - Booking with ID 26 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:15,282 - INFO - Booking 26 inserted into Cosmos DB successfully.
+2024-10-18 16:30:15,282 - INFO - Booking 26 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-10-18 16:30:15,283 - INFO - Processing Booking 27...
+2024-10-18 16:30:15,283 - INFO - Attempting to allocate Booking 27 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:30:15,283 - INFO - Booking 27 successfully allocated to Campsite 6.
+2024-10-18 16:30:15,284 - INFO - Confirmation saved as pdfs\confirmation_27.pdf.
+2024-10-18 16:30:15,409 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:15,631 - INFO - PDF pdfs\confirmation_27.pdf upserted into Cosmos DB successfully with pdf_id 27.
+2024-10-18 16:30:15,631 - INFO - Confirmation PDF pdfs\confirmation_27.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:15,679 - INFO - Booking with ID 27 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:15,679 - INFO - Booking 27 inserted into Cosmos DB successfully.
+2024-10-18 16:30:15,680 - INFO - Booking 27 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-10-18 16:30:15,680 - INFO - Processing Booking 28...
+2024-10-18 16:30:15,680 - INFO - Attempting to allocate Booking 28 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:30:15,680 - INFO - Booking 28 successfully allocated to Campsite 5.
+2024-10-18 16:30:15,688 - INFO - Confirmation saved as pdfs\confirmation_28.pdf.
+2024-10-18 16:30:15,910 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:16,195 - INFO - PDF pdfs\confirmation_28.pdf upserted into Cosmos DB successfully with pdf_id 28.
+2024-10-18 16:30:16,196 - INFO - Confirmation PDF pdfs\confirmation_28.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:16,246 - INFO - Booking with ID 28 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:16,246 - INFO - Booking 28 inserted into Cosmos DB successfully.
+2024-10-18 16:30:16,247 - INFO - Booking 28 processed successfully: allocated to Campsite 5 and inserted into Cosmos DB.
+2024-10-18 16:30:16,247 - INFO - Processing Booking 29...
+2024-10-18 16:30:16,247 - INFO - Attempting to allocate Booking 29 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:16,247 - INFO - Booking 29 successfully allocated to Campsite 11.
+2024-10-18 16:30:16,248 - INFO - Confirmation saved as pdfs\confirmation_29.pdf.
+2024-10-18 16:30:16,406 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:16,713 - INFO - PDF pdfs\confirmation_29.pdf upserted into Cosmos DB successfully with pdf_id 29.
+2024-10-18 16:30:16,713 - INFO - Confirmation PDF pdfs\confirmation_29.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:16,762 - INFO - Booking with ID 29 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:16,762 - INFO - Booking 29 inserted into Cosmos DB successfully.
+2024-10-18 16:30:16,762 - INFO - Booking 29 processed successfully: allocated to Campsite 11 and inserted into Cosmos DB.
+2024-10-18 16:30:16,763 - INFO - Processing Booking 30...
+2024-10-18 16:30:16,763 - INFO - Attempting to allocate Booking 30 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:16,763 - INFO - Booking 30 successfully allocated to Campsite 12.
+2024-10-18 16:30:16,764 - INFO - Confirmation saved as pdfs\confirmation_30.pdf.
+2024-10-18 16:30:16,904 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:17,211 - INFO - PDF pdfs\confirmation_30.pdf upserted into Cosmos DB successfully with pdf_id 30.
+2024-10-18 16:30:17,211 - INFO - Confirmation PDF pdfs\confirmation_30.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:17,260 - INFO - Booking with ID 30 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:17,260 - INFO - Booking 30 inserted into Cosmos DB successfully.
+2024-10-18 16:30:17,260 - INFO - Booking 30 processed successfully: allocated to Campsite 12 and inserted into Cosmos DB.
+2024-10-18 16:30:17,260 - INFO - Processing Booking 31...
+2024-10-18 16:30:17,260 - INFO - Attempting to allocate Booking 31 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:17,260 - INFO - Booking 31 successfully allocated to Campsite 13.
+2024-10-18 16:30:17,261 - INFO - Confirmation saved as pdfs\confirmation_31.pdf.
+2024-10-18 16:30:17,405 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:17,652 - INFO - PDF pdfs\confirmation_31.pdf upserted into Cosmos DB successfully with pdf_id 31.
+2024-10-18 16:30:17,652 - INFO - Confirmation PDF pdfs\confirmation_31.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:17,700 - INFO - Booking with ID 31 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:17,700 - INFO - Booking 31 inserted into Cosmos DB successfully.
+2024-10-18 16:30:17,700 - INFO - Booking 31 processed successfully: allocated to Campsite 13 and inserted into Cosmos DB.
+2024-10-18 16:30:17,701 - INFO - Processing Booking 32...
+2024-10-18 16:30:17,701 - INFO - Attempting to allocate Booking 32 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:30:17,701 - INFO - Booking 32 successfully allocated to Campsite 7.
+2024-10-18 16:30:17,702 - INFO - Confirmation saved as pdfs\confirmation_32.pdf.
+2024-10-18 16:30:17,869 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:18,104 - INFO - PDF pdfs\confirmation_32.pdf upserted into Cosmos DB successfully with pdf_id 32.
+2024-10-18 16:30:18,104 - INFO - Confirmation PDF pdfs\confirmation_32.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:18,154 - INFO - Booking with ID 32 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:18,154 - INFO - Booking 32 inserted into Cosmos DB successfully.
+2024-10-18 16:30:18,154 - INFO - Booking 32 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-10-18 16:30:18,155 - INFO - Processing Booking 33...
+2024-10-18 16:30:18,155 - INFO - Attempting to allocate Booking 33 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:18,155 - INFO - Booking 33 successfully allocated to Campsite 14.
+2024-10-18 16:30:18,156 - INFO - Confirmation saved as pdfs\confirmation_33.pdf.
+2024-10-18 16:30:18,298 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:18,524 - INFO - PDF pdfs\confirmation_33.pdf upserted into Cosmos DB successfully with pdf_id 33.
+2024-10-18 16:30:18,524 - INFO - Confirmation PDF pdfs\confirmation_33.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:18,573 - INFO - Booking with ID 33 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:18,573 - INFO - Booking 33 inserted into Cosmos DB successfully.
+2024-10-18 16:30:18,573 - INFO - Booking 33 processed successfully: allocated to Campsite 14 and inserted into Cosmos DB.
+2024-10-18 16:30:18,573 - INFO - Processing Booking 34...
+2024-10-18 16:30:18,574 - INFO - Attempting to allocate Booking 34 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:30:18,574 - INFO - Booking 34 successfully allocated to Campsite 6.
+2024-10-18 16:30:18,574 - INFO - Confirmation saved as pdfs\confirmation_34.pdf.
+2024-10-18 16:30:18,714 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:18,972 - INFO - PDF pdfs\confirmation_34.pdf upserted into Cosmos DB successfully with pdf_id 34.
+2024-10-18 16:30:18,972 - INFO - Confirmation PDF pdfs\confirmation_34.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:19,020 - INFO - Booking with ID 34 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:19,021 - INFO - Booking 34 inserted into Cosmos DB successfully.
+2024-10-18 16:30:19,021 - INFO - Booking 34 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-10-18 16:30:19,021 - INFO - Processing Booking 35...
+2024-10-18 16:30:19,021 - INFO - Attempting to allocate Booking 35 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:30:19,021 - INFO - Booking 35 successfully allocated to Campsite 6.
+2024-10-18 16:30:19,022 - INFO - Confirmation saved as pdfs\confirmation_35.pdf.
+2024-10-18 16:30:19,154 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:19,414 - INFO - PDF pdfs\confirmation_35.pdf upserted into Cosmos DB successfully with pdf_id 35.
+2024-10-18 16:30:19,414 - INFO - Confirmation PDF pdfs\confirmation_35.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:19,475 - INFO - Booking with ID 35 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:19,475 - INFO - Booking 35 inserted into Cosmos DB successfully.
+2024-10-18 16:30:19,475 - INFO - Booking 35 processed successfully: allocated to Campsite 6 and inserted into Cosmos DB.
+2024-10-18 16:30:19,475 - INFO - Processing Booking 36...
+2024-10-18 16:30:19,475 - INFO - Attempting to allocate Booking 36 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:19,475 - INFO - Booking 36 successfully allocated to Campsite 15.
+2024-10-18 16:30:19,484 - INFO - Confirmation saved as pdfs\confirmation_36.pdf.
+2024-10-18 16:30:19,613 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:19,862 - INFO - PDF pdfs\confirmation_36.pdf upserted into Cosmos DB successfully with pdf_id 36.
+2024-10-18 16:30:19,862 - INFO - Confirmation PDF pdfs\confirmation_36.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:19,911 - INFO - Booking with ID 36 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:19,911 - INFO - Booking 36 inserted into Cosmos DB successfully.
+2024-10-18 16:30:19,911 - INFO - Booking 36 processed successfully: allocated to Campsite 15 and inserted into Cosmos DB.
+2024-10-18 16:30:19,911 - INFO - Processing Booking 37...
+2024-10-18 16:30:19,911 - INFO - Attempting to allocate Booking 37 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:30:19,911 - INFO - Booking 37 successfully allocated to Campsite 7.
+2024-10-18 16:30:19,912 - INFO - Confirmation saved as pdfs\confirmation_37.pdf.
+2024-10-18 16:30:20,041 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:20,261 - INFO - PDF pdfs\confirmation_37.pdf upserted into Cosmos DB successfully with pdf_id 37.
+2024-10-18 16:30:20,261 - INFO - Confirmation PDF pdfs\confirmation_37.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:20,311 - INFO - Booking with ID 37 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:20,311 - INFO - Booking 37 inserted into Cosmos DB successfully.
+2024-10-18 16:30:20,311 - INFO - Booking 37 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-10-18 16:30:20,311 - INFO - Processing Booking 38...
+2024-10-18 16:30:20,311 - INFO - Attempting to allocate Booking 38 from 2024-10-19 to 2024-10-26...
+2024-10-18 16:30:20,311 - INFO - Booking 38 successfully allocated to Campsite 7.
+2024-10-18 16:30:20,312 - INFO - Confirmation saved as pdfs\confirmation_38.pdf.
+2024-10-18 16:30:20,454 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:20,685 - INFO - PDF pdfs\confirmation_38.pdf upserted into Cosmos DB successfully with pdf_id 38.
+2024-10-18 16:30:20,685 - INFO - Confirmation PDF pdfs\confirmation_38.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:20,734 - INFO - Booking with ID 38 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:20,734 - INFO - Booking 38 inserted into Cosmos DB successfully.
+2024-10-18 16:30:20,734 - INFO - Booking 38 processed successfully: allocated to Campsite 7 and inserted into Cosmos DB.
+2024-10-18 16:30:20,734 - INFO - Processing Booking 39...
+2024-10-18 16:30:20,734 - INFO - Attempting to allocate Booking 39 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:30:20,734 - INFO - Booking 39 successfully allocated to Campsite 8.
+2024-10-18 16:30:20,735 - INFO - Confirmation saved as pdfs\confirmation_39.pdf.
+2024-10-18 16:30:20,900 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:21,193 - INFO - PDF pdfs\confirmation_39.pdf upserted into Cosmos DB successfully with pdf_id 39.
+2024-10-18 16:30:21,193 - INFO - Confirmation PDF pdfs\confirmation_39.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:21,242 - INFO - Booking with ID 39 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:21,242 - INFO - Booking 39 inserted into Cosmos DB successfully.
+2024-10-18 16:30:21,242 - INFO - Booking 39 processed successfully: allocated to Campsite 8 and inserted into Cosmos DB.
+2024-10-18 16:30:21,242 - INFO - Processing Booking 40...
+2024-10-18 16:30:21,242 - INFO - Attempting to allocate Booking 40 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:21,242 - INFO - Booking 40 successfully allocated to Campsite 16.
+2024-10-18 16:30:21,243 - INFO - Confirmation saved as pdfs\confirmation_40.pdf.
+2024-10-18 16:30:21,418 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:21,631 - INFO - PDF pdfs\confirmation_40.pdf upserted into Cosmos DB successfully with pdf_id 40.
+2024-10-18 16:30:21,631 - INFO - Confirmation PDF pdfs\confirmation_40.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:21,680 - INFO - Booking with ID 40 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:21,680 - INFO - Booking 40 inserted into Cosmos DB successfully.
+2024-10-18 16:30:21,680 - INFO - Booking 40 processed successfully: allocated to Campsite 16 and inserted into Cosmos DB.
+2024-10-18 16:30:21,680 - INFO - Processing Booking 41...
+2024-10-18 16:30:21,680 - INFO - Attempting to allocate Booking 41 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:30:21,680 - INFO - Booking 41 successfully allocated to Campsite 8.
+2024-10-18 16:30:21,681 - INFO - Confirmation saved as pdfs\confirmation_41.pdf.
+2024-10-18 16:30:21,812 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:22,042 - INFO - PDF pdfs\confirmation_41.pdf upserted into Cosmos DB successfully with pdf_id 41.
+2024-10-18 16:30:22,042 - INFO - Confirmation PDF pdfs\confirmation_41.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:22,091 - INFO - Booking with ID 41 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:22,091 - INFO - Booking 41 inserted into Cosmos DB successfully.
+2024-10-18 16:30:22,091 - INFO - Booking 41 processed successfully: allocated to Campsite 8 and inserted into Cosmos DB.
+2024-10-18 16:30:22,091 - INFO - Processing Booking 42...
+2024-10-18 16:30:22,092 - INFO - Attempting to allocate Booking 42 from 2024-11-02 to 2024-11-09...
+2024-10-18 16:30:22,092 - INFO - Booking 42 successfully allocated to Campsite 9.
+2024-10-18 16:30:22,092 - INFO - Confirmation saved as pdfs\confirmation_42.pdf.
+2024-10-18 16:30:22,211 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:22,412 - INFO - PDF pdfs\confirmation_42.pdf upserted into Cosmos DB successfully with pdf_id 42.
+2024-10-18 16:30:22,412 - INFO - Confirmation PDF pdfs\confirmation_42.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:22,460 - INFO - Booking with ID 42 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:22,460 - INFO - Booking 42 inserted into Cosmos DB successfully.
+2024-10-18 16:30:22,460 - INFO - Booking 42 processed successfully: allocated to Campsite 9 and inserted into Cosmos DB.
+2024-10-18 16:30:22,461 - INFO - Processing Booking 43...
+2024-10-18 16:30:22,461 - INFO - Attempting to allocate Booking 43 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:22,461 - INFO - Booking 43 successfully allocated to Campsite 17.
+2024-10-18 16:30:22,469 - INFO - Confirmation saved as pdfs\confirmation_43.pdf.
+2024-10-18 16:30:22,599 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:22,850 - INFO - PDF pdfs\confirmation_43.pdf upserted into Cosmos DB successfully with pdf_id 43.
+2024-10-18 16:30:22,851 - INFO - Confirmation PDF pdfs\confirmation_43.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:22,900 - INFO - Booking with ID 43 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:22,900 - INFO - Booking 43 inserted into Cosmos DB successfully.
+2024-10-18 16:30:22,900 - INFO - Booking 43 processed successfully: allocated to Campsite 17 and inserted into Cosmos DB.
+2024-10-18 16:30:22,901 - INFO - Processing Booking 44...
+2024-10-18 16:30:22,901 - INFO - Attempting to allocate Booking 44 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:30:22,901 - INFO - Booking 44 successfully allocated to Campsite 9.
+2024-10-18 16:30:22,901 - INFO - Confirmation saved as pdfs\confirmation_44.pdf.
+2024-10-18 16:30:23,049 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:23,272 - INFO - PDF pdfs\confirmation_44.pdf upserted into Cosmos DB successfully with pdf_id 44.
+2024-10-18 16:30:23,272 - INFO - Confirmation PDF pdfs\confirmation_44.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:23,319 - INFO - Booking with ID 44 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:23,319 - INFO - Booking 44 inserted into Cosmos DB successfully.
+2024-10-18 16:30:23,319 - INFO - Booking 44 processed successfully: allocated to Campsite 9 and inserted into Cosmos DB.
+2024-10-18 16:30:23,319 - INFO - Processing Booking 45...
+2024-10-18 16:30:23,319 - INFO - Attempting to allocate Booking 45 from 2024-10-26 to 2024-11-02...
+2024-10-18 16:30:23,319 - INFO - Booking 45 successfully allocated to Campsite 10.
+2024-10-18 16:30:23,320 - INFO - Confirmation saved as pdfs\confirmation_45.pdf.
+2024-10-18 16:30:23,446 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:23,743 - INFO - PDF pdfs\confirmation_45.pdf upserted into Cosmos DB successfully with pdf_id 45.
+2024-10-18 16:30:23,743 - INFO - Confirmation PDF pdfs\confirmation_45.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:23,793 - INFO - Booking with ID 45 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:23,793 - INFO - Booking 45 inserted into Cosmos DB successfully.
+2024-10-18 16:30:23,793 - INFO - Booking 45 processed successfully: allocated to Campsite 10 and inserted into Cosmos DB.
+2024-10-18 16:30:23,794 - INFO - Processing Booking 46...
+2024-10-18 16:30:23,794 - INFO - Attempting to allocate Booking 46 from 2024-10-05 to 2024-10-12...
+2024-10-18 16:30:23,794 - INFO - Booking 46 successfully allocated to Campsite 18.
+2024-10-18 16:30:23,802 - INFO - Confirmation saved as pdfs\confirmation_46.pdf.
+2024-10-18 16:30:23,940 - INFO - Connected to Cosmos DB container 'PDFs' successfully.
+2024-10-18 16:30:24,155 - INFO - PDF pdfs\confirmation_46.pdf upserted into Cosmos DB successfully with pdf_id 46.
+2024-10-18 16:30:24,155 - INFO - Confirmation PDF pdfs\confirmation_46.pdf inserted into Cosmos DB successfully.
+2024-10-18 16:30:24,204 - INFO - Booking with ID 46 already exists in Cosmos DB. Skipping insertion.
+2024-10-18 16:30:24,204 - INFO - Booking 46 inserted into Cosmos DB successfully.
+2024-10-18 16:30:24,204 - INFO - Booking 46 processed successfully: allocated to Campsite 18 and inserted into Cosmos DB.
+2024-10-18 16:30:24,426 - INFO - 127.0.0.1 - - [18/Oct/2024 16:30:24] "[32mPOST /process_bookings HTTP/1.1[0m" 302 -
+2024-10-18 16:30:24,428 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-18 16:30:24,429 - INFO - Generating summary from booking data.
+2024-10-18 16:30:24,429 - INFO - Summary Data: {'date': datetime.date(2024, 10, 18), 'total_sales': 24640, 'total_bookings': 46, 'successful_allocations': 46, 'failed_allocations': 0, 'campsite_utilization': {1: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 2: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 3: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 4: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 5: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 6: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 7: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 8: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 9: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 10: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 2}, 11: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 12: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 13: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 14: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 15: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 16: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 17: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 18: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 19: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 20: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 21: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 22: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 23: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 24: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 25: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 26: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 27: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 28: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 29: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 30: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}}}
+2024-10-18 16:30:24,429 - INFO - Generated Summary Data: {'date': datetime.date(2024, 10, 18), 'total_sales': 24640, 'total_bookings': 46, 'successful_allocations': 46, 'failed_allocations': 0, 'campsite_utilization': {1: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 2: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 3: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 4: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 5: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 6: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 7: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 8: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 9: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 10: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 2}, 11: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 12: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 13: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 14: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 15: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 16: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 17: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 18: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 19: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 20: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 21: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 22: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 23: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 24: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 25: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 26: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 27: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 28: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 29: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 30: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}}}
+2024-10-18 16:30:24,432 - INFO - Summary validated and created for 2024-10-18.
+2024-10-18 16:30:25,214 - INFO - Connected to SQL database successfully.
+2024-10-18 16:30:25,356 - INFO - Insert into local SQL database successful.
+2024-10-18 16:30:25,472 - INFO - Summary inserted into the local SQL database.
+2024-10-18 16:30:25,520 - INFO - Connected to Head Office SQL database successfully.
+2024-10-18 16:30:25,594 - INFO - Insert into Head Office database successful.
+2024-10-18 16:30:25,645 - INFO - Summary written to the Head Office database.
+2024-10-18 16:30:25,646 - INFO - Summary PDF generated and saved as pdfs\summary_2024-10-18.pdf.
+2024-10-18 16:30:25,646 - INFO - Summary PDF generated and saved.
+2024-10-18 16:30:25,878 - INFO - Connected to Cosmos DB container 'Summary_PDFs' successfully.
+2024-10-18 16:30:26,205 - INFO - Summary PDF pdfs\summary_2024-10-18.pdf upserted into Cosmos DB successfully with summary_id 1121132_2024-10-18.
+2024-10-18 16:30:26,205 - INFO - Summary PDF upserted into Cosmos DB successfully.
+2024-10-18 16:30:26,217 - INFO - 127.0.0.1 - - [18/Oct/2024 16:30:26] "GET /summary HTTP/1.1" 200 -
+2024-10-18 16:31:14,473 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-18 16:31:14,823 - INFO - Fetched 46 bookings from Cosmos DB.
+2024-10-18 16:31:14,823 - INFO - Booking ID: 1, Customer Name: John Doe
+2024-10-18 16:31:14,823 - INFO - Booking ID: 2, Customer Name: Jane Smith
+2024-10-18 16:31:14,823 - INFO - Booking ID: 3, Customer Name: Michael Johnson
+2024-10-18 16:31:14,823 - INFO - Booking ID: 4, Customer Name: Emily Williams
+2024-10-18 16:31:14,823 - INFO - Booking ID: 5, Customer Name: William Brown
+2024-10-18 16:31:14,823 - INFO - Booking ID: 6, Customer Name: Olivia Jones
+2024-10-18 16:31:14,823 - INFO - Booking ID: 7, Customer Name: James Davis
+2024-10-18 16:31:14,823 - INFO - Booking ID: 8, Customer Name: Sophia Miller
+2024-10-18 16:31:14,823 - INFO - Booking ID: 9, Customer Name: Benjamin Wilson
+2024-10-18 16:31:14,823 - INFO - Booking ID: 10, Customer Name: Isabella Moore
+2024-10-18 16:31:14,824 - INFO - Booking ID: 11, Customer Name: Alexander Taylor
+2024-10-18 16:31:14,824 - INFO - Booking ID: 12, Customer Name: Mia Anderson
+2024-10-18 16:31:14,824 - INFO - Booking ID: 13, Customer Name: Ethan White
+2024-10-18 16:31:14,824 - INFO - Booking ID: 14, Customer Name: Emma Martin
+2024-10-18 16:31:14,824 - INFO - Booking ID: 15, Customer Name: Daniel Thompson
+2024-10-18 16:31:14,824 - INFO - Booking ID: 16, Customer Name: Ava Hall
+2024-10-18 16:31:14,824 - INFO - Booking ID: 17, Customer Name: Matthew Adams
+2024-10-18 16:31:14,824 - INFO - Booking ID: 18, Customer Name: Liam Clark
+2024-10-18 16:31:14,824 - INFO - Booking ID: 19, Customer Name: Sofia Rodriguez
+2024-10-18 16:31:14,824 - INFO - Booking ID: 20, Customer Name: Amelia Lewis
+2024-10-18 16:31:14,824 - INFO - Booking ID: 21, Customer Name: Lucas Lee
+2024-10-18 16:31:14,824 - INFO - Booking ID: 22, Customer Name: Grace Walker
+2024-10-18 16:31:14,824 - INFO - Booking ID: 23, Customer Name: Jackson Hall
+2024-10-18 16:31:14,824 - INFO - Booking ID: 24, Customer Name: Chloe Green
+2024-10-18 16:31:14,824 - INFO - Booking ID: 25, Customer Name: Sebastian Turner
+2024-10-18 16:31:14,824 - INFO - Booking ID: 26, Customer Name: Lily Harris
+2024-10-18 16:31:14,824 - INFO - Booking ID: 27, Customer Name: Zoe King
+2024-10-18 16:31:14,824 - INFO - Booking ID: 28, Customer Name: Gabriel Baker
+2024-10-18 16:31:14,824 - INFO - Booking ID: 29, Customer Name: Penelope Evans
+2024-10-18 16:31:14,824 - INFO - Booking ID: 30, Customer Name: Anthony Martinez
+2024-10-18 16:31:14,824 - INFO - Booking ID: 31, Customer Name: Aria Wright
+2024-10-18 16:31:14,824 - INFO - Booking ID: 32, Customer Name: Leo Robinson
+2024-10-18 16:31:14,824 - INFO - Booking ID: 33, Customer Name: Victoria Perez
+2024-10-18 16:31:14,824 - INFO - Booking ID: 34, Customer Name: Thomas Garcia
+2024-10-18 16:31:14,824 - INFO - Booking ID: 35, Customer Name: Riley Jones
+2024-10-18 16:31:14,824 - INFO - Booking ID: 36, Customer Name: Ella Davis
+2024-10-18 16:31:14,824 - INFO - Booking ID: 37, Customer Name: Aaron Moore
+2024-10-18 16:31:14,824 - INFO - Booking ID: 38, Customer Name: Nora Smith
+2024-10-18 16:31:14,824 - INFO - Booking ID: 39, Customer Name: Elijah Johnson
+2024-10-18 16:31:14,824 - INFO - Booking ID: 40, Customer Name: Hannah Brown
+2024-10-18 16:31:14,824 - INFO - Booking ID: 41, Customer Name: Eli Williams
+2024-10-18 16:31:14,824 - INFO - Booking ID: 42, Customer Name: Layla Taylor
+2024-10-18 16:31:14,824 - INFO - Booking ID: 43, Customer Name: David Anderson
+2024-10-18 16:31:14,825 - INFO - Booking ID: 44, Customer Name: Aubrey Martin
+2024-10-18 16:31:14,825 - INFO - Booking ID: 45, Customer Name: Samuel Thompson
+2024-10-18 16:31:14,825 - INFO - Booking ID: 46, Customer Name: Avery Hall
+2024-10-18 16:31:14,836 - INFO - 127.0.0.1 - - [18/Oct/2024 16:31:14] "GET / HTTP/1.1" 200 -
+2024-10-18 16:31:16,061 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-18 16:31:16,361 - INFO - Fetched 46 bookings from Cosmos DB.
+2024-10-18 16:31:16,361 - INFO - Booking ID: 1, Customer Name: John Doe
+2024-10-18 16:31:16,361 - INFO - Booking ID: 2, Customer Name: Jane Smith
+2024-10-18 16:31:16,361 - INFO - Booking ID: 3, Customer Name: Michael Johnson
+2024-10-18 16:31:16,361 - INFO - Booking ID: 4, Customer Name: Emily Williams
+2024-10-18 16:31:16,361 - INFO - Booking ID: 5, Customer Name: William Brown
+2024-10-18 16:31:16,361 - INFO - Booking ID: 6, Customer Name: Olivia Jones
+2024-10-18 16:31:16,362 - INFO - Booking ID: 7, Customer Name: James Davis
+2024-10-18 16:31:16,362 - INFO - Booking ID: 8, Customer Name: Sophia Miller
+2024-10-18 16:31:16,362 - INFO - Booking ID: 9, Customer Name: Benjamin Wilson
+2024-10-18 16:31:16,362 - INFO - Booking ID: 10, Customer Name: Isabella Moore
+2024-10-18 16:31:16,362 - INFO - Booking ID: 11, Customer Name: Alexander Taylor
+2024-10-18 16:31:16,362 - INFO - Booking ID: 12, Customer Name: Mia Anderson
+2024-10-18 16:31:16,362 - INFO - Booking ID: 13, Customer Name: Ethan White
+2024-10-18 16:31:16,362 - INFO - Booking ID: 14, Customer Name: Emma Martin
+2024-10-18 16:31:16,362 - INFO - Booking ID: 15, Customer Name: Daniel Thompson
+2024-10-18 16:31:16,362 - INFO - Booking ID: 16, Customer Name: Ava Hall
+2024-10-18 16:31:16,362 - INFO - Booking ID: 17, Customer Name: Matthew Adams
+2024-10-18 16:31:16,362 - INFO - Booking ID: 18, Customer Name: Liam Clark
+2024-10-18 16:31:16,362 - INFO - Booking ID: 19, Customer Name: Sofia Rodriguez
+2024-10-18 16:31:16,362 - INFO - Booking ID: 20, Customer Name: Amelia Lewis
+2024-10-18 16:31:16,362 - INFO - Booking ID: 21, Customer Name: Lucas Lee
+2024-10-18 16:31:16,362 - INFO - Booking ID: 22, Customer Name: Grace Walker
+2024-10-18 16:31:16,362 - INFO - Booking ID: 23, Customer Name: Jackson Hall
+2024-10-18 16:31:16,362 - INFO - Booking ID: 24, Customer Name: Chloe Green
+2024-10-18 16:31:16,362 - INFO - Booking ID: 25, Customer Name: Sebastian Turner
+2024-10-18 16:31:16,362 - INFO - Booking ID: 26, Customer Name: Lily Harris
+2024-10-18 16:31:16,362 - INFO - Booking ID: 27, Customer Name: Zoe King
+2024-10-18 16:31:16,362 - INFO - Booking ID: 28, Customer Name: Gabriel Baker
+2024-10-18 16:31:16,362 - INFO - Booking ID: 29, Customer Name: Penelope Evans
+2024-10-18 16:31:16,362 - INFO - Booking ID: 30, Customer Name: Anthony Martinez
+2024-10-18 16:31:16,362 - INFO - Booking ID: 31, Customer Name: Aria Wright
+2024-10-18 16:31:16,362 - INFO - Booking ID: 32, Customer Name: Leo Robinson
+2024-10-18 16:31:16,362 - INFO - Booking ID: 33, Customer Name: Victoria Perez
+2024-10-18 16:31:16,362 - INFO - Booking ID: 34, Customer Name: Thomas Garcia
+2024-10-18 16:31:16,362 - INFO - Booking ID: 35, Customer Name: Riley Jones
+2024-10-18 16:31:16,362 - INFO - Booking ID: 36, Customer Name: Ella Davis
+2024-10-18 16:31:16,362 - INFO - Booking ID: 37, Customer Name: Aaron Moore
+2024-10-18 16:31:16,362 - INFO - Booking ID: 38, Customer Name: Nora Smith
+2024-10-18 16:31:16,362 - INFO - Booking ID: 39, Customer Name: Elijah Johnson
+2024-10-18 16:31:16,362 - INFO - Booking ID: 40, Customer Name: Hannah Brown
+2024-10-18 16:31:16,363 - INFO - Booking ID: 41, Customer Name: Eli Williams
+2024-10-18 16:31:16,363 - INFO - Booking ID: 42, Customer Name: Layla Taylor
+2024-10-18 16:31:16,363 - INFO - Booking ID: 43, Customer Name: David Anderson
+2024-10-18 16:31:16,363 - INFO - Booking ID: 44, Customer Name: Aubrey Martin
+2024-10-18 16:31:16,363 - INFO - Booking ID: 45, Customer Name: Samuel Thompson
+2024-10-18 16:31:16,363 - INFO - Booking ID: 46, Customer Name: Avery Hall
+2024-10-18 16:31:16,373 - INFO - 127.0.0.1 - - [18/Oct/2024 16:31:16] "GET /bookings HTTP/1.1" 200 -
+2024-10-18 16:31:17,350 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-18 16:31:17,698 - INFO - Fetched 46 bookings from Cosmos DB.
+2024-10-18 16:31:17,698 - INFO - Booking ID: 1, Customer Name: John Doe
+2024-10-18 16:31:17,698 - INFO - Booking ID: 2, Customer Name: Jane Smith
+2024-10-18 16:31:17,698 - INFO - Booking ID: 3, Customer Name: Michael Johnson
+2024-10-18 16:31:17,698 - INFO - Booking ID: 4, Customer Name: Emily Williams
+2024-10-18 16:31:17,698 - INFO - Booking ID: 5, Customer Name: William Brown
+2024-10-18 16:31:17,698 - INFO - Booking ID: 6, Customer Name: Olivia Jones
+2024-10-18 16:31:17,698 - INFO - Booking ID: 7, Customer Name: James Davis
+2024-10-18 16:31:17,698 - INFO - Booking ID: 8, Customer Name: Sophia Miller
+2024-10-18 16:31:17,698 - INFO - Booking ID: 9, Customer Name: Benjamin Wilson
+2024-10-18 16:31:17,698 - INFO - Booking ID: 10, Customer Name: Isabella Moore
+2024-10-18 16:31:17,698 - INFO - Booking ID: 11, Customer Name: Alexander Taylor
+2024-10-18 16:31:17,698 - INFO - Booking ID: 12, Customer Name: Mia Anderson
+2024-10-18 16:31:17,698 - INFO - Booking ID: 13, Customer Name: Ethan White
+2024-10-18 16:31:17,698 - INFO - Booking ID: 14, Customer Name: Emma Martin
+2024-10-18 16:31:17,698 - INFO - Booking ID: 15, Customer Name: Daniel Thompson
+2024-10-18 16:31:17,698 - INFO - Booking ID: 16, Customer Name: Ava Hall
+2024-10-18 16:31:17,698 - INFO - Booking ID: 17, Customer Name: Matthew Adams
+2024-10-18 16:31:17,698 - INFO - Booking ID: 18, Customer Name: Liam Clark
+2024-10-18 16:31:17,698 - INFO - Booking ID: 19, Customer Name: Sofia Rodriguez
+2024-10-18 16:31:17,698 - INFO - Booking ID: 20, Customer Name: Amelia Lewis
+2024-10-18 16:31:17,698 - INFO - Booking ID: 21, Customer Name: Lucas Lee
+2024-10-18 16:31:17,699 - INFO - Booking ID: 22, Customer Name: Grace Walker
+2024-10-18 16:31:17,699 - INFO - Booking ID: 23, Customer Name: Jackson Hall
+2024-10-18 16:31:17,699 - INFO - Booking ID: 24, Customer Name: Chloe Green
+2024-10-18 16:31:17,699 - INFO - Booking ID: 25, Customer Name: Sebastian Turner
+2024-10-18 16:31:17,699 - INFO - Booking ID: 26, Customer Name: Lily Harris
+2024-10-18 16:31:17,699 - INFO - Booking ID: 27, Customer Name: Zoe King
+2024-10-18 16:31:17,699 - INFO - Booking ID: 28, Customer Name: Gabriel Baker
+2024-10-18 16:31:17,699 - INFO - Booking ID: 29, Customer Name: Penelope Evans
+2024-10-18 16:31:17,699 - INFO - Booking ID: 30, Customer Name: Anthony Martinez
+2024-10-18 16:31:17,699 - INFO - Booking ID: 31, Customer Name: Aria Wright
+2024-10-18 16:31:17,699 - INFO - Booking ID: 32, Customer Name: Leo Robinson
+2024-10-18 16:31:17,699 - INFO - Booking ID: 33, Customer Name: Victoria Perez
+2024-10-18 16:31:17,699 - INFO - Booking ID: 34, Customer Name: Thomas Garcia
+2024-10-18 16:31:17,699 - INFO - Booking ID: 35, Customer Name: Riley Jones
+2024-10-18 16:31:17,699 - INFO - Booking ID: 36, Customer Name: Ella Davis
+2024-10-18 16:31:17,699 - INFO - Booking ID: 37, Customer Name: Aaron Moore
+2024-10-18 16:31:17,699 - INFO - Booking ID: 38, Customer Name: Nora Smith
+2024-10-18 16:31:17,699 - INFO - Booking ID: 39, Customer Name: Elijah Johnson
+2024-10-18 16:31:17,699 - INFO - Booking ID: 40, Customer Name: Hannah Brown
+2024-10-18 16:31:17,699 - INFO - Booking ID: 41, Customer Name: Eli Williams
+2024-10-18 16:31:17,699 - INFO - Booking ID: 42, Customer Name: Layla Taylor
+2024-10-18 16:31:17,699 - INFO - Booking ID: 43, Customer Name: David Anderson
+2024-10-18 16:31:17,699 - INFO - Booking ID: 44, Customer Name: Aubrey Martin
+2024-10-18 16:31:17,699 - INFO - Booking ID: 45, Customer Name: Samuel Thompson
+2024-10-18 16:31:17,699 - INFO - Booking ID: 46, Customer Name: Avery Hall
+2024-10-18 16:31:17,700 - INFO - 127.0.0.1 - - [18/Oct/2024 16:31:17] "GET / HTTP/1.1" 200 -
+2024-10-18 16:31:18,534 - INFO - Initialized 30 campsites: 10 Small, 10 Medium, 10 Large.
+2024-10-18 16:31:18,534 - INFO - Generating summary from booking data.
+2024-10-18 16:31:18,534 - INFO - Summary Data: {'date': datetime.date(2024, 10, 18), 'total_sales': 24640, 'total_bookings': 46, 'successful_allocations': 46, 'failed_allocations': 0, 'campsite_utilization': {1: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 2: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 3: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 4: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 5: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 6: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 7: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 8: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 9: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 10: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 2}, 11: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 12: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 13: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 14: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 15: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 16: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 17: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 18: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 19: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 20: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 21: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 22: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 23: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 24: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 25: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 26: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 27: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 28: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 29: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 30: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}}}
+2024-10-18 16:31:18,534 - INFO - Generated Summary Data: {'date': datetime.date(2024, 10, 18), 'total_sales': 24640, 'total_bookings': 46, 'successful_allocations': 46, 'failed_allocations': 0, 'campsite_utilization': {1: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 2: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 5}, 3: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 4: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 5: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 6: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 7: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 4}, 8: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 9: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 3}, 10: {'size': 'Small', 'rate_per_night': 50, 'bookings_count': 2}, 11: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 12: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 13: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 14: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 15: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 16: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 17: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 18: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 1}, 19: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 20: {'size': 'Medium', 'rate_per_night': 60, 'bookings_count': 0}, 21: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 22: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 23: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 24: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 25: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 26: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 27: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 28: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 29: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}, 30: {'size': 'Large', 'rate_per_night': 70, 'bookings_count': 0}}}
+2024-10-18 16:31:18,537 - INFO - Summary validated and created for 2024-10-18.
+2024-10-18 16:31:18,599 - INFO - Connected to SQL database successfully.
+2024-10-18 16:31:18,696 - INFO - Insert into local SQL database successful.
+2024-10-18 16:31:18,754 - INFO - Summary inserted into the local SQL database.
+2024-10-18 16:31:18,823 - INFO - Connected to Head Office SQL database successfully.
+2024-10-18 16:31:18,959 - INFO - Insert into Head Office database successful.
+2024-10-18 16:31:19,029 - INFO - Summary written to the Head Office database.
+2024-10-18 16:31:19,029 - INFO - Summary PDF generated and saved as pdfs\summary_2024-10-18.pdf.
+2024-10-18 16:31:19,030 - INFO - Summary PDF generated and saved.
+2024-10-18 16:31:19,306 - INFO - Connected to Cosmos DB container 'Summary_PDFs' successfully.
+2024-10-18 16:31:19,719 - INFO - Summary PDF pdfs\summary_2024-10-18.pdf upserted into Cosmos DB successfully with summary_id 1121132_2024-10-18.
+2024-10-18 16:31:19,719 - INFO - Summary PDF upserted into Cosmos DB successfully.
+2024-10-18 16:31:19,720 - INFO - 127.0.0.1 - - [18/Oct/2024 16:31:19] "GET /summary HTTP/1.1" 200 -
+2024-10-18 16:31:26,876 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-18 16:31:27,120 - INFO - Fetched 46 bookings from Cosmos DB.
+2024-10-18 16:31:27,120 - INFO - Booking ID: 1, Customer Name: John Doe
+2024-10-18 16:31:27,120 - INFO - Booking ID: 2, Customer Name: Jane Smith
+2024-10-18 16:31:27,120 - INFO - Booking ID: 3, Customer Name: Michael Johnson
+2024-10-18 16:31:27,120 - INFO - Booking ID: 4, Customer Name: Emily Williams
+2024-10-18 16:31:27,120 - INFO - Booking ID: 5, Customer Name: William Brown
+2024-10-18 16:31:27,120 - INFO - Booking ID: 6, Customer Name: Olivia Jones
+2024-10-18 16:31:27,120 - INFO - Booking ID: 7, Customer Name: James Davis
+2024-10-18 16:31:27,120 - INFO - Booking ID: 8, Customer Name: Sophia Miller
+2024-10-18 16:31:27,120 - INFO - Booking ID: 9, Customer Name: Benjamin Wilson
+2024-10-18 16:31:27,120 - INFO - Booking ID: 10, Customer Name: Isabella Moore
+2024-10-18 16:31:27,120 - INFO - Booking ID: 11, Customer Name: Alexander Taylor
+2024-10-18 16:31:27,120 - INFO - Booking ID: 12, Customer Name: Mia Anderson
+2024-10-18 16:31:27,120 - INFO - Booking ID: 13, Customer Name: Ethan White
+2024-10-18 16:31:27,120 - INFO - Booking ID: 14, Customer Name: Emma Martin
+2024-10-18 16:31:27,120 - INFO - Booking ID: 15, Customer Name: Daniel Thompson
+2024-10-18 16:31:27,120 - INFO - Booking ID: 16, Customer Name: Ava Hall
+2024-10-18 16:31:27,121 - INFO - Booking ID: 17, Customer Name: Matthew Adams
+2024-10-18 16:31:27,121 - INFO - Booking ID: 18, Customer Name: Liam Clark
+2024-10-18 16:31:27,121 - INFO - Booking ID: 19, Customer Name: Sofia Rodriguez
+2024-10-18 16:31:27,121 - INFO - Booking ID: 20, Customer Name: Amelia Lewis
+2024-10-18 16:31:27,121 - INFO - Booking ID: 21, Customer Name: Lucas Lee
+2024-10-18 16:31:27,121 - INFO - Booking ID: 22, Customer Name: Grace Walker
+2024-10-18 16:31:27,121 - INFO - Booking ID: 23, Customer Name: Jackson Hall
+2024-10-18 16:31:27,121 - INFO - Booking ID: 24, Customer Name: Chloe Green
+2024-10-18 16:31:27,121 - INFO - Booking ID: 25, Customer Name: Sebastian Turner
+2024-10-18 16:31:27,121 - INFO - Booking ID: 26, Customer Name: Lily Harris
+2024-10-18 16:31:27,121 - INFO - Booking ID: 27, Customer Name: Zoe King
+2024-10-18 16:31:27,121 - INFO - Booking ID: 28, Customer Name: Gabriel Baker
+2024-10-18 16:31:27,121 - INFO - Booking ID: 29, Customer Name: Penelope Evans
+2024-10-18 16:31:27,121 - INFO - Booking ID: 30, Customer Name: Anthony Martinez
+2024-10-18 16:31:27,121 - INFO - Booking ID: 31, Customer Name: Aria Wright
+2024-10-18 16:31:27,121 - INFO - Booking ID: 32, Customer Name: Leo Robinson
+2024-10-18 16:31:27,121 - INFO - Booking ID: 33, Customer Name: Victoria Perez
+2024-10-18 16:31:27,121 - INFO - Booking ID: 34, Customer Name: Thomas Garcia
+2024-10-18 16:31:27,121 - INFO - Booking ID: 35, Customer Name: Riley Jones
+2024-10-18 16:31:27,121 - INFO - Booking ID: 36, Customer Name: Ella Davis
+2024-10-18 16:31:27,121 - INFO - Booking ID: 37, Customer Name: Aaron Moore
+2024-10-18 16:31:27,121 - INFO - Booking ID: 38, Customer Name: Nora Smith
+2024-10-18 16:31:27,121 - INFO - Booking ID: 39, Customer Name: Elijah Johnson
+2024-10-18 16:31:27,121 - INFO - Booking ID: 40, Customer Name: Hannah Brown
+2024-10-18 16:31:27,121 - INFO - Booking ID: 41, Customer Name: Eli Williams
+2024-10-18 16:31:27,121 - INFO - Booking ID: 42, Customer Name: Layla Taylor
+2024-10-18 16:31:27,121 - INFO - Booking ID: 43, Customer Name: David Anderson
+2024-10-18 16:31:27,121 - INFO - Booking ID: 44, Customer Name: Aubrey Martin
+2024-10-18 16:31:27,121 - INFO - Booking ID: 45, Customer Name: Samuel Thompson
+2024-10-18 16:31:27,121 - INFO - Booking ID: 46, Customer Name: Avery Hall
+2024-10-18 16:31:27,122 - INFO - 127.0.0.1 - - [18/Oct/2024 16:31:27] "GET / HTTP/1.1" 200 -
+2024-10-18 16:31:36,937 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-18 16:31:36,937 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-18 16:31:38,913 - INFO - Connected to Cosmos DB container 'Bookings' successfully.
+2024-10-18 16:31:39,286 - INFO - Fetched 46 bookings from Cosmos DB.
+2024-10-18 16:31:39,287 - INFO - Booking ID: 1, Customer Name: John Doe
+2024-10-18 16:31:39,287 - INFO - Booking ID: 2, Customer Name: Jane Smith
+2024-10-18 16:31:39,287 - INFO - Booking ID: 3, Customer Name: Michael Johnson
+2024-10-18 16:31:39,287 - INFO - Booking ID: 4, Customer Name: Emily Williams
+2024-10-18 16:31:39,287 - INFO - Booking ID: 5, Customer Name: William Brown
+2024-10-18 16:31:39,287 - INFO - Booking ID: 6, Customer Name: Olivia Jones
+2024-10-18 16:31:39,287 - INFO - Booking ID: 7, Customer Name: James Davis
+2024-10-18 16:31:39,287 - INFO - Booking ID: 8, Customer Name: Sophia Miller
+2024-10-18 16:31:39,287 - INFO - Booking ID: 9, Customer Name: Benjamin Wilson
+2024-10-18 16:31:39,287 - INFO - Booking ID: 10, Customer Name: Isabella Moore
+2024-10-18 16:31:39,287 - INFO - Booking ID: 11, Customer Name: Alexander Taylor
+2024-10-18 16:31:39,287 - INFO - Booking ID: 12, Customer Name: Mia Anderson
+2024-10-18 16:31:39,287 - INFO - Booking ID: 13, Customer Name: Ethan White
+2024-10-18 16:31:39,287 - INFO - Booking ID: 14, Customer Name: Emma Martin
+2024-10-18 16:31:39,287 - INFO - Booking ID: 15, Customer Name: Daniel Thompson
+2024-10-18 16:31:39,287 - INFO - Booking ID: 16, Customer Name: Ava Hall
+2024-10-18 16:31:39,287 - INFO - Booking ID: 17, Customer Name: Matthew Adams
+2024-10-18 16:31:39,287 - INFO - Booking ID: 18, Customer Name: Liam Clark
+2024-10-18 16:31:39,287 - INFO - Booking ID: 19, Customer Name: Sofia Rodriguez
+2024-10-18 16:31:39,287 - INFO - Booking ID: 20, Customer Name: Amelia Lewis
+2024-10-18 16:31:39,287 - INFO - Booking ID: 21, Customer Name: Lucas Lee
+2024-10-18 16:31:39,287 - INFO - Booking ID: 22, Customer Name: Grace Walker
+2024-10-18 16:31:39,287 - INFO - Booking ID: 23, Customer Name: Jackson Hall
+2024-10-18 16:31:39,287 - INFO - Booking ID: 24, Customer Name: Chloe Green
+2024-10-18 16:31:39,287 - INFO - Booking ID: 25, Customer Name: Sebastian Turner
+2024-10-18 16:31:39,287 - INFO - Booking ID: 26, Customer Name: Lily Harris
+2024-10-18 16:31:39,287 - INFO - Booking ID: 27, Customer Name: Zoe King
+2024-10-18 16:31:39,287 - INFO - Booking ID: 28, Customer Name: Gabriel Baker
+2024-10-18 16:31:39,287 - INFO - Booking ID: 29, Customer Name: Penelope Evans
+2024-10-18 16:31:39,287 - INFO - Booking ID: 30, Customer Name: Anthony Martinez
+2024-10-18 16:31:39,287 - INFO - Booking ID: 31, Customer Name: Aria Wright
+2024-10-18 16:31:39,287 - INFO - Booking ID: 32, Customer Name: Leo Robinson
+2024-10-18 16:31:39,287 - INFO - Booking ID: 33, Customer Name: Victoria Perez
+2024-10-18 16:31:39,288 - INFO - Booking ID: 34, Customer Name: Thomas Garcia
+2024-10-18 16:31:39,288 - INFO - Booking ID: 35, Customer Name: Riley Jones
+2024-10-18 16:31:39,288 - INFO - Booking ID: 36, Customer Name: Ella Davis
+2024-10-18 16:31:39,288 - INFO - Booking ID: 37, Customer Name: Aaron Moore
+2024-10-18 16:31:39,288 - INFO - Booking ID: 38, Customer Name: Nora Smith
+2024-10-18 16:31:39,288 - INFO - Booking ID: 39, Customer Name: Elijah Johnson
+2024-10-18 16:31:39,288 - INFO - Booking ID: 40, Customer Name: Hannah Brown
+2024-10-18 16:31:39,288 - INFO - Booking ID: 41, Customer Name: Eli Williams
+2024-10-18 16:31:39,288 - INFO - Booking ID: 42, Customer Name: Layla Taylor
+2024-10-18 16:31:39,288 - INFO - Booking ID: 43, Customer Name: David Anderson
+2024-10-18 16:31:39,288 - INFO - Booking ID: 44, Customer Name: Aubrey Martin
+2024-10-18 16:31:39,288 - INFO - Booking ID: 45, Customer Name: Samuel Thompson
+2024-10-18 16:31:39,288 - INFO - Booking ID: 46, Customer Name: Avery Hall
+2024-10-18 16:31:39,301 - INFO - 127.0.0.1 - - [18/Oct/2024 16:31:39] "GET / HTTP/1.1" 200 -

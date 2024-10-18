@@ -72,3 +72,4 @@ def allocate_campsite(campsites, start_date, end_date, booking):
                 return campsite  # Return the successfully allocated campsite
     logger.warning(f"No available campsites for Booking {booking.booking_id} from {start_date.date()} to {end_date.date()}.")
     return None  # Return None if no campsites are available
+

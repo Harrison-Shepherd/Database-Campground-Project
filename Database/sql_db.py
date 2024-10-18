@@ -1,6 +1,7 @@
 import pyodbc
 from Utils.logging_config import logger
 
+# Function to connect to the local SQL database
 def connect_to_sql():
     """
     Connects to the local SQL database (camping).

@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--
+this is the summary.html file that will be rendered when the user visits the summary page of the application.
+ It displays a summary of the bookings made, including the total number of bookings, total revenue, and average revenue per booking. 
+ It also includes buttons to process bookings, view bookings, and view the summary report. It also displays flash messages if any are present.
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,44 +14,46 @@
     <title>Daily Summary Report</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body class="bg-light">
 
-<div class="container mt-5">
-    <!-- Home Button and Title -->
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <a href="{{ url_for('index') }}" class="btn btn-primary">Home</a>
-        <h2 class="text-dark">Daily Summary Report</h2>
-    </div>
-
-    <!-- Summary Report Card -->
-    <div class="card">
-        <div class="card-header bg-dark text-white text-center">
-            <h2>Daily Summary Report</h2>
+    <div class="container mt-5">
+        <!-- Home Button and Title -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <a href="{{ url_for('index') }}" class="btn btn-primary">Home</a>
+            <h2 class="text-dark">Daily Summary Report</h2>
         </div>
-        <div class="card-body">
-            <h5 class="card-title">Date: {{ summary['date'] }}</h5>
-            <p class="card-text">
-                <strong>Total Sales:</strong> ${{ summary['total_sales'] }}<br>
-                <strong>Total Bookings:</strong> {{ summary['total_bookings'] }}<br>
-                <strong>Successful Allocations:</strong> {{ summary['successful_allocations'] }}<br>
-                <strong>Failed Allocations:</strong> {{ summary['failed_allocations'] }}
-            </p>
 
-            <h5 class="mt-4">Campsite Utilization:</h5>
-            <ul class="list-group">
-                {% for site_number, details in summary['campsite_utilization'].items() %}
+        <!-- Summary Report Card -->
+        <div class="card">
+            <div class="card-header bg-dark text-white text-center">
+                <h2>Daily Summary Report</h2>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Date: {{ summary['date'] }}</h5>
+                <p class="card-text">
+                    <strong>Total Sales:</strong> ${{ summary['total_sales'] }}<br>
+                    <strong>Total Bookings:</strong> {{ summary['total_bookings'] }}<br>
+                    <strong>Successful Allocations:</strong> {{ summary['successful_allocations'] }}<br>
+                    <strong>Failed Allocations:</strong> {{ summary['failed_allocations'] }}
+                </p>
+
+                <h5 class="mt-4">Campsite Utilization:</h5>
+                <ul class="list-group">
+                    {% for site_number, details in summary['campsite_utilization'].items() %}
                     <li class="list-group-item">
-                        <strong>Campsite {{ site_number }}:</strong> 
-                        Size - {{ details['size'] }}, 
-                        Rate - ${{ details['rate_per_night'] }}, 
+                        <strong>Campsite {{ site_number }}:</strong>
+                        Size - {{ details['size'] }},
+                        Rate - ${{ details['rate_per_night'] }},
                         Total Bookings - {{ details['bookings_count'] }}
                     </li>
-                {% endfor %}
-            </ul>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

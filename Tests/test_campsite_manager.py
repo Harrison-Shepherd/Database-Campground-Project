@@ -1,6 +1,7 @@
 import unittest
 from Utils.campsite_manager import initialize_campsites
 
+# Define a test class for the CampsiteManager
 class TestCampsiteManager(unittest.TestCase):
     """
     Test class for testing the initialization of campsites.
@@ -9,6 +10,7 @@ class TestCampsiteManager(unittest.TestCase):
     initializes campsites with the expected sizes and quantities.
     """
 
+    # Test the initialization of campsites
     def test_initialize_campsites(self):
         """
         Test the initialization of campsites.
@@ -31,5 +33,6 @@ class TestCampsiteManager(unittest.TestCase):
         # Assert that the last 10 campsites (starting from index 20) are of size 'Large'
         self.assertEqual(campsites[20].size, 'Large', "The 21st campsite should be of size 'Large'.")
 
+# Run the test cases
 if __name__ == "__main__":
     unittest.main()

@@ -9,6 +9,7 @@ class TestSQLDatabase(unittest.TestCase):
     and that the connection object returned is not None.
     """
 
+
     def test_connect_to_sql(self):
         """
         Test the connection to the SQL database.

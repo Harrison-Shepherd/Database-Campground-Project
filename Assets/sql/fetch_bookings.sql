@@ -10,8 +10,8 @@ SELECT
     b.num_campsites,               -- Number of campsites booked
     CONCAT(c.first_name, ' ', c.last_name) AS customer_name  -- Full name of the customer (first and last name concatenated)
 FROM 
-    head_office.booking b
+    camping.booking b
 JOIN 
-    head_office.customers c ON b.customer_id = c.customer_id  -- Join customers to bookings based on customer_id
+    camping.customers c ON b.customer_id = c.customer_id  -- Join customers to bookings based on customer_id
 WHERE 
     b.campground_id = ?  -- Placeholder for the campground_id to be supplied when executing the query

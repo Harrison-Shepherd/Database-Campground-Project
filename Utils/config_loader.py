@@ -29,7 +29,7 @@ def load_config(file_name):
         logger.error(f"Error decoding JSON from the configuration file: {file_path}")
         raise
 
-# helps to normalise connection setup
+# Helps to normalise connection setup
 def get_connection_string(db_type):
     """
     Retrieves the connection string or configuration dictionary for the specified database type.
@@ -60,7 +60,7 @@ def get_connection_string(db_type):
         logger.error(f"Error retrieving connection string for {db_type}: {e}")
         raise
 
-def prepare_query(sql): #TODO not sure if needed anymore?, sql files just have "?" placeholders for pyodbc
+def prepare_query(sql):
     """
     Replaces placeholders with question marks in SQL queries.
 

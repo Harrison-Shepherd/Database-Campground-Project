@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import patch, MagicMock
 import main  
 
+# Define a test class for the main application flow
 class TestMainFlow(unittest.TestCase):
     """
     Test class for testing the main flow of the application.
@@ -9,7 +10,7 @@ class TestMainFlow(unittest.TestCase):
     This class mocks the key components of the main application, including database connections
     and data fetching methods, to ensure the main flow runs without actual dependencies.
     """
-
+ 
     @patch('main.connect_to_sql')
     @patch('main.connect_to_head_office')
     @patch('main.connect_to_cosmos')

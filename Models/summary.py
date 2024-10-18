@@ -43,3 +43,4 @@ class Summary:
         if self.total_sales < 0 or self.total_bookings < 0:
             logger.error("Validation Error: Total sales and bookings cannot be negative.")
             raise ValueError("Total sales and bookings cannot be negative.")
+        

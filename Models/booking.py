@@ -183,4 +183,5 @@ def create_booking_data(booking):
     booking_data = booking.to_dict()
     booking_data["confirmation"] = f"confirmation_{booking.booking_id}.pdf"  # Reference the confirmation PDF
     booking_data["customer_name"] = booking.customer_name  # Ensure customer_name is included correctly
+    
     return booking_data

@@ -13,7 +13,9 @@ from Utils.summary_manager import create_and_insert_summary, generate_summary, d
 from Database.head_office_db import connect_to_head_office, fetch_bookings
 from Utils.logging_config import logger
 
+# Initialize the Flask app
 app = Flask(__name__)
+# Set the secret key to enable session storage
 app.secret_key = b'\x89\xfa\x1d\xfe\x2c\x88\x9b\xfd\x8c\x2e\xbf\x4a\x7d\xea\x3f\xce\xa1\x23\x64\xbf\x8e\x59\x22'
 
 # Configure logging to display only INFO level and above
@@ -22,6 +24,7 @@ logging.basicConfig(level=logging.INFO, format='%(message)s')
 # Global variable to hold processed bookings
 processed_bookings = []
 
+# Define the main route for the Flask app
 @app.route('/')
 def index():
     """
@@ -43,6 +46,7 @@ def index():
         flash(f'Error loading index: {str(e)}', 'danger')
         return redirect(url_for('index'))
 
+# Define the route to process bookings
 @app.route('/process_bookings', methods=['POST'])
 def process_bookings_route():
     """
@@ -70,6 +74,7 @@ def process_bookings_route():
         flash(f'Error processing bookings: {str(e)}', 'danger')
         return redirect(url_for('index'))
 
+# Define the route to view bookings
 @app.route('/bookings')
 def view_bookings():
     """
@@ -89,6 +94,7 @@ def view_bookings():
         flash(f'Error fetching bookings: {str(e)}', 'danger')
         return redirect(url_for('index'))
 
+# Define the route to view a specific booking
 @app.route('/summary')
 def summary():
     """
@@ -123,6 +129,7 @@ def summary():
         flash(f"Error generating summary: {str(e)}", 'danger')
         return redirect(url_for('index'))
 
+# Define the route to show a PDF confirmation for a specific booking
 @app.route('/pdf/<int:booking_id>')
 def show_pdf(booking_id):
     """
@@ -146,6 +153,7 @@ def show_pdf(booking_id):
         flash(f'Error fetching PDF for Booking ID {booking_id}: {str(e)}', 'danger')
         return redirect(url_for('view_bookings'))
 
+# Define the route to handle 404 errors
 def fetch_pdf_from_cosmos(cosmos_conn_bookings, cosmos_conn_pdfs, booking_id):
     """
     Fetches PDF data associated with a booking from Cosmos DB.

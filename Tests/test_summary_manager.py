@@ -61,7 +61,7 @@ class TestSummaryManager(unittest.TestCase):
         """
         summary = Summary(
             campground_id=1121132,
-            summary_date=datetime.now().date(),
+            summary_date=datetime.now().date(), # Use the current date for the summary
             total_sales=500,
             total_bookings=5
         )

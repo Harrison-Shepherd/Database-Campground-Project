@@ -2,6 +2,8 @@ import unittest
 from datetime import datetime, timedelta
 from Models.campsite import Campsite
 
+
+# Define a test class for the Campsite model
 class TestCampsite(unittest.TestCase):
     """
     Test class for testing the functionality of the Campsite class.
@@ -10,6 +12,7 @@ class TestCampsite(unittest.TestCase):
     campsite reservations are handled correctly.
     """
 
+    # Set up the test environment before each test
     def setUp(self):
         """
         Set up the test environment before each test.
@@ -19,6 +22,7 @@ class TestCampsite(unittest.TestCase):
         # Initialize a Campsite object with specified attributes
         self.campsite = Campsite(site_number=1, size='Medium', rate_per_night=60)
 
+    # Test the availability of the campsite
     def test_is_available(self):
         """
         Test the availability of the campsite.
@@ -31,6 +35,7 @@ class TestCampsite(unittest.TestCase):
         # Assert that the campsite is available initially
         self.assertTrue(self.campsite.is_available(start_date, end_date), "Campsite should be available initially.")
 
+    # Test booking the campsite
     def test_book_campsite(self):
         """
         Test booking the campsite.
@@ -46,5 +51,6 @@ class TestCampsite(unittest.TestCase):
         # Assert that the campsite is no longer available after booking
         self.assertFalse(self.campsite.is_available(start_date, end_date), "Campsite should not be available after booking.")
 
+    # Test the rate calculation for the campsite
 if __name__ == "__main__":
     unittest.main()

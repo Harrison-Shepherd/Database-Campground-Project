@@ -47,13 +47,13 @@ class PDFGenerator(FPDF):
         self.add_page()  # Add a new page to the PDF
         self.set_font("Arial", "", 12)  # Set the font for the content
         # Add booking details to the PDF
-        self.cell(0, 10, f"Booking Confirmation - {booking.customer_name}", 0, 1)
-        self.cell(0, 10, f"Booking ID: {booking.booking_id}", 0, 1)
-        self.cell(0, 10, f"Customer: {booking.customer_name}", 0, 1)
-        self.cell(0, 10, f"Arrival Date: {booking.arrival_date.strftime('%Y-%m-%d')}", 0, 1)
-        self.cell(0, 10, f"Campsite Size: {booking.campsite_size}", 0, 1)
-        self.cell(0, 10, f"Total Sites Booked: {booking.num_campsites}", 0, 1)
-        self.cell(0, 10, f"Total Cost: ${booking.total_cost:.2f}", 0, 1)
+        self.cell(0, 10, f"Booking Confirmation - {booking.customer_name}", 0, 1) # Add the title centered on the page
+        self.cell(0, 10, f"Booking ID: {booking.booking_id}", 0, 1) # Add the booking ID
+        self.cell(0, 10, f"Customer: {booking.customer_name}", 0, 1) # Add the customer name
+        self.cell(0, 10, f"Arrival Date: {booking.arrival_date.strftime('%Y-%m-%d')}", 0, 1) # Add the arrival date
+        self.cell(0, 10, f"Campsite Size: {booking.campsite_size}", 0, 1) # Add the campsite size
+        self.cell(0, 10, f"Total Sites Booked: {booking.num_campsites}", 0, 1) # Add the number of campsites
+        self.cell(0, 10, f"Total Cost: ${booking.total_cost:.2f}", 0, 1) # Add the total cost
 
         # Define the filename and save the PDF
         filename = os.path.join(PDF_FOLDER, f"confirmation_{booking.booking_id}.pdf")
@@ -71,11 +71,11 @@ class PDFGenerator(FPDF):
         self.add_page()  # Add a new page to the PDF
         self.set_font("Arial", "", 12)  # Set the font for the content
         # Add summary details to the PDF
-        self.cell(0, 10, "Daily Summary Report", ln=True, align="C")
-        self.cell(0, 10, f"Campground ID: {summary.campground_id}", ln=True)
-        self.cell(0, 10, f"Summary Date: {summary.summary_date}", ln=True)
-        self.cell(0, 10, f"Total Sales: ${summary.total_sales:.2f}", ln=True)
-        self.cell(0, 10, f"Total Bookings: {summary.total_bookings}", ln=True)
+        self.cell(0, 10, "Daily Summary Report", ln=True, align="C") # Add the title centered on the page
+        self.cell(0, 10, f"Campground ID: {summary.campground_id}", ln=True) # Add the campground ID
+        self.cell(0, 10, f"Summary Date: {summary.summary_date}", ln=True) # Add the summary date
+        self.cell(0, 10, f"Total Sales: ${summary.total_sales:.2f}", ln=True) # Add the total sales
+        self.cell(0, 10, f"Total Bookings: {summary.total_bookings}", ln=True) # Add the total bookings
 
         # Define the filename and save the PDF
         filename = os.path.join(PDF_FOLDER, f"summary_{summary.summary_date}.pdf")

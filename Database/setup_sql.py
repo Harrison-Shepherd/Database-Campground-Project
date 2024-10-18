@@ -1,7 +1,7 @@
 import pyodbc
 from Utils.logging_config import logger
 
-def connect_to_sql():
+def connect_to_sql(): #TODO remove other sql tables that arent needed
     """
     Connects to the SQL Server database.
 
@@ -166,4 +166,4 @@ def setup_database():
             logger.info("Database setup completed and connection closed.")
 
 if __name__ == "__main__":
-    setup_database()  # Run the database setup when the script is executed
+    setup_database()  

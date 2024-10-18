@@ -1,8 +1,8 @@
 import os
 import sys
 
+# Add the parent directory to the sys.path list to allow importing from the Utils package
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 
 import logging
 from azure.cosmos import CosmosClient, exceptions
@@ -44,6 +44,7 @@ BOOKINGS_CONTAINER_NAME = "Bookings"
 PDFS_CONTAINER_NAME = "PDFs"
 SUMMARY_PDFS_CONTAINER_NAME = "Summary_PDFs"
 
+# Function to clean campsite data from SQL and Cosmos DB
 def clean_sql_campsite_data():
     """
     Cleans campsite-related data from specified SQL tables.
@@ -57,7 +58,6 @@ def clean_sql_campsite_data():
 
         # List of tables to clean
         tables_to_clean = [
-            "camping.booking",
             "camping.summary"
         ]
 
@@ -76,6 +76,7 @@ def clean_sql_campsite_data():
         logger.error(f"An error occurred while cleaning SQL campsite data: {e}")
         print(f"An error occurred while cleaning SQL campsite data: {e}")
 
+# Function to clean data from the Cosmos DB container
 def clean_cosmos_container_data(container_name, partition_key_name):
     """
     Cleans data from the specified Cosmos DB container based on the provided partition key.
@@ -125,7 +126,8 @@ def clean_cosmos_container_data(container_name, partition_key_name):
         # Log other exceptions encountered during cleanup
         logger.warning(f"An error occurred while cleaning {container_name} data: {e}")
 
-def main(): #FIXME currently can only run using terminal, python -m Database.clean_campsite_data
+
+def main():
     """
     Main function to clean campsite data from SQL and Cosmos DB.
 

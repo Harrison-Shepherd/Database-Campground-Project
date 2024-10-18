@@ -78,3 +78,4 @@ if __name__ == '__main__':
     # Set logger to INFO level to suppress DEBUG-level messages
     logger.setLevel(logging.INFO)
     main()
+    

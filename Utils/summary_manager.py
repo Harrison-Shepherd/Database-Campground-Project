@@ -21,7 +21,7 @@ def create_and_insert_summary(bookings):
 
         # Create a summary object with the calculated data
         summary = Summary(
-            campground_id=1121132,
+            campground_id=1121132,  # Your student ID as campground ID
             summary_date=datetime.now().date(),
             total_sales=total_sales,
             total_bookings=total_bookings
@@ -51,6 +51,7 @@ def create_and_insert_summary(bookings):
         logger.error(f"Error during summary creation and processing: {e}")
         print(f"An error occurred while processing the summary.")
 
+
 def insert_summary_into_databases(summary):
     """
     Inserts the summary into both the local SQL and Head Office databases.
@@ -59,8 +60,8 @@ def insert_summary_into_databases(summary):
     """
     try:
         # Connect to the local SQL database and insert the summary
-        sql_conn = connect_to_sql()
-        insert_summary(sql_conn, summary.to_dict())
+        sql_conn = connect_to_sql()  # Connect to the local camping SQL database
+        insert_summary(sql_conn, summary.to_dict())  # Insert into local camping database
         sql_conn.close()
         logger.info("Summary inserted into the local SQL database.")
 
@@ -69,13 +70,14 @@ def insert_summary_into_databases(summary):
 
     try:
         # Connect to the Head Office database and write the summary
-        head_office_conn = connect_to_head_office()
-        write_summary_to_head_office(head_office_conn, summary.to_dict())
+        head_office_conn = connect_to_head_office()  # Connect to the Head Office SQL database
+        write_summary_to_head_office(head_office_conn, summary.to_dict())  # Insert into Head Office database
         head_office_conn.close()
         logger.info("Summary written to the Head Office database.")
 
     except Exception as e:
         logger.error(f"Error writing summary to Head Office: {e}")
+
 
 def insert_summary(conn, summary_data):
     """
@@ -86,7 +88,7 @@ def insert_summary(conn, summary_data):
     """
     try:
         cursor = conn.cursor()
-        # SQL query to insert summary data into the local database
+        # SQL query to insert summary data into the local camping SQL database
         query = """
             INSERT INTO camping.summary (campground_id, summary_date, total_sales, total_bookings)
             VALUES (?, ?, ?, ?)
@@ -105,6 +107,7 @@ def insert_summary(conn, summary_data):
     except Exception as e:
         logger.error(f"Error inserting summary into the local SQL database: {e}")
 
+
 def write_summary_to_head_office(conn, summary_data):
     """
     Inserts the summary data into the Head Office summary table.
@@ -116,7 +119,7 @@ def write_summary_to_head_office(conn, summary_data):
         cursor = conn.cursor()
         # SQL query to insert summary data into the Head Office database
         query = """
-        INSERT INTO head_office.summary (campground_id, summary_date, total_sales, total_bookings)
+        INSERT INTO camping.summary (campground_id, summary_date, total_sales, total_bookings)
         VALUES (?, ?, ?, ?)
         """
         # Execute the query with the summary data
@@ -131,6 +134,7 @@ def write_summary_to_head_office(conn, summary_data):
 
     except Exception as e:
         logger.error(f"Error writing summary to Head Office: {e}")
+
 
 def generate_summary(bookings, campsites):
     """
@@ -168,6 +172,7 @@ def generate_summary(bookings, campsites):
     logger.info(f"Summary Data: {summary_data}")
     return summary_data
 
+
 def display_summary(summary):
     """
     Displays the summary of booking allocations and campsite utilization.
@@ -184,4 +189,4 @@ def display_summary(summary):
     print("\nCampsite Utilization:")
     for site_number, details in summary['campsite_utilization'].items():
         print(f"Campsite {site_number}: Size - {details['size']}, Rate - ${details['rate_per_night']} per night, "
-              f"Total Bookings - {details['bookings_count']}")
+              f"Total Bookings - {details['bookings_count']}")  

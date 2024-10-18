@@ -1,8 +1,12 @@
 import logging
 import os
 
-# Define the log file path
-log_file_path = os.path.join(os.path.dirname(__file__), '..', 'app.log')
+# Ensure the Logs directory exists
+log_dir = os.path.join(os.path.dirname(__file__), '..', 'Logs')
+os.makedirs(log_dir, exist_ok=True)
+
+# Define the log file path in the Logs directory
+log_file_path = os.path.join(log_dir, 'Campground.log')
 
 # Create a file handler that logs INFO level and above
 file_handler = logging.FileHandler(log_file_path)

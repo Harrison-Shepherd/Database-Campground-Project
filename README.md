@@ -60,17 +60,18 @@ This project is a **Campground Booking Management System** designed to help mana
 │   └── summary.py
 ├── pdfs                                        # Directory for storing generated PDFs
 ├── Tests                                       # Contains unit and integration tests for the application
-│   ├── test_booking_processor.py               # Tests for booking processing                      
-│   ├── test_booking.py                         # Tests for booking functions
-│   ├── test_campsite_manager.py                # Tests for campsite functionality
-│   ├── test_campsite.py                        # Tests core campsite functions
-│   ├── test_config_loader.py                   # Tests configuration functions such as connection strings
-│   ├── test_confirmation.py                    # Tests booking confirmations
-│   ├── test_cosmos_db.py                       # Tests cosmos DB connection and functions
-│   ├── test_main.py                            # Tests main execution
-│   ├── test_pdf_generation.py                  # Tests PDF generation
-│   ├── test_sql_db.py                          # Tests SQL server queries and data
-│   └── test_summary_manager.py                 # Tests summary generation
+│   ├── test_booking_processor.py                                   
+│   ├── test_booking.py                         
+│   ├── test_campsite_manager.py               
+│   ├── test_campsite.py                        
+│   ├── test_config_loader.py                   
+│   ├── test_confirmation.py                    
+│   ├── test_cosmos_db.py                       
+│   ├── test_main.py                            
+│   ├── test_head_office.py                     
+│   ├── test_pdf_generation.py                  
+│   ├── test_sql_db.py                          
+│   └── test_summary_manager.py                 
 ├── Utils                                       # Utility scripts for handling various functionalities
 │   ├── booking_processor.py                    # Processes bookings, allocates campsites, and updates databases
 │   ├── campsite_manager.py                     # Initializes and manages campsite data
@@ -78,8 +79,9 @@ This project is a **Campground Booking Management System** designed to help mana
 │   ├── confirmation.py                         # Generates booking confirmations
 │   ├── logging_config.py                       # Configures logging for the application
 │   ├── pdf_generator.py                        # Generates PDFs for booking confirmations and summaries
-│   └── summary_manager.py                      # Handles summary generation and database insertion                  
-├── app.log                                     # Log file for the application
+│   └── summary_manager.py                      # Handles summary generation and database insertion  
+├── Logs                                        
+│   └──  Campground.log                         # Log file for the application                          
 ├── main.py                                     # Main script for running database setup and other utilities
 ├── README.md                                   # Project documentation (this file)
 └──retrieve_booking.py                          # Script to retrieve a single booking information
@@ -145,7 +147,7 @@ python main.py processes all of the bookings if you just want to see that.
 
 python retrieve_booking.py prompts you for a booking ID to retrieve their details. 
 
-python -m unittest discover -s Tests | This runs all of the test cases. There are 18.
+python -m unittest discover -s Tests | This runs all of the test cases. There are 20.
 
 Please let me know if you need anything else or a file was corrupted. HJS028@student.usc.edu.au, 1121132.
 
