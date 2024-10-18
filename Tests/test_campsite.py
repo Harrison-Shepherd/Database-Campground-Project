@@ -1,5 +1,3 @@
-# Tests/test_campsite.py
-
 import unittest
 from datetime import datetime, timedelta
 from Models.campsite import Campsite

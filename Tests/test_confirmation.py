@@ -1,6 +1,6 @@
 import unittest
 import os
-from Utils.pdf_generator import PDFGenerator  # Ensure this is the correct import
+from Utils.pdf_generator import PDFGenerator  
 from Models.booking import Booking
 
 class TestConfirmation(unittest.TestCase):
@@ -43,7 +43,6 @@ class TestConfirmation(unittest.TestCase):
         Verifies that the PDF file is generated in the specified output directory with the correct filename
         and that the function returns the correct file path.
         """
-        # Expected filename path
         filename = os.path.join(self.output_dir, f"confirmation_{self.booking.booking_id}.pdf")
 
         # Remove the file if it already exists to ensure a clean test

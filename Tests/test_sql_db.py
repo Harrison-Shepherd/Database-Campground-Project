@@ -1,5 +1,3 @@
-# Tests/test_sql_db.py
-
 import unittest
 from Database.sql_db import connect_to_sql
 

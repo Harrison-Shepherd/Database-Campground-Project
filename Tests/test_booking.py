@@ -1,5 +1,3 @@
-# Tests/test_booking.py
-
 import unittest
 from datetime import datetime, timedelta
 from Models.booking import Booking

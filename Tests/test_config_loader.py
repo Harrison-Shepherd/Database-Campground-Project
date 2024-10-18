@@ -1,5 +1,3 @@
-# Tests/test_config_loader.py
-
 import unittest
 from Utils.config_loader import load_config, get_connection_string
 

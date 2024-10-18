@@ -1,6 +1,6 @@
 import unittest
 import os
-from Utils.pdf_generator import PDFGenerator  # Import the PDFGenerator class correctly
+from Utils.pdf_generator import PDFGenerator  
 from Models.booking import Booking
 
 class TestPDFGeneration(unittest.TestCase):

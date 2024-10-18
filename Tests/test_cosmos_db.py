@@ -1,5 +1,3 @@
-# Tests/test_cosmos_db.py
-
 import unittest
 from unittest.mock import MagicMock
 from Database.cosmos_db import connect_to_cosmos, insert_booking_to_cosmos

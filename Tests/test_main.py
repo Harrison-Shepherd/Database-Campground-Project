@@ -1,8 +1,6 @@
-# Tests/test_main.py
-
 import unittest
 from unittest.mock import patch, MagicMock
-import main  # Replace with your actual main module name if different
+import main  
 
 class TestMainFlow(unittest.TestCase):
     """

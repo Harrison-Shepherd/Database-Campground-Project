@@ -1,5 +1,3 @@
--- create_head_office_schema.sql
-
 -- Create the 'head_office' schema if it does not exist
 IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'head_office')
 BEGIN
@@ -18,13 +16,13 @@ CREATE TABLE head_office.customers (
 
 -- Create the 'booking' table within the 'head_office' schema
 CREATE TABLE head_office.booking (
-    booking_id INT IDENTITY(1,1) PRIMARY KEY,                       -- Primary key with auto-increment
-    customer_id INT NULL FOREIGN KEY REFERENCES head_office.customers(customer_id),  -- Foreign key referencing 'customers' table
-    booking_date DATE NOT NULL,                                     -- Date when the booking was made
-    arrival_date DATE NOT NULL,                                     -- Customer's arrival date
-    campground_id INT NOT NULL,                                     -- Identifier of the campground
-    campsite_size VARCHAR(10),                                      -- Size category of the campsite (e.g., 'Small', 'Medium', 'Large')
-    num_campsites INT                                               -- Number of campsites booked
+    booking_id INT IDENTITY(1,1) PRIMARY KEY,                                            -- Primary key with auto-increment
+    customer_id INT NULL FOREIGN KEY REFERENCES head_office.customers(customer_id),      -- Foreign key referencing 'customers' table
+    booking_date DATE NOT NULL,                                                          -- Date when the booking was made
+    arrival_date DATE NOT NULL,                                                          -- Customer's arrival date
+    campground_id INT NOT NULL,                                                          -- Identifier of the campground
+    campsite_size VARCHAR(10),                                                           -- Size category of the campsite (e.g., 'Small', 'Medium', 'Large')
+    num_campsites INT                                                                    -- Number of campsites booked
 );
 
 -- Create the 'summary' table within the 'head_office' schema

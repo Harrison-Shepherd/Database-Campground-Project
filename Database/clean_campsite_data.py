@@ -1,3 +1,9 @@
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+
 import logging
 from azure.cosmos import CosmosClient, exceptions
 import pyodbc
@@ -7,7 +13,7 @@ from Utils.logging_config import logger
 # helps suppress http data flooding output
 class SuppressHttpLogsFilter(logging.Filter):
     def filter(self, record):
-        # Suppress logs that contain specific HTTP-related keywords
+        # Suppress logs that contain specific HTTP-related keywords, output was cluttered.
         return 'Request URL:' not in record.getMessage() and \
                'Request headers:' not in record.getMessage() and \
                'Response headers:' not in record.getMessage()

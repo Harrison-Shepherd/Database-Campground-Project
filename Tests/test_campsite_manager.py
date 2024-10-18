@@ -1,5 +1,3 @@
-# Tests/test_campsite_manager.py
-
 import unittest
 from Utils.campsite_manager import initialize_campsites
 

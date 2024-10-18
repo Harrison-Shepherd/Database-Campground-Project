@@ -19,7 +19,6 @@
         <a href="{{ url_for('summary') }}" class="btn btn-info mb-2">View Summary</a>
     </div>
 
-    <!-- Display messages if any -->
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
             <div class="mt-3">

@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime
 from Models.summary import Summary
-from Utils.pdf_generator import PDFGenerator  # Import the PDFGenerator class correctly
+from Utils.pdf_generator import PDFGenerator  
 import os
 
 class TestSummaryManager(unittest.TestCase):

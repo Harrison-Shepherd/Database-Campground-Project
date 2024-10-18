@@ -1,5 +1,3 @@
-# Tests/test_booking_processor.py
-
 import unittest
 from unittest.mock import MagicMock
 from datetime import datetime, timedelta

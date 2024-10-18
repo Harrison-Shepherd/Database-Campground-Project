@@ -60,7 +60,7 @@ def get_connection_string(db_type):
         logger.error(f"Error retrieving connection string for {db_type}: {e}")
         raise
 
-def prepare_query(sql): #TODO not sure if needed anymore ? sql files just have "?" placeholders for pyodbc
+def prepare_query(sql): #TODO not sure if needed anymore?, sql files just have "?" placeholders for pyodbc
     """
     Replaces placeholders with question marks in SQL queries.
 
