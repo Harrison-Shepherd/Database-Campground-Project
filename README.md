@@ -136,19 +136,4 @@ This project is a **Campground Booking Management System** designed to help mana
   python -m unittest discover -s Tests
   ```
 
-### For Andrew:
-pip install -r requirements.txt # has all of the imports incase something is wrong
-
-connection_strings.json has all of the connection details for Azure SQL database, Cosmos DB, and head office DB. 
-
-python Front_End/app.py runs the Flask application | you can access it at http://127.0.0.1:5000
-
-python main.py processes all of the bookings if you just want to see that.
-
-python retrieve_booking.py prompts you for a booking ID to retrieve their details. 
-
-python -m unittest discover -s Tests | This runs all of the test cases. There are 20.
-
-Please let me know if you need anything else or a file was corrupted. HJS028@student.usc.edu.au, 1121132.
-
 
